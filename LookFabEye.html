@@ -691,6 +691,7 @@
         data.map(function(item){
             var prodiv = document.createElement("div");
             prodiv.setAttribute("id","maindiv");
+            prodiv.addEventListener("click",productShow);
 
             var image = document.createElement("img");
             image.setAttribute("id","picture");
@@ -742,6 +743,10 @@
             document.querySelector("#container").append(prodiv);
 
         });
+
+        function productShow(){
+            window.location.href = "productShow.html" ;
+        } 
     }
 
 
