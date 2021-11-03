@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Eye care Makeup Products</title>
+        <style>
+            #heading{
+                width:75%;
+                margin: auto;
+                color: rgb(24, 24, 24);
+            }
+            #optionsForSort{
+                width:75%;
+                margin: auto;
+                padding-top: 10px;
+                padding-bottom : 15px;
+                background-color: white;
+                display: flex;
+                gap: 1.4% ;
+                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
+                position: sticky;
+                top:0;
+            }
+            #container{
+                width: 75%;
+                display: grid ;
+                grid-template-columns: repeat(4, 24%);
+                /* border: 1.5px solid red; */
+                margin: auto;
+                column-gap : 1.4%;
+                row-gap : 20px;
+                font-family: Lato,sans-serif;
+            }
+
+            #optionsForSort > select{
+                width : 33% ;
+                height: 55px; 
+                padding: 10px;
+                border-radius: 6px;
+                padding-right: 10px;
+                font-size: 15px;
+            }
+           
+            select option {
+                margin: 40px;
+                background: rgba(0, 0, 0, 0.3);
+                color: #fff;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+            }
+
+            #maindiv {
+                height: 280px ;
+                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+                border-radius: 8px;
+                line-height: 15px;
+                padding: 2%;
+                color:rgba(41, 40, 40, 0.904);
+            }
+
+            #maindiv:hover{
+               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+
+            #picture{
+                width: 45%;
+                height: 55%;
+                margin: auto;
+                margin-left: 25%;
+                margin-bottom: 8%;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+
+            }
+            p{
+                margin:0;
+                padding:0;
+                line-height: 15px;
+                margin-left : 10px;
+                margin-right : 10px;
+            }
+
+            #nameofprod{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; 
+                        line-clamp: 2; 
+                -webkit-box-orient: vertical;
+                font-size: 14px;
+                font-weight: 500;
+                color : black;
+            }
+
+            #brandofprod{
+                font-size: 12px;
+                font-weight: 500;
+            }
+
+            #sub1div{
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+                margin-top: 5%;
+            }
+
+            #cost{
+                font-size: 14px;
+                margin-top: 25%;
+                font-weight: 700;  
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+                <option value="0">Any delivery time</option>
+                <option value="1"> Same Day </option>
+                <option value="2"> 2 days </option>
+                <option value="4"> 3-5 days </option>
+                <option value="6"> 5-8days </option>
+                <option value="10"> 9-15days</option>
+                <option value="16"> 15+ days </option>
+            </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Eye Care Makeup Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "L'Oreal Paris Skin Care Clean Artiste Oil Free Eye Makeup Remover, 2 Count",
+           brand : "By L'oreal Paris",
+           rating : 4.6 ,
+           MRP : 1929 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/41JYQmTDfyL.jpg" 
+        },
+        {
+           name: "Eminence Herbal Eye Make-Up Remover, 5.07 Ounce",
+           brand : "By Eminence",
+           rating : 4.6 ,
+           MRP : 5279 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/81MInjJ-whL.jpg" 
+        },
+        {
+           name : "Gentle, Waterproof Eye Makeup Remover - Moisturizing and Organic with Vitamin E and Tea Tree Oil to Support Dry, Itchy Eyelids and Irritated Eyes (1-Pack)",
+           brand : "By Eyelove",
+           rating : 4.2 ,
+           MRP : 3339 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/7127OPAie5L.jpg" 
+        },
+        {
+           name : "e.l.f. Holy Hydration! Eye Cream | Infused with Hyaluronic Acid & Peptides | Minimizes Dark Circles | 0.53 Oz (15g)",
+           brand : "By E L F",
+           rating : 4.6 ,
+           MRP : 1489 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/61geOiUtyUL.jpg" 
+        },
+        
+        {
+           name: "IT Cosmetics Confidence in an Eye Cream - Anti-Aging & Brightening Eye Cream for Dark Circles, Puffiness & Fine Lines - With Hyaluronic Acid & Collagen - 0.5 fl oz",
+           brand : "By It Cosmetics",
+           rating : 4.5 ,
+           MRP : 4459 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71ycxIxpWlL.jpg" 
+        },
+        {
+           name: "2 Pack Cute Mini Makeup Spoons, Cosmetic Facial Spatula, Under Eye Cream Applicator Messager Stick Cosmetics Skincare Tools",
+           brand : "By Sc Store",
+           rating : 4.3 ,
+           MRP : 1269 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/61AHB5eRzyL.jpg" 
+        },
+        {
+           name: "Neutrogena Gentle OilFree Eye Makeup Remover Cleanser for Sensitive Eyes NonGreasy Remover Removes Waterproof Mascara Dermatologist Ophthalmologist Tested, 8 Fl Oz",
+           brand : "By Neutrogena",
+           rating : 4.7 ,
+           MRP : 1479 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71hUdww65jL.jpg" 
+        },
+        {
+           name: "Under Eye Bags Mask 24K Gold Eye Treatment Masks Hyaluronic Acid Under Eye Patches Collagen Eye Pads for Moisturizing & Reducing Dark Circles Puffiness Wrinkles, Gel Pads 30 Pairs",
+           brand : "By Dr.Davey",
+           rating : 4.0 ,
+           MRP : 959 ,
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6,
+           image: "https://m.media-amazon.com/images/I/71LKgS+cp+L.jpg" 
+        },
+        {
+           name: "Cetaphil Gentle Waterproof Makeup Remover, 6.0 Fluid Ounce",
+           brand : "By Cetaphil",
+           rating : 4.7 ,
+           MRP : 1619 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71jFSFNm0iS.jpg" 
+        },
+
+        {
+           name: "Garnier SkinActive Micellar Cleansing Water, For Waterproof Makeup, 13.5 Fl Oz",
+           brand : "By Garnier",
+           rating : 4.7 ,
+           MRP : 1509 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4,
+           image: "https://m.media-amazon.com/images/I/719Q1VE1ABL.jpg" 
+        },
+
+        {
+           name: "Bliss - Makeup Melt Never-Greasy Eye Makeup Remover Gel | Cooling & Soothing Gel for Eye Makeup Removal | Hydrating Eyelid Cleanser & Mascara Remover | Vegan | Cruelty Free | Paraben Free | 4.0 fl.oz.",
+           brand : "By Bliss",
+           rating : 3.8 ,
+           MRP : 1009 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/717lGOCWWoL.jpg" 
+        },
+
+        {
+           name: "L'Oreal Clean Artiste Oil-Free Eye Makeup Remover, 4 oz",
+           brand : "By L'oreal Paris",
+           rating : 4.3 ,
+           MRP : 1289 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71gRQPF9L3L.jpg" 
+        },
+
+        {
+           name: "Eminence Herbal Eye Make Up Remover, 5.07 Ounce",
+           brand : "By Eminence",
+           rating : 4.5 ,
+           MRP : 4179 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/719WpqXR1vL.jpg" 
+        },
+        
+        {
+           name: "24K Gold Eye Mask– 20 Pairs - Puffy Eyes and Dark Circles Treatments – Look Less Tired and Reduce Wrinkles and Fine Lines Undereye, Revitalize and Refresh Your Skin",
+           brand : "By Dermora",
+           rating : 4.3 ,
+           MRP : 3349 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71mJ6chpRGS.jpg"
+        },
+        {
+           name: "TULA Skin Care Rose Glow & Get It Cooling & Brightening Eye Balm | Dark Circle Under Eye Treatment, Instantly Hydrate and Brighten Undereye Area, Perfect to Use On-the-go | 0.35 oz.",
+           brand : "By Tula",
+           rating : 4.5 ,
+           MRP : 3909 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4,
+           image: "https://m.media-amazon.com/images/I/51sp7P39G4L.jpg" 
+        },
+
+        {
+           name: "Neutrogena Oil-Free Liquid Eye Makeup Remover, Residue-Free, Non-Greasy, Gentle & Skin-Soothing Makeup Remover Solution with Aloe & Cucumber Extract for Waterproof Mascara, 3.8 fl. oz",
+           brand : "By Neutrogena",
+           rating : 4.7 ,
+           MRP : 734 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71NA51HGqLL.jpg" 
+        },
+        {
+           name: "Under Eye Bags Mask 24K Gold Eye Treatment Masks Hyaluronic Acid Under Eye Patches Collagen Eye Pads for Moisturizing & Reducing Dark Circles Puffiness Wrinkles, Gel Pads 30 Pairs",
+           brand : "By Dr.Davey",
+           rating : 4.0 ,
+           MRP : 959 ,
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6,
+           image: "https://m.media-amazon.com/images/I/71LKgS+cp+L.jpg" 
+        },
+
+        {
+           name: "Bliss - Makeup Melt Oil-Free Makeup Remover Wipes | Facial Cleansing Wipes w/Chamomile, Aloe & Marshmallow Root for Hydrating Skin | All Skin Types | Vegan | Cruelty Free | Paraben Free | 30 ct.",
+           brand : "By Bliss",
+           rating : 4.5 ,
+           MRP : 859 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4,
+           image: "https://m.media-amazon.com/images/I/71pmHzvGZNL.jpg" 
+        },
+
+        {
+           name: "IT Cosmetics Bye Bye Under Eye, 10.5 Light (C) - Full-Coverage, Anti-Aging, Waterproof Concealer - Improves the Appearance of Dark Circles, Wrinkles & Imperfections - 0.4 fl oz",
+           brand : "By Eminence",
+           rating : 4.5 ,
+           MRP : 3259 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4,
+           image: "https://m.media-amazon.com/images/I/61XZoseK8IL.jpg" 
+        },
+
+        {
+           name: "Garnier SkinActive Clearly Brighter Sheer Tinted Eye Roller, Light/Medium, 0.5 Fl Oz",
+           brand : "By Garnier",
+           rating : 4.3 ,
+           MRP : 1799 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/41Wgaqq4I3L.jpg" 
+        },
+
+        {
+           name: "e.l.f. Jet Set Hydration Kit, Travel Friendly Skincare Set, Cleanser, Balm, Moisturizer, Eye Cream & Night Cream",
+           brand : "By E L F",
+           rating : 4.5 ,
+           MRP : 2379 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/61BI9OyRXNL.jpg" 
+        },
+        {
+           name: "Burt's Bees Eye Makeup Remover Pads, 35 Count",
+           brand : "By Garnier",
+           rating : 4.3 ,
+           MRP : 1499 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/81NIUaD5uPL.jpg" 
+        },
+        {
+           name: "Eye Care Cosmetics Pencil Eyeliner Blue",
+           brand : "By Eye care cosmetics",
+           rating : 3.4 ,
+           MRP : 3339 ,
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/51yFhosbYdL.jpg" 
+        },
+
+        {
+           name: "Eyebrow Cream,6 Colors Brow Color Waterproof Eyebrow Pomade Gel, ​Makeup Waterproof Eyebrow Gel For Long Lasting Eye Brow Make Up,Versatile, Defines, Sculpts, Shades, Contours… (02 TAUPE)",
+           brand : "By Junhe",
+           rating : 4.3 ,
+           MRP : 1269 ,
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71-CRmvsZhL.jpg" 
+        },
+
+        {
+           name: "Milk Makeup Cooling Water Stick Soothing Seawater and Firming Caffeine - 1.2 Ounce Full Size",
+           brand : "By Milk Makeup",
+           rating : 4.3 ,
+           MRP : 3569 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4,
+           image: "https://m.media-amazon.com/images/I/51ja4Wb0z0L.jpg" 
+        },
+        {
+           name: "[the SAEM] Iceland Hydrating Eye Stick 0.24oz (7g) - Cooling Eye Stick to Cool and Brighten Dark and Puffy Eyes, 5% Iceland Mineral Water",
+           brand : "By Thesaem",
+           rating : 4.3 ,
+           MRP : 1329 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/51grVaC31UL.jpg" 
+        },
+        {
+           name: "Colorescience Total Eye 3-in-1 Anti-Aging Renewal Therapy for Wrinkles & Dark Circle",
+           brand : "",
+           rating : 4.3 ,
+           MRP : 11059 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/61vlY6JQFUL.jpg" 
+        },
+        {
+           name: "Organic Cotton Rounds Compatible with Makeup Products, Eye Makeup Remover Pads and Baby Wipes, Small, 300 Count - Noleo",
+           brand : "By Noleo",
+           rating : 4.5 ,
+           MRP : 1379 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71dPLSk7w9S.jpg" 
+        },
+        {
+           name: "I DEW CARE Glow-Key Eye Cream with Applicator | Vitamin C Eye Serum with Niacinamide | Eye Cream for Dark Circles and Puffiness | Korean Skin care, Vegan, Cruelty-free, Gluten-free, Paraben-free",
+           brand : "By I DEW CARE",
+           rating : 4.3 ,
+           MRP : 3139 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71MQE+X9UkS.jpg" 
+        },
+        {
+           name: "9 Sheets Eye Body Face Gems Rhinestone Stickers Self Adhesive Rhinestones Rainbow Face Gems for Women Festival Accessory and Nail Art Decorations (Tiny Bead)",
+           brand : "By  Outus",
+           rating : 4.6 ,
+           MRP : 1499 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/81l6k0UlZKL.jpg" 
+        },
+
+        {
+           name: "2 Pack 12 Colors Makeup Naked Eyeshadow Palette Natural Nude Matte Shimmer Glitter Pigment Eye Shadow Pallete Set Waterproof Smokey Professional Cosmetic Beauty Kit BestLand (2 PCS)",
+           brand : "By BestLand",
+           rating : 4.2 ,
+           MRP : 2499 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/61GNNPfcmCL.jpg" 
+        },
+
+        {
+           name: "Eye Care Volumizing Mascara Pure Black 9g",
+           brand : "By Eye care cosmetics",
+           rating : 4.1 ,
+           MRP : 3759 ,
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/61TaOvXTxJL.jpg" 
+        },
+
+        {
+           name: "Eye Care Cosmetics Pencil Eyeliner Blue",
+           brand : "By Eye care cosmetics",
+           rating : 3.4 ,
+           MRP : 3339 ,
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/51yFhosbYdL.jpg" 
+        },
+
+        {
+           name: "Eyebrow Cream,6 Colors Brow Color Waterproof Eyebrow Pomade Gel, ​Makeup Waterproof Eyebrow Gel For Long Lasting Eye Brow Make Up,Versatile, Defines, Sculpts, Shades, Contours… (02 TAUPE)",
+           brand : "By Junhe",
+           rating : 4.3 ,
+           MRP : 1269 ,
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71-CRmvsZhL.jpg" 
+        },
+
+        {
+           name: "Under Eye Bags Mask 24K Gold Eye Treatment Masks Hyaluronic Acid Under Eye Patches Collagen Eye Pads for Moisturizing & Reducing Dark Circles Puffiness Wrinkles, Gel Pads 30 Pairs",
+           brand : "By Dr.Davey",
+           rating : 4.0 ,
+           MRP : 959 ,
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6,
+           image: "https://m.media-amazon.com/images/I/71LKgS+cp+L.jpg" 
+        },
+
+        {
+           name: "COSMAC Eye Lip Care Combo Kit Waterproof Eyeliner,Mascara,Eyebrow Pencil,Black Auto Kajal With Red Liquid Lipstick For Protective Stay All Day And strawberry Lip Balm (set of 6)",
+           brand : "By Cosmac",
+           rating : 3.1 ,
+           MRP : 549 ,
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6,
+           image: "https://m.media-amazon.com/images/I/61tn8x1nknL.jpg" 
+        },
+        {
+           name: "Under Eye Bags Mask 24K Gold Eye Treatment Masks Hyaluronic Acid Under Eye Patches Collagen Eye Pads for Moisturizing & Reducing Dark Circles Puffiness Wrinkles, Gel Pads 30 Pairs",
+           brand : "By Dr.Davey",
+           rating : 4.0 ,
+           MRP : 959 ,
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6,
+           image: "https://m.media-amazon.com/images/I/71LKgS+cp+L.jpg" 
+        },
+
+        {
+           name: "Mamaearth Vitamin C Oil-Free Moisturizer For Face with Vitamin C & Gotu Kola for Skin Illumination – 80 ml",
+           brand : "By Mama earth",
+           rating : 4.2 ,
+           MRP : 399 ,
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4,
+           image: "https://m.media-amazon.com/images/I/61f+TzAIssS.jpg" 
+        },
+        {
+           name: "Blue Heaven Festive Combo, Vanilla",
+           brand : "By Blue Heaven",
+           rating : 3.8 ,
+           MRP : 999 ,
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6,
+           image: "https://m.media-amazon.com/images/I/61hQPZref3L.jpg" 
+        },
+        
+
+    ]
+
+   
+   
+
+    function priceSort(){
+        var select = document.querySelector("#forPrice").value;  
+        if(select == "nofilter"){
+            displayProducts(data);
+        }
+        else if(select == 1){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices < 1000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1);
+       } 
+       else if(select == 2){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 1000 && prices < 2000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 3){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 2000 && prices < 3000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 4){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 3000 && prices < 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 5){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+}
+
+    function countrySort(){
+        var select = document.querySelector("#forCountry").value;
+        console.log(select);
+
+        var selected = data.filter(function(item){
+            if(select === item.range) return item ;
+            if(select == "nofilter") return item ;
+        });
+           displayProducts(selected);
+        }
+
+    function deliverySort(){
+        var select = Number(document.querySelector("#fortime").value);
+ 
+
+        var selected = data.filter(function(item){
+            var days = item.range ;
+            if(select === 0) return item ;
+            else if(select === days) return item ;
+            
+        });
+             displayProducts(selected);
+        }
+    
+
+
+    displayProducts(data);
+
+    function displayProducts(data){
+        document.querySelector("#container").innerHTML = "";
+        data.map(function(item){
+            var prodiv = document.createElement("div");
+            prodiv.setAttribute("id","maindiv");
+
+            var image = document.createElement("img");
+            image.setAttribute("id","picture");
+            image.setAttribute("src",item.image)
+
+            var ptag1 = document.createElement("p");
+            ptag1.setAttribute("id","nameofprod");
+            ptag1.textContent = item.name ;
+
+            var ptag2 = document.createElement("p");
+            ptag2.setAttribute("id","brandofprod");
+            ptag2.textContent = item.brand ;
+
+            var personaldiv = document.createElement("div");
+            personaldiv.setAttribute("id","sub1div");
+
+            var leftdiv = document.createElement("div");
+            leftdiv.setAttribute("id","div1");
+
+            var rightdiv = document.createElement("div");
+            rightdiv.setAttribute("id","div2");
+
+            var rating1 = document.createElement("p");
+            rating1.setAttribute("id","rating");
+            rating1.textContent = item.rating ;
+            
+            var price = document.createElement("p");
+            price.setAttribute("id","cost");
+            price.textContent = "₹ " + item.MRP ;
+
+            var origin = document.createElement("p");
+            origin.setAttribute("id","fromCounty");
+            origin.textContent = "from " + item.from ;
+
+            var dispatch = document.createElement("p");
+            dispatch.setAttribute("id","toCounty");
+            dispatch.textContent = "to "+item.toCountry;
+
+            var when = document.createElement("p");
+            when.setAttribute("id","delivery");
+            when.textContent = "in " +item.delivery  ;
+            
+            leftdiv.append(rating1, price);
+            rightdiv.append(origin,dispatch, when);
+            
+            personaldiv.append(leftdiv, rightdiv);
+            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+
+            document.querySelector("#container").append(prodiv);
+
+        });
+    }
+
+
+</script>
