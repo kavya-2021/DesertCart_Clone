@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head> <title> Online Lipstick Products</title>
+    <link rel="stylesheet" href="productInitial.css">
+    </head>
+    <body>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+                <option value="0">Any delivery time</option>
+                <option value="1"> Same Day </option>
+                <option value="2"> 2 days </option>
+                <option value="4"> 3-5 days </option>
+                <option value="6"> 5-8days </option>
+                <option value="10"> 9-15days</option>
+                <option value="16"> 15+ days </option>
+            </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Lipsticks Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script >
+    var data =[
+        {
+           name : "7Pcs Matte Liquid Lipstick + 1Pcs Lip Plumper Makeup Set Kit, Long Lasting Waterproof Velvet Lip Gloss Set, Pigmented Lip Makeup Gift Sets for Girls and Women",
+           brand : "By Qibest",
+           rating : 4.3 ,
+           MRP : 1919 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71mDhuzT3YS.jpg" 
+        },
+        {
+           name : "6Pcs Matte Liquid Lipstick Makeup Set, Matte liquid Long-Lasting Wear Non-Stick Cup Not Fade Waterproof Lip Gloss (Set A)",
+           brand : "By Bestland",
+           rating : 4.0 ,
+           MRP : 2059 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/61YVyDv6rbL.jpg" 
+        },
+        {
+           name : "Maybelline Color Sensational Lipstick, Lip Makeup, Cream Finish, Hydrating Lipstick, Nude, Pink, Red, Plum Lip Color, Warm Me Up, 0.15 oz; (Packaging May Vary)",
+           brand : "By Maybelline New York",
+           rating : 4.5 ,
+           MRP : 834 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71KI8ihR0XL.jpg" 
+        },
+        {
+           name : "12Pcs Matte Liquid Lipstick + Lip Liner Pens Set, One Step Lips Makeup Kits Pigment Velvety Nude Lip Stain Waterproof Long Wear Lip Gloss Make up Gift Set",
+           brand : "By Bestland",
+           rating : 4.1 ,
+           MRP : 2229 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4,
+           image: "https://m.media-amazon.com/images/I/71PbfB04iOS.jpg" 
+        },
+        {
+           name : "REVLON Super Lustrous Glass Shine Lipstick, Flawless Moisturizing Lip Color with Aloe, Hyaluronic Acid and Rose Quartz, Glossed Up Rose (003), 0.15 oz",
+           brand : "By Revlon",
+           rating : 4.5 ,
+           MRP : 1059 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/71ZnyotJHIL.jpg" 
+        },
+        {
+           name : "L'Oreal Paris Colour Riche Lipstick, Sandstone, 1 Count",
+           brand : "By L'Oreal Paris ",
+           rating : 4.6 ,
+           MRP : 874 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/51FEZnRe7hL.jpg" 
+        },
+        {
+           name : "3 Pure Color Envy Sculpting Lipsticks Trio by Estee Lauder for Women - 3 x 0.12 oz Lipstick - 280 Ambitious Pink, Lipstick - 260 Eccentric, Lipstick - 340 Envious",
+           brand : "By Estee Lauder",
+           rating : 4.5 ,
+           MRP : 9179 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4,
+           image: "https://m.media-amazon.com/images/I/71ue2t1QHYL.jpg" 
+        },
+        {
+           name : "REVLON Super Lustrous Lipstick, 5 Piece Multi-finish Lipcolor Gift Set, in Cream Pearl & Matte, Pack of 5",
+           brand : "By Revlon",
+           rating : 4.5 ,
+           MRP : 4979 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/81l--fbgybL.jpg" 
+        },
+        {
+           name : "Miss Rose Long-lasting Matte Lipstick Set, 12 PCS Multi Colored featuring full-pigment lip color with a smooth, ultra-matte finish in 12 shades",
+           brand : "By Miss Rose",
+           rating : 4.1 ,
+           MRP : 3309 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/51YTdPxBU4L.jpg" 
+        },
+        {
+           name : "(3 Pack) RIMMEL LONDON Lasting Finish Intense Wear Lipstick - Amethyst Shimmer",
+           brand : "By Rimmel",
+           rating : 4.9 ,
+           MRP : 3559 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "https://m.media-amazon.com/images/I/515Lt1r+uDL.jpg" 
+        },
+        {
+           name : "",
+           brand : "By ",
+           rating : 4.5 ,
+           MRP : 834 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "" 
+        },
+        {
+           name : "",
+           brand : "By ",
+           rating : 4.5 ,
+           MRP : 834 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "" 
+        },
+        {
+           name : "",
+           brand : "By ",
+           rating : 4.5 ,
+           MRP : 834 ,
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10,
+           image: "" 
+        },
+    
+    ]
+
+    function priceSort(){
+    var select = document.querySelector("#forPrice").value;  
+    if(select == "nofilter"){
+        displayProducts(data);
+    }
+    else if(select == 1){
+    var level1 = data.filter(function(item){
+         var prices = Number(item.MRP);
+         if(prices < 1000) {
+            return item;
+         } 
+    }); 
+    displayProducts(level1);
+   } 
+   else if(select == 2){
+    var level1 = data.filter(function(item){
+         var prices = Number(item.MRP);
+         if(prices >= 1000 && prices < 2000) {
+            return item;
+         } 
+    }); 
+    displayProducts(level1); 
+   }
+   else if(select == 3){
+    var level1 = data.filter(function(item){
+         var prices = Number(item.MRP);
+         if(prices >= 2000 && prices < 3000) {
+            return item;
+         } 
+    }); 
+    displayProducts(level1); 
+   }
+   else if(select == 4){
+    var level1 = data.filter(function(item){
+         var prices = Number(item.MRP);
+         if(prices >= 3000 && prices < 10000) {
+            return item;
+         } 
+    }); 
+    displayProducts(level1); 
+   }
+   else if(select == 5){
+    var level1 = data.filter(function(item){
+         var prices = Number(item.MRP);
+         if(prices >= 10000) {
+            return item;
+         } 
+    }); 
+    displayProducts(level1); 
+   }
+}
+
+function countrySort(){
+    var select = document.querySelector("#forCountry").value;
+    console.log(select);
+
+    var selected = data.filter(function(item){
+        if(select === item.range) return item ;
+        if(select == "nofilter") return item ;
+    });
+       displayProducts(selected);
+    }
+
+function deliverySort(){
+    var select = Number(document.querySelector("#fortime").value);
+
+
+    var selected = data.filter(function(item){
+        var days = item.range ;
+        if(select === 0) return item ;
+        else if(select === days) return item ;
+        
+    });
+         displayProducts(selected);
+    }
+
+
+
+displayProducts(data);
+
+function displayProducts(data){
+    document.querySelector("#container").innerHTML = "";
+    data.map(function(item){
+        var prodiv = document.createElement("div");
+        prodiv.setAttribute("id","maindiv");
+
+        var image = document.createElement("img");
+        image.setAttribute("id","picture");
+        image.setAttribute("src",item.image)
+
+        var ptag1 = document.createElement("p");
+        ptag1.setAttribute("id","nameofprod");
+        ptag1.textContent = item.name ;
+
+        var ptag2 = document.createElement("p");
+        ptag2.setAttribute("id","brandofprod");
+        ptag2.textContent = item.brand ;
+
+        var personaldiv = document.createElement("div");
+        personaldiv.setAttribute("id","sub1div");
+
+        var leftdiv = document.createElement("div");
+        leftdiv.setAttribute("id","div1");
+
+        var rightdiv = document.createElement("div");
+        rightdiv.setAttribute("id","div2");
+
+        var rating1 = document.createElement("p");
+        rating1.setAttribute("id","rating");
+        rating1.textContent = item.rating ;
+        
+        var price = document.createElement("p");
+        price.setAttribute("id","cost");
+        price.textContent = "₹ " + item.MRP ;
+
+        var origin = document.createElement("p");
+        origin.setAttribute("id","fromCounty");
+        origin.textContent = "from " + item.from ;
+
+        var dispatch = document.createElement("p");
+        dispatch.setAttribute("id","toCounty");
+        dispatch.textContent = "to "+item.toCountry;
+
+        var when = document.createElement("p");
+        when.setAttribute("id","delivery");
+        when.textContent = "in " +item.delivery  ;
+        
+        leftdiv.append(rating1, price);
+        rightdiv.append(origin,dispatch, when);
+        
+        personaldiv.append(leftdiv, rightdiv);
+        prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+
+        document.querySelector("#container").append(prodiv);
+
+    });
+}
+</script>
