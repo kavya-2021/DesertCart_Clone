@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Eye care Makeup Products</title>
+        <style>
+            #heading{
+                width:75%;
+                margin: auto;
+                color: rgb(24, 24, 24);
+            }
+            #optionsForSort{
+                width:75%;
+                margin: auto;
+                padding-top: 10px;
+                padding-bottom : 15px;
+                background-color: white;
+                display: flex;
+                gap: 1.4% ;
+                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
+                position: sticky;
+                top:0;
+            }
+            #container{
+                width: 75%;
+                display: grid ;
+                grid-template-columns: repeat(4, 24%);
+                /* border: 1.5px solid red; */
+                margin: auto;
+                column-gap : 1.4%;
+                row-gap : 20px;
+                font-family: Lato,sans-serif;
+            }
+
+            #optionsForSort > select{
+                width : 33% ;
+                height: 55px; 
+                padding: 10px;
+                border-radius: 6px;
+                padding-right: 10px;
+                font-size: 15px;
+            }
+           
+            select option {
+                margin: 40px;
+                background: rgba(0, 0, 0, 0.3);
+                color: #fff;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+            }
+
+            #maindiv {
+                height: 280px ;
+                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+                border-radius: 8px;
+                line-height: 15px;
+                padding: 2%;
+                color:rgba(41, 40, 40, 0.904);
+            }
+
+            #maindiv:hover{
+               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+
+            #picture{
+                width: 45%;
+                height: 55%;
+                margin: auto;
+                margin-left: 25%;
+                margin-bottom: 8%;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+
+            }
+            p{
+                margin:0;
+                padding:0;
+                line-height: 15px;
+                margin-left : 10px;
+                margin-right : 10px;
+            }
+
+            #nameofprod{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; 
+                        line-clamp: 2; 
+                -webkit-box-orient: vertical;
+                font-size: 14px;
+                font-weight: 500;
+                color : black;
+            }
+
+            #brandofprod{
+                font-size: 12px;
+                font-weight: 500;
+            }
+
+            #sub1div{
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+                margin-top: 5%;
+            }
+
+            #cost{
+                font-size: 14px;
+                margin-top: 25%;
+                font-weight: 700;  
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+                <option value="0">Any delivery time</option>
+                <option value="1"> Same Day </option>
+                <option value="2"> 2 days </option>
+                <option value="4"> 3-5 days </option>
+                <option value="6"> 5-8days </option>
+                <option value="10"> 9-15days</option>
+                <option value="16"> 15+ days </option>
+            </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Eye Care Makeup Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "",
+           brand : "By ",
+           rating : 4.6 ,
+           MRP : 1929 ,   //write only value
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, //just the next day of given delivery range (for 9-15 range is 10 )
+           image: " " 
+        },
+    ]
+
+    // for same day delivery range is 1
+    // for 1-2 days delivery range is 2 
+    // for 3-5 days delivery range is 4
+    // for 5-8 days delivery range is 6
+    // for 9-15 days delivery range is 10
+    // for 15 + days delivery range is 16
+   
+
+    function priceSort(){
+        var select = document.querySelector("#forPrice").value;  
+        if(select == "nofilter"){
+            displayProducts(data);
+        }
+        else if(select == 1){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices < 1000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1);
+       } 
+       else if(select == 2){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 1000 && prices < 2000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 3){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 2000 && prices < 3000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 4){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 3000 && prices < 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 5){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+}
+
+    function countrySort(){
+        var select = document.querySelector("#forCountry").value;
+        console.log(select);
+
+        var selected = data.filter(function(item){
+            if(select === item.from) return item ;
+            if(select == "nofilter") return item ;
+        });
+           displayProducts(selected);
+        }
+
+    function deliverySort(){
+        var select = Number(document.querySelector("#fortime").value);
+ 
+
+        var selected = data.filter(function(item){
+            var days = item.range ;
+            if(select === 0) return item ;
+            else if(select === days) return item ;
+            
+        });
+             displayProducts(selected);
+        }
+    
+
+
+    displayProducts(data);
+
+    function displayProducts(data){
+        document.querySelector("#container").innerHTML = "";
+        data.map(function(item){
+            var prodiv = document.createElement("div");
+            prodiv.setAttribute("id","maindiv");
+            prodiv.addEventListener("click",productShow);
+
+            var image = document.createElement("img");
+            image.setAttribute("id","picture");
+            image.setAttribute("src",item.image)
+
+            var ptag1 = document.createElement("p");
+            ptag1.setAttribute("id","nameofprod");
+            ptag1.textContent = item.name ;
+
+            var ptag2 = document.createElement("p");
+            ptag2.setAttribute("id","brandofprod");
+            ptag2.textContent = item.brand ;
+
+            var personaldiv = document.createElement("div");
+            personaldiv.setAttribute("id","sub1div");
+
+            var leftdiv = document.createElement("div");
+            leftdiv.setAttribute("id","div1");
+
+            var rightdiv = document.createElement("div");
+            rightdiv.setAttribute("id","div2");
+
+            var rating1 = document.createElement("p");
+            rating1.setAttribute("id","rating");
+            rating1.textContent = item.rating ;
+            
+            var price = document.createElement("p");
+            price.setAttribute("id","cost");
+            price.textContent = "₹ " + item.MRP ;
+
+            var origin = document.createElement("p");
+            origin.setAttribute("id","fromCounty");
+            origin.textContent = "from " + item.from ;
+
+            var dispatch = document.createElement("p");
+            dispatch.setAttribute("id","toCounty");
+            dispatch.textContent = "to "+item.toCountry;
+
+            var when = document.createElement("p");
+            when.setAttribute("id","delivery");
+            when.textContent = "in " +item.delivery  ;
+            
+            leftdiv.append(rating1, price);
+            rightdiv.append(origin,dispatch, when);
+            
+            personaldiv.append(leftdiv, rightdiv);
+            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+
+            document.querySelector("#container").append(prodiv);
+
+        });
+
+        function productShow(){
+            window.location.href = "productShow.html" ;
+        } 
+    }
+
+
+</script>
