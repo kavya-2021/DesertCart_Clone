@@ -663,7 +663,7 @@
         console.log(select);
 
         var selected = data.filter(function(item){
-            if(select === item.range) return item ;
+            if(select === item.from) return item ;
             if(select == "nofilter") return item ;
         });
            displayProducts(selected);
