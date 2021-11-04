@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Phone Cases Products</title>
+        <style>
+            #heading{
+                width:75%;
+                margin: auto;
+                color: rgb(24, 24, 24);
+            }
+            #optionsForSort{
+                width:75%;
+                margin: auto;
+                padding-top: 10px;
+                padding-bottom : 15px;
+                background-color: white;
+                display: flex;
+                gap: 1.4% ;
+                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
+                position: sticky;
+                top:0;
+            }
+            #container{
+                width: 75%;
+                display: grid ;
+                grid-template-columns: repeat(4, 24%);
+                /* border: 1.5px solid red; */
+                margin: auto;
+                column-gap : 1.4%;
+                row-gap : 20px;
+                font-family: Lato,sans-serif;
+            }
+
+            #optionsForSort > select{
+                width : 33% ;
+                height: 55px; 
+                padding: 10px;
+                border-radius: 6px;
+                padding-right: 10px;
+                font-size: 15px;
+            }
+           
+            select option {
+                margin: 40px;
+                background: rgba(0, 0, 0, 0.3);
+                color: #fff;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+            }
+
+            #maindiv {
+                height: 280px ;
+                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+                border-radius: 8px;
+                line-height: 15px;
+                padding: 2%;
+                color:rgba(41, 40, 40, 0.904);
+            }
+
+            #maindiv:hover{
+               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+
+            #picture{
+                width: 45%;
+                height: 55%;
+                margin: auto;
+                margin-left: 25%;
+                margin-bottom: 8%;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+
+            }
+            p{
+                margin:0;
+                padding:0;
+                line-height: 15px;
+                margin-left : 10px;
+                margin-right : 10px;
+            }
+
+            #nameofprod{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; 
+                        line-clamp: 2; 
+                -webkit-box-orient: vertical;
+                font-size: 14px;
+                font-weight: 500;
+                color : black;
+            }
+
+            #brandofprod{
+                font-size: 12px;
+                font-weight: 500;
+            }
+
+            #sub1div{
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+                margin-top: 5%;
+            }
+
+            #cost{
+                font-size: 14px;
+                margin-top: 25%;
+                font-weight: 700;  
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+                <option value="0">Any delivery time</option>
+                <option value="1"> Same Day </option>
+                <option value="2"> 2 days </option>
+                <option value="4"> 3-5 days </option>
+                <option value="6"> 5-8days </option>
+                <option value="10"> 9-15days</option>
+                <option value="16"> 15+ days </option>
+            </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Phone cases Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "Cordking iPhone 11 Case, Silicone Ultra Slim Shockproof Phone Case with [Soft Anti-Scratch Microfiber Lining], 6.1 inch, Midnight Green",
+           brand : "By Cordking",
+           rating : 4.5 ,
+           MRP : 1939 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61cQ+WABIlS.jpg" 
+        },
+        {
+           name : "Phone Case Liquid Smiley Sage Green Compatible with iPhone 12 11 X Xs Xr 8 7 6 6s Plus Mini Pro Max Samsung Galaxy Note S9 S10 S20 Ultra Plus",
+           brand : "By Generic ",
+           rating : 4.4 ,
+           MRP : 4199 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/51Y2h-Y8dTS.jpg" 
+        },
+        {
+           name : "elago Silicone Case Compatible with iPhone 11 case (Lavender) - Premium Liquid Silicone, Raised Lip (Screen & Camera Protection), 3 Layer Structure, Full Body Protection",
+           brand : "By  Elago ",
+           rating : 4.6 ,
+           MRP : 2399 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61naZEdDCoL.jpg" 
+        },
+        {
+           name : "iPhone 11 Case Anti-Scratch Shock Proof Bumper Transparent Silicone Reinforced Edges Clear protection Cover",
+           brand : "By U Case",
+           rating : 4.1 ,
+           MRP : 414 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/41bPnGSEp3L.jpg" 
+        },
+        
+        {
+           name : "UGREEN Magsafe Silicone Phone Case For iPhone 12/12 Pro Cover Soft Silicone Case With Magnetic Design To Protect The Phone In All Directions Compatible for iPhone 12/12 Pro Magsafe Cover Navy 6.1 inch",
+           brand : "By Ugreen",
+           rating : 4.0 ,
+           MRP : 2839 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71XhxokT8IL.jpg" 
+        },
+        {
+           name : "Ownest Compatible for iPhone 11 Case for Flower Clear Frosted PC Back Floral Girls Woman and Soft TPU Protective Silicone Slim Case for iPhone 11-Purple",
+           brand : "By Ownest",
+           rating : 4.6 ,
+           MRP : 1479 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61uDh0rcJvL.jpg" 
+        },
+        {
+           name : "OtterBox SYMMETRY SERIES Case for Samsung Galaxy S20 FE 5G - BLACK",
+           brand : "By OtterBox",
+           rating : 4.6 ,
+           MRP : 7449 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/519LqjXa4lS.jpg" 
+        },
+        {
+           name : "Waterproof Vinyl Vsco Stickers for Water Bottle Laptop Phone Cases(50 Pcs Cute Girl Style)",
+           brand : "By Qlt",
+           rating : 4.6 ,
+           MRP : 1369 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71z9dyD6udL.jpg" 
+        },
+        {
+           name : "Game Console Case for iPhone,LucBuy Retro Protective Cover Self-Powered Case with 36 Small Game,Full Color Display,Shockproof Video Game Case for iPhoneX/Xs/MAX/Xr/6/7/8Plus/11/Pro/Max",
+           brand : "By LucBuy",
+           rating : 4.6 ,
+           MRP : 3209 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71U4eC0zvfL.jpg" 
+        },
+        {
+           name : "2021 Waterproof Phone Pouch, [Fingerprint Identification+Swim Cap] Floating phone Case Dry Bag. Compatible with all Smartphones:iPhone 12/12 Pro,11/11 Pro, iPhone X Xs Max 8 Plus, Galaxy S20 S10",
+           brand : "By Yuangaoshow",
+           rating : 4.0 ,
+           MRP : 1259 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71i4-nnnybL.jpg" 
+        },
+        {
+           name : "Diaclara Compatible with iPhone 11 Case, Full Body Rugged Case with Built-in Touch Sensitive Anti-Scratch Screen Protector, Soft TPU Bumper Case Clear Compatible with iPhone 11 6.1' (Purple and Clear)",
+           brand : "By Diaclara ",
+           rating : 4.4 ,
+           MRP : 3199 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61lnC7PhdeL.jpg" 
+        },
+        {
+           name : "[high quality] Running Armband waterproof for iPhone 11/11 Pro/XR/XS/8/7, Samsung S10/S9/S8, Sport Running Gym Cell Phone Holder Case with Fingerprint Touch & Zipper Slot for 6.5 inches iPhone Black",
+           brand : "By Ubbily",
+           rating : 4.6 ,
+           MRP : 2199 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61CqNcIj8VL.jpg" 
+        },
+        {
+           name : "LEEGU for Moto E 2020 Phone Case, Military Grade Heavy Duty Armor Protection Phone Case 15ft. Drop Tested Cover with Magnetic Ring Kickstand and HD Screen Protector for Motorola E 2020, Blue",
+           brand : "By Leegu",
+           rating : 4.6 ,
+           MRP : 1349 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61s8GfOo93L.jpg" 
+        },
+        {
+           name : "Arrival Phone Case, Pop Fidget Reliver Stress Toys Push Pop Bubble Protective Phone Case, Silicone Shockproof Phone Cover, Anti-Fall Shockproof Silicone (Rabbit Design, Iphone 11 PRO)",
+           brand : "By Generic",
+           rating : 4.6 ,
+           MRP : 1139 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/71+HJKzx09S.jpg" 
+        },{
+           name : "kazineer Case for Samsung Galaxy M11/A11, Premium Leather Flip Wallet Cover with Card Slots Phone Case for Samsung Galaxy M11/Galaxy A11 (Rose Gold)",
+           brand : "By kazineer",
+           rating : 4.6 ,
+           MRP : 2649 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 5, 
+           image: "https://m.media-amazon.com/images/I/81ghVcsS-tL.jpg" 
+        },{
+           name : "UGREEN Metal iPad Stand Mobile Phone Holder Adjustable Hands-Free Tablet Stand Holder Compatible with iPad Pro 12.9 2021,iPad Air 4, Mini iPad mini 6,iPhone 13 Pro Max,Samsung S7 A7 HuaWei Tablet",
+           brand : "By Ugreen",
+           rating : 4.6 ,
+           MRP : 4389 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/5150xfo8tdL.jpg" 
+        },{
+           name : "Luxury Glitter Bling TPU And PC Mobile Phone Case For iPhone12,12 Pro,12 Pro Max 11pro, 11 Pro Max and X/XS (12 PRO, Pink)",
+           brand : "By Generic",
+           rating : 2.5 ,
+           MRP : 2389 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71oXFaKqsbL.jpg" 
+        },{
+           name : "For Samsung Galaxy A21s - Samsung Galaxy A21s Phone Case for Women Men Card Slots Magnetic Closure Kickstand Full Protection Premium Leather Flip Wallet Phone Case Cover (Samsung Galaxy A21s-purple)",
+           brand : "By Fanna",
+           rating : 4.6 ,
+           MRP : 559 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81EnKN66HTL.jpg" 
+        },{
+           name : "Phone Case for TCL A3/ TCL A3 (Straight Talk, TracFone), Shockproof Hybrid Metallic Brushed Design Case Cover + Ring (Blue)",
+           brand : "By Tommulti",
+           rating : 4.6 ,
+           MRP : 2149 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/51wNBUW4K4L.jpg" 
+        },{
+           name : "Fidget Toy Push Pop Bubble Case for iPad, Rainbow Soft Full Body Protection Cover with Fold Kickstand Lanyard, Protective Tablet Cover for iPad (iPad 10.2''(2019/2020))",
+           brand : "By Luyao",
+           rating : 5 ,
+           MRP : 2339 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9515 days",
+           range: 110, 
+           image: "https://m.media-amazon.com/images/I/71I2fBvfU2S.jpg" 
+        },{
+           name : "UGREEN Running Belt Pouch Runners Fanny Pack Waist Bag for iPhone X, iPhone 8, iPhone 7 Plus, iPhone 6S 6 Plus, Samsung Galaxy S9 S8 S7 S6 Edge, Waterproof and Reflective",
+           brand : "By Ugreen",
+           rating : 4.6 ,
+           MRP : 1929 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61yOGGMJ5gL.jpg" 
+        },{
+           name : "UGREEN M.2 NVMe SSD Enclosure Adapter, Aluminum 10 Gbps USB C 3.1 Gen 2 to NVMe PCIe M-Key Solid State Drive External Enclosure Compatible with MacBook Pro, WD, Samsung, Toshiba, 2230/2242/2260/2280",
+           brand : "By ",
+           rating : 4.0 ,
+           MRP : 4469 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61v2CvsjpOS.jpg" 
+        },{
+           name : "Cordking iPhone XR Case, Silicone Ultra Slim Shockproof Phone Case with [Soft Anti-Scratch Microfiber Lining], 6.1 inch, Midnight Green",
+           brand : "By Cordking",
+           rating : 4.6 ,
+           MRP : 1939 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61QrOUtayrL.jpg" 
+        },
+        {
+           name : "BENTOBEN Wallet Case for Galaxy S9, Shockproof Heavy Duty Rugged 3 in 1 Hybrid Hard PC Cover Soft TPU Bumper Anti-Scratch Protective Phone Case with Card Slot Holder for Samsung Galaxy S9, Rose Gold",
+           brand : "By Bentoben",
+           rating : 4.2 ,
+           MRP : 2299 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/71mrP-oNAaL.jpg" 
+        },{
+           name : "CENHUFO Compatible with Samsung A70 Case, Samsung A70S Case Built-in Screen Protector Military Grade Shockproof 360° Full Body Protective Rugged Bumper Phone Case for Samsung Galaxy A70/A70S",
+           brand : "By Cenhufo",
+           rating : 4.0 ,
+           MRP : 2669 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71CyXe2uhdS.jpg" 
+        },{
+           name : "ESR Clear Case Compatible with iPhone 13 Pro Case, Crystal-Clear Shockproof Thin Silicone Case, Yellowing-Resistant Slim Transparent TPU Phone Case, Project Zero Series, Clear",
+           brand : "By ESR",
+           rating : 4.6 ,
+           MRP : 1469 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71ZNPyoE0hL.jpg" 
+        },{
+           name : "Cordking iPhone 11 Case, Silicone Ultra Slim Shockproof Phone Case with [Soft Anti-Scratch Microfiber Lining], 6.1 inch, Midnight Green",
+           brand : "By Cordking",
+           rating : 4.5 ,
+           MRP : 1939 ,  
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "1-2 days",
+           range: 2, 
+           image: "https://m.media-amazon.com/images/I/61cQ+WABIlS.jpg" 
+        },
+        {
+           name : "Phone Case Liquid Smiley Sage Green Compatible with iPhone 12 11 X Xs Xr 8 7 6 6s Plus Mini Pro Max Samsung Galaxy Note S9 S10 S20 Ultra Plus",
+           brand : "By Generic ",
+           rating : 4.4 ,
+           MRP : 4199 ,  
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "1-2 days",
+           range: 2, 
+           image: "https://m.media-amazon.com/images/I/51Y2h-Y8dTS.jpg" 
+        },
+        {
+           name : "elago Silicone Case Compatible with iPhone 11 case (Lavender) - Premium Liquid Silicone, Raised Lip (Screen & Camera Protection), 3 Layer Structure, Full Body Protection",
+           brand : "By  Elago ",
+           rating : 4.6 ,
+           MRP : 2399 ,  
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "1-2 days",
+           range: 2, 
+           image: "https://m.media-amazon.com/images/I/61naZEdDCoL.jpg" 
+        },
+        {
+           name : "iPhone 11 Case Anti-Scratch Shock Proof Bumper Transparent Silicone Reinforced Edges Clear protection Cover",
+           brand : "By U Case",
+           rating : 4.1 ,
+           MRP : 414 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/41bPnGSEp3L.jpg" 
+        },
+        
+        {
+           name : "UGREEN Magsafe Silicone Phone Case For iPhone 12/12 Pro Cover Soft Silicone Case With Magnetic Design To Protect The Phone In All Directions Compatible for iPhone 12/12 Pro Magsafe Cover Navy 6.1 inch",
+           brand : "By Ugreen",
+           rating : 4.0 ,
+           MRP : 2839 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71XhxokT8IL.jpg" 
+        },
+        {
+           name : "Ownest Compatible for iPhone 11 Case for Flower Clear Frosted PC Back Floral Girls Woman and Soft TPU Protective Silicone Slim Case for iPhone 11-Purple",
+           brand : "By Ownest",
+           rating : 4.6 ,
+           MRP : 1479 ,  
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "1-2 days",
+           range: 2, 
+           image: "https://m.media-amazon.com/images/I/61uDh0rcJvL.jpg" 
+        },
+        {
+           name : "OtterBox SYMMETRY SERIES Case for Samsung Galaxy S20 FE 5G - BLACK",
+           brand : "By OtterBox",
+           rating : 4.6 ,
+           MRP : 7449 ,  
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "1-2 days",
+           range: 2, 
+           image: "https://m.media-amazon.com/images/I/519LqjXa4lS.jpg" 
+        },
+        {
+           name : "Waterproof Vinyl Vsco Stickers for Water Bottle Laptop Phone Cases(50 Pcs Cute Girl Style)",
+           brand : "By Qlt",
+           rating : 4.6 ,
+           MRP : 1369 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71z9dyD6udL.jpg" 
+        },
+        {
+           name : "Game Console Case for iPhone,LucBuy Retro Protective Cover Self-Powered Case with 36 Small Game,Full Color Display,Shockproof Video Game Case for iPhoneX/Xs/MAX/Xr/6/7/8Plus/11/Pro/Max",
+           brand : "By LucBuy",
+           rating : 4.6 ,
+           MRP : 3209 ,  
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "1-2 days",
+           range: 2, 
+           image: "https://m.media-amazon.com/images/I/71U4eC0zvfL.jpg" 
+        },
+        {
+           name : "2021 Waterproof Phone Pouch, [Fingerprint Identification+Swim Cap] Floating phone Case Dry Bag. Compatible with all Smartphones:iPhone 12/12 Pro,11/11 Pro, iPhone X Xs Max 8 Plus, Galaxy S20 S10",
+           brand : "By Yuangaoshow",
+           rating : 4.0 ,
+           MRP : 1259 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71i4-nnnybL.jpg" 
+        },
+        {
+           name : "Diaclara Compatible with iPhone 11 Case, Full Body Rugged Case with Built-in Touch Sensitive Anti-Scratch Screen Protector, Soft TPU Bumper Case Clear Compatible with iPhone 11 6.1' (Purple and Clear)",
+           brand : "By Diaclara ",
+           rating : 4.4 ,
+           MRP : 3199 ,  
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "1-2 days",
+           range: 2, 
+           image: "https://m.media-amazon.com/images/I/61lnC7PhdeL.jpg" 
+        },
+        {
+           name : "[high quality] Running Armband waterproof for iPhone 11/11 Pro/XR/XS/8/7, Samsung S10/S9/S8, Sport Running Gym Cell Phone Holder Case with Fingerprint Touch & Zipper Slot for 6.5 inches iPhone Black",
+           brand : "By Ubbily",
+           rating : 4.6 ,
+           MRP : 2199 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61CqNcIj8VL.jpg" 
+        },
+        {
+           name : "LEEGU for Moto E 2020 Phone Case, Military Grade Heavy Duty Armor Protection Phone Case 15ft. Drop Tested Cover with Magnetic Ring Kickstand and HD Screen Protector for Motorola E 2020, Blue",
+           brand : "By Leegu",
+           rating : 4.6 ,
+           MRP : 1349 ,  
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "1-2 days",
+           range: 2, 
+           image: "https://m.media-amazon.com/images/I/61s8GfOo93L.jpg" 
+        },
+        {
+           name : "Arrival Phone Case, Pop Fidget Reliver Stress Toys Push Pop Bubble Protective Phone Case, Silicone Shockproof Phone Cover, Anti-Fall Shockproof Silicone (Rabbit Design, Iphone 11 PRO)",
+           brand : "By Generic",
+           rating : 4.6 ,
+           MRP : 1139 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/71+HJKzx09S.jpg" 
+        },{
+           name : "kazineer Case for Samsung Galaxy M11/A11, Premium Leather Flip Wallet Cover with Card Slots Phone Case for Samsung Galaxy M11/Galaxy A11 (Rose Gold)",
+           brand : "By kazineer",
+           rating : 4.6 ,
+           MRP : 2649 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 5, 
+           image: "https://m.media-amazon.com/images/I/81ghVcsS-tL.jpg" 
+        },{
+           name : "UGREEN Metal iPad Stand Mobile Phone Holder Adjustable Hands-Free Tablet Stand Holder Compatible with iPad Pro 12.9 2021,iPad Air 4, Mini iPad mini 6,iPhone 13 Pro Max,Samsung S7 A7 HuaWei Tablet",
+           brand : "By Ugreen",
+           rating : 4.6 ,
+           MRP : 4389 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/5150xfo8tdL.jpg" 
+        },{
+           name : "Luxury Glitter Bling TPU And PC Mobile Phone Case For iPhone12,12 Pro,12 Pro Max 11pro, 11 Pro Max and X/XS (12 PRO, Pink)",
+           brand : "By Generic",
+           rating : 2.5 ,
+           MRP : 2389 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71oXFaKqsbL.jpg" 
+        },{
+           name : "For Samsung Galaxy A21s - Samsung Galaxy A21s Phone Case for Women Men Card Slots Magnetic Closure Kickstand Full Protection Premium Leather Flip Wallet Phone Case Cover (Samsung Galaxy A21s-purple)",
+           brand : "By Fanna",
+           rating : 4.6 ,
+           MRP : 559 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81EnKN66HTL.jpg" 
+        },{
+           name : "Phone Case for TCL A3/ TCL A3 (Straight Talk, TracFone), Shockproof Hybrid Metallic Brushed Design Case Cover + Ring (Blue)",
+           brand : "By Tommulti",
+           rating : 4.6 ,
+           MRP : 2149 ,  
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "1-2 days",
+           range: 2, 
+           image: "https://m.media-amazon.com/images/I/51wNBUW4K4L.jpg" 
+        },{
+           name : "Fidget Toy Push Pop Bubble Case for iPad, Rainbow Soft Full Body Protection Cover with Fold Kickstand Lanyard, Protective Tablet Cover for iPad (iPad 10.2''(2019/2020))",
+           brand : "By Luyao",
+           rating : 5 ,
+           MRP : 2339 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "15+ days",
+           range: 16, 
+           image: "https://m.media-amazon.com/images/I/71I2fBvfU2S.jpg" 
+        },{
+           name : "UGREEN Running Belt Pouch Runners Fanny Pack Waist Bag for iPhone X, iPhone 8, iPhone 7 Plus, iPhone 6S 6 Plus, Samsung Galaxy S9 S8 S7 S6 Edge, Waterproof and Reflective",
+           brand : "By Ugreen",
+           rating : 4.6 ,
+           MRP : 1929 ,  
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "1-2 days",
+           range: 2, 
+           image: "https://m.media-amazon.com/images/I/61yOGGMJ5gL.jpg" 
+        },{
+           name : "UGREEN M.2 NVMe SSD Enclosure Adapter, Aluminum 10 Gbps USB C 3.1 Gen 2 to NVMe PCIe M-Key Solid State Drive External Enclosure Compatible with MacBook Pro, WD, Samsung, Toshiba, 2230/2242/2260/2280",
+           brand : "By ",
+           rating : 4.0 ,
+           MRP : 4469 ,  
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/61v2CvsjpOS.jpg" 
+        },{
+           name : "Cordking iPhone XR Case, Silicone Ultra Slim Shockproof Phone Case with [Soft Anti-Scratch Microfiber Lining], 6.1 inch, Midnight Green",
+           brand : "By Cordking",
+           rating : 4.6 ,
+           MRP : 1939 ,  
+           from : "INDIA",
+           toCountry : "INDIA",
+           delivery : "1-2 days",
+           range: 2, 
+           image: "https://m.media-amazon.com/images/I/61QrOUtayrL.jpg" 
+        },
+        {
+           name : "BENTOBEN Wallet Case for Galaxy S9, Shockproof Heavy Duty Rugged 3 in 1 Hybrid Hard PC Cover Soft TPU Bumper Anti-Scratch Protective Phone Case with Card Slot Holder for Samsung Galaxy S9, Rose Gold",
+           brand : "By Bentoben",
+           rating : 4.2 ,
+           MRP : 2299 ,  
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/71mrP-oNAaL.jpg" 
+        },{
+           name : "CENHUFO Compatible with Samsung A70 Case, Samsung A70S Case Built-in Screen Protector Military Grade Shockproof 360° Full Body Protective Rugged Bumper Phone Case for Samsung Galaxy A70/A70S",
+           brand : "By Cenhufo",
+           rating : 4.0 ,
+           MRP : 2669 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71CyXe2uhdS.jpg" 
+        },{
+           name : "ESR Clear Case Compatible with iPhone 13 Pro Case, Crystal-Clear Shockproof Thin Silicone Case, Yellowing-Resistant Slim Transparent TPU Phone Case, Project Zero Series, Clear",
+           brand : "By ESR",
+           rating : 4.6 ,
+           MRP : 1469 ,  
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71ZNPyoE0hL.jpg" 
+        },
+    ]
+
+    function priceSort(){
+        var select = document.querySelector("#forPrice").value;  
+        if(select == "nofilter"){
+            displayProducts(data);
+        }
+        else if(select == 1){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices < 1000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1);
+       } 
+       else if(select == 2){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 1000 && prices < 2000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 3){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 2000 && prices < 3000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 4){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 3000 && prices < 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 5){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+}
+
+    function countrySort(){
+        var select = document.querySelector("#forCountry").value;
+        console.log(select);
+
+        var selected = data.filter(function(item){
+            if(select === item.from) return item ;
+            if(select == "nofilter") return item ;
+        });
+           displayProducts(selected);
+        }
+
+    function deliverySort(){
+        var select = Number(document.querySelector("#fortime").value);
+ 
+
+        var selected = data.filter(function(item){
+            var days = item.range ;
+            if(select === 0) return item ;
+            else if(select === days) return item ;
+            
+        });
+             displayProducts(selected);
+        }
+    
+
+
+    displayProducts(data);
+
+    function displayProducts(data){
+        document.querySelector("#container").innerHTML = "";
+        data.map(function(item){
+            var prodiv = document.createElement("div");
+            prodiv.setAttribute("id","maindiv");
+            prodiv.addEventListener("click",productShow);
+
+            var image = document.createElement("img");
+            image.setAttribute("id","picture");
+            image.setAttribute("src",item.image)
+
+            var ptag1 = document.createElement("p");
+            ptag1.setAttribute("id","nameofprod");
+            ptag1.textContent = item.name ;
+
+            var ptag2 = document.createElement("p");
+            ptag2.setAttribute("id","brandofprod");
+            ptag2.textContent = item.brand ;
+
+            var personaldiv = document.createElement("div");
+            personaldiv.setAttribute("id","sub1div");
+
+            var leftdiv = document.createElement("div");
+            leftdiv.setAttribute("id","div1");
+
+            var rightdiv = document.createElement("div");
+            rightdiv.setAttribute("id","div2");
+
+            var rating1 = document.createElement("p");
+            rating1.setAttribute("id","rating");
+            rating1.textContent = item.rating ;
+            
+            var price = document.createElement("p");
+            price.setAttribute("id","cost");
+            price.textContent = "₹ " + item.MRP ;
+
+            var origin = document.createElement("p");
+            origin.setAttribute("id","fromCounty");
+            origin.textContent = "from " + item.from ;
+
+            var dispatch = document.createElement("p");
+            dispatch.setAttribute("id","toCounty");
+            dispatch.textContent = "to "+item.toCountry;
+
+            var when = document.createElement("p");
+            when.setAttribute("id","delivery");
+            when.textContent = "in " +item.delivery  ;
+            
+            leftdiv.append(rating1, price);
+            rightdiv.append(origin,dispatch, when);
+            
+            personaldiv.append(leftdiv, rightdiv);
+            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+
+            document.querySelector("#container").append(prodiv);
+
+        });
+
+        function productShow(){
+            window.location.href = "productShow.html" ;
+        } 
+    }
+
+
+</script>
