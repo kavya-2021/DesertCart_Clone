@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Gaming Laptops Products</title>
+        <style>
+            #heading{
+                width:75%;
+                margin: auto;
+                color: rgb(24, 24, 24);
+            }
+            #optionsForSort{
+                width:75%;
+                margin: auto;
+                padding-top: 10px;
+                padding-bottom : 15px;
+                background-color: white;
+                display: flex;
+                gap: 1.4% ;
+                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
+                position: sticky;
+                top:0;
+            }
+            #container{
+                width: 75%;
+                display: grid ;
+                grid-template-columns: repeat(4, 24%);
+                /* border: 1.5px solid red; */
+                margin: auto;
+                column-gap : 1.4%;
+                row-gap : 20px;
+                font-family: Lato,sans-serif;
+            }
+
+            #optionsForSort > select{
+                width : 33% ;
+                height: 55px; 
+                padding: 10px;
+                border-radius: 6px;
+                padding-right: 10px;
+                font-size: 15px;
+            }
+           
+            select option {
+                margin: 40px;
+                background: rgba(0, 0, 0, 0.3);
+                color: #fff;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+            }
+
+            #maindiv {
+                height: 280px ;
+                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+                border-radius: 8px;
+                line-height: 15px;
+                padding: 2%;
+                color:rgba(41, 40, 40, 0.904);
+            }
+
+            #maindiv:hover{
+               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+
+            #picture{
+                width: 45%;
+                height: 55%;
+                margin: auto;
+                margin-left: 25%;
+                margin-bottom: 8%;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+
+            }
+            p{
+                margin:0;
+                padding:0;
+                line-height: 15px;
+                margin-left : 10px;
+                margin-right : 10px;
+            }
+
+            #nameofprod{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; 
+                        line-clamp: 2; 
+                -webkit-box-orient: vertical;
+                font-size: 14px;
+                font-weight: 500;
+                color : black;
+            }
+
+            #brandofprod{
+                font-size: 12px;
+                font-weight: 500;
+            }
+
+            #sub1div{
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+                margin-top: 5%;
+            }
+
+            #cost{
+                font-size: 14px;
+                margin-top: 25%;
+                font-weight: 700;  
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+                <option value="0">Any delivery time</option>
+                <option value="1"> Same Day </option>
+                <option value="2"> 2 days </option>
+                <option value="4"> 3-5 days </option>
+                <option value="6"> 5-8days </option>
+                <option value="10"> 9-15days</option>
+                <option value="16"> 15+ days </option>
+            </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Gaming Laptops Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6' Full HD 144Hz 3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB Keyboard",
+           brand : "By Acer",
+           rating : 4.7 ,
+           MRP : 263989 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71Nly9vPapL.jpg" 
+        },
+        {
+           name : "ASUS TUF Dash 15 (2021) Ultra Slim Gaming Laptop, 15.6” 144Hz FHD, GeForce RTX 3050 Ti, Intel Core i7-11370H, 8GB DDR4, 512GB PCIe NVMe SSD, Wi-Fi 6, Windows 10, Eclipse Grey Color, TUF516PE-AB73 Lenovo Legion 5 15 Gaming Laptop, 15.6' FHD (1920 x 1080) Display, AMD Ryzen 7 5800H Processor, 16GB DDR4 RAM, 512GB NVMe SSD, NVIDIA GeForce RTX 3050Ti, Windows 10H, 82JW0012US, Phantom Blue MSI GL65 Gaming Laptop: 15.6' Display, Intel Core i5-10300H, NVIDIA GeForce GTX 1650, 16GB RAM, 512GB NVMe SSD, Win10, Black (10SCXK-211) Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6' Full HD 144Hz 3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB Keyboard",
+           brand : "By Asus",
+           rating : 4.5 ,
+           MRP : 227029 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81Tx3MJBkSL.jpg" 
+        },{
+           name : "Acer Nitro 5 AN515-55-53E5 Gaming Laptop | Intel Core i5-10300H | NVIDIA GeForce RTX 3050 Laptop GPU | 15.6' FHD 144Hz IPS Display | 8GB DDR4 | 256GB NVMe SSD | Intel Wi-Fi 6 | Backlit Keyboard",
+           brand : "By Acer",
+           rating : 4.7 ,
+           MRP : 165179 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71m03KItMZL.jpg" 
+        },{
+           name : "Acer Predator Helios 300 Gaming Laptop, Intel i7-10750H, NVIDIA GeForce RTX 3060 Laptop GPU, 15.6' Full HD 144Hz 3ms IPS Display, 16GB DDR4, 512GB NVMe SSD, WiFi 6, RGB Keyboard, PH315-53-71HN",
+           brand : "By Acer",
+           rating : 4.6 ,
+           MRP : 208639 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/7183SjkrSnL.jpg" 
+        },{
+           name : "Acer Nitro 5 Premium Gaming Laptop I 17.3” FHD IPS 144Hz 3ms I 11th Gen Intel 8-Core i7-11800H I 64GB DDR4 2TB SSD + 1TB HDD I GeForce RTX 3050Ti 4GB I Backlit USB-C Win10 Black + 32GB MicroSD Card",
+           brand : "By Acer",
+           rating : 5.0 ,
+           MRP : 391949 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81-S7507q3L.jpg" 
+        },{
+           name : "Razer Blade 15 Base Gaming Laptop 2020: Intel Core i7-10750H 6-Core, NVIDIA GeForce GTX 1660 Ti, 15.6' FHD 1080p 120Hz, 16GB RAM, 256GB SSD, CNC Aluminum, Chroma RGB Lighting, Black",
+           brand : "By Razer",
+           rating : 4.6 ,
+           MRP : 184199 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71wF7YDIQkL.jpg" 
+        },{
+           name : "Flagship 2021 ASUS ROG Strix G17 Gaming Laptop 17.3' FHD IPS 300Hz 100% sRGB AMD Octa-Core Ryzen 9 5900HX 32GB RAM 2TB SSD GeForce RTX 3070 8GB RGB Backlit WiFi6 USB-C Win 10 Black + HDMI Cable",
+           brand : "By Asus",
+           rating : 4.8 ,
+           MRP : 548339 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81nFTMz6OKS.jpg" 
+        },{
+           name : "HP Pavilion Gaming 15.6-Inch Micro-EDGE Laptop, Intel Core i5-9300H Processor, NVIDIA GeForce GTX 1650 (4 GB), 8 GB SDRAM, 256 GB SSD, Windows 10 Home (15-dk0020nr, Shadow Black/Acid Green)",
+           brand : "By Hp ",
+           rating : 4.7 ,
+           MRP : 101759 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/810gynDZHzL.jpg" 
+        },{
+           name : "Dell G15 5510 15.6 Inch FHD (1920 x 1080) Gaming Laptop, Intel Core i5-10200H, NVIDIA GeForce GTX 1650 4GB GDDR5, 120Hz 250 nits LED Display, 8 GB RAM, 256 GB SSD, Win 10H (Dark Shadow Grey)",
+           brand : "By Dell",
+           rating : 4.2 ,
+           MRP : 152789 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71gEWj-kFiS.jpg" 
+        },{
+           name : "HP Pavilion Gaming 15.6' Laptop PC 15-ec1001na, AMD Ryzen 5, 8GB RAM, GTX 1650, 256GB SSD, FHD, Shadow Black",
+           brand : "By Hp",
+           rating : 4.6 ,
+           MRP : 123479 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61kPCQ2AkcS.jpg" 
+        },{
+           name : "HP Pavilion Gaming 15.6' Laptop PC 15-dk1007na, Intel i5, 8GB RAM, GTX 1650Ti, 512GB SSD, FHD, Shadow Black",
+           brand : "By Hp",
+           rating : 4.5 ,
+           MRP : 162619 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71O1dX84WfS.jpg" 
+        },{
+           name : "HP Pavilion Gaming 15.6-Inch Micro-EDGE Laptop, Intel Core i5-9300H Processor, NVIDIA GeForce GTX 1650 (4 GB), 8 GB SDRAM, 256 GB SSD, Windows 10 Home (15-dk0020nr, Shadow Black/Acid Green)",
+           brand : "By Hp",
+           rating : 4.7 ,
+           MRP : 112589 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/810gynDZHzL.jpg" 
+        },{
+           name : "ASUS TUF Gaming FX506LH 15.6' Full HD 144Hz Gaming Laptop (Intel i5-10300H, Nvidia GeForce GTX 1650, 8GB RAM, 512GB M.2 PCIe SSD, Windows 10, 4-Zone RGB Keyboard)",
+           brand : "By Asus",
+           rating : 4.6 ,
+           MRP : 126199 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61AJ6+GAjiL.jpg" 
+        },{
+           name : "Laptop 15.6 Inch TECLAST Tbolt 20 Pro Gaming Laptop, Intel Core i5-8259U, 8GB RAM 256GB ROM, Up to 3.8GHz, FHD IPS 1920×1080, Windows 10, Backlit keyboard, Dual WiFi, Mini-HDMI, USBx3, Bluetooth 5.1",
+           brand : "By Teclast",
+           rating : 3.7 ,
+           MRP : 102339 ,   
+           from : "Uk",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71rI6WhCAkL.jpg" 
+        },{
+           name : "MSI GF63 Thin 10SC-059UK FHD 60 Hz 45% NTSC IPS-Level 15.6 Inch Gaming Laptop (Intel i5-10300H, NVIDIA GeForce GTX1650 4 GB, 256GB NVMe PCIe Gen3x4 SSD, 8 GB RAM, Wi-Fi 6, 51 Whr) Black",
+           brand : "By Msi",
+           rating : 4.6 ,
+           MRP : 113589 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/719QyW89YDL.jpg" 
+        },{
+           name : "15.6 inch Laptop Notebook Computer PC, Intel J4125 Quad Core CPU, Windows 10 Pro Operating System, 1920 X 1080 IPS Display, 8GB RAM, 128GB SSD (Expandable Memory 1TB SSD), Portable Gaming Laptop",
+           brand : "By Ulun",
+           rating : 4.6 ,
+           MRP : 59799 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61Vfp2eQo8S.jpg" 
+        },{
+           name : "Daysky Portable Laptop Computer M11, Inte Celeron N5095 Processor, 12GB DDR4 RAM, 256GB SSD, 15.6' FHD Display, Fingerprint Recognition, Backlit Number Keyboard Protect Eyes, Metal Body, USB3.0, Red",
+           brand : "By Daysky",
+           rating : 4.6 ,
+           MRP : 114169 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/612OFJavdvS.jpg" 
+        },{
+           name : "Dell G5 15 5500 Gaming Laptop, Intel Core i7-10750H, 15.6 Inch FHD, 1TB SSD, 16 GB RAM, NVIDIA® GeForce RTX™ 2060 6GB Graphics, Windows 10 Home, English-Arabic Keyboard, Black",
+           brand : "By Dell",
+           rating : 4.6 ,
+           MRP : 254989 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71srWKH2CHL.jpg" 
+        },{
+           name : "Lenovo IdeaPad L340 17.3 Inch FHD Gaming Laptop (Intel Core i5, 8 GB RAM, 256 GB SSD, GTX 1650, Windows 10 Home) – Granite Black Lenovo Ideapad L340-17inch Gaming",
+           brand : "By Lenovo",
+           rating : 3.8 ,
+           MRP : 156179 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/61gAR7xqnoL.jpg" 
+        },{
+           name : "Razer Blade 17: 17 inch Gaming Laptop Intel 11th Gen i7 11800H, NVIDIA GeForce RTX 3080, 360 Hz Full HD, 32GB RAM, 1TB, Chroma RGB Lighting, Vapor Chamber Cooling, Black, RZ09-0406CEC3-R341",
+           brand : "By Razer",
+           rating : 4.6 ,
+           MRP : 622769 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71zu6WY1fUS.jpg" 
+        },{
+           name : "MSI GF66 Katana 15.6' FHD, 144Hz Gaming Laptop: Intel 11th Gen i7-11800H, NVIDIA GeForce RTX 3050 4GB, 512GB NVMe PCIe SSD, 8 GB RAM, Killer Wi-Fi 6, Black (11UC-252UK) Win 10, Free Win 11 upgrade",
+           brand : "By Msi",
+           rating : 1.5 ,
+           MRP : 222339 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/51g6crY+dTL.jpg" 
+        },{
+           name : "MAIBENBEN MaiBook M543 15.6 inch Laptop AMD Ryzen 5 4500U Processor with Radeon 6 Graphics, 8 GB RAM, 256 GB PCI-E SSD, Wi-Fi 6, Windows 10 Home Full View 1080P FHD Ultrabook 2021",
+           brand : "By Maibenben",
+           rating : 5.0 ,
+           MRP : 108079 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71bIer78JCS.jpg" 
+        },{
+           name : "TopMate C11 Laptop Cooling Pad RGB Gaming Notebook Cooler, Laptop Fan Stand Adjustable Height with 6 Quiet Fans and Phone Holder, Computer Chill Mat, for 15.6-17.3 Inch Laptops - Blue LED Light",
+           brand : "By TopMate",
+           rating : 4.3 ,
+           MRP : 4929 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/81tXi4E4QRS.jpg" 
+        },{
+           name : "Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB SSD, Backlit Keyboard, Windows 10 in S Mode, A515-43-R19L, Silver",
+           brand : "By Acer",
+           rating : 4.6 ,
+           MRP : 64749 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71vvXGmdKWL.jpg" 
+        },{
+           name : "Rechargeable 2.4Ghz Wireless Gaming Mouse with USB Receiver,7 Colors Backlit for MacBook, Computer PC, Laptop (600Mah Lithium Battery)-White",
+           brand : "By Zienstar ",
+           rating : 4.6 ,
+           MRP : 2149 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/61vtWVxKqgL.jpg" 
+        },{
+           name : "HP 14 Laptop, AMD Ryzen 5 5500U, 8 GB RAM, 256 GB SSD Storage, 14-inch Full HD Display, Windows 10 Home, Thin & Portable, Micro-Edge & Anti-Glare Screen, Long Battery Life (14-fq1021nr, 2021)",
+           brand : "By HP",
+           rating : 4.4 ,
+           MRP : 75009 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/81BnABO7qiS.jpg" 
+        },{
+           name : "Daysky Slim Laptop Computer V14S, 14.1' FHD Display, Intel Celeron N5095 Processor, 6GB RAM, 128GB SSD, Backlit keyboard, Full Metal Body, Windows 10, USB 3.0, Type C, Pink",
+           brand : "By Daysky",
+           rating : 3.7 ,
+           MRP : 67609 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/41vDAgZ4GHS.jpg" 
+        },{
+           name : "Acer Nitro 5 AN515 Gaming NB-AMD Ryzen 7-4800H Upto 4.20GHz/16GB DDR4 RAM/1TB HDD+256GB SSD-4GB Nvidia GTX1650 /15.6' FHD IPS Display/Win 10 Home-WiFi-6/Obsidian Black + Gaming Headset+ Mouse & Pad",
+           brand : "By Acer",
+           rating : 4.6 ,
+           MRP : 15690 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71dT+SyIpWL.jpg" 
+        },{
+           name : "15.6 Zoll Laptop Notebook, Full HD 1080P, Intel Core M-5Y51 Processor, 8G RAM, 128G SSD, 1.1 GHz, Windows 10 Pro, USB 3.0, WiFi, HDMI, Students",
+           brand : "By ",
+           rating : 4.7 ,
+           MRP : 49579 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/41Lr92yABWL.jpg" 
+        },{
+           name : "Acer Spin 3 Convertible Notebook 10th Gen Intel Core i3 1005G1 Upto 3.40GHz 4GB DDR4 RAM 256GB SSD Intel UHD Graphics 14inches FHD Touch Display Win 10 Home Latest Finger Print Silver",
+           brand : "By Acer",
+           rating : 4.6 ,
+           MRP : 100099,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71HiGcqrLLL.jpg" 
+        },{
+           name : "KUU YOBOOK Laptop 13.5 inch 3K 3000×2000 resolution IPS screen Intel Pentium Processor 4GB 128GB SSD Windows10 USB3.0 light and thin Notebook",
+           brand : "By Kuu",
+           rating : 3.4 ,
+           MRP : 50979 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71lJeXcfDAL.jpg" 
+        },{
+           name : "Lenovo Yoga 6, 2 in 1 Laptop, 13.3' FHD Touch Display, AMD Ryzen 5 5500U 2.1GHz, 16GB RAM, 512GB SSD, Integrated AMD Radeon Graphics, Win10 Home, Eng-Arb Backlit KB, Abyss Blue - [82ND0017AX]",
+           brand : "By Lenovo",
+           rating : 4.5 ,
+           MRP : 137329 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/61Rwrg-w+BL.jpg" 
+        },{
+           name : "ASUS Chromebook C223NA 11.6' HD Laptop (Intel Celeron N3350, 4GB RAM, 32G eMMC, Chrome OS), Red",
+           brand : "By Asus",
+           rating : 4.2 ,
+           MRP : 31729 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61IsN9B-PDL.jpg" 
+        },{
+           name : "LG 27 Inch UHD 4K IPS Monitor with VESA DisplayHDR 400,USB-C, Height/Pivot/Tilt Adjustable Stand, Silver-27UP850-W",
+           brand : "By LG",
+           rating : 4.6 ,
+           MRP : 104649 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71VRWWwU+YL.jpg" 
+        },{
+           name : "LincPlus P3 Laptop 14 inch Full HD Netbook Intel Celeron N3350 Processor 4GB RAM 64GB Storage Upgradable up to 512GB Windows 10 in S Mode Ultrabook with QWERTY UK Keyboard White PC",
+           brand : "By LincPlus",
+           rating : 4.2 ,
+           MRP : 47659 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81tszekaQJS.jpg" 
+        },{
+           name : "Monster Tulpar T7 V21.1 Gaming Notebook, Intel Core i7 10875H CPU, Gaming Laptop with 16GB RAM, 512GB SSD, Nvidia GeForce 6GB RTX-2060, Windows 10 Home, 17.3'' FHD 144HZ IPS-LED-Display + Backpack",
+           brand : "By Monster",
+           rating : 2.5 ,
+           MRP : 190019 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71t-CkJh7GL.jpg" 
+        },{
+           name : "2021 Newest HP Envy x360 2-in-1 Flip Laptop, 15.6' Full HD Touchscreen, AMD Ryzen 7 5700U 8-Core Processor, 32GB RAM, 1TB PCIe NVMe SSD, Backlit Keyboard, Webcam, Wi-Fi, Bluetooth, Windows 10 Home",
+           brand : "By Hp ",
+           rating : 4.5 ,
+           MRP : 263989 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/61A84fO+myS.jpg" 
+        },{
+           name : "WD Black 1TB SN850 NVME Internal Gaming SSD, PCIE Gen4 Technology, Up To 7000 Mb/S Read Speeds, M.2 2280 with Heatsink-WDBAPZ0010BNC-WRSN",
+           brand : "By Western Digital",
+           rating : 5 ,
+           MRP : 40609 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/51iqzXNsblL.jpg" 
+        },
+        {
+           name : "KUU YOBOOK Laptop 13.5 inch 3K 3000×2000 resolution IPS screen Intel Pentium Processor 4GB 128GB SSD Windows10 USB3.0 light and thin Notebook",
+           brand : "By Kuu",
+           rating : 3.4 ,
+           MRP : 50979 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71lJeXcfDAL.jpg" 
+        },
+        {
+           name : "Daysky Slim Laptop Computer V14S, 14.1' FHD Display, Intel Celeron N5095 Processor, 6GB RAM, 128GB SSD, Backlit keyboard, Full Metal Body, Windows 10, USB 3.0, Type C, Pink",
+           brand : "By Daysky",
+           rating : 3.7 ,
+           MRP : 67609 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/41vDAgZ4GHS.jpg" 
+        },
+        {
+           name : "Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6' Full HD 144Hz 3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB Keyboard",
+           brand : "By Acer",
+           rating : 4.7 ,
+           MRP : 263989 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71Nly9vPapL.jpg" 
+        },
+        {
+           name : "ASUS TUF Dash 15 (2021) Ultra Slim Gaming Laptop, 15.6” 144Hz FHD, GeForce RTX 3050 Ti, Intel Core i7-11370H, 8GB DDR4, 512GB PCIe NVMe SSD, Wi-Fi 6, Windows 10, Eclipse Grey Color, TUF516PE-AB73 Lenovo Legion 5 15 Gaming Laptop, 15.6' FHD (1920 x 1080) Display, AMD Ryzen 7 5800H Processor, 16GB DDR4 RAM, 512GB NVMe SSD, NVIDIA GeForce RTX 3050Ti, Windows 10H, 82JW0012US, Phantom Blue MSI GL65 Gaming Laptop: 15.6' Display, Intel Core i5-10300H, NVIDIA GeForce GTX 1650, 16GB RAM, 512GB NVMe SSD, Win10, Black (10SCXK-211) Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6' Full HD 144Hz 3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB Keyboard",
+           brand : "By Asus",
+           rating : 4.5 ,
+           MRP : 227029 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81Tx3MJBkSL.jpg" 
+        },
+        {
+           name : "Dell G5 15 5500 Gaming Laptop, Intel Core i7-10750H, 15.6 Inch FHD, 1TB SSD, 16 GB RAM, NVIDIA® GeForce RTX™ 2060 6GB Graphics, Windows 10 Home, English-Arabic Keyboard, Black",
+           brand : "By Dell",
+           rating : 4.6 ,
+           MRP : 254989 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71srWKH2CHL.jpg" 
+        },{
+           name : "Lenovo IdeaPad L340 17.3 Inch FHD Gaming Laptop (Intel Core i5, 8 GB RAM, 256 GB SSD, GTX 1650, Windows 10 Home) – Granite Black Lenovo Ideapad L340-17inch Gaming",
+           brand : "By Lenovo",
+           rating : 3.8 ,
+           MRP : 156179 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/61gAR7xqnoL.jpg" 
+        },{
+           name : "Razer Blade 17: 17 inch Gaming Laptop Intel 11th Gen i7 11800H, NVIDIA GeForce RTX 3080, 360 Hz Full HD, 32GB RAM, 1TB, Chroma RGB Lighting, Vapor Chamber Cooling, Black, RZ09-0406CEC3-R341",
+           brand : "By Razer",
+           rating : 4.6 ,
+           MRP : 622769 ,   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 6, 
+           image: "https://m.media-amazon.com/images/I/71zu6WY1fUS.jpg" 
+        },
+        {
+           name : "Daysky Slim Laptop Computer V14S, 14.1' FHD Display, Intel Celeron N5095 Processor, 6GB RAM, 128GB SSD, Backlit keyboard, Full Metal Body, Windows 10, USB 3.0, Type C, Pink",
+           brand : "By Daysky",
+           rating : 3.7 ,
+           MRP : 67609 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/41vDAgZ4GHS.jpg" 
+        },
+        {
+           name : "Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6' Full HD 144Hz 3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB Keyboard",
+           brand : "By Acer",
+           rating : 4.7 ,
+           MRP : 263989 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71Nly9vPapL.jpg" 
+        },
+        {
+           name : "ASUS TUF Dash 15 (2021) Ultra Slim Gaming Laptop, 15.6” 144Hz FHD, GeForce RTX 3050 Ti, Intel Core i7-11370H, 8GB DDR4, 512GB PCIe NVMe SSD, Wi-Fi 6, Windows 10, Eclipse Grey Color, TUF516PE-AB73 Lenovo Legion 5 15 Gaming Laptop, 15.6' FHD (1920 x 1080) Display, AMD Ryzen 7 5800H Processor, 16GB DDR4 RAM, 512GB NVMe SSD, NVIDIA GeForce RTX 3050Ti, Windows 10H, 82JW0012US, Phantom Blue MSI GL65 Gaming Laptop: 15.6' Display, Intel Core i5-10300H, NVIDIA GeForce GTX 1650, 16GB RAM, 512GB NVMe SSD, Win10, Black (10SCXK-211) Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6' Full HD 144Hz 3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB Keyboard",
+           brand : "By Asus",
+           rating : 4.5 ,
+           MRP : 227029 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81Tx3MJBkSL.jpg" 
+        },{
+           name : "Daysky Slim Laptop Computer V14S, 14.1' FHD Display, Intel Celeron N5095 Processor, 6GB RAM, 128GB SSD, Backlit keyboard, Full Metal Body, Windows 10, USB 3.0, Type C, Pink",
+           brand : "By Daysky",
+           rating : 3.7 ,
+           MRP : 67609 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/41vDAgZ4GHS.jpg" 
+        },
+        {
+           name : "Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6' Full HD 144Hz 3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB Keyboard",
+           brand : "By Acer",
+           rating : 4.7 ,
+           MRP : 263989 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71Nly9vPapL.jpg" 
+        },
+        {
+           name : "ASUS TUF Dash 15 (2021) Ultra Slim Gaming Laptop, 15.6” 144Hz FHD, GeForce RTX 3050 Ti, Intel Core i7-11370H, 8GB DDR4, 512GB PCIe NVMe SSD, Wi-Fi 6, Windows 10, Eclipse Grey Color, TUF516PE-AB73 Lenovo Legion 5 15 Gaming Laptop, 15.6' FHD (1920 x 1080) Display, AMD Ryzen 7 5800H Processor, 16GB DDR4 RAM, 512GB NVMe SSD, NVIDIA GeForce RTX 3050Ti, Windows 10H, 82JW0012US, Phantom Blue MSI GL65 Gaming Laptop: 15.6' Display, Intel Core i5-10300H, NVIDIA GeForce GTX 1650, 16GB RAM, 512GB NVMe SSD, Win10, Black (10SCXK-211) Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6' Full HD 144Hz 3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB Keyboard",
+           brand : "By Asus",
+           rating : 4.5 ,
+           MRP : 227029 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81Tx3MJBkSL.jpg" 
+        },{
+           name : "Daysky Slim Laptop Computer V14S, 14.1' FHD Display, Intel Celeron N5095 Processor, 6GB RAM, 128GB SSD, Backlit keyboard, Full Metal Body, Windows 10, USB 3.0, Type C, Pink",
+           brand : "By Daysky",
+           rating : 3.7 ,
+           MRP : 67609 ,   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/41vDAgZ4GHS.jpg" 
+        },
+        {
+           name : "Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6' Full HD 144Hz 3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB Keyboard",
+           brand : "By Acer",
+           rating : 4.7 ,
+           MRP : 263989 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/71Nly9vPapL.jpg" 
+        },
+        {
+           name : "ASUS TUF Dash 15 (2021) Ultra Slim Gaming Laptop, 15.6” 144Hz FHD, GeForce RTX 3050 Ti, Intel Core i7-11370H, 8GB DDR4, 512GB PCIe NVMe SSD, Wi-Fi 6, Windows 10, Eclipse Grey Color, TUF516PE-AB73 Lenovo Legion 5 15 Gaming Laptop, 15.6' FHD (1920 x 1080) Display, AMD Ryzen 7 5800H Processor, 16GB DDR4 RAM, 512GB NVMe SSD, NVIDIA GeForce RTX 3050Ti, Windows 10H, 82JW0012US, Phantom Blue MSI GL65 Gaming Laptop: 15.6' Display, Intel Core i5-10300H, NVIDIA GeForce GTX 1650, 16GB RAM, 512GB NVMe SSD, Win10, Black (10SCXK-211) Acer Predator Helios 300 PH315-54-760S Gaming Laptop | Intel i7-11800H | NVIDIA GeForce RTX 3060 Laptop GPU | 15.6' Full HD 144Hz 3ms IPS Display | 16GB DDR4 | 512GB SSD | Killer WiFi 6 | RGB Keyboard",
+           brand : "By Asus",
+           rating : 4.5 ,
+           MRP : 227029 ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 10, 
+           image: "https://m.media-amazon.com/images/I/81Tx3MJBkSL.jpg" 
+        },
+    ]
+
+
+    function priceSort(){
+        var select = document.querySelector("#forPrice").value;  
+        if(select == "nofilter"){
+            displayProducts(data);
+        }
+        else if(select == 1){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices < 1000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1);
+       } 
+       else if(select == 2){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 1000 && prices < 2000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 3){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 2000 && prices < 3000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 4){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 3000 && prices < 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 5){
+        var level1 = data.filter(function(item){
+             var prices = Number(item.MRP);
+             if(prices >= 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+}
+
+    function countrySort(){
+        var select = document.querySelector("#forCountry").value;
+        console.log(select);
+
+        var selected = data.filter(function(item){
+            if(select === item.from) return item ;
+            if(select == "nofilter") return item ;
+        });
+           displayProducts(selected);
+        }
+
+    function deliverySort(){
+        var select = Number(document.querySelector("#fortime").value);
+ 
+
+        var selected = data.filter(function(item){
+            var days = item.range ;
+            if(select === 0) return item ;
+            else if(select === days) return item ;
+            
+        });
+             displayProducts(selected);
+        }
+    
+    displayProducts(data);
+
+    function displayProducts(data){
+        document.querySelector("#container").innerHTML = "";
+        data.map(function(item){
+            var prodiv = document.createElement("div");
+            prodiv.setAttribute("id","maindiv");
+            prodiv.addEventListener("click",productShow);
+
+            var image = document.createElement("img");
+            image.setAttribute("id","picture");
+            image.setAttribute("src",item.image)
+
+            var ptag1 = document.createElement("p");
+            ptag1.setAttribute("id","nameofprod");
+            ptag1.textContent = item.name ;
+
+            var ptag2 = document.createElement("p");
+            ptag2.setAttribute("id","brandofprod");
+            ptag2.textContent = item.brand ;
+
+            var personaldiv = document.createElement("div");
+            personaldiv.setAttribute("id","sub1div");
+
+            var leftdiv = document.createElement("div");
+            leftdiv.setAttribute("id","div1");
+
+            var rightdiv = document.createElement("div");
+            rightdiv.setAttribute("id","div2");
+
+            var rating1 = document.createElement("p");
+            rating1.setAttribute("id","rating");
+            rating1.textContent = item.rating ;
+            
+            var price = document.createElement("p");
+            price.setAttribute("id","cost");
+            price.textContent = "₹ " + item.MRP ;
+
+            var origin = document.createElement("p");
+            origin.setAttribute("id","fromCounty");
+            origin.textContent = "from " + item.from ;
+
+            var dispatch = document.createElement("p");
+            dispatch.setAttribute("id","toCounty");
+            dispatch.textContent = "to "+item.toCountry;
+
+            var when = document.createElement("p");
+            when.setAttribute("id","delivery");
+            when.textContent = "in " +item.delivery  ;
+            
+            leftdiv.append(rating1, price);
+            rightdiv.append(origin,dispatch, when);
+            
+            personaldiv.append(leftdiv, rightdiv);
+            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+
+            document.querySelector("#container").append(prodiv);
+
+        });
+
+        function productShow(){
+            window.location.href = "productShow.html" ;
+        } 
+    }
+
+
+</script>
