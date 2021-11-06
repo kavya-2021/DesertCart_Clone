@@ -938,10 +938,12 @@
     function displayProducts(data){
         document.querySelector("#container").innerHTML = "";
         data.map(function(item){
-            var prodiv = document.createElement("div");
+         var prodiv = document.createElement("div");
             prodiv.setAttribute("id","maindiv");
-            prodiv.addEventListener("click",productShow);
-
+            prodiv.addEventListener("click",function(){
+               productShow(item);
+            });
+            
             var image = document.createElement("img");
             image.setAttribute("id","picture");
             image.setAttribute("src",item.image)
@@ -965,7 +967,7 @@
 
             var rating1 = document.createElement("p");
             rating1.setAttribute("id","rating");
-            rating1.textContent = item.rating ;
+            rating1.textContent = "★ " + item.rating ;
             
             var price = document.createElement("p");
             price.setAttribute("id","cost");
@@ -993,8 +995,10 @@
 
         });
 
-        function productShow(){
-            window.location.href = "productShow.html" ;
+        function productShow(item){
+               var product = item;
+               localStorage.setItem("SelectedProduct", JSON.stringify(product)); 
+               window.location.href = "productShow.html" ;
         } 
     }
 
