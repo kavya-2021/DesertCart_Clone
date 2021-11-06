@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>Individual Product Page</title>
+        <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+       
+    <style>
+        body{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-top: 50px;
+        }
+        #container {
+            width: 100%;
+        }
+        
+        #nameCart{
+            width: 90% ;
+            height: 400px;
+            position: sticky;
+            top : 0;
+        }
+        #cartView{
+            width: 90%;
+            height: 100px;
+            border : 1px solid rgb(167, 165, 165) ;
+            border-radius: 6px;
+            padding: 25px;
+            margin-top: 10px;
+        }
+        #quant{
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+            width: 110px;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+            padding-left: 1%;
+            padding-right:1% ;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        #increment , #decrement {
+            border: none;
+            width: 30px;
+            font-size: 25px;
+            background-color: transparent;
+        }
+        #increment:hover , #decrement:hover {
+            border: none;
+            font-size: 25px;
+            background-color: rgba(209, 206, 206, 0.877);
+            border-radius: 50%;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+        }
+
+        label{
+            font-size: 18px;
+        }
+
+        #spanCart{
+            display: flex;
+            gap: 3% ;
+        }
+
+        #cartBtn{
+            width: 100%;
+            height: 40px;
+            align-items: center;
+            font-size: 20px;
+            padding-left: 1%;
+            padding-right:1% ;
+            border-radius: 6px;
+            margin-top: 10px;
+            background-color: #5eb2d9;
+            border: none ;
+            color: white ;
+            font-size: 15px;
+        }
+
+        #fewOptions{
+            display: flex;
+            gap : 2% ; 
+            height: 70px;
+            margin-top: 20px;
+            
+        }
+
+        #fewOptions > div{
+            width: 100%;
+            border : 1px solid rgb(167, 165, 165) ;
+            border-radius: 6px;
+        }
+
+        #details > img{
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        #name{
+            text-align: justify;
+        }
+
+
+        #nameofprod{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; 
+                    line-clamp: 2; 
+            -webkit-box-orient: vertical;
+            font-size: 14px;
+            font-weight: 500;
+            color : black;
+        }
+
+        #brandofprod{
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        #sub1div{
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            line-height: 20px;
+            margin-top: 30px;            
+        }
+
+        #cost{
+            font-size: 20px;
+            margin-top: 25%;
+            font-weight: 700;  
+        }
+        #div2{
+            line-height: 1px;
+        }
+
+        #imageDiv{
+            display: flex;
+            gap : 3%;
+            height: 450px; 
+  
+        }
+       
+        #forImage{
+            width:80%;
+            padding: 5%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        #forImage:hover{
+            border: 3px solid #5eb2d9;
+            border-radius: 6px;
+        }
+        #innerImage{
+            width:18%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+      
+        #forImage img {
+            width: 100%;
+            transition: 0.5s all ease-in-out;
+        }
+      
+        #forImage:hover img {
+            transform: scale(2.5);
+        }
+
+        img{
+            width:100%;
+            height:100%;
+        }
+        #heart,#share{
+            font-size : 30px ;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            color:rgba(9, 30, 66, 0.25)       
+        }
+        #innerImage > img {
+            width: 80%;
+            height: 80px;
+            border : 3px solid rgb(167, 165, 165) ;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        #innerImage > img:hover{
+          border : 3px solid #5eb2d9 ;
+        }
+        #heart:hover ,#share:hover {
+          color:  #5eb2d9      
+        }
+        
+    </style>
+ </head>
+ <body>
+     <div id="container">
+         <div id="imageDiv"> 
+             <div id="forImage"></div>  
+             <div id="innerImage">
+                 <div> <i id="heart" class="far fa-heart"></i></div>
+                 <div><i id="share" class="fas fa-share-alt-square"></i></div>
+                 
+             </div>            
+         </div>
+        
+     </div>
+     <div id="nameCart">
+         <h3 id="name"> Lorem ipsum dolor sit amet, consectetur Voluptatum nulla modi reprehenderit ducimus tenetur, eum perspiciatis iusto.</h3>
+         <div id="cartView">
+            <label for="quant">Quantity</label> <br>
+             <span id="spanCart">   <div id="quant"> <button id="decrement">-</button> <p id="count">1</p> <button id="increment">+</button></div> <button id="cartBtn"> Add to cart</button></span>
+         </div>
+         <div id="fewOptions">
+             <div id="details" >
+                <img id="details" src="photos/Screenshot 2021-11-06 at 6.17.02 PM.png" alt="delivery">
+             </div>
+             <div  id="details">
+                <img id="details" src="photos/Screenshot 2021-11-06 at 6.21.00 PM.png" alt="return">
+             </div>
+             <div id="details">
+                <img id="details" src="photos/Screenshot 2021-11-06 at 6.12.06 PM.png" alt="about">
+             </div>
+         </div>
+     </div>
+ </body>
+    
+</html>
+
+<script>
+    var c = document.querySelector("#count").textContent ;
+    var productInfo = JSON.parse(localStorage.getItem("SelectedProduct"));
+    var count = Number(c) ;
+
+    document.getElementById("decrement").addEventListener("click",decrement); // for decrement buttons
+    document.getElementById("increment").addEventListener("click",increment); // for increment buttons
+    document.getElementById("cartBtn").addEventListener("click",addToCart);  // for add to cart buttons
+    document.getElementById("cartBtn").textContent = "Add to cart "+" ₹ "+ productInfo.MRP; // for add to cart buttons with price
+    document.querySelector("#name").textContent = productInfo.name ;   // above cart the details of product
+    document.querySelector("#heart").addEventListener("click", wishList); // for making wish list buttons
+    document.querySelector("#heart").addEventListener("dblclick", removeWishList); // for removing from wish list
+
+    var forImage = document.querySelector("#forImage");     
+    var innerImage = document.querySelector("#innerImage");
+    var image = document.createElement("img");
+    image.setAttribute("src",productInfo.image);
+    forImage.append(image);
+
+    var image1 = document.createElement("img");
+    image1.setAttribute("src",productInfo.image);
+
+    var image2 = document.createElement("img");
+    image2.setAttribute("src",productInfo.image);
+
+    var image3 = document.createElement("img");
+    image3.setAttribute("src",productInfo.image);
+
+    innerImage.append(image1,image2,image3);
+
+    var personaldiv = document.createElement("div");
+            personaldiv.setAttribute("id","sub1div");
+
+            var ptag2 = document.createElement("p");
+            ptag2.setAttribute("id","brandofprod");
+            ptag2.textContent = productInfo.brand ;
+
+            var leftdiv = document.createElement("div");
+            leftdiv.setAttribute("id","div1");
+
+            var rightdiv = document.createElement("div");
+            rightdiv.setAttribute("id","div2");
+
+            var rating1 = document.createElement("p");
+            rating1.setAttribute("id","rating");
+            rating1.textContent = "★ " + productInfo.rating ;
+            
+            var price = document.createElement("p");
+            price.setAttribute("id","cost");
+            price.textContent = "₹ " + productInfo.MRP ;
+
+            var origin = document.createElement("p");
+            origin.setAttribute("id","fromCounty");
+            origin.textContent = "from " + productInfo.from ;
+
+            var dispatch = document.createElement("p");
+            dispatch.setAttribute("id","toCounty");
+            dispatch.textContent = "to "+ productInfo.toCountry;
+
+            var when = document.createElement("p");
+            when.setAttribute("id","delivery");
+            when.textContent = "in " + productInfo.delivery  ;
+            
+            leftdiv.append(ptag2, price);
+            rightdiv.append(rating1, origin,dispatch, when);
+            
+            personaldiv.append(leftdiv, rightdiv);
+
+            document.querySelector("#imageDiv").append(forImage, innerImage)
+            document.querySelector("#container").append( personaldiv);
+
+            var title = document.createElement("p");
+            title.textContent = "About this item : This item is imported from " + productInfo.from ;
+
+            var description1 = document.createElement("p");
+            description1.textContent =  productInfo.name  ;
+            var description2 = document.createElement("p");
+            description2.textContent =  productInfo.name  ;
+            var description3 = document.createElement("p");
+            description3.textContent =  productInfo.name  ;
+            document.querySelector("#container").append( title, description1 ,description2 ,description3 );
+
+    
+    function decrement(){
+       if(count > 0) count = count -1 ;
+       else removeEventListener(click,decrement);
+       document.getElementById("count").textContent = count;
+    }
+
+    function increment(){
+        count = count+ 1;
+        document.getElementById("count").textContent = count;
+    }
+
+    function addToCart(){
+        alert("Added to cart")
+    }
+    
+    function wishList(){
+        document.querySelector("#heart").style.color = "#5eb2d9" ;
+
+    }
+    function removeWishList(){
+        document.querySelector("#heart").style.color = "rgba(9, 30, 66, 0.25)" ;
+ 
+    }
+
+</script>
+
