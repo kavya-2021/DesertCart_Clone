@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Watches Shopping Products</title>
+        <link rel="stylesheet" href="innerPage.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+                <option value="0">Any delivery time</option>
+                <option value="1"> Same Day </option>
+                <option value="3"> 2 days </option>
+                <option value="3"> 3-5 days </option>
+                <option value="4"> 5-8days </option>
+                <option value="9"> 9-15days</option>
+                <option value="9"> 15+ days </option>
+            </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Watches Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "Men's W735H-1AVCF Super Illuminator Watch With Black Resin Band",
+           brand : "by Casio",
+           rating : 4.7 ,
+           MRP :  "3,849",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/91GMlZbSIUL.jpg" 
+        },{
+           name : "Smart Watch, Popglory Smartwatch with Blood Pressure, Blood Oxygen Monitor, Fitness Tracker with Heart Rate Monitor, Full Touch Fitness Watch for Android & iOS for Men Women (Black)",
+           brand : "by Popglory",
+           rating : 4.7 ,
+           MRP :  "3,989",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71-2cdx6xnL.jpg" 
+        },{
+           name : "Men's Aviator Stainless Steel Quartz Watch with Silicone Strap, Blue, Black 26 (Model: 22523, 22525)",
+           brand : "by Invicta",
+           rating : 4.7 ,
+           MRP :  "17,059",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/91CyZis12VL.jpg" 
+        },{
+           name : "Fossil Men's Nate Stainless Steel Quartz Chronograph Watch",
+           brand : "by Fossil",
+           rating : 4.7 ,
+           MRP :  "14,319",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61xqpipYCnL.jpg" 
+        },{
+           name : "BENYAR - Stylish Wrist Watch for Men, Genuine Silicone Strap Watches, Perfect Quartz Movement, 30M Waterproof Analog Chronograph Quartz Business Watches",
+           brand : "by BENYAR",
+           rating : 4.7 ,
+           MRP :  "10,279",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/716ThV-zOAL.jpg" 
+        },{
+           name : "Ice-Watch - ICE Duo Chic Nude - Women's Pink Watch with Silicone Strap - 016985 (Medium)",
+           brand : "by Ice-Watch",
+           rating : 4.7 ,
+           MRP :  "12,239",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61ECdbSdfUL.jpg" 
+        },{
+           name : "Mens Watches 3 Dials Chronograph Luxury Wrist Watch for Men with Calendar Watch",
+           brand : "by Cluemica",
+           rating : 4.7 ,
+           MRP :  "6,229",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61Q9wLuWAQL.jpg" 
+        },{
+           name : "Compatible, Smart Watches for Women Men, 5ATM Waterproof Fitness Smartwatch with Heart Rate Monitor & Sleep Tracker & Blood Oxygen Monitor, Pink",
+           brand : "by Dirrelo",
+           rating : 4.7 ,
+           MRP :  "8,619",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61k-tG7UMLL.jpg" 
+        },{
+           name : "Smart Watches for Women, 2021 HD LCD Smart Watch for Android Phones and iPhone Compatible, 3ATM Waterproof Fitness Smartwatch with Sleep Tracker, Heart Rate, Blood Oxygen Monitor, Smartwatch Rose Gold",
+           brand : "by Lovtutu",
+           rating : 4.7 ,
+           MRP :  "8,829",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61O4pPUJW6L.jpg" 
+        },{
+           name : "Men's Townsman Stainless Steel and Leather Casual Quartz Chronograph Watch",
+           brand : "by Fossil",
+           rating : 4.7 ,
+           MRP :  "9,349",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71o88-MgquL.jpg" 
+        },{
+           name : "Apple Watch Series 3 (GPS + Cellular, 38MM) - Silver Aluminum Case with White Sport Band (Renewed)",
+           brand : "by Amazon",
+           rating : 4.7 ,
+           MRP :  " 29,209",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71rns5WXKkL.jpg" 
+        },{
+           name : "Apple Watch SE (GPS, 40mm) - Space Grey Aluminium Case with Midnight Sport Band - RegularApple Watch SE (GPS, 40mm) - Space Grey Aluminium Case with Midnight Sport Band - Regular",
+           brand : "by Apple",
+           rating : 4.7 ,
+           MRP :  " 46,259",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71Pln-8awPL.jpg" 
+        },{
+           name : "WYZE Smart Watch, 1.75'(47mm)Aluminum Smartwatch for Android Phones and iOS Phones IP68 Waterproof Fitness Tracker with Heart Rate/Blood Oxygen/Sleep/ Menstrual Monitor Digital Watch for Women and Men",
+           brand : "by wyze",
+           rating : 4.7 ,
+           MRP :  "7,199",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61uf31I31hL.jpg" 
+        },{
+           name : "Samsung Electronics Galaxy Watch 4 44mm Smartwatch with ECG Monitor Tracker for Health Fitness Running Sleep Cycles GPS Fall Detection Bluetooth US Version, Green",
+           brand : "by Samsung Electronics",
+           rating : 4.7 ,
+           MRP :  "33,819",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61T0N58UJiS.jpg" 
+        },{
+           name : "Men's the Minimalist Stainless Steel Slim Casual Quartz Watch",
+           brand : "by Fossil",
+           rating : 4.7 ,
+           MRP :  "11,269",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81K7BAXknJL.jpg" 
+        },{
+           name : "Smart Watch, 1.69' Touch Screen Smart watch for Women Men, 24 Sports Modes Fitness Activity Trackers, IP67 Waterproof Step Counter Watch, Fitness Watch with Heart Rate Sleep Monitor for Android iOS",
+           brand : "by togala",
+           rating : 4.7 ,
+           MRP :  "8,849",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71CMtFGDhxL.jpg" 
+        },{
+           name : 'Smart Watch, 1.69" Touch Screen Smart watch for Women Men, 24 Sports Modes Fitness Activity Trackers, IP67 Waterproof Step Counter Watch, Fitness Watch with Heart Rate Sleep Monitor for Android iOS',
+           brand : "by fossile",
+           rating : 4.7 ,
+           MRP :  "4,789",   
+           from : "india",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 3, 
+           image: "https://m.media-amazon.com/images/I/71CMtFGDhxL.jpg" 
+        },{
+           name : "Smart Watch for Women, Full Touch Fitness Tracker Watch with Blood Oxygen, Blood Pressure, Heart Rate and Sleep Monitor, Message Notification, IP68 Waterproof Step Counter Watch for Android iphone",
+           brand : "by Oxygen",
+           rating : 4.7 ,
+           MRP :  "9,719",   
+           from : "inida",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 3, 
+           image: "https://m.media-amazon.com/images/I/614PUMBVsKL.jpg" 
+        },{
+           name : "H.TANG Smart Watch Fitness Trackers With Heart Rate Monitor Fit Bitwatches Mens Messages Reminder Waterproof IP67 Lets Com Smartwatch Calorie Step Counter Bracelet Compatible Android iPhone – Black",
+           brand : "by H.TANG",
+           rating : 4.7 ,
+           MRP :  "7,479",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71t2noThGYL.jpg" 
+        },{
+           name : "Collection Men's Watch AE-1200WH",
+           brand : "by Casio",
+           rating : 4.7 ,
+           MRP :  "5,029",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71ZXUQpWnAL.jpg" 
+        },
+    ]
+
+
+    function priceSort(){
+        var select = document.querySelector("#forPrice").value;  
+        if(select == "nofilter"){
+            displayProducts(data);
+        }
+        else if(select == 1){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices < 1000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1);
+       } 
+       else if(select == 2){
+        var level1 = data.filter(function(item){
+           var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 1000 && prices < 2000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 3){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 2000 && prices < 3000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 4){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 3000 && prices < 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 5){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+}
+
+    function countrySort(){
+        var select = document.querySelector("#forCountry").value;
+        console.log(select);
+
+        var selected = data.filter(function(item){
+            if(select === item.from.toUpperCase()) return item ;
+            if(select == "nofilter") return item ;
+        });
+           displayProducts(selected);
+        }
+
+    function deliverySort(){
+        var select = Number(document.querySelector("#fortime").value);
+ 
+
+        var selected = data.filter(function(item){
+            var days = item.range ;
+            if(select === 0) return item ;
+            else if(select === days) return item ;
+            
+        });
+             displayProducts(selected);
+        }
+    
+    displayProducts(data);
+
+    function displayProducts(data){
+        document.querySelector("#container").innerHTML = "";
+        data.map(function(item){
+            var prodiv = document.createElement("div");
+            prodiv.setAttribute("id","maindiv");
+            prodiv.addEventListener("click",productShow);
+
+            var image = document.createElement("img");
+            image.setAttribute("id","picture");
+            image.setAttribute("src",item.image)
+
+            var ptag1 = document.createElement("p");
+            ptag1.setAttribute("id","nameofprod");
+            ptag1.textContent = item.name ;
+
+            var ptag2 = document.createElement("p");
+            ptag2.setAttribute("id","brandofprod");
+            ptag2.textContent = item.brand ;
+
+            var personaldiv = document.createElement("div");
+            personaldiv.setAttribute("id","sub1div");
+
+            var leftdiv = document.createElement("div");
+            leftdiv.setAttribute("id","div1");
+
+            var rightdiv = document.createElement("div");
+            rightdiv.setAttribute("id","div2");
+
+            var rating1 = document.createElement("p");
+            rating1.setAttribute("id","rating");
+            rating1.innerHTML =`<i class="fas fa-star"></i> ${item.rating}`;
+            
+            var price = document.createElement("p");
+            price.setAttribute("id","cost");
+            price.textContent = "₹ " + item.MRP ;
+
+            var origin = document.createElement("p");
+            origin.setAttribute("id","fromCounty");
+            origin.textContent = "from " + item.from.toUpperCase();
+
+            var dispatch = document.createElement("p");
+            dispatch.setAttribute("id","toCounty");
+            dispatch.textContent = "to "+item.toCountry.toUpperCase();
+
+            var when = document.createElement("p");
+            when.setAttribute("id","delivery");
+            when.textContent = "in " +item.delivery  ;
+            
+            leftdiv.append(rating1, price);
+            rightdiv.append(origin,dispatch, when);
+            
+            personaldiv.append(leftdiv, rightdiv);
+            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+
+            document.querySelector("#container").append(prodiv);
+
+        });
+
+        function productShow(){
+            window.location.href = "productShow.html" ;
+        } 
+    }
+
+
+</script>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Perfumes For Her Products</title>
+        <link rel="stylesheet" href="innerPage.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+                <option value="0">Any delivery time</option>
+                <option value="1"> Same Day </option>
+                <option value="2"> 2 days </option>
+                <option value="3"> 3-5 days </option>
+                <option value="5"> 5-8days </option>
+                <option value="9"> 9-15days</option>
+                <option value="9"> 15+ days </option>
+            </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Perfumes For Her Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "BURBERRY Brit for Her Eau De Parfum",
+           brand : "By Blueberry",
+           rating : 4.7 ,
+           MRP :  "13,169",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/413GmFxuZgL.jpg" 
+        },
+        {
+           name : "Creed Aventus Eau de Parfum Millesime Spray for Her, 2.5 Ounce",
+           brand : "",
+           rating : 4.5 ,
+           MRP : "59,879",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/616ifx0pyVL.jpg" 
+        },{
+           name : "Narciso Rodriguez For Her Eau De Toilette Spray - 100ml/3.4oz",
+           brand : "By Narciso Rodriguez",
+           rating : 4.7 ,
+           MRP : "13,619" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61quxU6jRGL.jpg" 
+        },{
+           name : "Givenchy Play For Her Eau De Parfum Spray (New Packaging) 75ml/2.5oz",
+           brand : "By Givenchy",
+           rating : 4.6 ,
+           MRP : '34,869' ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/51O-I3l4xBL.jpg" 
+        },{
+           name : "This is Her Zadig & Voltaire for women Eau de Parfum 3.3 ounce",
+           brand : "By Zadig Voltaire",
+           rating : 5.0 ,
+           MRP : "10,519" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/51EQAIUqCyL.jpg" 
+        },{
+           name : "Narciso for Woman By Narciso Rodriguez Eau de Parfum Spray, 3 Fluid Ounce",
+           brand : "By Narciso Rodriguez",
+           rating : 4.6 ,
+           MRP : "13,849",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/410BoUCrDQL.jpg" 
+        },{
+           name : "BURBERRY Brit Sheer Eau De Toilette For Her",
+           brand : "",
+           rating : 4.8 ,
+           MRP : "5,919" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/41ke3yaiZIL.jpg" 
+        },{
+           name : "Kenneth Cole White for Her, 3.4 Fl oz",
+           brand : "",
+           rating : 4.7 ,
+           MRP : " 9,339" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61OGB1yWWDL.jpg" 
+        },{
+           name : "Burberry Brit For Her Eau de Toilette Spray",
+           brand : "",
+           rating : 4.7 ,
+           MRP : "7,889" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71XVrXF66yL.jpg" 
+        },{
+           name : "Narciso Rodriguez Perfume For Her Women 3.3 oz Eau de Parfum Spray In Box Sealed",
+           brand : "Narciso Rodriguez",
+           rating : 4.7 ,
+           MRP : "13,569" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/41o9OBB7kTS.jpg" 
+        },{
+           name : "Narciso Rodriguez Fleur Musc for Her 3.3 Ounce Eau De Parfum Spray, 3.3 Ounce",
+           brand : "Narciso Rodriguez",
+           rating : 4.7 ,
+           MRP : " 12,329" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/51jzmjSFSlL.jpg" 
+        },{
+           name : "Armaf Tag Her By Eau De Parfum Spray, Clear, oriental floral, 3.4 Ounce",
+           brand : "Armaf",
+           rating : 4.7 ,
+           MRP : " 3,479" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81J9wLsatfL.jpg" 
+        },{
+           name : "Narciso for Woman By Narciso Rodriguez Eau de Parfum Spray 1.6 oz",
+           brand : "by Narciso Rodriguez",
+           rating : 4.7 ,
+           MRP : "19,669" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/31ez0-J8SsL.jpg" 
+        },{
+           name : "Kenneth Cole White for Her, 3.4 Fl oz",
+           brand : "",
+           rating : 4.7 ,
+           MRP : " 9,339" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61hSvdiJ3kS.jpg" 
+        },{
+           name : "Versace Bright Crystal Eau de Toilette Spray for Women, 3 Fl Oz",
+           brand : "by Versace",
+           rating : 4.7 ,
+           MRP : " 8,609" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/518ONQ2J2eL.jpg" 
+        },{
+           name : "Narciso Rodriguez Rouge for Her 3.0 oz Eau de Parfum Spray",
+           brand : "Narciso Rodriguez",
+           rating : 4.7 ,
+           MRP : "11,989" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/51UDZL-iwmL.jpg" 
+        },{
+           name : "Fogg I Am Queen Scent For Women, 100ml",
+           brand : "Fogg",
+           rating : 4.7 ,
+           MRP : "519" ,   
+           from : "india",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 3, 
+           image: "https://m.media-amazon.com/images/I/71NCKHkJuOS.jpg" 
+        },{
+           name : "EMBARK My Dream for Her, Women's Perfume, 30ml Floral, Oriental, Woody Long Lasting Smell Travel Size Bottle",
+           brand : "",
+           rating : 4.7 ,
+           MRP : "869" ,   
+           from : "indai",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 3, 
+           image: "https://m.media-amazon.com/images/I/81mjQZ1fu2L.jpg" 
+        },{
+           name : "Perfumer's Club'All Time Classic Fragrances for Women' Gift Set of 3 (Bombshell + Trendsetter + NightQueen) Upto 24 hrs lasting (Eau De Parfum)",
+           brand : "Perfumer's Club",
+           rating : 4.7 ,
+           MRP : " 1,799" ,   
+           from : "india",
+           toCountry : "INDIA",
+           delivery : "3-5 days",
+           range: 3, 
+           image: "https://m.media-amazon.com/images/I/61OAgQuiZzL.jpg" 
+        },{
+           name : "Hollister Wave 2 for Her Eau De Parfum, 100ml",
+           brand : "Hollister",
+           rating : 4.7 ,
+           MRP : " 9,339" ,   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "5-9 days",
+           range: 5, 
+           image: "https://m.media-amazon.com/images/I/810Pf3NGCKL.jpg" 
+        },
+    ]
+
+
+    function priceSort(){
+        var select = document.querySelector("#forPrice").value;  
+        if(select == "nofilter"){
+            displayProducts(data);
+        }
+        else if(select == 1){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices < 1000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1);
+       } 
+       else if(select == 2){
+        var level1 = data.filter(function(item){
+           var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 1000 && prices < 2000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 3){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 2000 && prices < 3000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 4){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 3000 && prices < 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 5){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+}
+
+    function countrySort(){
+        var select = document.querySelector("#forCountry").value;
+        console.log(select);
+
+        var selected = data.filter(function(item){
+            if(select === item.from.toUpperCase()) return item ;
+            if(select == "nofilter") return item ;
+        });
+           displayProducts(selected);
+        }
+
+    function deliverySort(){
+        var select = Number(document.querySelector("#fortime").value);
+ 
+
+        var selected = data.filter(function(item){
+            var days = item.range ;
+            if(select === 0) return item ;
+            else if(select === days) return item ;
+            
+        });
+             displayProducts(selected);
+        }
+    
+    displayProducts(data);
+
+    function displayProducts(data){
+        document.querySelector("#container").innerHTML = "";
+        data.map(function(item){
+            var prodiv = document.createElement("div");
+            prodiv.setAttribute("id","maindiv");
+            prodiv.addEventListener("click",productShow);
+
+            var image = document.createElement("img");
+            image.setAttribute("id","picture");
+            image.setAttribute("src",item.image)
+
+            var ptag1 = document.createElement("p");
+            ptag1.setAttribute("id","nameofprod");
+            ptag1.textContent = item.name ;
+
+            var ptag2 = document.createElement("p");
+            ptag2.setAttribute("id","brandofprod");
+            ptag2.textContent = item.brand ;
+
+            var personaldiv = document.createElement("div");
+            personaldiv.setAttribute("id","sub1div");
+
+            var leftdiv = document.createElement("div");
+            leftdiv.setAttribute("id","div1");
+
+            var rightdiv = document.createElement("div");
+            rightdiv.setAttribute("id","div2");
+
+            var rating1 = document.createElement("p");
+            rating1.setAttribute("id","rating");
+            rating1.innerHTML =`<i class="fas fa-star"></i> ${item.rating}` ;
+            
+            var price = document.createElement("p");
+            price.setAttribute("id","cost");
+            price.textContent = "₹ " + item.MRP ;
+
+            var origin = document.createElement("p");
+            origin.setAttribute("id","fromCounty");
+            origin.textContent = "from " + item.from ;
+
+            var dispatch = document.createElement("p");
+            dispatch.setAttribute("id","toCounty");
+            dispatch.textContent = "to "+item.toCountry;
+
+            var when = document.createElement("p");
+            when.setAttribute("id","delivery");
+            when.textContent = "in " +item.delivery  ;
+            
+            leftdiv.append(rating1, price);
+            rightdiv.append(origin,dispatch, when);
+            
+            personaldiv.append(leftdiv, rightdiv);
+            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+
+            document.querySelector("#container").append(prodiv);
+
+        });
+
+        function productShow(){
+            window.location.href = "productShow.html" ;
+        } 
+    }
+
+
+</script>

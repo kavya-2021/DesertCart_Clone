@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Survival Gear Shopping Products</title>
+        <link rel="stylesheet" href="innerPage.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+                <option value="0">Any delivery time</option>
+                <option value="1"> Same Day </option>
+                <option value="3"> 2 days </option>
+                <option value="3"> 3-5 days </option>
+                <option value="4"> 5-8days </option>
+                <option value="9"> 9-15days</option>
+                <option value="9"> 15+ days </option>
+            </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Survival Gear Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "Prep Store Elite Emergency Pack - Emergency Survival Pack - Survival Kit - Bugout Bag - Hurricane Emergency Kit - Survival Bag - Bug Out Bag (Elite Kit)",
+           brand : "by Prep",
+           rating : 4.7 ,
+           MRP :  "165,479",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/51+phZSNomL.jpg" 
+        },{
+           name : "Emergency Survival Kit and First Aid Kit, 142Pcs Professional Survival Gear and Equipment with Molle Pouch, for Men Camping Outdoor Adventure",
+           brand : "by Luxmom",
+           rating : 4.7 ,
+           MRP :  "18,339",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81oDITQ5AIL.jpg" 
+        },{
+           name : "TG Plasma Lighter Windproof Waterproof USB Rechargeable Flameless Dual Arc for EDC Camping Survival Tactical",
+           brand : "by TG",
+           rating : 4.7 ,
+           MRP :  "2,829",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/51doE2w5TQL.jpg" 
+        },{
+           name : "Survival Kit 28 in 1, Gifts for Men Dad Husband Teenage Boy, Survival Gear and Equipment Supplies Kits Christmas Stocking Stuffers for Families Outdoors Camping Hiking Adventures",
+           brand : "by Luxmom",
+           rating : 4.7 ,
+           MRP :  "8,189",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81TInkWElLL.jpg" 
+        },{
+           name : "Sahara Sailor Survival Shovel with Axe, High Carbon Steel Tactical Shovel Camping Shovel Hatchet Combo - 4 Thicken Extension Handles, 20-39.5 Inch Survival Gear and Equipment for Hiking Camping",
+           brand : "by Sahara Sailor",
+           rating : 4.7 ,
+           MRP :  "13,549",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71Yy81iOU3L.jpg" 
+        },{
+           name : "Aokiwo 200Pcs Emergency Survival Kit and First Aid Kit Professional Survival Gear SOS Emergency Tool with Molle Pouch for Camping Adventures",
+           brand : "by Aokiwo",
+           rating : 4.7 ,
+           MRP :  "8,989",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81m3Qk2ginS.jpg" 
+        },{
+           name : "Survival Vegetable Seeds Garden Kit Over 16,000 Seeds Non-GMO and Heirloom, Great for Emergency Bugout Survival Gear 35 Varieties Seeds for Planting Vegetables 35 Free Plant Markers Gardeners Basics",
+           brand : "by Garden",
+           rating : 4.7 ,
+           MRP :  "7,169",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81OruoYg7vS.jpg" 
+        },{
+           name : "SHARPAL 101N 6-In-1 Pocket Knife Sharpener & Survival Tool, with Fire Starter, Whistle & Diamond Sharpening Rod, Quickly Repair, Restore and Hone Straight and Serrated Blade",
+           brand : "by SHARPAL",
+           rating : 4.7 ,
+           MRP :  "1,759",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71mua8kr0aL.jpg" 
+        },{
+           name : "Go Time Gear Life Tent Emergency Survival Shelter – 2 Person Emergency Tent – Use As Survival Tent, Emergency Shelter, Tube Tent, Survival Tarp - Includes Survival Whistle & Paracord",
+           brand : "by Go Time Gear",
+           rating : 4.7 ,
+           MRP :  "3,929",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/712XCKhlJ7L.jpg" 
+        },{
+           name : "ACR ResQKit PRO Survival Kit (EPIRB, PLB 400, and USCG Approved eFlare) - 2357",
+           brand : "by ACR",
+           rating : 4.7 ,
+           MRP :  "151,559",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71QdTTLqvYL.jpg" 
+        },{
+           name : "ACR GLOBALFIX V4 and ResQLink 400 Survival Kit with EPIRB, Personal Locator Beacon, Ditch Bag, and Safety Gear",
+           brand : "by ACR GLOBALFIX",
+           rating : 4.7 ,
+           MRP :  "147,919",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71ybaayxbhL.jpg" 
+        },{
+           name : "World’s Toughest Emergency Blankets [4-Pack] Extra-Thick Thermal Mylar Foil Space Blanket | Waterproof Ultralight Outdoor Survival Gear for Hiking, Camping, Running, Emergency, First Aid Kits [Green]",
+           brand : "by Don’t Die In The Woods",
+           rating : 4.7 ,
+           MRP :  "4,939",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81xNPWf9BfL.jpg" 
+        },{
+           name : "NAPASA Survival Kit 232 pcs Professional Survival Gear Emergency Tactical First Aid Kit Outdoor Trauma Bag for Men Women Adventure Camping Hiking Hunting",
+           brand : "by NAPASA",
+           rating : 4.7 ,
+           MRP :  "13,789",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/817XNT1zNzL.jpg" 
+        },{
+           name : "Russian-Bear Hot Tent Wood Burning Stove - Yurt Tents with Stoves Pipe Vent Hole Jack for All 4 Season Arctic Expedition Camp Outfitter Hunting Ice Fishing Winter Camping Cold Weather",
+           brand : "by Russian-Bear",
+           rating : 4.7 ,
+           MRP :  "514,089",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/51HJR9w2j3L.jpg" 
+        },{
+           name : "Solar Charger, Durecopow 20000mAh Portable Outdoor Waterproof Solar Power Bank, Camping External Backup Battery Pack Dual 5V USB Ports Output, 2 Led Light Flashlight with Compass (Orange)",
+           brand : "by Durecopow",
+           rating : 4.7 ,
+           MRP :  "4,389",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71mYVEqV0NL.jpg" 
+        },
+    ]
+
+
+    function priceSort(){
+        var select = document.querySelector("#forPrice").value;  
+        if(select == "nofilter"){
+            displayProducts(data);
+        }
+        else if(select == 1){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices < 1000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1);
+       } 
+       else if(select == 2){
+        var level1 = data.filter(function(item){
+           var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 1000 && prices < 2000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 3){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 2000 && prices < 3000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 4){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 3000 && prices < 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 5){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+}
+
+    function countrySort(){
+        var select = document.querySelector("#forCountry").value;
+        console.log(select);
+
+        var selected = data.filter(function(item){
+            if(select === item.from.toUpperCase()) return item ;
+            if(select == "nofilter") return item ;
+        });
+           displayProducts(selected);
+        }
+
+    function deliverySort(){
+        var select = Number(document.querySelector("#fortime").value);
+ 
+
+        var selected = data.filter(function(item){
+            var days = item.range ;
+            if(select === 0) return item ;
+            else if(select === days) return item ;
+            
+        });
+             displayProducts(selected);
+        }
+    
+    displayProducts(data);
+
+    function displayProducts(data){
+        document.querySelector("#container").innerHTML = "";
+        data.map(function(item){
+            var prodiv = document.createElement("div");
+            prodiv.setAttribute("id","maindiv");
+            prodiv.addEventListener("click",productShow);
+
+            var image = document.createElement("img");
+            image.setAttribute("id","picture");
+            image.setAttribute("src",item.image)
+
+            var ptag1 = document.createElement("p");
+            ptag1.setAttribute("id","nameofprod");
+            ptag1.textContent = item.name ;
+
+            var ptag2 = document.createElement("p");
+            ptag2.setAttribute("id","brandofprod");
+            ptag2.textContent = item.brand ;
+
+            var personaldiv = document.createElement("div");
+            personaldiv.setAttribute("id","sub1div");
+
+            var leftdiv = document.createElement("div");
+            leftdiv.setAttribute("id","div1");
+
+            var rightdiv = document.createElement("div");
+            rightdiv.setAttribute("id","div2");
+
+            var rating1 = document.createElement("p");
+            rating1.setAttribute("id","rating");
+            rating1.innerHTML =`<i class="fas fa-star"></i> ${item.rating}` ;
+            
+            var price = document.createElement("p");
+            price.setAttribute("id","cost");
+            price.textContent = "₹ " + item.MRP ;
+
+            var origin = document.createElement("p");
+            origin.setAttribute("id","fromCounty");
+            origin.textContent = "from " + item.from.toUpperCase() ;
+
+            var dispatch = document.createElement("p");
+            dispatch.setAttribute("id","toCounty");
+            dispatch.textContent = "to "+item.toCountry.toUpperCase();
+
+            var when = document.createElement("p");
+            when.setAttribute("id","delivery");
+            when.textContent = "in " +item.delivery  ;
+            
+            leftdiv.append(rating1, price);
+            rightdiv.append(origin,dispatch, when);
+            
+            personaldiv.append(leftdiv, rightdiv);
+            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+
+            document.querySelector("#container").append(prodiv);
+
+        });
+
+        function productShow(){
+            window.location.href = "productShow.html" ;
+        } 
+    }
+
+
+</script>

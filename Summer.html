@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Summer Dresses For Women Products</title>
+        <link rel="stylesheet" href="innerPage.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+                <option value="0">Any delivery time</option>
+                <option value="1"> Same Day </option>
+                <option value="3"> 2 days </option>
+                <option value="3"> 3-5 days </option>
+                <option value="4"> 5-8days </option>
+                <option value="9"> 9-15days</option>
+                <option value="9"> 15+ days </option>
+            </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Summer Dresses For Women Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "ANRABESS Women's Casual Loose Sundress Long Dress Sleeveless Split Maxi Dresses Summer Beach Dress with Pockets",
+           brand : "by ANRABESS",
+           rating : 4.7 ,
+           MRP :  "5,189",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/51sVinVyoJL.jpg" 
+        },{
+           name : "Women's Boho Floral Print Off Shoulder Split Long A Line Dress",
+           brand : "by Floreans",
+           rating : 4.7 ,
+           MRP :  "5,539",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81Han764TKL.jpg" 
+        },{
+           name : "Women's Short Sleeve Crew Neck T Shirt Dress Tie Waist Ruched Bodycon Mini Dress",
+           brand : "by Meero",
+           rating : 4.7 ,
+           MRP :  "7,849",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61ZaWYUFEjL.jpg" 
+        },{
+           name : "ZAFUL Women's Ditsy Floral Cross Back Cami Mini Dress Ruched Tie Frilled Dress",
+           brand : "by ZAFUL",
+           rating : 4.7 ,
+           MRP :  "6,029",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71z5GmShATS.jpg" 
+        },{
+           name : "Summer Dresses for Women Spaghetti Strap Floral V Neck Beach Dress Midi Sundress",
+           brand : "",
+           rating : 4.7 ,
+           MRP :  "3,599",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61VHJL-+FgS.jpg" 
+        },{
+           name : "Dokuritu Women's Beach Crochet Lace Maxi Dress Summer Spaghetti Strap Maxi Dress",
+           brand : "by Dokuritu",
+           rating : 4.7 ,
+           MRP :  " 5,379",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71QiwI8Mh9S.jpg" 
+        },{
+           name : "Women's Beach Crochet Lace Maxi Dress Summer Spaghetti Strap Maxi Dress",
+           brand : "by Dokuritu",
+           rating : 4.7 ,
+           MRP :  "5,379",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71QiwI8Mh9S.jpg" 
+        },{
+           name : "Women's Stylish Kimono Cardigan with Pom-pom, Loose Sleeveless Beach Cover Up, Fashion Swimwear Cover for 2021 Spring Summer.",
+           brand : "by Kimono",
+           rating : 4.7 ,
+           MRP :  "2,239",   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/71AhoYSObJL.jpg" 
+        },{
+           name : "Womens Fashion Floral Print Swimsuit Casual Cardigan Loose Beach skirt Cover Up",
+           brand : "by Floral",
+           rating : 4.7 ,
+           MRP :  "2,229",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71I-entzUVL.jpg" 
+        },{
+           name : "Women Maxi Solid Sleeveless Long Backless Dress Evening Party Beach Dress",
+           brand : "by Starryflashing",
+           rating : 4.7 ,
+           MRP :  "2,199",   
+           from : "UAE",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/51iZk2E3FgL.jpg" 
+        },{
+           name : "women's Fashion Floral Printed Summer Maxi Dresses",
+           brand : "by Floral",
+           rating : 4.7 ,
+           MRP :  "4,229",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61YWUMllBDL.jpg" 
+        },{
+           name : "Nightwear Lingerie Dress Women sexy Night Dress Ladies Summer Crotchless Lingerie Nightdress Pajamas for Women Silk Green",
+           brand : "by vINMASS",
+           rating : 4.7 ,
+           MRP :  "2,809",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/712o7kg6joL.jpg" 
+        },{
+           name : "MAI&FUN Women Maxi Dress Summer Casual A Line Dress Floral Print Polka Dot",
+           brand : "by MAI&FUN",
+           rating : 4.7 ,
+           MRP :  " 1,969",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/7115j+wBesL.jpg" 
+        },{
+           name : "Women's Floral Fashion A-line Summer Casual Maxi Dress",
+           brand : "by ghik",
+           rating : 4.7 ,
+           MRP :  "4,689",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/51ejaSIeNAL.jpg" 
+        },{
+           name : "Women's A-Line Long Sleeve Summer Fashion Floral Printed V Neck Swing Long Dresses",
+           brand : "by FRDAYN",
+           rating : 4.7 ,
+           MRP :  "4,229",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61SNqwswAKS.jpg" 
+        },{
+           name : "MAI&FUN Short Sleeve V-Neck Dress Women's Long Dress Summer Ladies Floral Printed Maxi Dress Multicolour",
+           brand : "by MAI&FUN",
+           rating : 4.7 ,
+           MRP :  " 2,419",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "5-8 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/71dzgrQQwmL.jpg" 
+        },{
+           name : "Women's Tea Length Dress and Jacket (Petite and Regular Sizes)",
+           brand : "by Alex",
+           rating : 4.7 ,
+           MRP :  "40,439",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "5-9 days",
+           range: 4, 
+           image: "https://m.media-amazon.com/images/I/81jVh4QTRLL.jpg" 
+        },{
+           name : "KIRUNDO Women’s Summer Dress Sleeveless Ruffle Sleeve Round Neck Mini Dress Solid Color Loose Fit Short Flowy Pleated Dress",
+           brand : "by KIRUNDO",
+           rating : 4.7 ,
+           MRP :  "7,239",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://images-na.ssl-images-amazon.com/images/I/613C9Cz9DvL.SS150.jpg" 
+        },{
+           name : "Women Denim Shirt Dresses Short Sleeve Distressed Jean Dress Button Down Casual Tunic Top",
+           brand : "by Zilcema",
+           rating : 4.7 ,
+           MRP :  "6,349",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71BMBNwDWyL.jpg" 
+        },{
+           name : "Women's Summer Sleeveless Ruffle Self Tie Wrap Short Dress",
+           brand : "by Sheine",
+           rating : 4.7 ,
+           MRP :  "4,119",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/713hcbCqk4L.jpg" 
+        },
+    ]
+
+
+    function priceSort(){
+        var select = document.querySelector("#forPrice").value;  
+        if(select == "nofilter"){
+            displayProducts(data);
+        }
+        else if(select == 1){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices < 1000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1);
+       } 
+       else if(select == 2){
+        var level1 = data.filter(function(item){
+           var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 1000 && prices < 2000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 3){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 2000 && prices < 3000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 4){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 3000 && prices < 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 5){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+}
+
+    function countrySort(){
+        var select = document.querySelector("#forCountry").value;
+        console.log(select);
+
+        var selected = data.filter(function(item){
+            if(select === item.from.toUpperCase()) return item ;
+            if(select == "nofilter") return item ;
+        });
+           displayProducts(selected);
+        }
+
+    function deliverySort(){
+        var select = Number(document.querySelector("#fortime").value);
+ 
+
+        var selected = data.filter(function(item){
+            var days = item.range ;
+            if(select === 0) return item ;
+            else if(select === days) return item ;
+            
+        });
+             displayProducts(selected);
+        }
+    
+    displayProducts(data);
+
+    function displayProducts(data){
+        document.querySelector("#container").innerHTML = "";
+        data.map(function(item){
+            var prodiv = document.createElement("div");
+            prodiv.setAttribute("id","maindiv");
+            prodiv.addEventListener("click",productShow);
+
+            var image = document.createElement("img");
+            image.setAttribute("id","picture");
+            image.setAttribute("src",item.image)
+
+            var ptag1 = document.createElement("p");
+            ptag1.setAttribute("id","nameofprod");
+            ptag1.textContent = item.name ;
+
+            var ptag2 = document.createElement("p");
+            ptag2.setAttribute("id","brandofprod");
+            ptag2.textContent = item.brand ;
+
+            var personaldiv = document.createElement("div");
+            personaldiv.setAttribute("id","sub1div");
+
+            var leftdiv = document.createElement("div");
+            leftdiv.setAttribute("id","div1");
+
+            var rightdiv = document.createElement("div");
+            rightdiv.setAttribute("id","div2");
+
+            var rating1 = document.createElement("p");
+            rating1.setAttribute("id","rating");
+            rating1.innerHTML =`<i class="fas fa-star"></i> ${item.rating}` ;
+            
+            var price = document.createElement("p");
+            price.setAttribute("id","cost");
+            price.textContent = "₹ " + item.MRP ;
+
+            var origin = document.createElement("p");
+            origin.setAttribute("id","fromCounty");
+            origin.textContent = "from " + item.from ;
+
+            var dispatch = document.createElement("p");
+            dispatch.setAttribute("id","toCounty");
+            dispatch.textContent = "to "+item.toCountry;
+
+            var when = document.createElement("p");
+            when.setAttribute("id","delivery");
+            when.textContent = "in " +item.delivery  ;
+            
+            leftdiv.append(rating1, price);
+            rightdiv.append(origin,dispatch, when);
+            
+            personaldiv.append(leftdiv, rightdiv);
+            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+
+            document.querySelector("#container").append(prodiv);
+
+        });
+
+        function productShow(){
+            window.location.href = "productShow.html" ;
+        } 
+    }
+
+
+</script>

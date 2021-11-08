@@ -1,0 +1,110 @@
+#heading{
+    width:80%;
+    margin: auto;
+    color: rgb(24, 24, 24);
+}
+#optionsForSort{
+    width:80%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom : 15px;
+    background-color: white;
+    display: flex;
+    gap: 1.4% ;
+    border-bottom: 1px solid rgba(56, 55, 55, 0.479);
+    position: sticky;
+    top:0;
+}
+#container{
+    width: 80%;
+    display: grid ;
+    grid-template-columns: repeat(3, 1fr);
+    /* border: 1.5px solid red; */
+    margin: auto;
+    column-gap : 1.4%;
+    row-gap : 20px;
+    font-family: Lato,sans-serif;
+}
+
+#optionsForSort > select{
+    width : 33% ;
+    height: 55px; 
+    padding: 10px;
+    border-radius: 6px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+select option {
+    margin: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+#maindiv {
+    height: 350px ;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: 8px;
+    line-height: 15px;
+    padding: 2%;
+    color:rgba(41, 40, 40, 0.904);
+}
+
+#maindiv:hover{
+    transition: 0.5s;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#picture{
+    width: 65%;
+    height: 55%;
+    margin: auto;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-bottom: 8%;
+    align-items: center;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+
+}
+p{
+    margin:0;
+    padding:0;
+    line-height: 15px;
+    margin-left : 10px;
+    margin-right : 10px;
+}
+
+#nameofprod{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+            line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    font-weight: 500;
+    color : black;
+}
+
+#brandofprod{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#sub1div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 5%;
+}
+
+#cost{
+    font-size: 14px;
+    margin-top: 25%;
+    font-weight: 700;  
+}
+i{
+    color: mediumturquoise;
+}

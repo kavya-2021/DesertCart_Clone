@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Online Herbs Shopping Products</title>
+        <link rel="stylesheet" href="innerPage.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="optionsForSort">
+            <select name= "price" id="forPrice" onchange="priceSort()">
+            <option value="nofilter">Any Price</option>
+            <option value="1"> Below INR 1,000 </option>
+            <option value="2">INR 1,000 - INR 2000</option>
+            <option value="3">INR 2,000 - INR 3000</option>
+            <option value="4">INR 3,000 - INR 10000</option>
+            <option value="5"> INR 10000 + </option>
+            </select>
+            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
+                <option value="nofilter">Any Country</option>
+                <option value="USA"> IMPORTED FROM USA</option>
+                <option value="UK">IMPORTED FROM UK</option>
+                <option value="UAE">IMPORTED FROM UAE</option>
+                <option value="INDIA">IMPORTED FROM INDIA</option>
+            </select>
+            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
+                <option value="0">Any delivery time</option>
+                <option value="1"> Same Day </option>
+                <option value="3"> 2 days </option>
+                <option value="3"> 3-5 days </option>
+                <option value="4"> 5-8days </option>
+                <option value="9"> 9-15days</option>
+                <option value="9"> 15+ days </option>
+            </select>
+            
+        </div>
+        <div id= "heading">
+            <h2>Online Herbs Shopping Store in India</h2>
+        </div>
+        
+        <div id="container">
+ 
+        </div>
+    </body>
+</html>
+<script>
+
+    var data = [
+        {
+           name : "Dried Herbs Witchcraft Supplies, 22 Natural Witch Herbs for Spells with Magical Uses, Wiccan Supplies and Tools, Beginner Witchcraft Kit Magic Herbs kit Witch Stuff for Pagan, Wiccan Rituals, Voodoo",
+           brand : "by Dried Herbs",
+           rating : 4.7 ,
+           MRP :  "4,169",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81G2OejhzYS.jpg" 
+        },{
+           name : "AeroGarden Bounty Elite - Indoor Garden with LED Grow Light, WiFi and Alexa Compatible, Stainless Steel",
+           brand : "by AeroGarden",
+           rating : 4.7 ,
+           MRP :  " 52,959",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81xOlFWGp5L.jpg" 
+        },{
+           name : "Dried Herbs for Witchcraft Supplies - 22 Witch Herbs Kit for Wicca, Pagan and Magic Spells,Altar Supplies, Ritual Root Spell Collection, with 7 Pcs Crystals Chakra Stones",
+           brand : "by Leveve",
+           rating : 4.7 ,
+           MRP :  "3,549",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/815bEfrsCjS.jpg" 
+        },{
+           name : "iDOO Hydroponics Growing System, 7Pods Mini Herb Garden with Pump System, Germination Kit with LED Light, Automatic Timer, Height Adjustable (No Seed)",
+           brand : "by iDOO",
+           rating : 4.7 ,
+           MRP :  "15,349",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71Vs-OxtS+L.jpg" 
+        },{
+           name : "AeroGarden Harvest - Indoor Garden with LED Grow Light, Black",
+           brand : "by AeroGarden",
+           rating : 4.7 ,
+           MRP :  "17,069",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81DPs6WZXjL.jpg" 
+        },{
+           name : 'iDOO 12Pods Hydroponics Growing System, Indoor Herb Garden with Grow Light, Plants Germination Kit Built-in Fan, Automatic Timer, Up to 11.3"',
+           brand : "by iDOO",
+           rating : 4.7 ,
+           MRP :  "18,129",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71iT-OCtOVL.jpg" 
+        },{
+           name : "9 Herb Window Garden - Indoor Herb Growing Kit - Kitchen Windowsill Starter Kit - Easily Grow 9 Herbs Plants from Scratch with Comprehensive Guide - Unique Gardening Gifts for Women & Men",
+           brand : "by Planters Choice",
+           rating : 4.7 ,
+           MRP :  "6,939",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81lD8wyeIiL.jpg" 
+        },{
+           name : "24 Bags Dried Flowers,100% Natural Dried Flowers Herbs Kit for Soap Making, DIY Candle Making,Bath - Include Rose Petals,Lavender,Don't Forget Me,Lilium,Jasmine,Rosebudsand More",
+           brand : "by DIY",
+           rating : 4.7 ,
+           MRP :  " 2,689",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/91wnm8Dz6oL.jpg" 
+        },{
+           name : "Lulli Spell Herbs for Witchcraft - 24 Bottles of Magical Herbal Supplies for Pagan, Wiccan, Witch Spells & Ritual (15ML Paper Box)",
+           brand : "by Lulli",
+           rating : 4.7 ,
+           MRP :  "6,369",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/91wrnCjyUVS.jpg" 
+        },{
+           name : "Kitchen Herb Seed Set: 12 Varieties of Kitchen Herbs as Practical Herb Seed Mix, Spice Seeds and Herb Set for Kitchen, Garden and Balcony - Eco Friendly Gift Box of 12 Indoor Plants Seeds by OwnGrown",
+           brand : "by Kitchen Herb",
+           rating : 4.7 ,
+           MRP :  " 1,449",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/A1MUak8mWGL.jpg" 
+        },{
+           name : "Steenbergs Organic Storecupboard Spice and Herbs Gift Set",
+           brand : "by Steenbergs",
+           rating : 4.7 ,
+           MRP :  "5,059",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/91ob5XoJWGL.jpg" 
+        },{
+           name : "6 x Herb Plants - Including Herbs Like Rosemary - Coriander - Mint - Chives - Lavender - 9cm Pots Ready to Plant",
+           brand : "by Cathcy",
+           rating : 4.7 ,
+           MRP :  "3,839",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "15+ days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/51nlSwrKmjL.jpg" 
+        },{
+           name : "Schwartz Herbes de Provence 11 g, Bulk Pack of 6",
+           brand : "by Schwartz",
+           rating : 4.7 ,
+           MRP :  "2,199",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/819jWE93wjS.jpg" 
+        },{
+           name : "Schwartz - Herbs - Mixed - 100g",
+           brand : "by Schwartz",
+           rating : 4.7 ,
+           MRP :  "1,299",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71weYsph3gL.jpg" 
+        },{
+           name : "Cole & Mason H105349 Burwell Self-Watering Potted Herb Saver | Windowsill Herb Planter Indoor/Herb Box/Indoor Herb Garden | Triple | Suitable for 3 pots (85mm) | Includes 12 x Pads | 2 Year Guarantee",
+           brand : "by Cole & Mason",
+           rating : 4.7 ,
+           MRP :  "4,569",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61BL4vrQ57L.jpg" 
+        },{
+           name : "Baby Bio 79900562 Herb Food, Concentrate - 175 ml",
+           brand : "by Baby Bio",
+           rating : 4.7 ,
+           MRP :  "890",   
+           from : "UK",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71FDGI5ZfML.jpg" 
+        },{
+           name : "GOLUMUP Hydroponics Growing System, 12 Pods Indoor Herb Garden Kit With LED Grow Light, Smart Indoor Garden Planter for Home Kitchen, Automatic Timer Germination Kit, Height Adjustable(No Seeds)",
+           brand : "by GOLUMUP",
+           rating : 4.7 ,
+           MRP :  "21,469",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/81O7EY7CSKL.jpg" 
+        },{
+           name : "Schwartz Mixed Herbs, 11g",
+           brand : "by Schwartz",
+           rating : 4.7 ,
+           MRP :  "994",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61vPuf5Y8AL.jpg" 
+        },{
+           name : "Schwartz Garlic Granules, 50g",
+           brand : "by Schwartz",
+           rating : 4.7 ,
+           MRP :  "254",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/61+9zqOqKYL.jpg" 
+        },{
+           name : "A.Vogel Herbamare Original Seasoning Salt | Sea Salt with 12 Different Fresh Organic Vegetables & Herbs| Add Flavour to Cooking | 250g",
+           brand : "by A.Vogel",
+           rating : 4.7 ,
+           MRP :  "1,289",   
+           from : "USA",
+           toCountry : "INDIA",
+           delivery : "9-15 days",
+           range: 9, 
+           image: "https://m.media-amazon.com/images/I/71fc89gFo-L.jpg" 
+        },
+    ]
+
+
+    function priceSort(){
+        var select = document.querySelector("#forPrice").value;  
+        if(select == "nofilter"){
+            displayProducts(data);
+        }
+        else if(select == 1){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices < 1000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1);
+       } 
+       else if(select == 2){
+        var level1 = data.filter(function(item){
+           var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 1000 && prices < 2000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 3){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 2000 && prices < 3000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 4){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 3000 && prices < 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+       else if(select == 5){
+        var level1 = data.filter(function(item){
+         var cost =item.MRP;
+           cost = String(cost);
+           var prices = cost.replace(",","");
+           prices = Number(prices);
+             if(prices >= 10000) {
+                return item;
+             } 
+        }); 
+        displayProducts(level1); 
+       }
+}
+
+    function countrySort(){
+        var select = document.querySelector("#forCountry").value;
+        console.log(select);
+
+        var selected = data.filter(function(item){
+            if(select === item.from.toUpperCase()) return item ;
+            if(select == "nofilter") return item ;
+        });
+           displayProducts(selected);
+        }
+
+    function deliverySort(){
+        var select = Number(document.querySelector("#fortime").value);
+ 
+
+        var selected = data.filter(function(item){
+            var days = item.range ;
+            if(select === 0) return item ;
+            else if(select === days) return item ;
+            
+        });
+             displayProducts(selected);
+        }
+    
+    displayProducts(data);
+
+    function displayProducts(data){
+        document.querySelector("#container").innerHTML = "";
+        data.map(function(item){
+            var prodiv = document.createElement("div");
+            prodiv.setAttribute("id","maindiv");
+            prodiv.addEventListener("click",productShow);
+
+            var image = document.createElement("img");
+            image.setAttribute("id","picture");
+            image.setAttribute("src",item.image)
+
+            var ptag1 = document.createElement("p");
+            ptag1.setAttribute("id","nameofprod");
+            ptag1.textContent = item.name ;
+
+            var ptag2 = document.createElement("p");
+            ptag2.setAttribute("id","brandofprod");
+            ptag2.textContent = item.brand ;
+
+            var personaldiv = document.createElement("div");
+            personaldiv.setAttribute("id","sub1div");
+
+            var leftdiv = document.createElement("div");
+            leftdiv.setAttribute("id","div1");
+
+            var rightdiv = document.createElement("div");
+            rightdiv.setAttribute("id","div2");
+
+            var rating1 = document.createElement("p");
+            rating1.setAttribute("id","rating");
+            rating1.innerHTML =`<i class="fas fa-star"></i> ${item.rating}` ;
+
+            
+            var price = document.createElement("p");
+            price.setAttribute("id","cost");
+            price.textContent = "₹ " + item.MRP ;
+
+            var origin = document.createElement("p");
+            origin.setAttribute("id","fromCounty");
+            origin.textContent = "from " + item.from ;
+
+            var dispatch = document.createElement("p");
+            dispatch.setAttribute("id","toCounty");
+            dispatch.textContent = "to "+item.toCountry;
+
+            var when = document.createElement("p");
+            when.setAttribute("id","delivery");
+            when.textContent = "in " +item.delivery  ;
+            
+            leftdiv.append(rating1, price);
+            rightdiv.append(origin,dispatch, when);
+            
+            personaldiv.append(leftdiv, rightdiv);
+            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+
+            document.querySelector("#container").append(prodiv);
+
+        });
+
+        function productShow(){
+            window.location.href = "productShow.html" ;
+        } 
+    }
+
+
+</script>
