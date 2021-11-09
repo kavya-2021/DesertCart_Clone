@@ -873,7 +873,7 @@
 
             var when = document.createElement("p");
             when.setAttribute("id","delivery");
-            when.textContent = item.delivery ;
+            when.textContent = "in "+item.delivery ;
             
             var symbols = document.createElement("img");
             symbols.setAttribute("id","imagesymbol");
@@ -893,7 +893,7 @@
             document.querySelector("#container").append(prodiv);
 
         }); 
-        
+
       function productShow(item){
          var product = item;
          localStorage.setItem("SelectedProduct", JSON.stringify(product)); 
