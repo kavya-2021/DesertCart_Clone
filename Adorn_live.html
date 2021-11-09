@@ -2,113 +2,8 @@
 <html lang="en">
     <head>
         <title>Online Home Decor Products</title>
-        <style>
-            #heading{
-                width:75%;
-                margin: auto;
-                color: rgb(24, 24, 24);
-            }
-            #optionsForSort{
-                width:75%;
-                margin: auto;
-                padding-top: 10px;
-                padding-bottom : 15px;
-                background-color: white;
-                display: flex;
-                gap: 1.4% ;
-                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
-                position: sticky;
-                top:0;
-            }
-            #container{
-                width: 75%;
-                display: grid ;
-                grid-template-columns: repeat(4, 24%);
-                /* border: 1.5px solid red; */
-                margin: auto;
-                column-gap : 1.4%;
-                row-gap : 20px;
-                font-family: Lato,sans-serif;
-            }
-
-            #optionsForSort > select{
-                width : 33% ;
-                height: 55px; 
-                padding: 10px;
-                border-radius: 6px;
-                padding-right: 10px;
-                font-size: 15px;
-            }
-           
-            select option {
-                margin: 40px;
-                background: rgba(0, 0, 0, 0.3);
-                color: #fff;
-                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-            }
-
-            #maindiv {
-                height: 280px ;
-                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-                border-radius: 8px;
-                line-height: 15px;
-                padding: 2%;
-                color:rgba(41, 40, 40, 0.904);
-            }
-
-            #maindiv:hover{
-               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-            }
-
-            #picture{
-                width: 45%;
-                height: 55%;
-                margin: auto;
-                margin-left: 25%;
-                margin-bottom: 8%;
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
-
-            }
-            p{
-                margin:0;
-                padding:0;
-                line-height: 15px;
-                margin-left : 10px;
-                margin-right : 10px;
-            }
-
-            #nameofprod{
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2; 
-                        line-clamp: 2; 
-                -webkit-box-orient: vertical;
-                font-size: 14px;
-                font-weight: 500;
-                color : black;
-            }
-
-            #brandofprod{
-                font-size: 12px;
-                font-weight: 500;
-            }
-
-            #sub1div{
-                display: flex;
-                justify-content: space-between;
-                font-size: 12px;
-                margin-top: 5%;
-            }
-
-            #cost{
-                font-size: 14px;
-                margin-top: 25%;
-                font-weight: 700;  
-            }
-
-        </style>
+        <link rel="stylesheet" href="products_page.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="optionsForSort">
@@ -153,6 +48,7 @@
         {
            name : "HoMedics Indoor 3-Tier Relaxation Tabletop Fountain, Automatic Pump with Power Switch, Extra Deep Basin with Natural River Rocks and Reflective Lighting Feature, EnviraScape Silver Springs",
            brand : "By Homedics",
+           qty:1,
            rating : 4.2 ,
            MRP : "3,239",  
            from : "USA",
@@ -163,6 +59,7 @@
         },{
            name : "This is Us Personalized Custom Metal/Wood Sign Retro Wooden Panel Background Warm Home Decor Entry Door Garden Patio Living Room Porch Welcome Sign Couple Parents Thanksgiving Gift",
            brand : "By Gxiliru",
+           qty:1,
            rating : 4.6 ,
            MRP : "5,619",  
            from : "USA",
@@ -173,6 +70,7 @@
         },{
            name : "MORECON 4 Meters 40 LED Double-Layer Light String Christmas Ribbon Bow LED Christmas Tree Ornaments New Year Home Decor (C)",
            brand : "By Morecon",
+           qty:1,
            rating : 4.6 ,
            MRP : "9,469",  
            from : "USA",
@@ -183,6 +81,7 @@
         },{
            name : "Console Table with Drawers, Rustic Hallway Table with Storage Shelves, Narrow Long Sofa Entryway Table for Living Room, Metal Frame, Rustic Brown",
            brand : "By Urkno",
+           qty:1,
            rating : 4.6 ,
            MRP : "72,179",  
            from : "USA",
@@ -193,6 +92,7 @@
         },{
            name : "Christmas Wreaths Decoration for Front Door,The Cordless Prelit Red and White Holiday Trim,Ornament for Xmas Party Indoors and Outdoors Home Decor (A-Long Strip 120CM)",
            brand : "By Elneeya",
+           qty:1,
            rating : 4.6 ,
            MRP : "24,539",  
            from : "USA",
@@ -203,6 +103,7 @@
         },{
            name : "Quorum International Windmill 72' Ceiling Fan - Oiled Bronze - 97215-86",
            brand : "By Quorum International",
+           qty:1,
            rating : 4.2 ,
            MRP : "194,499",  
            from : "USA",
@@ -213,6 +114,7 @@
         },{
            name : "Hexagarm Trippy Planet Tapestry Fantasy Galaxy Tapestry Wall Hanging Hippie Mountain Mushroom Magic River Tapestry Psychedelic Space Wall ",
            brand : "By Hexagarm ",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,969",  
            from : "USA",
@@ -223,6 +125,7 @@
         },{
            name : "Corner Shelf, Greenco 5 Tier Floating Shelves for Wall, Easy-to-Assemble Wall Mount Corner Shelves for Bedrooms and Living Rooms, Espresso Finish",
            brand : "By Greenco",
+           qty:1,
            rating : 4.6 ,
            MRP : "",  
            from : "USA",
@@ -233,6 +136,7 @@
         },{
            name : "EFOLKI Boho Throw Pillow Covers for Couch and Bed 18x18 Set of 6, Boho Decor,Winter Home Decor, Bedroom Living Room Farmhouse Boho Decor, Winter Decorations for Home, Decorative Throw Pillows Covers",
            brand : "By Efolki",
+           qty:1,
            rating : 4.7 ,
            MRP : "8,369",  
            from : "USA",
@@ -243,6 +147,7 @@
         },{
            name : "Yoleshy Wooden Home Sign with Artificial Eucalyptus Wreath for O, 9.8'' Home Letters with Wreath for Wall Hanging Decor, Rustic Wall Letters Decor for Living Room, Entry Way, Kitchen, Etc (Brown)",
            brand : "By Yoleshy",
+           qty:1,
            rating : 4.7 ,
            MRP : "5,059",  
            from : "USA",
@@ -253,6 +158,7 @@
         },{
            name : "Cutting Board Eat Sign Set Hanging Art Kitchen Eat Sign Fork and Spoon Wall Decor Rustic Primitive Country Farmhouse Kitchen Decor for Kitchen and Home Decoration (White, Grey Black, Brown)",
            brand : "By Jetec",
+           qty:1,
            rating : 4.5 ,
            MRP : "4,559",  
            from : "USA",
@@ -263,6 +169,7 @@
         },{
            name : "Bonsai Tree Light for Room Decor, Aesthetic Lamps for Living Room, Cute Night Light for House Decor, Good Ideas for Gifts, Home Decorations, Weddings,Christmas, Holidays and More (Warm White, 108 LED)",
            brand : "By Otavilem",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,049",  
            from : "USA",
@@ -273,6 +180,7 @@
         },{
            name : "500 Pieces Puzzles for Adults Round Jigsaw Puzzles- Mysterious Zodiac Horoscope Puzzle, Twelve Constellations Kids DIY Toys for Creative Gift Home Decor",
            brand : "By Gojeek",
+           qty:1,
            rating : 3.8 ,
            MRP : "1,599",  
            from : "USA",
@@ -283,6 +191,7 @@
         },{
            name : "The Lakeside Collection Wooden Decorative Home Signs with Letters, Pumpkin, Turkey, Snowflake - 13 Pc.",
            brand : "By The Lakeside Collection",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,899",  
            from : "USA",
@@ -293,6 +202,7 @@
         },{
            name : "U HOOME Night Light Projector Led Lamp, 180 Degree Rotation Sunset Night Light, USB Charging Romantic Led Light Rainbow Projection Lamp for Home Party Living Room Bedroom Decor(Rainbow) (Rainbow)",
            brand : "By U Hoome",
+           qty:1,
            rating : 3.0 ,
            MRP : "2,609",  
            from : "USA",
@@ -303,6 +213,7 @@
         },{
            name : "LED night light, TAIPOW bedside table lamp for baby kids room bedroom outdoor, dimmable eye caring desk lamp with color changing touch senor remote control USB rechargeable",
            brand : "By Taipow",
+           qty:1,
            rating : 4.6 ,
            MRP : "1,859",  
            from : "USA",
@@ -313,6 +224,7 @@
         },{
            name : "HAUSCHEN HOME 32x24 inch LED Bathroom Wall Mounted Makeup Vanity Mirror with CRI 95 Adjustable Light, Anti Fog, Memory Dimming Function, ETL Listed, Vertical & Horizontal",
            brand : "By Hauschen Home",
+           qty:1,
            rating : 4.6 ,
            MRP : "64,449",  
            from : "USA",
@@ -326,6 +238,7 @@
         {
            name : "HoMedics Indoor 3-Tier Relaxation Tabletop Fountain, Automatic Pump with Power Switch, Extra Deep Basin with Natural River Rocks and Reflective Lighting Feature, EnviraScape Silver Springs",
            brand : "By Homedics",
+           qty:1,
            rating : 4.2 ,
            MRP : "3,239",  
            from : "UAE",
@@ -336,6 +249,7 @@
         },{
            name : "This is Us Personalized Custom Metal/Wood Sign Retro Wooden Panel Background Warm Home Decor Entry Door Garden Patio Living Room Porch Welcome Sign Couple Parents Thanksgiving Gift",
            brand : "By Gxiliru",
+           qty:1,
            rating : 4.6 ,
            MRP : "5,619",  
            from : "UAE",
@@ -346,6 +260,7 @@
         },{
            name : "MORECON 4 Meters 40 LED Double-Layer Light String Christmas Ribbon Bow LED Christmas Tree Ornaments New Year Home Decor (C)",
            brand : "By Morecon",
+           qty:1,
            rating : 4.6 ,
            MRP : "9,469",  
            from : "UAE",
@@ -356,6 +271,7 @@
         },{
            name : "Console Table with Drawers, Rustic Hallway Table with Storage Shelves, Narrow Long Sofa Entryway Table for Living Room, Metal Frame, Rustic Brown",
            brand : "By Urkno",
+           qty:1,
            rating : 4.6 ,
            MRP : "72,179",  
            from : "UAE",
@@ -366,6 +282,7 @@
         },{
            name : "Christmas Wreaths Decoration for Front Door,The Cordless Prelit Red and White Holiday Trim,Ornament for Xmas Party Indoors and Outdoors Home Decor (A-Long Strip 120CM)",
            brand : "By Elneeya",
+           qty:1,
            rating : 4.6 ,
            MRP : "24,539",  
            from : "UAE",
@@ -376,6 +293,7 @@
         },{
            name : "Quorum International Windmill 72' Ceiling Fan - Oiled Bronze - 97215-86",
            brand : "By Quorum International",
+           qty:1,
            rating : 4.2 ,
            MRP : "194,499",  
            from : "UAE",
@@ -386,6 +304,7 @@
         },{
            name : "Hexagarm Trippy Planet Tapestry Fantasy Galaxy Tapestry Wall Hanging Hippie Mountain Mushroom Magic River Tapestry Psychedelic Space Wall ",
            brand : "By Hexagarm ",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,969",  
            from : "UAE",
@@ -396,6 +315,7 @@
         },{
            name : "Corner Shelf, Greenco 5 Tier Floating Shelves for Wall, Easy-to-Assemble Wall Mount Corner Shelves for Bedrooms and Living Rooms, Espresso Finish",
            brand : "By Greenco",
+           qty:1,
            rating : 4.6 ,
            MRP : "",  
            from : "UAE",
@@ -406,6 +326,7 @@
         },{
            name : "EFOLKI Boho Throw Pillow Covers for Couch and Bed 18x18 Set of 6, Boho Decor,Winter Home Decor, Bedroom Living Room Farmhouse Boho Decor, Winter Decorations for Home, Decorative Throw Pillows Covers",
            brand : "By Efolki",
+           qty:1,
            rating : 4.7 ,
            MRP : "8,369",  
            from : "UAE",
@@ -416,6 +337,7 @@
         },{
            name : "Yoleshy Wooden Home Sign with Artificial Eucalyptus Wreath for O, 9.8'' Home Letters with Wreath for Wall Hanging Decor, Rustic Wall Letters Decor for Living Room, Entry Way, Kitchen, Etc (Brown)",
            brand : "By Yoleshy",
+           qty:1,
            rating : 4.7 ,
            MRP : "5,059",  
            from : "UAE",
@@ -426,6 +348,7 @@
         },{
            name : "Cutting Board Eat Sign Set Hanging Art Kitchen Eat Sign Fork and Spoon Wall Decor Rustic Primitive Country Farmhouse Kitchen Decor for Kitchen and Home Decoration (White, Grey Black, Brown)",
            brand : "By Jetec",
+           qty:1,
            rating : 4.5 ,
            MRP : "4,559",  
            from : "UAE",
@@ -436,6 +359,7 @@
         },{
            name : "Bonsai Tree Light for Room Decor, Aesthetic Lamps for Living Room, Cute Night Light for House Decor, Good Ideas for Gifts, Home Decorations, Weddings,Christmas, Holidays and More (Warm White, 108 LED)",
            brand : "By Otavilem",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,049",  
            from : "UAE",
@@ -446,6 +370,7 @@
         },{
            name : "500 Pieces Puzzles for Adults Round Jigsaw Puzzles- Mysterious Zodiac Horoscope Puzzle, Twelve Constellations Kids DIY Toys for Creative Gift Home Decor",
            brand : "By Gojeek",
+           qty:1,
            rating : 3.8 ,
            MRP : "1,599",  
            from : "UAE",
@@ -456,6 +381,7 @@
         },{
            name : "The Lakeside Collection Wooden Decorative Home Signs with Letters, Pumpkin, Turkey, Snowflake - 13 Pc.",
            brand : "By The Lakeside Collection",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,899",  
            from : "UAE",
@@ -466,6 +392,7 @@
         },{
            name : "U HOOME Night Light Projector Led Lamp, 180 Degree Rotation Sunset Night Light, USB Charging Romantic Led Light Rainbow Projection Lamp for Home Party Living Room Bedroom Decor(Rainbow) (Rainbow)",
            brand : "By U Hoome",
+           qty:1,
            rating : 3.0 ,
            MRP : "2,609",  
            from : "UAE",
@@ -476,6 +403,7 @@
         },{
            name : "LED night light, TAIPOW bedside table lamp for baby kids room bedroom outdoor, dimmable eye caring desk lamp with color changing touch senor remote control USB rechargeable",
            brand : "By Taipow",
+           qty:1,
            rating : 4.6 ,
            MRP : "1,859",  
            from : "UAE",
@@ -486,6 +414,7 @@
         },{
            name : "HAUSCHEN HOME 32x24 inch LED Bathroom Wall Mounted Makeup Vanity Mirror with CRI 95 Adjustable Light, Anti Fog, Memory Dimming Function, ETL Listed, Vertical & Horizontal",
            brand : "By Hauschen Home",
+           qty:1,
            rating : 4.6 ,
            MRP : "64,449",  
            from : "UAE",
@@ -499,6 +428,7 @@
         {
            name : "HoMedics Indoor 3-Tier Relaxation Tabletop Fountain, Automatic Pump with Power Switch, Extra Deep Basin with Natural River Rocks and Reflective Lighting Feature, EnviraScape Silver Springs",
            brand : "By Homedics",
+           qty:1,
            rating : 4.2 ,
            MRP : "3,239",  
            from : "UK",
@@ -509,6 +439,7 @@
         },{
            name : "This is Us Personalized Custom Metal/Wood Sign Retro Wooden Panel Background Warm Home Decor Entry Door Garden Patio Living Room Porch Welcome Sign Couple Parents Thanksgiving Gift",
            brand : "By Gxiliru",
+           qty:1,
            rating : 4.6 ,
            MRP : "5,619",  
            from : "UK",
@@ -519,6 +450,7 @@
         },{
            name : "MORECON 4 Meters 40 LED Double-Layer Light String Christmas Ribbon Bow LED Christmas Tree Ornaments New Year Home Decor (C)",
            brand : "By Morecon",
+           qty:1,
            rating : 4.6 ,
            MRP : "9,469",  
            from : "UK",
@@ -529,6 +461,7 @@
         },{
            name : "Console Table with Drawers, Rustic Hallway Table with Storage Shelves, Narrow Long Sofa Entryway Table for Living Room, Metal Frame, Rustic Brown",
            brand : "By Urkno",
+           qty:1,
            rating : 4.6 ,
            MRP : "72,179",  
            from : "UK",
@@ -539,6 +472,7 @@
         },{
            name : "Christmas Wreaths Decoration for Front Door,The Cordless Prelit Red and White Holiday Trim,Ornament for Xmas Party Indoors and Outdoors Home Decor (A-Long Strip 120CM)",
            brand : "By Elneeya",
+           qty:1,
            rating : 4.6 ,
            MRP : "24,539",  
            from : "UK",
@@ -549,6 +483,7 @@
         },{
            name : "Quorum International Windmill 72' Ceiling Fan - Oiled Bronze - 97215-86",
            brand : "By Quorum International",
+           qty:1,
            rating : 4.2 ,
            MRP : "194,499",  
            from : "UK",
@@ -559,6 +494,7 @@
         },{
            name : "Hexagarm Trippy Planet Tapestry Fantasy Galaxy Tapestry Wall Hanging Hippie Mountain Mushroom Magic River Tapestry Psychedelic Space Wall ",
            brand : "By Hexagarm ",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,969",  
            from : "UK",
@@ -569,6 +505,7 @@
         },{
            name : "Corner Shelf, Greenco 5 Tier Floating Shelves for Wall, Easy-to-Assemble Wall Mount Corner Shelves for Bedrooms and Living Rooms, Espresso Finish",
            brand : "By Greenco",
+           qty:1,
            rating : 4.6 ,
            MRP : "",  
            from : "UK",
@@ -579,6 +516,7 @@
         },{
            name : "EFOLKI Boho Throw Pillow Covers for Couch and Bed 18x18 Set of 6, Boho Decor,Winter Home Decor, Bedroom Living Room Farmhouse Boho Decor, Winter Decorations for Home, Decorative Throw Pillows Covers",
            brand : "By Efolki",
+           qty:1,
            rating : 4.7 ,
            MRP : "8,369",  
            from : "UK",
@@ -589,6 +527,7 @@
         },{
            name : "Yoleshy Wooden Home Sign with Artificial Eucalyptus Wreath for O, 9.8'' Home Letters with Wreath for Wall Hanging Decor, Rustic Wall Letters Decor for Living Room, Entry Way, Kitchen, Etc (Brown)",
            brand : "By Yoleshy",
+           qty:1,
            rating : 4.7 ,
            MRP : "5,059",  
            from : "UK",
@@ -599,6 +538,7 @@
         },{
            name : "Cutting Board Eat Sign Set Hanging Art Kitchen Eat Sign Fork and Spoon Wall Decor Rustic Primitive Country Farmhouse Kitchen Decor for Kitchen and Home Decoration (White, Grey Black, Brown)",
            brand : "By Jetec",
+           qty:1,
            rating : 4.5 ,
            MRP : "4,559",  
            from : "UK",
@@ -609,6 +549,7 @@
         },{
            name : "Bonsai Tree Light for Room Decor, Aesthetic Lamps for Living Room, Cute Night Light for House Decor, Good Ideas for Gifts, Home Decorations, Weddings,Christmas, Holidays and More (Warm White, 108 LED)",
            brand : "By Otavilem",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,049",  
            from : "UK",
@@ -619,6 +560,7 @@
         },{
            name : "500 Pieces Puzzles for Adults Round Jigsaw Puzzles- Mysterious Zodiac Horoscope Puzzle, Twelve Constellations Kids DIY Toys for Creative Gift Home Decor",
            brand : "By Gojeek",
+           qty:1,
            rating : 3.8 ,
            MRP : "1,599",  
            from : "UK",
@@ -629,6 +571,7 @@
         },{
            name : "The Lakeside Collection Wooden Decorative Home Signs with Letters, Pumpkin, Turkey, Snowflake - 13 Pc.",
            brand : "By The Lakeside Collection",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,899",  
            from : "UK",
@@ -639,6 +582,7 @@
         },{
            name : "U HOOME Night Light Projector Led Lamp, 180 Degree Rotation Sunset Night Light, USB Charging Romantic Led Light Rainbow Projection Lamp for Home Party Living Room Bedroom Decor(Rainbow) (Rainbow)",
            brand : "By U Hoome",
+           qty:1,
            rating : 3.0 ,
            MRP : "2,609",  
            from : "UK",
@@ -649,6 +593,7 @@
         },{
            name : "LED night light, TAIPOW bedside table lamp for baby kids room bedroom outdoor, dimmable eye caring desk lamp with color changing touch senor remote control USB rechargeable",
            brand : "By Taipow",
+           qty:1,
            rating : 4.6 ,
            MRP : "1,859",  
            from : "UK",
@@ -659,6 +604,7 @@
         },{
            name : "HAUSCHEN HOME 32x24 inch LED Bathroom Wall Mounted Makeup Vanity Mirror with CRI 95 Adjustable Light, Anti Fog, Memory Dimming Function, ETL Listed, Vertical & Horizontal",
            brand : "By Hauschen Home",
+           qty:1,
            rating : 4.6 ,
            MRP : "64,449",  
            from : "UK",
@@ -672,6 +618,7 @@
         {
            name : "HoMedics Indoor 3-Tier Relaxation Tabletop Fountain, Automatic Pump with Power Switch, Extra Deep Basin with Natural River Rocks and Reflective Lighting Feature, EnviraScape Silver Springs",
            brand : "By Homedics",
+           qty:1,
            rating : 4.2 ,
            MRP : "3,239",  
            from : "INDIA",
@@ -682,6 +629,7 @@
         },{
            name : "This is Us Personalized Custom Metal/Wood Sign Retro Wooden Panel Background Warm Home Decor Entry Door Garden Patio Living Room Porch Welcome Sign Couple Parents Thanksgiving Gift",
            brand : "By Gxiliru",
+           qty:1,
            rating : 4.6 ,
            MRP : "5,619",  
            from : "INDIA",
@@ -692,6 +640,7 @@
         },{
            name : "MORECON 4 Meters 40 LED Double-Layer Light String Christmas Ribbon Bow LED Christmas Tree Ornaments New Year Home Decor (C)",
            brand : "By Morecon",
+           qty:1,
            rating : 4.6 ,
            MRP : "9,469",  
            from : "INDIA",
@@ -702,6 +651,7 @@
         },{
            name : "Console Table with Drawers, Rustic Hallway Table with Storage Shelves, Narrow Long Sofa Entryway Table for Living Room, Metal Frame, Rustic Brown",
            brand : "By Urkno",
+           qty:1,
            rating : 4.6 ,
            MRP : "72,179",  
            from : "INDIA",
@@ -712,6 +662,7 @@
         },{
            name : "Christmas Wreaths Decoration for Front Door,The Cordless Prelit Red and White Holiday Trim,Ornament for Xmas Party Indoors and Outdoors Home Decor (A-Long Strip 120CM)",
            brand : "By Elneeya",
+           qty:1,
            rating : 4.6 ,
            MRP : "24,539",  
            from : "INDIA",
@@ -722,6 +673,7 @@
         },{
            name : "Quorum International Windmill 72' Ceiling Fan - Oiled Bronze - 97215-86",
            brand : "By Quorum International",
+           qty:1,
            rating : 4.2 ,
            MRP : "194,499",  
            from : "INDIA",
@@ -732,6 +684,7 @@
         },{
            name : "Hexagarm Trippy Planet Tapestry Fantasy Galaxy Tapestry Wall Hanging Hippie Mountain Mushroom Magic River Tapestry Psychedelic Space Wall ",
            brand : "By Hexagarm ",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,969",  
            from : "INDIA",
@@ -742,6 +695,7 @@
         },{
            name : "Corner Shelf, Greenco 5 Tier Floating Shelves for Wall, Easy-to-Assemble Wall Mount Corner Shelves for Bedrooms and Living Rooms, Espresso Finish",
            brand : "By Greenco",
+           qty:1,
            rating : 4.6 ,
            MRP : "",  
            from : "INDIA",
@@ -752,6 +706,7 @@
         },{
            name : "EFOLKI Boho Throw Pillow Covers for Couch and Bed 18x18 Set of 6, Boho Decor,Winter Home Decor, Bedroom Living Room Farmhouse Boho Decor, Winter Decorations for Home, Decorative Throw Pillows Covers",
            brand : "By Efolki",
+           qty:1,
            rating : 4.7 ,
            MRP : "8,369",  
            from : "INDIA",
@@ -762,6 +717,7 @@
         },{
            name : "Yoleshy Wooden Home Sign with Artificial Eucalyptus Wreath for O, 9.8'' Home Letters with Wreath for Wall Hanging Decor, Rustic Wall Letters Decor for Living Room, Entry Way, Kitchen, Etc (Brown)",
            brand : "By Yoleshy",
+           qty:1,
            rating : 4.7 ,
            MRP : "5,059",  
            from : "INDIA",
@@ -772,6 +728,7 @@
         },{
            name : "Cutting Board Eat Sign Set Hanging Art Kitchen Eat Sign Fork and Spoon Wall Decor Rustic Primitive Country Farmhouse Kitchen Decor for Kitchen and Home Decoration (White, Grey Black, Brown)",
            brand : "By Jetec",
+           qty:1,
            rating : 4.5 ,
            MRP : "4,559",  
            from : "INDIA",
@@ -782,6 +739,7 @@
         },{
            name : "Bonsai Tree Light for Room Decor, Aesthetic Lamps for Living Room, Cute Night Light for House Decor, Good Ideas for Gifts, Home Decorations, Weddings,Christmas, Holidays and More (Warm White, 108 LED)",
            brand : "By Otavilem",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,049",  
            from : "INDIA",
@@ -792,6 +750,7 @@
         },{
            name : "500 Pieces Puzzles for Adults Round Jigsaw Puzzles- Mysterious Zodiac Horoscope Puzzle, Twelve Constellations Kids DIY Toys for Creative Gift Home Decor",
            brand : "By Gojeek",
+           qty:1,
            rating : 3.8 ,
            MRP : "1,599",  
            from : "INDIA",
@@ -802,6 +761,7 @@
         },{
            name : "The Lakeside Collection Wooden Decorative Home Signs with Letters, Pumpkin, Turkey, Snowflake - 13 Pc.",
            brand : "By The Lakeside Collection",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,899",  
            from : "INDIA",
@@ -812,6 +772,7 @@
         },{
            name : "U HOOME Night Light Projector Led Lamp, 180 Degree Rotation Sunset Night Light, USB Charging Romantic Led Light Rainbow Projection Lamp for Home Party Living Room Bedroom Decor(Rainbow) (Rainbow)",
            brand : "By U Hoome",
+           qty:1,
            rating : 3.0 ,
            MRP : "2,609",  
            from : "INDIA",
@@ -822,6 +783,7 @@
         },{
            name : "LED night light, TAIPOW bedside table lamp for baby kids room bedroom outdoor, dimmable eye caring desk lamp with color changing touch senor remote control USB rechargeable",
            brand : "By Taipow",
+           qty:1,
            rating : 4.6 ,
            MRP : "1,859",  
            from : "INDIA",
@@ -832,6 +794,7 @@
         },{
            name : "HAUSCHEN HOME 32x24 inch LED Bathroom Wall Mounted Makeup Vanity Mirror with CRI 95 Adjustable Light, Anti Fog, Memory Dimming Function, ETL Listed, Vertical & Horizontal",
            brand : "By Hauschen Home",
+           qty:1,
            rating : 4.6 ,
            MRP : "64,449",  
            from : "INDIA",
@@ -941,12 +904,12 @@
     function displayProducts(data){
         document.querySelector("#container").innerHTML = "";
         data.map(function(item){
-         var prodiv = document.createElement("div");
+            var prodiv = document.createElement("div");
             prodiv.setAttribute("id","maindiv");
             prodiv.addEventListener("click",function(){
                productShow(item);
             });
-            
+
             var image = document.createElement("img");
             image.setAttribute("id","picture");
             image.setAttribute("src",item.image)
@@ -968,9 +931,15 @@
             var rightdiv = document.createElement("div");
             rightdiv.setAttribute("id","div2");
 
+            var rightdiv1 = document.createElement("div");
+            rightdiv1.setAttribute("id","divr1");
+
+            var rightdiv2 = document.createElement("div");
+            rightdiv2.setAttribute("id","divr2");
+
             var rating1 = document.createElement("p");
             rating1.setAttribute("id","rating");
-            rating1.textContent = "★ " + item.rating ;
+            rating1.innerHTML =`<i style="color: #4cb9eb" class="fas fa-star"></i> ${item.rating}`;
             
             var price = document.createElement("p");
             price.setAttribute("id","cost");
@@ -978,7 +947,7 @@
 
             var origin = document.createElement("p");
             origin.setAttribute("id","fromCounty");
-            origin.textContent = "from " + item.from ;
+            origin.textContent = "from " + item.from ;  
 
             var dispatch = document.createElement("p");
             dispatch.setAttribute("id","toCounty");
@@ -986,19 +955,26 @@
 
             var when = document.createElement("p");
             when.setAttribute("id","delivery");
-            when.textContent = "in " +item.delivery  ;
+            when.textContent = item.delivery ;
+            
+            var symbols = document.createElement("img");
+            symbols.setAttribute("id","imagesymbol");
+            symbols.setAttribute("src","Screenshot 2021-11-09 at 11.07.27 AM.png")
             
             leftdiv.append(rating1, price);
-            rightdiv.append(origin,dispatch, when);
+
+            rightdiv1.append(origin,dispatch, when);
+
+            rightdiv2.append(symbols);
+
+            rightdiv.append(rightdiv1,rightdiv2);
             
             personaldiv.append(leftdiv, rightdiv);
             prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
 
             document.querySelector("#container").append(prodiv);
 
-        });
-
-        
+        });    
        function productShow(item){
             var product = item;
             localStorage.setItem("SelectedProduct", JSON.stringify(product)); 
