@@ -2,113 +2,9 @@
 <html lang="en">
     <head>
         <title>Online Eye care Makeup Products</title>
-        <style>
-            #heading{
-                width:75%;
-                margin: auto;
-                color: rgb(24, 24, 24);
-            }
-            #optionsForSort{
-                width:75%;
-                margin: auto;
-                padding-top: 10px;
-                padding-bottom : 15px;
-                background-color: white;
-                display: flex;
-                gap: 1.4% ;
-                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
-                position: sticky;
-                top:0;
-            }
-            #container{
-                width: 75%;
-                display: grid ;
-                grid-template-columns: repeat(4, 24%);
-                /* border: 1.5px solid red; */
-                margin: auto;
-                column-gap : 1.4%;
-                row-gap : 20px;
-                font-family: Lato,sans-serif;
-            }
+        <link rel="stylesheet" href="products_page.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
 
-            #optionsForSort > select{
-                width : 33% ;
-                height: 55px; 
-                padding: 10px;
-                border-radius: 6px;
-                padding-right: 10px;
-                font-size: 15px;
-            }
-           
-            select option {
-                margin: 40px;
-                background: rgba(0, 0, 0, 0.3);
-                color: #fff;
-                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-            }
-
-            #maindiv {
-                height: 280px ;
-                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-                border-radius: 8px;
-                line-height: 15px;
-                padding: 2%;
-                color:rgba(41, 40, 40, 0.904);
-            }
-
-            #maindiv:hover{
-               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-            }
-
-            #picture{
-                width: 45%;
-                height: 55%;
-                margin: auto;
-                margin-left: 25%;
-                margin-bottom: 8%;
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
-
-            }
-            p{
-                margin:0;
-                padding:0;
-                line-height: 15px;
-                margin-left : 10px;
-                margin-right : 10px;
-            }
-
-            #nameofprod{
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2; 
-                        line-clamp: 2; 
-                -webkit-box-orient: vertical;
-                font-size: 14px;
-                font-weight: 500;
-                color : black;
-            }
-
-            #brandofprod{
-                font-size: 12px;
-                font-weight: 500;
-            }
-
-            #sub1div{
-                display: flex;
-                justify-content: space-between;
-                font-size: 12px;
-                margin-top: 5%;
-            }
-
-            #cost{
-                font-size: 14px;
-                margin-top: 25%;
-                font-weight: 700;  
-            }
-
-        </style>
     </head>
     <body>
         <div id="optionsForSort">
@@ -153,6 +49,7 @@
         {
            name : "L'Oreal Paris Skin Care Clean Artiste Oil Free Eye Makeup Remover, 2 Count",
            brand : "By L'oreal Paris",
+           qty:1,
            rating : 4.6 ,
            MRP : "1,929" ,
            from : "USA",
@@ -164,6 +61,7 @@
         {
            name: "Eminence Herbal Eye Make-Up Remover, 5.07 Ounce",
            brand : "By Eminence",
+           qty:1,
            rating : 4.6 ,
            MRP : "5,279" ,
            from : "USA",
@@ -175,6 +73,7 @@
         {
            name : "Gentle, Waterproof Eye Makeup Remover - Moisturizing and Organic with Vitamin E and Tea Tree Oil to Support Dry, Itchy Eyelids and Irritated Eyes (1-Pack)",
            brand : "By Eyelove",
+           qty:1,
            rating : 4.2 ,
            MRP : "3,339" ,
            from : "USA",
@@ -186,6 +85,7 @@
         {
            name : "e.l.f. Holy Hydration! Eye Cream | Infused with Hyaluronic Acid & Peptides | Minimizes Dark Circles | 0.53 Oz (15g)",
            brand : "By E L F",
+           qty:1,
            rating : 4.6 ,
            MRP : "1,489" ,
            from : "USA",
@@ -198,6 +98,7 @@
         {
            name: "IT Cosmetics Confidence in an Eye Cream - Anti-Aging & Brightening Eye Cream for Dark Circles, Puffiness & Fine Lines - With Hyaluronic Acid & Collagen - 0.5 fl oz",
            brand : "By It Cosmetics",
+           qty:1,
            rating : 4.5 ,
            MRP : "4,459" ,
            from : "USA",
@@ -209,6 +110,7 @@
         {
            name: "2 Pack Cute Mini Makeup Spoons, Cosmetic Facial Spatula, Under Eye Cream Applicator Messager Stick Cosmetics Skincare Tools",
            brand : "By Sc Store",
+           qty:1,
            rating : 4.3 ,
            MRP : "1,269" ,
            from : "USA",
@@ -220,6 +122,7 @@
         {
            name: "Neutrogena Gentle OilFree Eye Makeup Remover Cleanser for Sensitive Eyes NonGreasy Remover Removes Waterproof Mascara Dermatologist Ophthalmologist Tested, 8 Fl Oz",
            brand : "By Neutrogena",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,479" ,
            from : "USA",
@@ -231,6 +134,7 @@
         {
            name: "Under Eye Bags Mask 24K Gold Eye Treatment Masks Hyaluronic Acid Under Eye Patches Collagen Eye Pads for Moisturizing & Reducing Dark Circles Puffiness Wrinkles, Gel Pads 30 Pairs",
            brand : "By Dr.Davey",
+           qty:1,
            rating : 4.0 ,
            MRP : "959" ,
            from : "UAE",
@@ -242,6 +146,7 @@
         {
            name: "Cetaphil Gentle Waterproof Makeup Remover, 6.0 Fluid Ounce",
            brand : "By Cetaphil",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,619" ,
            from : "USA",
@@ -254,6 +159,7 @@
         {
            name: "Garnier SkinActive Micellar Cleansing Water, For Waterproof Makeup, 13.5 Fl Oz",
            brand : "By Garnier",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,509" ,
            from : "USA",
@@ -266,6 +172,7 @@
         {
            name: "Bliss - Makeup Melt Never-Greasy Eye Makeup Remover Gel | Cooling & Soothing Gel for Eye Makeup Removal | Hydrating Eyelid Cleanser & Mascara Remover | Vegan | Cruelty Free | Paraben Free | 4.0 fl.oz.",
            brand : "By Bliss",
+           qty:1,
            rating : 3.8 ,
            MRP : "1,009" ,
            from : "USA",
@@ -278,6 +185,7 @@
         {
            name: "L'Oreal Clean Artiste Oil-Free Eye Makeup Remover, 4 oz",
            brand : "By L'oreal Paris",
+           qty:1,
            rating : 4.3 ,
            MRP : "1,289" ,
            from : "USA",
@@ -290,6 +198,7 @@
         {
            name: "Eminence Herbal Eye Make Up Remover, 5.07 Ounce",
            brand : "By Eminence",
+           qty:1,
            rating : 4.5 ,
            MRP : "4,179" ,
            from : "USA",
@@ -302,6 +211,7 @@
         {
            name: "24K Gold Eye Mask– 20 Pairs - Puffy Eyes and Dark Circles Treatments – Look Less Tired and Reduce Wrinkles and Fine Lines Undereye, Revitalize and Refresh Your Skin",
            brand : "By Dermora",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,349" ,
            from : "USA",
@@ -313,6 +223,7 @@
         {
            name: "TULA Skin Care Rose Glow & Get It Cooling & Brightening Eye Balm | Dark Circle Under Eye Treatment, Instantly Hydrate and Brighten Undereye Area, Perfect to Use On-the-go | 0.35 oz.",
            brand : "By Tula",
+           qty:1,
            rating : 4.5 ,
            MRP : "3,909" ,
            from : "USA",
@@ -325,6 +236,7 @@
         {
            name: "Neutrogena Oil-Free Liquid Eye Makeup Remover, Residue-Free, Non-Greasy, Gentle & Skin-Soothing Makeup Remover Solution with Aloe & Cucumber Extract for Waterproof Mascara, 3.8 fl. oz",
            brand : "By Neutrogena",
+           qty:1,
            rating : 4.7 ,
            MRP : "734" ,
            from : "USA",
@@ -336,6 +248,7 @@
         {
            name: "Under Eye Bags Mask 24K Gold Eye Treatment Masks Hyaluronic Acid Under Eye Patches Collagen Eye Pads for Moisturizing & Reducing Dark Circles Puffiness Wrinkles, Gel Pads 30 Pairs",
            brand : "By Dr.Davey",
+           qty:1,
            rating : 4.0 ,
            MRP : "959" ,
            from : "UAE",
@@ -348,6 +261,7 @@
         {
            name: "Bliss - Makeup Melt Oil-Free Makeup Remover Wipes | Facial Cleansing Wipes w/Chamomile, Aloe & Marshmallow Root for Hydrating Skin | All Skin Types | Vegan | Cruelty Free | Paraben Free | 30 ct.",
            brand : "By Bliss",
+           qty:1,
            rating : 4.5 ,
            MRP : "859" ,
            from : "USA",
@@ -360,6 +274,7 @@
         {
            name: "IT Cosmetics Bye Bye Under Eye, 10.5 Light (C) - Full-Coverage, Anti-Aging, Waterproof Concealer - Improves the Appearance of Dark Circles, Wrinkles & Imperfections - 0.4 fl oz",
            brand : "By Eminence",
+           qty:1,
            rating : 4.5 ,
            MRP : "3,259" ,
            from : "USA",
@@ -372,6 +287,7 @@
         {
            name: "Garnier SkinActive Clearly Brighter Sheer Tinted Eye Roller, Light/Medium, 0.5 Fl Oz",
            brand : "By Garnier",
+           qty:1,
            rating : 4.3 ,
            MRP : "1,799" ,
            from : "USA",
@@ -384,6 +300,7 @@
         {
            name: "e.l.f. Jet Set Hydration Kit, Travel Friendly Skincare Set, Cleanser, Balm, Moisturizer, Eye Cream & Night Cream",
            brand : "By E L F",
+           qty:1,
            rating : 4.5 ,
            MRP : "2,379" ,
            from : "USA",
@@ -395,6 +312,7 @@
         {
            name: "Burt's Bees Eye Makeup Remover Pads, 35 Count",
            brand : "By Garnier",
+           qty:1,
            rating : 4.3 ,
            MRP : "1,499" ,
            from : "USA",
@@ -406,6 +324,7 @@
         {
            name: "Eye Care Cosmetics Pencil Eyeliner Blue",
            brand : "By Eye care cosmetics",
+           qty:1,
            rating : 3.4 ,
            MRP : "3,339" ,
            from : "UK",
@@ -418,6 +337,7 @@
         {
            name: "Eyebrow Cream,6 Colors Brow Color Waterproof Eyebrow Pomade Gel, ​Makeup Waterproof Eyebrow Gel For Long Lasting Eye Brow Make Up,Versatile, Defines, Sculpts, Shades, Contours… (02 TAUPE)",
            brand : "By Junhe",
+           qty:1,
            rating : 4.3 ,
            MRP : "1,269" ,
            from : "UK",
@@ -430,6 +350,7 @@
         {
            name: "Milk Makeup Cooling Water Stick Soothing Seawater and Firming Caffeine - 1.2 Ounce Full Size",
            brand : "By Milk Makeup",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,569" ,
            from : "USA",
@@ -441,6 +362,7 @@
         {
            name: "[the SAEM] Iceland Hydrating Eye Stick 0.24oz (7g) - Cooling Eye Stick to Cool and Brighten Dark and Puffy Eyes, 5% Iceland Mineral Water",
            brand : "By Thesaem",
+           qty:1,
            rating : 4.3 ,
            MRP : "1,329" ,
            from : "USA",
@@ -452,6 +374,7 @@
         {
            name: "Colorescience Total Eye 3-in-1 Anti-Aging Renewal Therapy for Wrinkles & Dark Circle",
            brand : "",
+           qty:1,
            rating : 4.3 ,
            MRP : "11,059" ,
            from : "USA",
@@ -463,6 +386,7 @@
         {
            name: "Organic Cotton Rounds Compatible with Makeup Products, Eye Makeup Remover Pads and Baby Wipes, Small, 300 Count - Noleo",
            brand : "By Noleo",
+           qty:1,
            rating : 4.5 ,
            MRP : "1,379" ,
            from : "USA",
@@ -474,6 +398,7 @@
         {
            name: "I DEW CARE Glow-Key Eye Cream with Applicator | Vitamin C Eye Serum with Niacinamide | Eye Cream for Dark Circles and Puffiness | Korean Skin care, Vegan, Cruelty-free, Gluten-free, Paraben-free",
            brand : "By I DEW CARE",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,139" ,
            from : "USA",
@@ -485,6 +410,7 @@
         {
            name: "9 Sheets Eye Body Face Gems Rhinestone Stickers Self Adhesive Rhinestones Rainbow Face Gems for Women Festival Accessory and Nail Art Decorations (Tiny Bead)",
            brand : "By  Outus",
+           qty:1,
            rating : 4.6 ,
            MRP : "1,499" ,
            from : "USA",
@@ -497,6 +423,7 @@
         {
            name: "2 Pack 12 Colors Makeup Naked Eyeshadow Palette Natural Nude Matte Shimmer Glitter Pigment Eye Shadow Pallete Set Waterproof Smokey Professional Cosmetic Beauty Kit BestLand (2 PCS)",
            brand : "By BestLand",
+           qty:1,
            rating : 4.2 ,
            MRP : "2,499" ,
            from : "USA",
@@ -509,6 +436,7 @@
         {
            name: "Eye Care Volumizing Mascara Pure Black 9g",
            brand : "By Eye care cosmetics",
+           qty:1,
            rating : 4.1 ,
            MRP : "3,759" ,
            from : "UK",
@@ -521,6 +449,7 @@
         {
            name: "Eye Care Cosmetics Pencil Eyeliner Blue",
            brand : "By Eye care cosmetics",
+           qty:1,
            rating : 3.4 ,
            MRP : "3,339" ,
            from : "UK",
@@ -533,6 +462,7 @@
         {
            name: "Eyebrow Cream,6 Colors Brow Color Waterproof Eyebrow Pomade Gel, ​Makeup Waterproof Eyebrow Gel For Long Lasting Eye Brow Make Up,Versatile, Defines, Sculpts, Shades, Contours… (02 TAUPE)",
            brand : "By Junhe",
+           qty:1,
            rating : 4.3 ,
            MRP : "1,269" ,
            from : "UK",
@@ -545,6 +475,7 @@
         {
            name: "Under Eye Bags Mask 24K Gold Eye Treatment Masks Hyaluronic Acid Under Eye Patches Collagen Eye Pads for Moisturizing & Reducing Dark Circles Puffiness Wrinkles, Gel Pads 30 Pairs",
            brand : "By Dr.Davey",
+           qty:1,
            rating : 4.0 ,
            MRP : "959" ,
            from : "UAE",
@@ -557,6 +488,7 @@
         {
            name: "COSMAC Eye Lip Care Combo Kit Waterproof Eyeliner,Mascara,Eyebrow Pencil,Black Auto Kajal With Red Liquid Lipstick For Protective Stay All Day And strawberry Lip Balm (set of 6)",
            brand : "By Cosmac",
+           qty:1,
            rating : 3.1 ,
            MRP : "549" ,
            from : "INDIA",
@@ -568,6 +500,7 @@
         {
            name: "Under Eye Bags Mask 24K Gold Eye Treatment Masks Hyaluronic Acid Under Eye Patches Collagen Eye Pads for Moisturizing & Reducing Dark Circles Puffiness Wrinkles, Gel Pads 30 Pairs",
            brand : "By Dr.Davey",
+           qty:1,
            rating : 4.0 ,
            MRP : "959" ,
            from : "UAE",
@@ -580,6 +513,7 @@
         {
            name: "Mamaearth Vitamin C Oil-Free Moisturizer For Face with Vitamin C & Gotu Kola for Skin Illumination – 80 ml",
            brand : "By Mama earth",
+           qty:1,
            rating : 4.2 ,
            MRP : "399" ,
            from : "INDIA",
@@ -591,6 +525,7 @@
         {
            name: "Blue Heaven Festive Combo, Vanilla",
            brand : "By Blue Heaven",
+           qty:1,
            rating : 3.8 ,
            MRP : "999" ,
            from : "INDIA",
@@ -700,7 +635,7 @@
 
 
     displayProducts(data);
-
+    
     function displayProducts(data){
         document.querySelector("#container").innerHTML = "";
         data.map(function(item){
@@ -731,9 +666,15 @@
             var rightdiv = document.createElement("div");
             rightdiv.setAttribute("id","div2");
 
+            var rightdiv1 = document.createElement("div");
+            rightdiv1.setAttribute("id","divr1");
+
+            var rightdiv2 = document.createElement("div");
+            rightdiv2.setAttribute("id","divr2");
+
             var rating1 = document.createElement("p");
             rating1.setAttribute("id","rating");
-            rating1.textContent = "★ " +  item.rating ;
+            rating1.innerHTML =`<i style="color: #4cb9eb" class="fas fa-star"></i> ${item.rating}`;
             
             var price = document.createElement("p");
             price.setAttribute("id","cost");
@@ -741,7 +682,7 @@
 
             var origin = document.createElement("p");
             origin.setAttribute("id","fromCounty");
-            origin.textContent = "from " + item.from ;
+            origin.textContent = "from " + item.from ;  
 
             var dispatch = document.createElement("p");
             dispatch.setAttribute("id","toCounty");
@@ -749,10 +690,19 @@
 
             var when = document.createElement("p");
             when.setAttribute("id","delivery");
-            when.textContent = "in " +item.delivery  ;
+            when.textContent = "in "+item.delivery ;
+            
+            var symbols = document.createElement("img");
+            symbols.setAttribute("id","imagesymbol");
+            symbols.setAttribute("src","Screenshot 2021-11-09 at 11.07.27 AM.png")
             
             leftdiv.append(rating1, price);
-            rightdiv.append(origin,dispatch, when);
+
+            rightdiv1.append(origin,dispatch, when);
+
+            rightdiv2.append(symbols);
+
+            rightdiv.append(rightdiv1,rightdiv2);
             
             personaldiv.append(leftdiv, rightdiv);
             prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
@@ -761,7 +711,7 @@
 
         });
 
-
+ 
       function productShow(item){
          var product = item;
          localStorage.setItem("SelectedProduct", JSON.stringify(product)); 

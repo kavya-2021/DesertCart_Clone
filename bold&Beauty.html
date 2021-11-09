@@ -1,112 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" >
     <head> <title> Online Lipstick Products</title>
-    <style>
-        #heading{
-                width:75%;
-                margin: auto;
-                color: rgb(24, 24, 24);
-            }
-            #optionsForSort{
-                width:75%;
-                margin: auto;
-                padding-top: 10px;
-                padding-bottom : 15px;
-                background-color: white;
-                display: flex;
-                gap: 1.4% ;
-                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
-                position: sticky;
-                top:0;
-            }
-            #container{
-                width: 75%;
-                display: grid ;
-                grid-template-columns: repeat(4, 24%);
-                /* border: 1.5px solid red; */
-                margin: auto;
-                column-gap : 1.4%;
-                row-gap : 20px;
-                font-family: Lato,sans-serif;
-            }
-
-            #optionsForSort > select{
-                width : 33% ;
-                height: 55px; 
-                padding: 10px;
-                border-radius: 6px;
-                padding-right: 10px;
-                font-size: 15px;
-            }
-           
-            select option {
-                margin: 40px;
-                background: rgba(0, 0, 0, 0.3);
-                color: #fff;
-                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-            }
-
-            #maindiv {
-                height: 280px ;
-                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-                border-radius: 8px;
-                line-height: 15px;
-                padding: 2%;
-                color:rgba(41, 40, 40, 0.904);
-            }
-
-            #maindiv:hover{
-               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-            }
-
-            #picture{
-                width: 45%;
-                height: 55%;
-                margin: auto;
-                margin-left: 25%;
-                margin-bottom: 8%;
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
-
-            }
-            p{
-                margin:0;
-                padding:0;
-                line-height: 15px;
-                margin-left : 10px;
-                margin-right : 10px;
-            }
-
-            #nameofprod{
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2; 
-                        line-clamp: 2; 
-                -webkit-box-orient: vertical;
-                font-size: 14px;
-                font-weight: 500;
-                color : black;
-            }
-
-            #brandofprod{
-                font-size: 12px;
-                font-weight: 500;
-            }
-
-            #sub1div{
-                display: flex;
-                justify-content: space-between;
-                font-size: 12px;
-                margin-top: 5%;
-            }
-
-            #cost{
-                font-size: 14px;
-                margin-top: 25%;
-                font-weight: 700;  
-            }
-    </style>
+      <link rel="stylesheet" href="products_page.css">
+      <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="optionsForSort">
@@ -150,6 +46,7 @@
         {
            name : "7Pcs Matte Liquid Lipstick + 1Pcs Lip Plumper Makeup Set Kit, Long Lasting Waterproof Velvet Lip Gloss Set, Pigmented Lip Makeup Gift Sets for Girls and Women",
            brand : "By Qibest",
+           qty:1,
            rating : 4.3 ,
            MRP : "1,919" ,
            from : "USA",
@@ -161,6 +58,7 @@
         {
            name : "6Pcs Matte Liquid Lipstick Makeup Set, Matte liquid Long-Lasting Wear Non-Stick Cup Not Fade Waterproof Lip Gloss (Set A)",
            brand : "By Bestland",
+           qty:1,
            rating : 4.0 ,
            MRP : "2,059" ,
            from : "USA",
@@ -172,6 +70,7 @@
         {
            name : "Maybelline Color Sensational Lipstick, Lip Makeup, Cream Finish, Hydrating Lipstick, Nude, Pink, Red, Plum Lip Color, Warm Me Up, 0.15 oz; (Packaging May Vary)",
            brand : "By Maybelline New York",
+           qty:1,
            rating : 4.5 ,
            MRP : "834" ,
            from : "USA",
@@ -183,6 +82,7 @@
         {
            name : "12Pcs Matte Liquid Lipstick + Lip Liner Pens Set, One Step Lips Makeup Kits Pigment Velvety Nude Lip Stain Waterproof Long Wear Lip Gloss Make up Gift Set",
            brand : "By Bestland",
+           qty:1,
            rating : 4.1 ,
            MRP : "2,229" ,
            from : "USA",
@@ -194,6 +94,7 @@
         {
            name : "REVLON Super Lustrous Glass Shine Lipstick, Flawless Moisturizing Lip Color with Aloe, Hyaluronic Acid and Rose Quartz, Glossed Up Rose (003), 0.15 oz",
            brand : "By Revlon",
+           qty:1,
            rating : 4.5 ,
            MRP : "1,059" ,
            from : "USA",
@@ -205,6 +106,7 @@
         {
            name : "L'Oreal Paris Colour Riche Lipstick, Sandstone, 1 Count",
            brand : "By L'Oreal Paris ",
+           qty:1,
            rating : 4.6 ,
            MRP : "874" ,
            from : "USA",
@@ -216,6 +118,7 @@
         {
            name : "3 Pure Color Envy Sculpting Lipsticks Trio by Estee Lauder for Women - 3 x 0.12 oz Lipstick - 280 Ambitious Pink, Lipstick - 260 Eccentric, Lipstick - 340 Envious",
            brand : "By Estee Lauder",
+           qty:1,
            rating : 4.5 ,
            MRP : "9,179" ,
            from : "USA",
@@ -227,6 +130,7 @@
         {
            name : "REVLON Super Lustrous Lipstick, 5 Piece Multi-finish Lipcolor Gift Set, in Cream Pearl & Matte, Pack of 5",
            brand : "By Revlon",
+           qty:1,
            rating : 4.5 ,
            MRP : "4,979" ,
            from : "USA",
@@ -238,6 +142,7 @@
         {
            name : "Miss Rose Long-lasting Matte Lipstick Set, 12 PCS Multi Colored featuring full-pigment lip color with a smooth, ultra-matte finish in 12 shades",
            brand : "By Miss Rose",
+           qty:1,
            rating : 4.1 ,
            MRP : "3,309" ,
            from : "USA",
@@ -249,6 +154,7 @@
         {
            name : "(3 Pack) RIMMEL LONDON Lasting Finish Intense Wear Lipstick - Amethyst Shimmer",
            brand : "By Rimmel",
+           qty:1,
            rating : 4.9 ,
            MRP : "3,559" ,
            from : "USA",
@@ -260,6 +166,7 @@
         {
            name : "Clinique Pop Lip Colour + Primer Lipstick, 0.08 oz. Travel Size •• (Bare Pop 02)",
            brand : "By Clinique",
+           qty:1,
            rating : 4.5 ,
            MRP : "984" ,
            from : "USA",
@@ -271,6 +178,7 @@
         {
            name : "Matte Liquid Lipstick Set, Spdoo 15 Colors Long Lasting High Pigmented Velvet Lip Gloss Kit",
            brand : "By Spdoo",
+           qty:1,
            rating : 3.9 ,
            MRP : "3,389" ,
            from : "USA",
@@ -282,6 +190,7 @@
         {
            name : "Mineral Fusion Lipstick, Ruby, .14 Ounce",
            brand : "By Mineral Fusion",
+           qty:1,
            rating : 4.3 ,
            MRP : "2,409" ,
            from : "USA",
@@ -294,6 +203,7 @@
         {
            name : "1PC Mini Capsule Lipstick, Matte Non-Stick Cup Waterproof Long Lasting Lipstick, Bright Moisturize Lip Gloss, Lip Enhancer for Fuller, Beauty Cosmetics Makeup Gift for Girls Womens (Red - 900#)",
            brand : "By 2022",
+           qty:1,
            rating : 4.3 ,
            MRP : "5,449" ,
            from : "USA",
@@ -305,6 +215,7 @@
         {
            name : "Matte Lipstick Set Mini Capsule Lipstick Set Velvet Matte Lipstick Smooth Long Lasting Waterproof Lipsticks Makeup Set 16 Colors",
            brand : "By Grospe",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,619" ,
            from : "USA",
@@ -316,6 +227,7 @@
         {
            name : "20 Pcs Tattoo Lipstick Cotton Swab, Long Lasting Waterproof Disposable Portable Lipstick, Red Moisturizing Lip Balm Lip Stick Non-stick Lipstick ",
            brand : "By Natebur",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,209" ,
            from : "USA",
@@ -327,6 +239,7 @@
         {
            name : "Maybelline Color Sensational Powder Matte Lipstick 05 Cruel Ruby",
            brand : "By Maybelline New York",
+           qty:1,
            rating : 3.9 ,
            MRP : "879" ,
            from : "UAE",
@@ -338,6 +251,7 @@
         {
            name : "NYX PROFESSIONAL MAKEUP Shout Loud Satin Lipstick, Desert Rose 05",
            brand : "By Nyx",
+           qty:1,
            rating : 4.1 ,
            MRP : "629" ,
            from : "UAE",
@@ -349,6 +263,7 @@
         {
            name : "Flawless Brows Eyebrow Hair Remover Trimmer Eplitor Razor for Women, Lipstick-Sized Eye brow Epilator,Facial Hair Shaver For Good Finishing",
            brand : "By Mbeline",
+           qty:1,
            rating : 2.8 ,
            MRP : "1,369" ,
            from : "UAE",
@@ -360,6 +275,7 @@
         {
            name : "theBalm Meet Matt(e) Hughes Liquid Lipstick Set #2 Set of 6 Mini Long-Lasting Liquid Lipsticks",
            brand : "By ",
+           qty:1,
            rating : 3.7 ,
            MRP : "2,319" ,
            from : "UAE",
@@ -371,6 +287,7 @@
         {
            name : "Flormar Matte Liquid Lipstick Lip Gloss - 02 Fall Rose",
            brand : "By Flormar",
+           qty:1,
            rating : 5 ,
            MRP : "2,029" ,
            from : "UAE",
@@ -382,6 +299,7 @@
         {
            name : "Max Factor Lipfinity Lip Colour Lipstick, 2-step Long Lasting, 335 Just In Love, 2.3 ml + 1.9 g",
            brand : "By Max Factor",
+           qty:1,
            rating : 4.5 ,
            MRP : "1,509" ,
            from : "UAE",
@@ -394,6 +312,7 @@
         {
            name : "Maybelline Superstay 14H Megawatt Lipstick Nu 135 Flash of Fuchsia",
            brand : "By Maybelline New York",
+           qty:1,
            rating : 3.8 ,
            MRP : "1,929" ,
            from : "UAE",
@@ -405,6 +324,7 @@
         {
            name : "[rom&nd] Zero matte lipstick 20 colors | Velvet matte, Colourpop, Sensational Lip color Creamy Matte, Silk Finishi | lipstick for Daily Use, K-beauty | 3g/0.106oz No.12 something…",
            brand : "By Rom Nd",
+           qty:1,
            rating : 4.6 ,
            MRP : "1,899" ,
            from : "UAE",
@@ -416,6 +336,7 @@
         {
            name : "Estee Lauder for Sculpted Lips Trio Lipsticks Gift Set 3 Full Sizes 410 Dynamic, 110 Insatiable Ivory, and 221 Pink Parfait",
            brand : "By ",
+           qty:1,
            rating : 4.3 ,
            MRP : "7,639" ,
            from : "UAE",
@@ -427,6 +348,7 @@
         {
            name : "(3 Pack) RIMMEL LONDON Lasting Finish Intense Wear Lipstick - Amethyst Shimmer",
            brand : "By Rimmel",
+           qty:1,
            rating : 4.9 ,
            MRP : "2,559" ,
            from : "INDIA",
@@ -438,6 +360,7 @@
         {
            name : "Maybelline Color Sensational Lipstick, Lip Makeup, Cream Finish, Hydrating Lipstick, Nude, Pink, Red, Plum Lip Color, Warm Me Up, 0.15 oz; (Packaging May Vary)",
            brand : "By Maybelline New York",
+           qty:1,
            rating : 4.5 ,
            MRP : "834" ,
            from : "INDIA",
@@ -449,6 +372,7 @@
         {
            name : "Clinique Pop Lip Colour + Primer Lipstick, 0.08 oz. Travel Size •• (Bare Pop 02)",
            brand : "By Clinique",
+           qty:1,
            rating : 4.5 ,
            MRP : "984" ,
            from : "INDIA",
@@ -460,6 +384,7 @@
         {
            name : "7Pcs Matte Liquid Lipstick + 1Pcs Lip Plumper Makeup Set Kit, Long Lasting Waterproof Velvet Lip Gloss Set, Pigmented Lip Makeup Gift Sets for Girls and Women",
            brand : "By Qibest",
+           qty:1,
            rating : 4.3 ,
            MRP : "1,919" ,
            from : "INDIA",
@@ -567,65 +492,79 @@ function deliverySort(){
 displayProducts(data);
 
 function displayProducts(data){
-    document.querySelector("#container").innerHTML = "";
-    data.map(function(item){
-      var prodiv = document.createElement("div");
+        document.querySelector("#container").innerHTML = "";
+        data.map(function(item){
+            var prodiv = document.createElement("div");
             prodiv.setAttribute("id","maindiv");
             prodiv.addEventListener("click",function(){
                productShow(item);
             });
-              
-        var image = document.createElement("img");
-        image.setAttribute("id","picture");
-        image.setAttribute("src",item.image)
 
-        var ptag1 = document.createElement("p");
-        ptag1.setAttribute("id","nameofprod");
-        ptag1.textContent = item.name ;
+            var image = document.createElement("img");
+            image.setAttribute("id","picture");
+            image.setAttribute("src",item.image)
 
-        var ptag2 = document.createElement("p");
-        ptag2.setAttribute("id","brandofprod");
-        ptag2.textContent = item.brand ;
+            var ptag1 = document.createElement("p");
+            ptag1.setAttribute("id","nameofprod");
+            ptag1.textContent = item.name ;
 
-        var personaldiv = document.createElement("div");
-        personaldiv.setAttribute("id","sub1div");
+            var ptag2 = document.createElement("p");
+            ptag2.setAttribute("id","brandofprod");
+            ptag2.textContent = item.brand ;
 
-        var leftdiv = document.createElement("div");
-        leftdiv.setAttribute("id","div1");
+            var personaldiv = document.createElement("div");
+            personaldiv.setAttribute("id","sub1div");
 
-        var rightdiv = document.createElement("div");
-        rightdiv.setAttribute("id","div2");
+            var leftdiv = document.createElement("div");
+            leftdiv.setAttribute("id","div1");
 
-        var rating1 = document.createElement("p");
-        rating1.setAttribute("id","rating");
-        rating1.textContent = "★ " +  item.rating ;
-        
-        var price = document.createElement("p");
-        price.setAttribute("id","cost");
-        price.textContent = "₹ " + item.MRP ;
+            var rightdiv = document.createElement("div");
+            rightdiv.setAttribute("id","div2");
 
-        var origin = document.createElement("p");
-        origin.setAttribute("id","fromCounty");
-        origin.textContent = "from " + item.from ;
+            var rightdiv1 = document.createElement("div");
+            rightdiv1.setAttribute("id","divr1");
 
-        var dispatch = document.createElement("p");
-        dispatch.setAttribute("id","toCounty");
-        dispatch.textContent = "to "+item.toCountry;
+            var rightdiv2 = document.createElement("div");
+            rightdiv2.setAttribute("id","divr2");
 
-        var when = document.createElement("p");
-        when.setAttribute("id","delivery");
-        when.textContent = "in " +item.delivery  ;
-        
-        leftdiv.append(rating1, price);
-        rightdiv.append(origin,dispatch, when);
-        
-        personaldiv.append(leftdiv, rightdiv);
-        prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+            var rating1 = document.createElement("p");
+            rating1.setAttribute("id","rating");
+            rating1.innerHTML =`<i style="color: #4cb9eb" class="fas fa-star"></i> ${item.rating}`;
+            
+            var price = document.createElement("p");
+            price.setAttribute("id","cost");
+            price.textContent = "₹ " + item.MRP ;
 
-        document.querySelector("#container").append(prodiv);
+            var origin = document.createElement("p");
+            origin.setAttribute("id","fromCounty");
+            origin.textContent = "from " + item.from ;  
 
-    });
+            var dispatch = document.createElement("p");
+            dispatch.setAttribute("id","toCounty");
+            dispatch.textContent = "to "+item.toCountry;
 
+            var when = document.createElement("p");
+            when.setAttribute("id","delivery");
+            when.textContent = "in "+item.delivery ;
+            
+            var symbols = document.createElement("img");
+            symbols.setAttribute("id","imagesymbol");
+            symbols.setAttribute("src","Screenshot 2021-11-09 at 11.07.27 AM.png")
+            
+            leftdiv.append(rating1, price);
+
+            rightdiv1.append(origin,dispatch, when);
+
+            rightdiv2.append(symbols);
+
+            rightdiv.append(rightdiv1,rightdiv2);
+            
+            personaldiv.append(leftdiv, rightdiv);
+            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
+
+            document.querySelector("#container").append(prodiv);
+
+        }); 
     function productShow(item){
          var product = item;
          localStorage.setItem("SelectedProduct", JSON.stringify(product)); 

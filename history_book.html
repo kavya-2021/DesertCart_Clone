@@ -2,113 +2,9 @@
 <html lang="en">
     <head>
         <title>Online Book History Products</title>
-        <style>
-            #heading{
-                width:75%;
-                margin: auto;
-                color: rgb(24, 24, 24);
-            }
-            #optionsForSort{
-                width:75%;
-                margin: auto;
-                padding-top: 10px;
-                padding-bottom : 15px;
-                background-color: white;
-                display: flex;
-                gap: 1.4% ;
-                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
-                position: sticky;
-                top:0;
-            }
-            #container{
-                width: 75%;
-                display: grid ;
-                grid-template-columns: repeat(4, 24%);
-                /* border: 1.5px solid red; */
-                margin: auto;
-                column-gap : 1.4%;
-                row-gap : 20px;
-                font-family: Lato,sans-serif;
-            }
+        <link rel="stylesheet" href="products_page.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
 
-            #optionsForSort > select{
-                width : 33% ;
-                height: 55px; 
-                padding: 10px;
-                border-radius: 6px;
-                padding-right: 10px;
-                font-size: 15px;
-            }
-           
-            select option {
-                margin: 40px;
-                background: rgba(0, 0, 0, 0.3);
-                color: #fff;
-                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-            }
-
-            #maindiv {
-                height: 280px ;
-                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-                border-radius: 8px;
-                line-height: 15px;
-                padding: 2%;
-                color:rgba(41, 40, 40, 0.904);
-            }
-
-            #maindiv:hover{
-               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-            }
-
-            #picture{
-                width: 45%;
-                height: 55%;
-                margin: auto;
-                margin-left: 25%;
-                margin-bottom: 8%;
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
-
-            }
-            p{
-                margin:0;
-                padding:0;
-                line-height: 15px;
-                margin-left : 10px;
-                margin-right : 10px;
-            }
-
-            #nameofprod{
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2; 
-                        line-clamp: 2; 
-                -webkit-box-orient: vertical;
-                font-size: 14px;
-                font-weight: 500;
-                color : black;
-            }
-
-            #brandofprod{
-                font-size: 12px;
-                font-weight: 500;
-            }
-
-            #sub1div{
-                display: flex;
-                justify-content: space-between;
-                font-size: 12px;
-                margin-top: 5%;
-            }
-
-            #cost{
-                font-size: 14px;
-                margin-top: 25%;
-                font-weight: 700;  
-            }
-
-        </style>
     </head>
     <body>
         <div id="optionsForSort">
@@ -153,6 +49,7 @@
         {
            name : "The Quiet Americans: Four CIA Spies at the Dawn of the Cold War Paperback – May 25, 2021",
            brand : "By Scott Anderson",
+           qty:1,
            rating : 4.5 ,
            MRP : "3,309" ,  
            from : "USA",
@@ -163,6 +60,7 @@
         },{
            name : "On This Day in History Sh!t Went Down Paperback – April 17, 2021",
            brand : "By James Fell",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,809" ,  
            from : "USA",
@@ -173,6 +71,7 @@
         },{
            name : "The Game Console 2.0: A Photographic History from Atari to Xbox Hardcover – September 8, 2021",
            brand : "By Evan Amos",
+           qty:1,
            rating : 4.8 ,
            MRP : "6,269" ,  
            from : "USA",
@@ -183,6 +82,7 @@
         },{
            name : "The President and the Freedom Fighter: Abraham Lincoln, Frederick Douglass, and Their Battle to Save America's Soul Hardcover – November 2, 2021",
            brand : "By Brian Kilmeade",
+           qty:1,
            rating : 4.5 ,
            MRP : "3,849" ,  
            from : "USA",
@@ -193,6 +93,7 @@
         },{
            name : "The Pioneers: The Heroic Story of the Settlers Who Brought the American Ideal West Paperback – May 5, 2020",
            brand : "By David Mccullough",
+           qty:1,
            rating : 4.5 ,
            MRP : "2,539" ,  
            from : "USA",
@@ -203,6 +104,7 @@
         },{
            name : "Major Labels: A History of Popular Music in Seven Genres Hardcover – October 5, 2021",
            brand : "By Kelefa Sanneh",
+           qty:1,
            rating : 4.4 ,
            MRP : "5,229" ,  
            from : "USA",
@@ -213,6 +115,7 @@
         },{
            name : "The Aztec Empire: An Enthralling Overview of the History of the Aztecs, Starting with the Settlement in the Valley of Mexico (Ancient Mexico)",
            brand : "By Enthralling History",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,069" ,  
            from : "USA",
@@ -223,6 +126,7 @@
         },{
            name : "Stalin's War: A New History of World War II Hardcover – April 20, 2021",
            brand : "By Sean Mcmeekin",
+           qty:1,
            rating : 4.5 ,
            MRP : "5,689" ,  
            from : "USA",
@@ -233,6 +137,7 @@
         },{
            name : "The Spy and the Traitor: The Greatest Espionage Story of the Cold War Paperback – August 6, 2019",
            brand : "By Ben Macintyre",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,629" ,  
            from : "USA",
@@ -243,6 +148,7 @@
         },{
            name : "Woke Up This Morning: The Definitive Oral History of The Sopranos Hardcover – November 2, 2021",
            brand : "By Michael Imperiolisteve Schirripa",
+           qty:1,
            rating : 3.8 ,
            MRP : "4,829" ,  
            from : "USA",
@@ -253,6 +159,7 @@
         },{
            name : "Code Talker: The First and Only Memoir By One of the Original Navajo Code Talkers of WWII Paperback – August 7, 2012",
            brand : "By Chester Nezjudith Schiess Avila",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,909" ,  
            from : "USA",
@@ -263,6 +170,7 @@
         },{
            name : "History of the World Map by Map",
            brand : "By Dk",
+           qty:1,
            rating : 4.6 ,
            MRP : "8,029" ,  
            from : "USA",
@@ -273,6 +181,7 @@
         },{
            name : "History: From the Dawn of Civilization to the Present Day",
            brand : "By Smithsonian Institution",
+           qty:1,
            rating : 4.6 ,
            MRP : "9,709" ,  
            from : "USA",
@@ -283,6 +192,7 @@
         },{
            name : "Military History: The Definitive Visual Guide to the Objects of Warfare Paperback – August 4, 2015",
            brand : "By Dk Publications",
+           qty:1,
            rating : 4.8 ,
            MRP : "5,279" ,  
            from : "USA",
@@ -293,6 +203,7 @@
         },{
            name : "Extra Life: A Short History of Living Longer Hardcover – May 11, 2021",
            brand : "By  Steven Johnson",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,689" ,  
            from : "USA",
@@ -303,6 +214,7 @@
         },{
            name : "The Sea Wolves: A History of the Vikings Paperback – December 24, 2014",
            brand : "By Lars Brownworth",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,579" ,  
            from : "USA",
@@ -313,6 +225,7 @@
         },{
            name : "American History: A Visual Encyclopedia Paperback – Illustrated, June 25, 2019",
            brand : "By Dk",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,599" ,  
            from : "USA",
@@ -323,6 +236,7 @@
         },{
            name : "A Brief History of Time Paperback – 16 October 2018",
            brand : "By Stephen Hawking",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,229" ,  
            from : "USA",
@@ -335,6 +249,7 @@
         {
            name : "The Quiet Americans: Four CIA Spies at the Dawn of the Cold War Paperback – May 25, 2021",
            brand : "By Scott Anderson",
+           qty:1,
            rating : 4.5 ,
            MRP : "3,309" ,  
            from : "UK",
@@ -345,6 +260,7 @@
         },{
            name : "On This Day in History Sh!t Went Down Paperback – April 17, 2021",
            brand : "By James Fell",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,809" ,  
            from : "UK",
@@ -355,6 +271,7 @@
         },{
            name : "The Game Console 2.0: A Photographic History from Atari to Xbox Hardcover – September 8, 2021",
            brand : "By Evan Amos",
+           qty:1,
            rating : 4.8 ,
            MRP : "6,269" ,  
            from : "UK",
@@ -365,6 +282,7 @@
         },{
            name : "The President and the Freedom Fighter: Abraham Lincoln, Frederick Douglass, and Their Battle to Save America's Soul Hardcover – November 2, 2021",
            brand : "By Brian Kilmeade",
+           qty:1,
            rating : 4.5 ,
            MRP : "3,849" ,  
            from : "UK",
@@ -375,6 +293,7 @@
         },{
            name : "The Pioneers: The Heroic Story of the Settlers Who Brought the American Ideal West Paperback – May 5, 2020",
            brand : "By David Mccullough",
+           qty:1,
            rating : 4.5 ,
            MRP : "2,539" ,  
            from : "UK",
@@ -385,6 +304,7 @@
         },{
            name : "Major Labels: A History of Popular Music in Seven Genres Hardcover – October 5, 2021",
            brand : "By Kelefa Sanneh",
+           qty:1,
            rating : 4.4 ,
            MRP : "5,229" ,  
            from : "UK",
@@ -395,6 +315,7 @@
         },{
            name : "The Aztec Empire: An Enthralling Overview of the History of the Aztecs, Starting with the Settlement in the Valley of Mexico (Ancient Mexico)",
            brand : "By Enthralling History",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,069" ,  
            from : "UK",
@@ -405,6 +326,7 @@
         },{
            name : "Stalin's War: A New History of World War II Hardcover – April 20, 2021",
            brand : "By Sean Mcmeekin",
+           qty:1,
            rating : 4.5 ,
            MRP : "5,689" ,  
            from : "UK",
@@ -415,6 +337,7 @@
         },{
            name : "The Spy and the Traitor: The Greatest Espionage Story of the Cold War Paperback – August 6, 2019",
            brand : "By Ben Macintyre",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,629" ,  
            from : "UK",
@@ -425,6 +348,7 @@
         },{
            name : "Woke Up This Morning: The Definitive Oral History of The Sopranos Hardcover – November 2, 2021",
            brand : "By Michael Imperiolisteve Schirripa",
+           qty:1,
            rating : 3.8 ,
            MRP : "4,829" ,  
            from : "UK",
@@ -435,6 +359,7 @@
         },{
            name : "Code Talker: The First and Only Memoir By One of the Original Navajo Code Talkers of WWII Paperback – August 7, 2012",
            brand : "By Chester Nezjudith Schiess Avila",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,909" ,  
            from : "UK",
@@ -445,6 +370,7 @@
         },{
            name : "History of the World Map by Map",
            brand : "By Dk",
+           qty:1,
            rating : 4.6 ,
            MRP : "8,029" ,  
            from : "UK",
@@ -455,6 +381,7 @@
         },{
            name : "History: From the Dawn of Civilization to the Present Day",
            brand : "By Smithsonian Institution",
+           qty:1,
            rating : 4.6 ,
            MRP : "9,709" ,  
            from : "UK",
@@ -465,6 +392,7 @@
         },{
            name : "Military History: The Definitive Visual Guide to the Objects of Warfare Paperback – August 4, 2015",
            brand : "By Dk Publications",
+           qty:1,
            rating : 4.8 ,
            MRP : "5,279" ,  
            from : "UK",
@@ -475,6 +403,7 @@
         },{
            name : "Extra Life: A Short History of Living Longer Hardcover – May 11, 2021",
            brand : "By  Steven Johnson",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,689" ,  
            from : "UK",
@@ -485,6 +414,7 @@
         },{
            name : "The Sea Wolves: A History of the Vikings Paperback – December 24, 2014",
            brand : "By Lars Brownworth",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,579" ,  
            from : "UAE",
@@ -495,6 +425,7 @@
         },{
            name : "American History: A Visual Encyclopedia Paperback – Illustrated, June 25, 2019",
            brand : "By Dk",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,599" ,  
            from : "UAE",
@@ -505,6 +436,7 @@
         },{
            name : "A Brief History of Time Paperback – 16 October 2018",
            brand : "By Stephen Hawking",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,229" ,  
            from : "UAE",
@@ -517,6 +449,7 @@
         {
            name : "The Quiet Americans: Four CIA Spies at the Dawn of the Cold War Paperback – May 25, 2021",
            brand : "By Scott Anderson",
+           qty:1,
            rating : 4.5 ,
            MRP : "3,309" ,  
            from : "UAE",
@@ -527,6 +460,7 @@
         },{
            name : "On This Day in History Sh!t Went Down Paperback – April 17, 2021",
            brand : "By James Fell",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,809" ,  
            from : "UAE",
@@ -537,6 +471,7 @@
         },{
            name : "The Game Console 2.0: A Photographic History from Atari to Xbox Hardcover – September 8, 2021",
            brand : "By Evan Amos",
+           qty:1,
            rating : 4.8 ,
            MRP : "6,269" ,  
            from : "UAE",
@@ -547,6 +482,7 @@
         },{
            name : "The President and the Freedom Fighter: Abraham Lincoln, Frederick Douglass, and Their Battle to Save America's Soul Hardcover – November 2, 2021",
            brand : "By Brian Kilmeade",
+           qty:1,
            rating : 4.5 ,
            MRP : "3,849" ,  
            from : "UAE",
@@ -557,6 +493,7 @@
         },{
            name : "The Pioneers: The Heroic Story of the Settlers Who Brought the American Ideal West Paperback – May 5, 2020",
            brand : "By David Mccullough",
+           qty:1,
            rating : 4.5 ,
            MRP : "2,539" ,  
            from : "UAE",
@@ -567,6 +504,7 @@
         },{
            name : "Major Labels: A History of Popular Music in Seven Genres Hardcover – October 5, 2021",
            brand : "By Kelefa Sanneh",
+           qty:1,
            rating : 4.4 ,
            MRP : "5,229" ,  
            from : "UAE",
@@ -577,6 +515,7 @@
         },{
            name : "The Aztec Empire: An Enthralling Overview of the History of the Aztecs, Starting with the Settlement in the Valley of Mexico (Ancient Mexico)",
            brand : "By Enthralling History",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,069" ,  
            from : "UAE",
@@ -587,6 +526,7 @@
         },{
            name : "Stalin's War: A New History of World War II Hardcover – April 20, 2021",
            brand : "By Sean Mcmeekin",
+           qty:1,
            rating : 4.5 ,
            MRP : "5,689" ,  
            from : "UAE",
@@ -597,6 +537,7 @@
         },{
            name : "The Spy and the Traitor: The Greatest Espionage Story of the Cold War Paperback – August 6, 2019",
            brand : "By Ben Macintyre",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,629" ,  
            from : "UAE",
@@ -607,6 +548,7 @@
         },{
            name : "Woke Up This Morning: The Definitive Oral History of The Sopranos Hardcover – November 2, 2021",
            brand : "By Michael Imperiolisteve Schirripa",
+           qty:1,
            rating : 3.8 ,
            MRP : "4,829" ,  
            from : "UAE",
@@ -617,6 +559,7 @@
         },{
            name : "Code Talker: The First and Only Memoir By One of the Original Navajo Code Talkers of WWII Paperback – August 7, 2012",
            brand : "By Chester Nezjudith Schiess Avila",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,909" ,  
            from : "UAE",
@@ -627,6 +570,7 @@
         },{
            name : "History of the World Map by Map",
            brand : "By Dk",
+           qty:1,
            rating : 4.6 ,
            MRP : "8,029" ,  
            from : "UAE",
@@ -637,6 +581,7 @@
         },{
            name : "History: From the Dawn of Civilization to the Present Day",
            brand : "By Smithsonian Institution",
+           qty:1,
            rating : 4.6 ,
            MRP : "9,709" ,  
            from : "UAE",
@@ -647,6 +592,7 @@
         },{
            name : "Military History: The Definitive Visual Guide to the Objects of Warfare Paperback – August 4, 2015",
            brand : "By Dk Publications",
+           qty:1,
            rating : 4.8 ,
            MRP : "5,279" ,  
            from : "UAE",
@@ -657,6 +603,7 @@
         },{
            name : "Extra Life: A Short History of Living Longer Hardcover – May 11, 2021",
            brand : "By  Steven Johnson",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,689" ,  
            from : "UAE",
@@ -667,6 +614,7 @@
         },{
            name : "The Sea Wolves: A History of the Vikings Paperback – December 24, 2014",
            brand : "By Lars Brownworth",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,579" ,  
            from : "UAE",
@@ -677,6 +625,7 @@
         },{
            name : "American History: A Visual Encyclopedia Paperback – Illustrated, June 25, 2019",
            brand : "By Dk",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,599" ,  
            from : "INDIA",
@@ -687,6 +636,7 @@
         },{
            name : "A Brief History of Time Paperback – 16 October 2018",
            brand : "By Stephen Hawking",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,229" ,  
            from : "INDIA",
@@ -699,6 +649,7 @@
         {
            name : "The Quiet Americans: Four CIA Spies at the Dawn of the Cold War Paperback – May 25, 2021",
            brand : "By Scott Anderson",
+           qty:1,
            rating : 4.5 ,
            MRP : "3,309" ,  
            from : "INDIA",
@@ -709,6 +660,7 @@
         },{
            name : "On This Day in History Sh!t Went Down Paperback – April 17, 2021",
            brand : "By James Fell",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,809" ,  
            from : "INDIA",
@@ -719,6 +671,7 @@
         },{
            name : "The Game Console 2.0: A Photographic History from Atari to Xbox Hardcover – September 8, 2021",
            brand : "By Evan Amos",
+           qty:1,
            rating : 4.8 ,
            MRP : "6,269" ,  
            from : "INDIA",
@@ -729,6 +682,7 @@
         },{
            name : "The President and the Freedom Fighter: Abraham Lincoln, Frederick Douglass, and Their Battle to Save America's Soul Hardcover – November 2, 2021",
            brand : "By Brian Kilmeade",
+           qty:1,
            rating : 4.5 ,
            MRP : "3,849" ,  
            from : "INDIA",
@@ -739,6 +693,7 @@
         },{
            name : "The Pioneers: The Heroic Story of the Settlers Who Brought the American Ideal West Paperback – May 5, 2020",
            brand : "By David Mccullough",
+           qty:1,
            rating : 4.5 ,
            MRP : "2,539" ,  
            from : "INDIA",
@@ -749,6 +704,7 @@
         },{
            name : "Major Labels: A History of Popular Music in Seven Genres Hardcover – October 5, 2021",
            brand : "By Kelefa Sanneh",
+           qty:1,
            rating : 4.4 ,
            MRP : "5,229" ,  
            from : "INDIA",
@@ -759,6 +715,7 @@
         },{
            name : "The Aztec Empire: An Enthralling Overview of the History of the Aztecs, Starting with the Settlement in the Valley of Mexico (Ancient Mexico)",
            brand : "By Enthralling History",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,069" ,  
            from : "INDIA",
@@ -769,6 +726,7 @@
         },{
            name : "Stalin's War: A New History of World War II Hardcover – April 20, 2021",
            brand : "By Sean Mcmeekin",
+           qty:1,
            rating : 4.5 ,
            MRP : "5,689" ,  
            from : "INDIA",
@@ -779,6 +737,7 @@
         },{
            name : "The Spy and the Traitor: The Greatest Espionage Story of the Cold War Paperback – August 6, 2019",
            brand : "By Ben Macintyre",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,629" ,  
            from : "INDIA",
@@ -789,6 +748,7 @@
         },{
            name : "Woke Up This Morning: The Definitive Oral History of The Sopranos Hardcover – November 2, 2021",
            brand : "By Michael Imperiolisteve Schirripa",
+           qty:1,
            rating : 3.8 ,
            MRP : "4,829" ,  
            from : "INDIA",
@@ -799,6 +759,7 @@
         },{
            name : "Code Talker: The First and Only Memoir By One of the Original Navajo Code Talkers of WWII Paperback – August 7, 2012",
            brand : "By Chester Nezjudith Schiess Avila",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,909" ,  
            from : "INDIA",
@@ -809,6 +770,7 @@
         },{
            name : "History of the World Map by Map",
            brand : "By Dk",
+           qty:1,
            rating : 4.6 ,
            MRP : "8,029" ,  
            from : "INDIA",
@@ -819,6 +781,7 @@
         },{
            name : "History: From the Dawn of Civilization to the Present Day",
            brand : "By Smithsonian Institution",
+           qty:1,
            rating : 4.6 ,
            MRP : "9,709" ,  
            from : "INDIA",
@@ -829,6 +792,7 @@
         },{
            name : "Military History: The Definitive Visual Guide to the Objects of Warfare Paperback – August 4, 2015",
            brand : "By Dk Publications",
+           qty:1,
            rating : 4.8 ,
            MRP : "5,279" ,  
            from : "INDIA",
@@ -839,6 +803,7 @@
         },{
            name : "Extra Life: A Short History of Living Longer Hardcover – May 11, 2021",
            brand : "By  Steven Johnson",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,689" ,  
            from : "UK",
@@ -849,6 +814,7 @@
         },{
            name : "The Sea Wolves: A History of the Vikings Paperback – December 24, 2014",
            brand : "By Lars Brownworth",
+           qty:1,
            rating : 4.6 ,
            MRP : "2,579" ,  
            from : "UK",
@@ -859,6 +825,7 @@
         },{
            name : "American History: A Visual Encyclopedia Paperback – Illustrated, June 25, 2019",
            brand : "By Dk",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,599" ,  
            from : "UK",
@@ -869,6 +836,7 @@
         },{
            name : "A Brief History of Time Paperback – 16 October 2018",
            brand : "By Stephen Hawking",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,229" ,  
            from : "UK",
@@ -1005,9 +973,15 @@
             var rightdiv = document.createElement("div");
             rightdiv.setAttribute("id","div2");
 
+            var rightdiv1 = document.createElement("div");
+            rightdiv1.setAttribute("id","divr1");
+
+            var rightdiv2 = document.createElement("div");
+            rightdiv2.setAttribute("id","divr2");
+
             var rating1 = document.createElement("p");
             rating1.setAttribute("id","rating");
-            rating1.textContent = "★ " + item.rating ;
+            rating1.innerHTML =`<i style="color: #4cb9eb" class="fas fa-star"></i> ${item.rating}`;
             
             var price = document.createElement("p");
             price.setAttribute("id","cost");
@@ -1015,7 +989,7 @@
 
             var origin = document.createElement("p");
             origin.setAttribute("id","fromCounty");
-            origin.textContent = "from " + item.from ;
+            origin.textContent = "from " + item.from ;  
 
             var dispatch = document.createElement("p");
             dispatch.setAttribute("id","toCounty");
@@ -1023,10 +997,19 @@
 
             var when = document.createElement("p");
             when.setAttribute("id","delivery");
-            when.textContent = "in " +item.delivery  ;
+            when.textContent = "in "+item.delivery ;
+            
+            var symbols = document.createElement("img");
+            symbols.setAttribute("id","imagesymbol");
+            symbols.setAttribute("src","Screenshot 2021-11-09 at 11.07.27 AM.png")
             
             leftdiv.append(rating1, price);
-            rightdiv.append(origin,dispatch, when);
+
+            rightdiv1.append(origin,dispatch, when);
+
+            rightdiv2.append(symbols);
+
+            rightdiv.append(rightdiv1,rightdiv2);
             
             personaldiv.append(leftdiv, rightdiv);
             prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;

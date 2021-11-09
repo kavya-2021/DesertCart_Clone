@@ -2,113 +2,8 @@
 <html lang="en">
     <head>
         <title>Online Cardio Training Products</title>
-        <style>
-            #heading{
-                width:75%;
-                margin: auto;
-                color: rgb(24, 24, 24);
-            }
-            #optionsForSort{
-                width:75%;
-                margin: auto;
-                padding-top: 10px;
-                padding-bottom : 15px;
-                background-color: white;
-                display: flex;
-                gap: 1.4% ;
-                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
-                position: sticky;
-                top:0;
-            }
-            #container{
-                width: 75%;
-                display: grid ;
-                grid-template-columns: repeat(4, 24%);
-                /* border: 1.5px solid red; */
-                margin: auto;
-                column-gap : 1.4%;
-                row-gap : 20px;
-                font-family: Lato,sans-serif;
-            }
-
-            #optionsForSort > select{
-                width : 33% ;
-                height: 55px; 
-                padding: 10px;
-                border-radius: 6px;
-                padding-right: 10px;
-                font-size: 15px;
-            }
-           
-            select option {
-                margin: 40px;
-                background: rgba(0, 0, 0, 0.3);
-                color: #fff;
-                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-            }
-
-            #maindiv {
-                height: 280px ;
-                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-                border-radius: 8px;
-                line-height: 15px;
-                padding: 2%;
-                color:rgba(41, 40, 40, 0.904);
-            }
-
-            #maindiv:hover{
-               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-            }
-
-            #picture{
-                width: 45%;
-                height: 55%;
-                margin: auto;
-                margin-left: 25%;
-                margin-bottom: 8%;
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
-
-            }
-            p{
-                margin:0;
-                padding:0;
-                line-height: 15px;
-                margin-left : 10px;
-                margin-right : 10px;
-            }
-
-            #nameofprod{
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2; 
-                        line-clamp: 2; 
-                -webkit-box-orient: vertical;
-                font-size: 14px;
-                font-weight: 500;
-                color : black;
-            }
-
-            #brandofprod{
-                font-size: 12px;
-                font-weight: 500;
-            }
-
-            #sub1div{
-                display: flex;
-                justify-content: space-between;
-                font-size: 12px;
-                margin-top: 5%;
-            }
-
-            #cost{
-                font-size: 14px;
-                margin-top: 25%;
-                font-weight: 700;  
-            }
-
-        </style>
+        <link rel="stylesheet" href="products_page.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="optionsForSort">
@@ -153,6 +48,7 @@
         {
            name : "XTERRA Fitness TR150 Folding Treadmill",
            brand : "By Xterra Fitness",
+           qty:1,
            rating : 4.4 ,
            MRP : "112,669" ,   
            from : "USA",
@@ -163,6 +59,7 @@
         },{
            name : "Cyclace Exercise Bike Stationary 330 Lbs Weight Capacity- Indoor Cycling Bike with Comfortable Seat Cushion, Tablet Holder and LCD Monitor",
            brand : "By Cyclace",
+           qty:1,
            rating : 4.4 ,
            MRP : "72,869" ,   
            from : "USA",
@@ -171,8 +68,9 @@
            range: 10, 
            image: "https://m.media-amazon.com/images/I/61YJlrM2f8L.jpg" 
         },{
-           name : "NordicTrack T Series 6.5 Treadmill",
+           name : "NordicTrack T Series 6.5 Treadmill,Stationary 330 Lbs Weight Capacity",
            brand : "By NordicTrack",
+           qty:1,
            rating : 4.5 ,
            MRP : "200,849" ,   
            from : "USA",
@@ -183,6 +81,7 @@
         },{
            name : "Sunny Health & Fitness SF-E905 Elliptical Machine Cross Trainer with 8 Level Resistance and Digital Monitor , Gray, White, 28 L x 17 W x 57 H",
            brand : "By Sunny Health & Fitness",
+           qty:1,
            rating : 4.6 ,
            MRP : "128,129" ,   
            from : "USA",
@@ -193,6 +92,7 @@
         },{
            name : "Sunny Health & Fitness Mini Stepper with Resistance Bands, Black",
            brand : "By Sunny Health & Fitness",
+           qty:1,
            rating : 4.6 ,
            MRP : "13,769" ,   
            from : "USA",
@@ -203,6 +103,7 @@
         },{
            name : "Mini Exercise Bike, Under Desk Bike Pedal Exerciser Portable Foot Cycle Arm & Leg Peddler Machine with LCD Screen Displays",
            brand : "By Himaly",
+           qty:1,
            rating : 4.0 ,
            MRP : "11,039" ,   
            from : "USA",
@@ -213,6 +114,7 @@
         },{
            name : "Marcy Foldable Upright Exercise Bike with Adjustable Resistance for Cardio Workout & Strength Training - Multiple Styles Available",
            brand : "By Marcy",
+           qty:1,
            rating : 4.5 ,
            MRP : "124,539" ,   
            from : "USA",
@@ -223,6 +125,7 @@
         },{
            name : "Marcy Cardio Mini Cycle – Portable Cardio Machine with Variable Resistance for Home Gym NS-909",
            brand : "By Marcy",
+           qty:1,
            rating : 4.6 ,
            MRP : "12,149" ,   
            from : "USA",
@@ -233,6 +136,7 @@
         },{
            name : "TRX ALL-IN-ONE Suspension Training: Bodyweight Resistance System | Full Body Workouts for Home, Travel, and Outdoors | Build Muscle, Burn Fat, Improve Cardio | Free Workouts Included",
            brand : "By Trx",
+           qty:1,
            rating : 4.6 ,
            MRP : "25,279" ,   
            from : "USA",
@@ -243,6 +147,7 @@
         },{
            name : "Leogreen 1.5'' 30ft Fitness Battle Rope with Anchor Strap & Wall Mount Bracket Kit Set, Durable Nylon Black Protective Sleeve, Heavy Battle Exercise Training Rope for Cardio Workout Training",
            brand : "By Leogreen",
+           qty:1,
            rating : 4.6 ,
            MRP : "10,609" ,   
            from : "USA",
@@ -253,6 +158,7 @@
         },{
            name : "Spartan, Kalba 600 - Magnetic Indoor Bike Trainer, Black",
            brand : "By ",
+           qty:1,
            rating : 3.6 ,
            MRP : "15,319" ,   
            from : "USA",
@@ -263,6 +169,7 @@
         },{
            name : "Marcy Trampoline Cardio Trainer with Handle ASG-40, Black",
            brand : "By ",
+           qty:1,
            rating : 4.3 ,
            MRP : "15,089" ,   
            from : "USA",
@@ -273,6 +180,7 @@
         },{
            name : "Bowflex SelectTech Dumbbell",
            brand : "By Bowflex",
+           qty:1,
            rating : 4.8 ,
            MRP : "44,369" ,   
            from : "USA",
@@ -283,6 +191,7 @@
         },{
            name : "Ringside Tsunami Water Heavy Bag",
            brand : "By Ringside",
+           qty:1,
            rating : 3.9 ,
            MRP : "28,679",   
            from : "USA",
@@ -295,6 +204,7 @@
         {
            name : "XTERRA Fitness TR150 Folding Treadmill",
            brand : "By Xterra Fitness",
+           qty:1,
            rating : 4.4 ,
            MRP : "112,669" ,   
            from : "UK",
@@ -305,6 +215,7 @@
         },{
            name : "Cyclace Exercise Bike Stationary 330 Lbs Weight Capacity- Indoor Cycling Bike with Comfortable Seat Cushion, Tablet Holder and LCD Monitor",
            brand : "By Cyclace",
+           qty:1,
            rating : 4.4 ,
            MRP : "72,869" ,   
            from : "UK",
@@ -315,6 +226,7 @@
         },{
            name : "NordicTrack T Series 6.5 Treadmill",
            brand : "By NordicTrack",
+           qty:1,
            rating : 4.5 ,
            MRP : "200,849" ,   
            from : "UK",
@@ -325,6 +237,7 @@
         },{
            name : "Sunny Health & Fitness SF-E905 Elliptical Machine Cross Trainer with 8 Level Resistance and Digital Monitor , Gray, White, 28 L x 17 W x 57 H",
            brand : "By Sunny Health & Fitness",
+           qty:1,
            rating : 4.6 ,
            MRP : "128,129" ,   
            from : "UK",
@@ -335,6 +248,7 @@
         },{
            name : "Sunny Health & Fitness Mini Stepper with Resistance Bands, Black",
            brand : "By Sunny Health & Fitness",
+           qty:1,
            rating : 4.6 ,
            MRP : "13,769" ,   
            from : "UK",
@@ -345,6 +259,7 @@
         },{
            name : "Mini Exercise Bike, Under Desk Bike Pedal Exerciser Portable Foot Cycle Arm & Leg Peddler Machine with LCD Screen Displays",
            brand : "By Himaly",
+           qty:1,
            rating : 4.0 ,
            MRP : "11,039" ,   
            from : "UK",
@@ -355,6 +270,7 @@
         },{
            name : "Marcy Foldable Upright Exercise Bike with Adjustable Resistance for Cardio Workout & Strength Training - Multiple Styles Available",
            brand : "By Marcy",
+           qty:1,
            rating : 4.5 ,
            MRP : "124,539" ,   
            from : "UK",
@@ -365,6 +281,7 @@
         },{
            name : "Marcy Cardio Mini Cycle – Portable Cardio Machine with Variable Resistance for Home Gym NS-909",
            brand : "By Marcy",
+           qty:1,
            rating : 4.6 ,
            MRP : "12,149" ,   
            from : "UK",
@@ -375,6 +292,7 @@
         },{
            name : "TRX ALL-IN-ONE Suspension Training: Bodyweight Resistance System | Full Body Workouts for Home, Travel, and Outdoors | Build Muscle, Burn Fat, Improve Cardio | Free Workouts Included",
            brand : "By Trx",
+           qty:1,
            rating : 4.6 ,
            MRP : "25,279" ,   
            from : "UK",
@@ -385,6 +303,7 @@
         },{
            name : "Leogreen 1.5'' 30ft Fitness Battle Rope with Anchor Strap & Wall Mount Bracket Kit Set, Durable Nylon Black Protective Sleeve, Heavy Battle Exercise Training Rope for Cardio Workout Training",
            brand : "By Leogreen",
+           qty:1,
            rating : 4.6 ,
            MRP : "10,609" ,   
            from : "UK",
@@ -395,6 +314,7 @@
         },{
            name : "Spartan, Kalba 600 - Magnetic Indoor Bike Trainer, Black",
            brand : "By ",
+           qty:1,
            rating : 3.6 ,
            MRP : "15,319" ,   
            from : "UK",
@@ -405,6 +325,7 @@
         },{
            name : "Marcy Trampoline Cardio Trainer with Handle ASG-40, Black",
            brand : "By ",
+           qty:1,
            rating : 4.3 ,
            MRP : "15,089" ,   
            from : "UK",
@@ -415,6 +336,7 @@
         },{
            name : "Bowflex SelectTech Dumbbell",
            brand : "By Bowflex",
+           qty:1,
            rating : 4.8 ,
            MRP : "44,369" ,   
            from : "UK",
@@ -425,6 +347,7 @@
         },{
            name : "Ringside Tsunami Water Heavy Bag",
            brand : "By Ringside",
+           qty:1,
            rating : 3.9 ,
            MRP : "28,679",   
            from : "UK",
@@ -437,6 +360,7 @@
         {
            name : "XTERRA Fitness TR150 Folding Treadmill",
            brand : "By Xterra Fitness",
+           qty:1,
            rating : 4.4 ,
            MRP : "112,669" ,   
            from : "UAE",
@@ -447,6 +371,7 @@
         },{
            name : "Cyclace Exercise Bike Stationary 330 Lbs Weight Capacity- Indoor Cycling Bike with Comfortable Seat Cushion, Tablet Holder and LCD Monitor",
            brand : "By Cyclace",
+           qty:1,
            rating : 4.4 ,
            MRP : "72,869" ,   
            from : "UAE",
@@ -457,6 +382,7 @@
         },{
            name : "NordicTrack T Series 6.5 Treadmill",
            brand : "By NordicTrack",
+           qty:1,
            rating : 4.5 ,
            MRP : "200,849" ,   
            from : "UAE",
@@ -467,6 +393,7 @@
         },{
            name : "Sunny Health & Fitness SF-E905 Elliptical Machine Cross Trainer with 8 Level Resistance and Digital Monitor , Gray, White, 28 L x 17 W x 57 H",
            brand : "By Sunny Health & Fitness",
+           qty:1,
            rating : 4.6 ,
            MRP : "128,129" ,   
            from : "UAE",
@@ -477,6 +404,7 @@
         },{
            name : "Sunny Health & Fitness Mini Stepper with Resistance Bands, Black",
            brand : "By Sunny Health & Fitness",
+           qty:1,
            rating : 4.6 ,
            MRP : "13,769" ,   
            from : "UAE",
@@ -487,6 +415,7 @@
         },{
            name : "Mini Exercise Bike, Under Desk Bike Pedal Exerciser Portable Foot Cycle Arm & Leg Peddler Machine with LCD Screen Displays",
            brand : "By Himaly",
+           qty:1,
            rating : 4.0 ,
            MRP : "11,039" ,   
            from : "UAE",
@@ -497,6 +426,7 @@
         },{
            name : "Marcy Foldable Upright Exercise Bike with Adjustable Resistance for Cardio Workout & Strength Training - Multiple Styles Available",
            brand : "By Marcy",
+           qty:1,
            rating : 4.5 ,
            MRP : "124,539" ,   
            from : "UAE",
@@ -507,6 +437,7 @@
         },{
            name : "Marcy Cardio Mini Cycle – Portable Cardio Machine with Variable Resistance for Home Gym NS-909",
            brand : "By Marcy",
+           qty:1,
            rating : 4.6 ,
            MRP : "12,149" ,   
            from : "UAE",
@@ -517,6 +448,7 @@
         },{
            name : "TRX ALL-IN-ONE Suspension Training: Bodyweight Resistance System | Full Body Workouts for Home, Travel, and Outdoors | Build Muscle, Burn Fat, Improve Cardio | Free Workouts Included",
            brand : "By Trx",
+           qty:1,
            rating : 4.6 ,
            MRP : "25,279" ,   
            from : "UAE",
@@ -527,6 +459,7 @@
         },{
            name : "Leogreen 1.5'' 30ft Fitness Battle Rope with Anchor Strap & Wall Mount Bracket Kit Set, Durable Nylon Black Protective Sleeve, Heavy Battle Exercise Training Rope for Cardio Workout Training",
            brand : "By Leogreen",
+           qty:1,
            rating : 4.6 ,
            MRP : "10,609" ,   
            from : "UAE",
@@ -537,6 +470,7 @@
         },{
            name : "Spartan, Kalba 600 - Magnetic Indoor Bike Trainer, Black",
            brand : "By ",
+           qty:1,
            rating : 3.6 ,
            MRP : "15,319" ,   
            from : "UAE",
@@ -547,6 +481,7 @@
         },{
            name : "Marcy Trampoline Cardio Trainer with Handle ASG-40, Black",
            brand : "By ",
+           qty:1,
            rating : 4.3 ,
            MRP : "15,089" ,   
            from : "UAE",
@@ -557,6 +492,7 @@
         },{
            name : "Bowflex SelectTech Dumbbell",
            brand : "By Bowflex",
+           qty:1,
            rating : 4.8 ,
            MRP : "44,369" ,   
            from : "UAE",
@@ -567,6 +503,7 @@
         },{
            name : "Ringside Tsunami Water Heavy Bag",
            brand : "By Ringside",
+           qty:1,
            rating : 3.9 ,
            MRP : "28,679",   
            from : "UAE",
@@ -577,6 +514,7 @@
         }, {
            name : "XTERRA Fitness TR150 Folding Treadmill",
            brand : "By Xterra Fitness",
+           qty:1,
            rating : 4.4 ,
            MRP : "112,669" ,   
            from : "INDIA",
@@ -587,6 +525,7 @@
         },{
            name : "Cyclace Exercise Bike Stationary 330 Lbs Weight Capacity- Indoor Cycling Bike with Comfortable Seat Cushion, Tablet Holder and LCD Monitor",
            brand : "By Cyclace",
+           qty:1,
            rating : 4.4 ,
            MRP : "72,869" ,   
            from : "INDIA",
@@ -597,6 +536,7 @@
         },{
            name : "NordicTrack T Series 6.5 Treadmill",
            brand : "By NordicTrack",
+           qty:1,
            rating : 4.5 ,
            MRP : "200,849" ,   
            from : "INDIA",
@@ -607,6 +547,7 @@
         },{
            name : "Sunny Health & Fitness SF-E905 Elliptical Machine Cross Trainer with 8 Level Resistance and Digital Monitor , Gray, White, 28 L x 17 W x 57 H",
            brand : "By Sunny Health & Fitness",
+           qty:1,
            rating : 4.6 ,
            MRP : "128,129" ,   
            from : "INDIA",
@@ -617,6 +558,7 @@
         },{
            name : "Sunny Health & Fitness Mini Stepper with Resistance Bands, Black",
            brand : "By Sunny Health & Fitness",
+           qty:1,
            rating : 4.6 ,
            MRP : "13,769" ,   
            from : "INDIA",
@@ -627,6 +569,7 @@
         },{
            name : "Mini Exercise Bike, Under Desk Bike Pedal Exerciser Portable Foot Cycle Arm & Leg Peddler Machine with LCD Screen Displays",
            brand : "By Himaly",
+           qty:1,
            rating : 4.0 ,
            MRP : "11,039" ,   
            from : "INDIA",
@@ -637,6 +580,7 @@
         },{
            name : "Marcy Foldable Upright Exercise Bike with Adjustable Resistance for Cardio Workout & Strength Training - Multiple Styles Available",
            brand : "By Marcy",
+           qty:1,
            rating : 4.5 ,
            MRP : "124,539" ,   
            from : "INDIA",
@@ -647,6 +591,7 @@
         },{
            name : "Marcy Cardio Mini Cycle – Portable Cardio Machine with Variable Resistance for Home Gym NS-909",
            brand : "By Marcy",
+           qty:1,
            rating : 4.6 ,
            MRP : "12,149" ,   
            from : "INDIA",
@@ -657,6 +602,7 @@
         },{
            name : "TRX ALL-IN-ONE Suspension Training: Bodyweight Resistance System | Full Body Workouts for Home, Travel, and Outdoors | Build Muscle, Burn Fat, Improve Cardio | Free Workouts Included",
            brand : "By Trx",
+           qty:1,
            rating : 4.6 ,
            MRP : "25,279" ,   
            from : "INDIA",
@@ -667,6 +613,7 @@
         },{
            name : "Leogreen 1.5'' 30ft Fitness Battle Rope with Anchor Strap & Wall Mount Bracket Kit Set, Durable Nylon Black Protective Sleeve, Heavy Battle Exercise Training Rope for Cardio Workout Training",
            brand : "By Leogreen",
+           qty:1,
            rating : 4.6 ,
            MRP : "10,609" ,   
            from : "INDIA",
@@ -677,6 +624,7 @@
         },{
            name : "Spartan, Kalba 600 - Magnetic Indoor Bike Trainer, Black",
            brand : "By ",
+           qty:1,
            rating : 3.6 ,
            MRP : "15,319" ,   
            from : "INDIA",
@@ -687,6 +635,7 @@
         },{
            name : "Marcy Trampoline Cardio Trainer with Handle ASG-40, Black",
            brand : "By ",
+           qty:1,
            rating : 4.3 ,
            MRP : "15,089" ,   
            from : "INDIA",
@@ -697,6 +646,7 @@
         },{
            name : "Bowflex SelectTech Dumbbell",
            brand : "By Bowflex",
+           qty:1,
            rating : 4.8 ,
            MRP : "44,369" ,   
            from : "INDIA",
@@ -707,6 +657,7 @@
         },{
            name : "Ringside Tsunami Water Heavy Bag",
            brand : "By Ringside",
+           qty:1,
            rating : 3.9 ,
            MRP : "28,679",   
            from : "INDIA",
@@ -815,12 +766,12 @@
     function displayProducts(data){
         document.querySelector("#container").innerHTML = "";
         data.map(function(item){
-         var prodiv = document.createElement("div");
+            var prodiv = document.createElement("div");
             prodiv.setAttribute("id","maindiv");
             prodiv.addEventListener("click",function(){
                productShow(item);
             });
-    
+
             var image = document.createElement("img");
             image.setAttribute("id","picture");
             image.setAttribute("src",item.image)
@@ -842,9 +793,15 @@
             var rightdiv = document.createElement("div");
             rightdiv.setAttribute("id","div2");
 
+            var rightdiv1 = document.createElement("div");
+            rightdiv1.setAttribute("id","divr1");
+
+            var rightdiv2 = document.createElement("div");
+            rightdiv2.setAttribute("id","divr2");
+
             var rating1 = document.createElement("p");
             rating1.setAttribute("id","rating");
-            rating1.textContent = "★ " + item.rating ;
+            rating1.innerHTML =`<i style="color: #4cb9eb" class="fas fa-star"></i> ${item.rating}`;
             
             var price = document.createElement("p");
             price.setAttribute("id","cost");
@@ -852,7 +809,7 @@
 
             var origin = document.createElement("p");
             origin.setAttribute("id","fromCounty");
-            origin.textContent = "from " + item.from ;
+            origin.textContent = "from " + item.from ;  
 
             var dispatch = document.createElement("p");
             dispatch.setAttribute("id","toCounty");
@@ -860,10 +817,19 @@
 
             var when = document.createElement("p");
             when.setAttribute("id","delivery");
-            when.textContent = "in " +item.delivery  ;
+            when.textContent = "in "+item.delivery ;
+            
+            var symbols = document.createElement("img");
+            symbols.setAttribute("id","imagesymbol");
+            symbols.setAttribute("src","Screenshot 2021-11-09 at 11.07.27 AM.png")
             
             leftdiv.append(rating1, price);
-            rightdiv.append(origin,dispatch, when);
+
+            rightdiv1.append(origin,dispatch, when);
+
+            rightdiv2.append(symbols);
+
+            rightdiv.append(rightdiv1,rightdiv2);
             
             personaldiv.append(leftdiv, rightdiv);
             prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;

@@ -2,113 +2,8 @@
 <html lang="en">
     <head>
         <title>Online Yoga Products</title>
-        <style>
-            #heading{
-                width:75%;
-                margin: auto;
-                color: rgb(24, 24, 24);
-            }
-            #optionsForSort{
-                width:75%;
-                margin: auto;
-                padding-top: 10px;
-                padding-bottom : 15px;
-                background-color: white;
-                display: flex;
-                gap: 1.4% ;
-                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
-                position: sticky;
-                top:0;
-            }
-            #container{
-                width: 75%;
-                display: grid ;
-                grid-template-columns: repeat(4, 24%);
-                /* border: 1.5px solid red; */
-                margin: auto;
-                column-gap : 1.4%;
-                row-gap : 20px;
-                font-family: Lato,sans-serif;
-            }
-
-            #optionsForSort > select{
-                width : 33% ;
-                height: 55px; 
-                padding: 10px;
-                border-radius: 6px;
-                padding-right: 10px;
-                font-size: 15px;
-            }
-           
-            select option {
-                margin: 40px;
-                background: rgba(0, 0, 0, 0.3);
-                color: #fff;
-                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-            }
-
-            #maindiv {
-                height: 280px ;
-                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-                border-radius: 8px;
-                line-height: 15px;
-                padding: 2%;
-                color:rgba(41, 40, 40, 0.904);
-            }
-
-            #maindiv:hover{
-               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-            }
-
-            #picture{
-                width: 45%;
-                height: 55%;
-                margin: auto;
-                margin-left: 25%;
-                margin-bottom: 8%;
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
-
-            }
-            p{
-                margin:0;
-                padding:0;
-                line-height: 15px;
-                margin-left : 10px;
-                margin-right : 10px;
-            }
-
-            #nameofprod{
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2; 
-                        line-clamp: 2; 
-                -webkit-box-orient: vertical;
-                font-size: 14px;
-                font-weight: 500;
-                color : black;
-            }
-
-            #brandofprod{
-                font-size: 12px;
-                font-weight: 500;
-            }
-
-            #sub1div{
-                display: flex;
-                justify-content: space-between;
-                font-size: 12px;
-                margin-top: 5%;
-            }
-
-            #cost{
-                font-size: 14px;
-                margin-top: 25%;
-                font-weight: 700;  
-            }
-
-        </style>
+        <link rel="stylesheet" href="products_page.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="optionsForSort">
@@ -153,6 +48,7 @@
         {
            name : "Gaiam Essentials Yoga Block (Set Of 2) – Supportive, Soft Non-Slip Foam Surface For Yoga, Pilates, Meditation",
            brand : "By Gaiam",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,569" ,   
            from : "USA",
@@ -163,6 +59,7 @@
         }, {
            name : "BalanceFrom GoYoga+ All-Purpose 1/2-Inch Extra Thick High Density Anti-Tear Exercise Yoga Mat and Knee Pad with Carrying Strap",
            brand : "By BalanceFrom",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,929" ,   
            from : "USA",
@@ -173,6 +70,7 @@
         }, {
            name : "Instructional Yoga Mat with Carrying Strap: Cute Yoga Mat with 75 Illustrated Yoga Poses + 75 Easily-Followed Stretching Exercises - 1/4” Thick, Non-Toxic, Non-Slip Yoga Mats for Women and Men",
            brand : "By Grand Basics",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,929" ,   
            from : "USA",
@@ -183,6 +81,7 @@
         }, {
            name : "Yoga Mate Soft, Sweat Absorbent, Non-Slip Bikram Yoga Mat Size Towel, Blue & Pink Tie Dye | Blue Trim",
            brand : "By Yoga Mate",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,159" ,   
            from : "USA",
@@ -193,6 +92,7 @@
         }, {
            name : "Trideer Yoga Bolster Pillow Meditation Pillow, Bolster Pillow for Legs for Restorative Yoga, Rectangular Yoga Bolster with Soft Velvet and Machine Washable Cover, 800g Lightweight with Handle",
            brand : "By Trideer",
+           qty:1,
            rating : 4.6 ,
            MRP : "5,849" ,   
            from : "USA",
@@ -203,6 +103,7 @@
         }, {
            name : "Syntus 9-in-1 Yoga Set, 1 Yoga Strap with 12 Loops, 2 EVA Foam Soft Non-Slip Yoga Blocks 9×6×4 inches,4 Resistance Bands with Instruction Book for Yoga, Pilates, Stretchings",
            brand : "By Syntus",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,929" ,   
            from : "USA",
@@ -213,6 +114,7 @@
         }, {
            name : "Ewedoos Yoga Mat Bag with Large Size Pocket and Zipper Pocket, Fit Most Size Mats",
            brand : "By Ewedoos",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,409" ,   
            from : "USA",
@@ -223,6 +125,7 @@
         }, {
            name : "Brien Yoga Socks for Women Non-Slip Grips & Straps with Carrying Pouch, One Size, Ideal for Pilates, Pure Barre, Ballet, Dance, Barefoot Workout",
            brand : "By  Brien",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,429" ,   
            from : "USA",
@@ -233,6 +136,7 @@
         }, {
            name : "8mm Thick Premium TPE Yoga Mat Green (Size 183cm x 61cm) with Carrying Bag, Anti-Slip Double Layer Eco Friendly 100% Latex & PVC Free (Chloride Free), Home/Gym Workout Fitness Exercise Sports Mattress",
            brand : "By ",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,249" ,   
            from : "USA",
@@ -243,6 +147,7 @@
         }, {
            name : "adidas Camo Yoga Mat - 5 mm",
            brand : "By Adidas",
+           qty:1,
            rating : 4.5 ,
            MRP : "7,549" ,   
            from : "USA",
@@ -253,6 +158,7 @@
         }, {
            name : "RIUXIB Yoga Headstand Bench Head Stand Wood Inversion Chair Stool Handstand with PVC Pads for Workout, Home Gym Unisex- Relieve Fatigue and Tone Muscle",
            brand : "By Riuxib",
+           qty:1,
            rating : 4.6 ,
            MRP : "11,479" ,   
            from : "USA",
@@ -263,6 +169,7 @@
         }, {
            name : "Better Me | Eco-Friendly LOTUS Inspired Alignment Lined THICK Non-Slip TPE Yoga Exercise Pilates Workout Mat & Strap (XL 71' x 24') | Durable & Non-Toxic | No Sore Knees",
            brand : "By Better Me",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,569" ,   
            from : "USA",
@@ -273,6 +180,7 @@
         },{
            name : "IUMANO Yoga Mat Set: TPE Yoga Mat + Yoga Mat Carrier Bag + Yoga Mat Strap. Exercise Mat Non slip Pilates Mat with Yoga Mat Bag. 6mm thick Training Mat for Gyms with Yoga Mat Carrier.",
            brand : "By Iumano",
+           qty:1,
            rating : 3.6 ,
            MRP : "3,709" ,   
            from : "USA",
@@ -283,6 +191,7 @@
         }, {
            name : "High Waisted Women's Premium Leggings with Pockets - Soft Tummy Control Slimming Dry Yoga Gym Pants for Workout Running (BLACK))",
            brand : "By Generic",
+           qty:1,
            rating : 4.5 ,
            MRP : "1,929" ,   
            from : "USA",
@@ -293,6 +202,7 @@
         },{
            name : "Yoga Mat 8mm - Eco Friendly TPE Non Slip Yoga Mats Double Face Gold Color Carrying Strap - Extra Thick Knees Supportive for Yoga Pilates Fitness Exercise Mat - (182 * 62.5 cm - 8mm)",
            brand : "By Rigid Fitness Apparel",
+           qty:1,
            rating : 4.1 ,
            MRP : "4,979" ,   
            from : "USA",
@@ -303,6 +213,7 @@
         },{
            name : "Decdeal Non Slip Yoga Mat Certified TPE Eco Friendly Lightweight Pilates Exercise Mat with Body Alignment Lines, Carrying Strap for Floor Workout, Fitness & Hot Yoga 72'x 24'",
            brand : "By Decdeal",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,499" ,   
            from : "USA",
@@ -313,6 +224,7 @@
         },{
            name : "EVA Yoga BLock Brick Pilates Sports Exercise Gym Foam Workout Stretching Aid Body Shaping Health Training Equipment",
            brand : "By Eva",
+           qty:1,
            rating : 4.6 ,
            MRP : "699" ,   
            from : "USA",
@@ -323,6 +235,7 @@
         },{
            name : "ADT Yoga Bag Mat Carriers Compact Gym Bag Purple / Grey with Multipurpose Storage Pockets Smooth Zippers and Adjustable Straps More Space and Fits All Mats Size with Free Cooling Towel",
            brand : "By Adt Achieve Discover Thrive",
+           qty:1,
            rating : 4.6 ,
            MRP : "7,549" ,   
            from : "USA",
@@ -336,6 +249,7 @@
         {
            name : "Gaiam Essentials Yoga Block (Set Of 2) – Supportive, Soft Non-Slip Foam Surface For Yoga, Pilates, Meditation",
            brand : "By Gaiam",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,569" ,   
            from : "UAE",
@@ -346,6 +260,7 @@
         }, {
            name : "BalanceFrom GoYoga+ All-Purpose 1/2-Inch Extra Thick High Density Anti-Tear Exercise Yoga Mat and Knee Pad with Carrying Strap",
            brand : "By BalanceFrom",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,929" ,   
            from : "UAE",
@@ -356,6 +271,7 @@
         }, {
            name : "Instructional Yoga Mat with Carrying Strap: Cute Yoga Mat with 75 Illustrated Yoga Poses + 75 Easily-Followed Stretching Exercises - 1/4” Thick, Non-Toxic, Non-Slip Yoga Mats for Women and Men",
            brand : "By Grand Basics",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,929" ,   
            from : "UAE",
@@ -366,6 +282,7 @@
         }, {
            name : "Yoga Mate Soft, Sweat Absorbent, Non-Slip Bikram Yoga Mat Size Towel, Blue & Pink Tie Dye | Blue Trim",
            brand : "By Yoga Mate",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,159" ,   
            from : "UAE",
@@ -376,6 +293,7 @@
         }, {
            name : "Trideer Yoga Bolster Pillow Meditation Pillow, Bolster Pillow for Legs for Restorative Yoga, Rectangular Yoga Bolster with Soft Velvet and Machine Washable Cover, 800g Lightweight with Handle",
            brand : "By Trideer",
+           qty:1,
            rating : 4.6 ,
            MRP : "5,849" ,   
            from : "UAE",
@@ -386,6 +304,7 @@
         }, {
            name : "Syntus 9-in-1 Yoga Set, 1 Yoga Strap with 12 Loops, 2 EVA Foam Soft Non-Slip Yoga Blocks 9×6×4 inches,4 Resistance Bands with Instruction Book for Yoga, Pilates, Stretchings",
            brand : "By Syntus",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,929" ,   
            from : "UAE",
@@ -396,6 +315,7 @@
         }, {
            name : "Ewedoos Yoga Mat Bag with Large Size Pocket and Zipper Pocket, Fit Most Size Mats",
            brand : "By Ewedoos",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,409" ,   
            from : "UAE",
@@ -406,6 +326,7 @@
         }, {
            name : "Brien Yoga Socks for Women Non-Slip Grips & Straps with Carrying Pouch, One Size, Ideal for Pilates, Pure Barre, Ballet, Dance, Barefoot Workout",
            brand : "By  Brien",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,429" ,   
            from : "UAE",
@@ -416,6 +337,7 @@
         }, {
            name : "8mm Thick Premium TPE Yoga Mat Green (Size 183cm x 61cm) with Carrying Bag, Anti-Slip Double Layer Eco Friendly 100% Latex & PVC Free (Chloride Free), Home/Gym Workout Fitness Exercise Sports Mattress",
            brand : "By ",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,249" ,   
            from : "UAE",
@@ -426,6 +348,7 @@
         }, {
            name : "adidas Camo Yoga Mat - 5 mm",
            brand : "By Adidas",
+           qty:1,
            rating : 4.5 ,
            MRP : "7,549" ,   
            from : "UAE",
@@ -436,6 +359,7 @@
         }, {
            name : "RIUXIB Yoga Headstand Bench Head Stand Wood Inversion Chair Stool Handstand with PVC Pads for Workout, Home Gym Unisex- Relieve Fatigue and Tone Muscle",
            brand : "By Riuxib",
+           qty:1,
            rating : 4.6 ,
            MRP : "11,479" ,   
            from : "UAE",
@@ -446,6 +370,7 @@
         }, {
            name : "Better Me | Eco-Friendly LOTUS Inspired Alignment Lined THICK Non-Slip TPE Yoga Exercise Pilates Workout Mat & Strap (XL 71' x 24') | Durable & Non-Toxic | No Sore Knees",
            brand : "By Better Me",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,569" ,   
            from : "UAE",
@@ -456,6 +381,7 @@
         },{
            name : "IUMANO Yoga Mat Set: TPE Yoga Mat + Yoga Mat Carrier Bag + Yoga Mat Strap. Exercise Mat Non slip Pilates Mat with Yoga Mat Bag. 6mm thick Training Mat for Gyms with Yoga Mat Carrier.",
            brand : "By Iumano",
+           qty:1,
            rating : 3.6 ,
            MRP : "3,709" ,   
            from : "UAE",
@@ -466,6 +392,7 @@
         }, {
            name : "High Waisted Women's Premium Leggings with Pockets - Soft Tummy Control Slimming Dry Yoga Gym Pants for Workout Running (BLACK))",
            brand : "By Generic",
+           qty:1,
            rating : 4.5 ,
            MRP : "1,929" ,   
            from : "UAE",
@@ -476,6 +403,7 @@
         },{
            name : "Yoga Mat 8mm - Eco Friendly TPE Non Slip Yoga Mats Double Face Gold Color Carrying Strap - Extra Thick Knees Supportive for Yoga Pilates Fitness Exercise Mat - (182 * 62.5 cm - 8mm)",
            brand : "By Rigid Fitness Apparel",
+           qty:1,
            rating : 4.1 ,
            MRP : "4,979" ,   
            from : "UAE",
@@ -486,6 +414,7 @@
         },{
            name : "Decdeal Non Slip Yoga Mat Certified TPE Eco Friendly Lightweight Pilates Exercise Mat with Body Alignment Lines, Carrying Strap for Floor Workout, Fitness & Hot Yoga 72'x 24'",
            brand : "By Decdeal",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,499" ,   
            from : "UAE",
@@ -496,6 +425,7 @@
         },{
            name : "EVA Yoga BLock Brick Pilates Sports Exercise Gym Foam Workout Stretching Aid Body Shaping Health Training Equipment",
            brand : "By Eva",
+           qty:1,
            rating : 4.6 ,
            MRP : "699" ,   
            from : "UAE",
@@ -506,6 +436,7 @@
         },{
            name : "ADT Yoga Bag Mat Carriers Compact Gym Bag Purple / Grey with Multipurpose Storage Pockets Smooth Zippers and Adjustable Straps More Space and Fits All Mats Size with Free Cooling Towel",
            brand : "By Adt Achieve Discover Thrive",
+           qty:1,
            rating : 4.6 ,
            MRP : "7,549" ,   
            from : "UAE",
@@ -519,6 +450,7 @@
         {
            name : "Gaiam Essentials Yoga Block (Set Of 2) – Supportive, Soft Non-Slip Foam Surface For Yoga, Pilates, Meditation",
            brand : "By Gaiam",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,569" ,   
            from : "UK",
@@ -529,6 +461,7 @@
         }, {
            name : "BalanceFrom GoYoga+ All-Purpose 1/2-Inch Extra Thick High Density Anti-Tear Exercise Yoga Mat and Knee Pad with Carrying Strap",
            brand : "By BalanceFrom",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,929" ,   
            from : "UK",
@@ -539,6 +472,7 @@
         }, {
            name : "Instructional Yoga Mat with Carrying Strap: Cute Yoga Mat with 75 Illustrated Yoga Poses + 75 Easily-Followed Stretching Exercises - 1/4” Thick, Non-Toxic, Non-Slip Yoga Mats for Women and Men",
            brand : "By Grand Basics",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,929" ,   
            from : "UK",
@@ -549,6 +483,7 @@
         }, {
            name : "Yoga Mate Soft, Sweat Absorbent, Non-Slip Bikram Yoga Mat Size Towel, Blue & Pink Tie Dye | Blue Trim",
            brand : "By Yoga Mate",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,159" ,   
            from : "UK",
@@ -559,6 +494,7 @@
         }, {
            name : "Trideer Yoga Bolster Pillow Meditation Pillow, Bolster Pillow for Legs for Restorative Yoga, Rectangular Yoga Bolster with Soft Velvet and Machine Washable Cover, 800g Lightweight with Handle",
            brand : "By Trideer",
+           qty:1,
            rating : 4.6 ,
            MRP : "5,849" ,   
            from : "UK",
@@ -569,6 +505,7 @@
         }, {
            name : "Syntus 9-in-1 Yoga Set, 1 Yoga Strap with 12 Loops, 2 EVA Foam Soft Non-Slip Yoga Blocks 9×6×4 inches,4 Resistance Bands with Instruction Book for Yoga, Pilates, Stretchings",
            brand : "By Syntus",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,929" ,   
            from : "UK",
@@ -579,6 +516,7 @@
         }, {
            name : "Ewedoos Yoga Mat Bag with Large Size Pocket and Zipper Pocket, Fit Most Size Mats",
            brand : "By Ewedoos",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,409" ,   
            from : "UK",
@@ -589,6 +527,7 @@
         }, {
            name : "Brien Yoga Socks for Women Non-Slip Grips & Straps with Carrying Pouch, One Size, Ideal for Pilates, Pure Barre, Ballet, Dance, Barefoot Workout",
            brand : "By  Brien",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,429" ,   
            from : "UK",
@@ -599,6 +538,7 @@
         }, {
            name : "8mm Thick Premium TPE Yoga Mat Green (Size 183cm x 61cm) with Carrying Bag, Anti-Slip Double Layer Eco Friendly 100% Latex & PVC Free (Chloride Free), Home/Gym Workout Fitness Exercise Sports Mattress",
            brand : "By ",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,249" ,   
            from : "UK",
@@ -609,6 +549,7 @@
         }, {
            name : "adidas Camo Yoga Mat - 5 mm",
            brand : "By Adidas",
+           qty:1,
            rating : 4.5 ,
            MRP : "7,549" ,   
            from : "UK",
@@ -619,6 +560,7 @@
         }, {
            name : "RIUXIB Yoga Headstand Bench Head Stand Wood Inversion Chair Stool Handstand with PVC Pads for Workout, Home Gym Unisex- Relieve Fatigue and Tone Muscle",
            brand : "By Riuxib",
+           qty:1,
            rating : 4.6 ,
            MRP : "11,479" ,   
            from : "UK",
@@ -629,6 +571,7 @@
         }, {
            name : "Better Me | Eco-Friendly LOTUS Inspired Alignment Lined THICK Non-Slip TPE Yoga Exercise Pilates Workout Mat & Strap (XL 71' x 24') | Durable & Non-Toxic | No Sore Knees",
            brand : "By Better Me",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,569" ,   
            from : "UK",
@@ -639,6 +582,7 @@
         },{
            name : "IUMANO Yoga Mat Set: TPE Yoga Mat + Yoga Mat Carrier Bag + Yoga Mat Strap. Exercise Mat Non slip Pilates Mat with Yoga Mat Bag. 6mm thick Training Mat for Gyms with Yoga Mat Carrier.",
            brand : "By Iumano",
+           qty:1,
            rating : 3.6 ,
            MRP : "3,709" ,   
            from : "UK",
@@ -649,6 +593,7 @@
         }, {
            name : "High Waisted Women's Premium Leggings with Pockets - Soft Tummy Control Slimming Dry Yoga Gym Pants for Workout Running (BLACK))",
            brand : "By Generic",
+           qty:1,
            rating : 4.5 ,
            MRP : "1,929" ,   
            from : "UK",
@@ -659,6 +604,7 @@
         },{
            name : "Yoga Mat 8mm - Eco Friendly TPE Non Slip Yoga Mats Double Face Gold Color Carrying Strap - Extra Thick Knees Supportive for Yoga Pilates Fitness Exercise Mat - (182 * 62.5 cm - 8mm)",
            brand : "By Rigid Fitness Apparel",
+           qty:1,
            rating : 4.1 ,
            MRP : "4,979" ,   
            from : "UK",
@@ -669,6 +615,7 @@
         },{
            name : "Decdeal Non Slip Yoga Mat Certified TPE Eco Friendly Lightweight Pilates Exercise Mat with Body Alignment Lines, Carrying Strap for Floor Workout, Fitness & Hot Yoga 72'x 24'",
            brand : "By Decdeal",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,499" ,   
            from : "UK",
@@ -679,6 +626,7 @@
         },{
            name : "EVA Yoga BLock Brick Pilates Sports Exercise Gym Foam Workout Stretching Aid Body Shaping Health Training Equipment",
            brand : "By Eva",
+           qty:1,
            rating : 4.6 ,
            MRP : "699" ,   
            from : "UK",
@@ -689,6 +637,7 @@
         },{
            name : "ADT Yoga Bag Mat Carriers Compact Gym Bag Purple / Grey with Multipurpose Storage Pockets Smooth Zippers and Adjustable Straps More Space and Fits All Mats Size with Free Cooling Towel",
            brand : "By Adt Achieve Discover Thrive",
+           qty:1,
            rating : 4.6 ,
            MRP : "7,549" ,   
            from : "UK",
@@ -701,6 +650,7 @@
         {
            name : "Gaiam Essentials Yoga Block (Set Of 2) – Supportive, Soft Non-Slip Foam Surface For Yoga, Pilates, Meditation",
            brand : "By Gaiam",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,569" ,   
            from : "INDIA",
@@ -711,6 +661,7 @@
         }, {
            name : "BalanceFrom GoYoga+ All-Purpose 1/2-Inch Extra Thick High Density Anti-Tear Exercise Yoga Mat and Knee Pad with Carrying Strap",
            brand : "By BalanceFrom",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,929" ,   
            from : "INDIA",
@@ -721,6 +672,7 @@
         }, {
            name : "Instructional Yoga Mat with Carrying Strap: Cute Yoga Mat with 75 Illustrated Yoga Poses + 75 Easily-Followed Stretching Exercises - 1/4” Thick, Non-Toxic, Non-Slip Yoga Mats for Women and Men",
            brand : "By Grand Basics",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,929" ,   
            from : "INDIA",
@@ -731,6 +683,7 @@
         }, {
            name : "Yoga Mate Soft, Sweat Absorbent, Non-Slip Bikram Yoga Mat Size Towel, Blue & Pink Tie Dye | Blue Trim",
            brand : "By Yoga Mate",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,159" ,   
            from : "INDIA",
@@ -741,6 +694,7 @@
         }, {
            name : "Trideer Yoga Bolster Pillow Meditation Pillow, Bolster Pillow for Legs for Restorative Yoga, Rectangular Yoga Bolster with Soft Velvet and Machine Washable Cover, 800g Lightweight with Handle",
            brand : "By Trideer",
+           qty:1,
            rating : 4.6 ,
            MRP : "5,849" ,   
            from : "INDIA",
@@ -751,6 +705,7 @@
         }, {
            name : "Syntus 9-in-1 Yoga Set, 1 Yoga Strap with 12 Loops, 2 EVA Foam Soft Non-Slip Yoga Blocks 9×6×4 inches,4 Resistance Bands with Instruction Book for Yoga, Pilates, Stretchings",
            brand : "By Syntus",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,929" ,   
            from : "INDIA",
@@ -761,6 +716,7 @@
         }, {
            name : "Ewedoos Yoga Mat Bag with Large Size Pocket and Zipper Pocket, Fit Most Size Mats",
            brand : "By Ewedoos",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,409" ,   
            from : "INDIA",
@@ -771,6 +727,7 @@
         }, {
            name : "Brien Yoga Socks for Women Non-Slip Grips & Straps with Carrying Pouch, One Size, Ideal for Pilates, Pure Barre, Ballet, Dance, Barefoot Workout",
            brand : "By  Brien",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,429" ,   
            from : "INDIA",
@@ -781,6 +738,7 @@
         }, {
            name : "8mm Thick Premium TPE Yoga Mat Green (Size 183cm x 61cm) with Carrying Bag, Anti-Slip Double Layer Eco Friendly 100% Latex & PVC Free (Chloride Free), Home/Gym Workout Fitness Exercise Sports Mattress",
            brand : "By ",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,249" ,   
            from : "INDIA",
@@ -791,6 +749,7 @@
         }, {
            name : "adidas Camo Yoga Mat - 5 mm",
            brand : "By Adidas",
+           qty:1,
            rating : 4.5 ,
            MRP : "7,549" ,   
            from : "INDIA",
@@ -801,6 +760,7 @@
         }, {
            name : "RIUXIB Yoga Headstand Bench Head Stand Wood Inversion Chair Stool Handstand with PVC Pads for Workout, Home Gym Unisex- Relieve Fatigue and Tone Muscle",
            brand : "By Riuxib",
+           qty:1,
            rating : 4.6 ,
            MRP : "11,479" ,   
            from : "INDIA",
@@ -811,6 +771,7 @@
         }, {
            name : "Better Me | Eco-Friendly LOTUS Inspired Alignment Lined THICK Non-Slip TPE Yoga Exercise Pilates Workout Mat & Strap (XL 71' x 24') | Durable & Non-Toxic | No Sore Knees",
            brand : "By Better Me",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,569" ,   
            from : "INDIA",
@@ -821,6 +782,7 @@
         },{
            name : "IUMANO Yoga Mat Set: TPE Yoga Mat + Yoga Mat Carrier Bag + Yoga Mat Strap. Exercise Mat Non slip Pilates Mat with Yoga Mat Bag. 6mm thick Training Mat for Gyms with Yoga Mat Carrier.",
            brand : "By Iumano",
+           qty:1,
            rating : 3.6 ,
            MRP : "3,709" ,   
            from : "INDIA",
@@ -831,6 +793,7 @@
         }, {
            name : "High Waisted Women's Premium Leggings with Pockets - Soft Tummy Control Slimming Dry Yoga Gym Pants for Workout Running (BLACK))",
            brand : "By Generic",
+           qty:1,
            rating : 4.5 ,
            MRP : "1,929" ,   
            from : "INDIA",
@@ -841,6 +804,7 @@
         },{
            name : "Yoga Mat 8mm - Eco Friendly TPE Non Slip Yoga Mats Double Face Gold Color Carrying Strap - Extra Thick Knees Supportive for Yoga Pilates Fitness Exercise Mat - (182 * 62.5 cm - 8mm)",
            brand : "By Rigid Fitness Apparel",
+           qty:1,
            rating : 4.1 ,
            MRP : "4,979" ,   
            from : "INDIA",
@@ -851,6 +815,7 @@
         },{
            name : "Decdeal Non Slip Yoga Mat Certified TPE Eco Friendly Lightweight Pilates Exercise Mat with Body Alignment Lines, Carrying Strap for Floor Workout, Fitness & Hot Yoga 72'x 24'",
            brand : "By Decdeal",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,499" ,   
            from : "INDIA",
@@ -861,6 +826,7 @@
         },{
            name : "EVA Yoga BLock Brick Pilates Sports Exercise Gym Foam Workout Stretching Aid Body Shaping Health Training Equipment",
            brand : "By Eva",
+           qty:1,
            rating : 4.6 ,
            MRP : "699" ,   
            from : "INDIA",
@@ -871,6 +837,7 @@
         },{
            name : "ADT Yoga Bag Mat Carriers Compact Gym Bag Purple / Grey with Multipurpose Storage Pockets Smooth Zippers and Adjustable Straps More Space and Fits All Mats Size with Free Cooling Towel",
            brand : "By Adt Achieve Discover Thrive",
+           qty:1,
            rating : 4.6 ,
            MRP : "7,549" ,   
            from : "INDIA",
@@ -881,6 +848,7 @@
         },{
            name : "Syntus 9-in-1 Yoga Set, 1 Yoga Strap with 12 Loops, 2 EVA Foam Soft Non-Slip Yoga Blocks 9×6×4 inches,4 Resistance Bands with Instruction Book for Yoga, Pilates, Stretchings",
            brand : "By Syntus",
+           qty:1,
            rating : 4.7 ,
            MRP : "1,929" ,   
            from : "INDIA",
@@ -891,6 +859,7 @@
         }, {
            name : "Ewedoos Yoga Mat Bag with Large Size Pocket and Zipper Pocket, Fit Most Size Mats",
            brand : "By Ewedoos",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,409" ,   
            from : "INDIA",
@@ -1027,9 +996,15 @@
             var rightdiv = document.createElement("div");
             rightdiv.setAttribute("id","div2");
 
+            var rightdiv1 = document.createElement("div");
+            rightdiv1.setAttribute("id","divr1");
+
+            var rightdiv2 = document.createElement("div");
+            rightdiv2.setAttribute("id","divr2");
+
             var rating1 = document.createElement("p");
             rating1.setAttribute("id","rating");
-            rating1.textContent = "★ " + item.rating ;
+            rating1.innerHTML =`<i style="color: #4cb9eb" class="fas fa-star"></i> ${item.rating}`;
             
             var price = document.createElement("p");
             price.setAttribute("id","cost");
@@ -1037,7 +1012,7 @@
 
             var origin = document.createElement("p");
             origin.setAttribute("id","fromCounty");
-            origin.textContent = "from " + item.from ;
+            origin.textContent = "from " + item.from ;  
 
             var dispatch = document.createElement("p");
             dispatch.setAttribute("id","toCounty");
@@ -1045,10 +1020,19 @@
 
             var when = document.createElement("p");
             when.setAttribute("id","delivery");
-            when.textContent = "in " +item.delivery  ;
+            when.textContent = "in "+item.delivery ;
+            
+            var symbols = document.createElement("img");
+            symbols.setAttribute("id","imagesymbol");
+            symbols.setAttribute("src","Screenshot 2021-11-09 at 11.07.27 AM.png")
             
             leftdiv.append(rating1, price);
-            rightdiv.append(origin,dispatch, when);
+
+            rightdiv1.append(origin,dispatch, when);
+
+            rightdiv2.append(symbols);
+
+            rightdiv.append(rightdiv1,rightdiv2);
             
             personaldiv.append(leftdiv, rightdiv);
             prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;

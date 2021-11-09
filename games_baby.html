@@ -2,113 +2,9 @@
 <html lang="en">
     <head>
         <title>Online Board Games Products</title>
-        <style>
-            #heading{
-                width:75%;
-                margin: auto;
-                color: rgb(24, 24, 24);
-            }
-            #optionsForSort{
-                width:75%;
-                margin: auto;
-                padding-top: 10px;
-                padding-bottom : 15px;
-                background-color: white;
-                display: flex;
-                gap: 1.4% ;
-                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
-                position: sticky;
-                top:0;
-            }
-            #container{
-                width: 75%;
-                display: grid ;
-                grid-template-columns: repeat(4, 24%);
-                /* border: 1.5px solid red; */
-                margin: auto;
-                column-gap : 1.4%;
-                row-gap : 20px;
-                font-family: Lato,sans-serif;
-            }
+        <link rel="stylesheet" href="products_page.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
 
-            #optionsForSort > select{
-                width : 33% ;
-                height: 55px; 
-                padding: 10px;
-                border-radius: 6px;
-                padding-right: 10px;
-                font-size: 15px;
-            }
-           
-            select option {
-                margin: 40px;
-                background: rgba(0, 0, 0, 0.3);
-                color: #fff;
-                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-            }
-
-            #maindiv {
-                height: 280px ;
-                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-                border-radius: 8px;
-                line-height: 15px;
-                padding: 2%;
-                color:rgba(41, 40, 40, 0.904);
-            }
-
-            #maindiv:hover{
-               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-            }
-
-            #picture{
-                width: 45%;
-                height: 55%;
-                margin: auto;
-                margin-left: 25%;
-                margin-bottom: 8%;
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
-
-            }
-            p{
-                margin:0;
-                padding:0;
-                line-height: 15px;
-                margin-left : 10px;
-                margin-right : 10px;
-            }
-
-            #nameofprod{
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2; 
-                        line-clamp: 2; 
-                -webkit-box-orient: vertical;
-                font-size: 14px;
-                font-weight: 500;
-                color : black;
-            }
-
-            #brandofprod{
-                font-size: 12px;
-                font-weight: 500;
-            }
-
-            #sub1div{
-                display: flex;
-                justify-content: space-between;
-                font-size: 12px;
-                margin-top: 5%;
-            }
-
-            #cost{
-                font-size: 14px;
-                margin-top: 25%;
-                font-weight: 700;  
-            }
-
-        </style>
     </head>
     <body>
         <div id="optionsForSort">
@@ -153,6 +49,7 @@
         {
            name : "Ravensburger World of Disney Eye Found It Board Game for Boys and Girls Ages 4 and Up - A Fun Family Game You'll Want to Play Again and Again",
            brand : "By Wonder Forge",
+           qty:1,
            rating : 4.7 ,
            MRP : "10,479",  
            from : "USA",
@@ -163,6 +60,7 @@
         }, {
            name : "Hasbro Gaming Clue Junior: Marvel Avengers Edition Board Game for Kids Ages 5+, Loki's Big Trick, Classic Mystery Game for 2-6 Players (Amazon Exclusive)",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,529",  
            from : "USA",
@@ -173,6 +71,7 @@
         }, {
            name : "Blank Slate - The Game Where Great Minds Think Alike | Fun Family Friendly Word Association Party Game",
            brand : "By Usaopoly",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,869",  
            from : "USA",
@@ -183,6 +82,7 @@
         }, {
            name : "Ticket to Ride Board Game | Family Board Game | Board Game for Adults and Family | Train Game | Ages 8+ | For 2 to 5 players | Average Playtime 30-60 minutes | Made by Days of Wonder",
            brand : "By Days Of Wonder",
+           qty:1,
            rating : 4.9 ,
            MRP : "8,199",  
            from : "USA",
@@ -193,6 +93,7 @@
         }, {
            name : "TOMYOU Dart Board for Kids - 26 inchs, Double Sided Dinosaur Themed Board Games with 16 Sticky Balls, Hooks, Christmas or Birthday Toy Gift for Boys Girls Age 5 6 7 8 9 10 11 12",
            brand : "By Tomyou",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,099",  
            from : "USA",
@@ -203,6 +104,7 @@
         }, {
            name : "Classic Operation Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,449",  
            from : "USA",
@@ -213,6 +115,7 @@
         }, {
            name : "Hasbro Gaming The Game of Life: Super Mario Edition Board Game for Kids Ages 8 and Up, Play Minigames, Collect Stars, Battle Bowser",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.6 ,
            MRP : "7,079",  
            from : "USA",
@@ -223,6 +126,7 @@
         }, {
            name : "Stonemaier Games Viticulture Essential Edition Board Game",
            brand : "By Stonemaier Games",
+           qty:1,
            rating : 4.9 ,
            MRP : "10,099",  
            from : "USA",
@@ -233,6 +137,7 @@
         }, {
            name : "Do You Really Know Your Family? A Fun Family Game Filled with Conversation Starters and Challenges - Great for Kids, Teens and Adults",
            brand : "By Do You Really Know Your Family",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,349",  
            from : "USA",
@@ -243,6 +148,7 @@
         }, {
            name : "Hasbro Connect 4 Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,809",  
            from : "USA",
@@ -253,6 +159,7 @@
         }, {
            name : "Jumanji Deluxe Game, Immersive Electronic Version of The Classic Adventure Movie Board Game, with Lights and Sounds, for Kids & Adults Ages 8 and up",
            brand : "By Spin Master",
+           qty:1,
            rating : 4.4 ,
            MRP : "9,119",  
            from : "USA",
@@ -263,6 +170,7 @@
         }, {
            name : "Monopoly: Mass Effect N7 Collector's Edition Board Game",
            brand : "By Usaopoly",
+           qty:1,
            rating : 4.9 ,
            MRP : "23,989",  
            from : "USA",
@@ -273,6 +181,7 @@
         }, {
            name : "Hygge Games ...I should have known that! Trivia Game Green",
            brand : "By Hygge Games",
+           qty:1,
            rating : 4.4 ,
            MRP : "5,249",  
            from : "USA",
@@ -283,6 +192,7 @@
         }, {
            name : "SEQUENCE- Original SEQUENCE Game with Folding Board, Cards and Chips by Jax ( Packaging may Vary ) White, 10.3' x 8.1' x 2.31' ",
            brand : "By Sequence",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,089",  
            from : "USA",
@@ -293,6 +203,7 @@
         }, {
            name : "Happy Little Dinosaurs Base Game",
            brand : "By Teeturtle",
+           qty:1,
            rating : 4.7 ,
            MRP : "5,559",  
            from : "USA",
@@ -303,6 +214,7 @@
         }, {
            name : "Hunt A Killer Death at The Dive Bar, Immersive Murder Mystery Game -Take on the Unsolved Case as an Independent Challenge, for Date Night or with Family & Friends as Detectives for Game Night, Age 14+",
            brand : "By Hunt A Killer",
+           qty:1,
            rating : 4.7 ,
            MRP : "7,409",  
            from : "USA",
@@ -313,6 +225,7 @@
         }, {
            name : "Don't Break the Ice Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,819",  
            from : "USA",
@@ -323,6 +236,7 @@
         }, {
            name : "Qwirkle Board Game",
            brand : "By Mindware",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,419",  
            from : "USA",
@@ -335,6 +249,7 @@
         {
            name : "Ravensburger World of Disney Eye Found It Board Game for Boys and Girls Ages 4 and Up - A Fun Family Game You'll Want to Play Again and Again",
            brand : "By Wonder Forge",
+           qty:1,
            rating : 4.7 ,
            MRP : "10,479",  
            from : "UK",
@@ -345,6 +260,7 @@
         }, {
            name : "Hasbro Gaming Clue Junior: Marvel Avengers Edition Board Game for Kids Ages 5+, Loki's Big Trick, Classic Mystery Game for 2-6 Players (Amazon Exclusive)",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,529",  
            from : "UK",
@@ -355,6 +271,7 @@
         }, {
            name : "Blank Slate - The Game Where Great Minds Think Alike | Fun Family Friendly Word Association Party Game",
            brand : "By Usaopoly",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,869",  
            from : "UK",
@@ -365,6 +282,7 @@
         }, {
            name : "Ticket to Ride Board Game | Family Board Game | Board Game for Adults and Family | Train Game | Ages 8+ | For 2 to 5 players | Average Playtime 30-60 minutes | Made by Days of Wonder",
            brand : "By Days Of Wonder",
+           qty:1,
            rating : 4.9 ,
            MRP : "8,199",  
            from : "UK",
@@ -375,6 +293,7 @@
         }, {
            name : "TOMYOU Dart Board for Kids - 26 inchs, Double Sided Dinosaur Themed Board Games with 16 Sticky Balls, Hooks, Christmas or Birthday Toy Gift for Boys Girls Age 5 6 7 8 9 10 11 12",
            brand : "By Tomyou",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,099",  
            from : "UK",
@@ -385,6 +304,7 @@
         }, {
            name : "Classic Operation Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,449",  
            from : "UK",
@@ -395,6 +315,7 @@
         }, {
            name : "Hasbro Gaming The Game of Life: Super Mario Edition Board Game for Kids Ages 8 and Up, Play Minigames, Collect Stars, Battle Bowser",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.6 ,
            MRP : "7,079",  
            from : "UK",
@@ -405,6 +326,7 @@
         }, {
            name : "Stonemaier Games Viticulture Essential Edition Board Game",
            brand : "By Stonemaier Games",
+           qty:1,
            rating : 4.9 ,
            MRP : "10,099",  
            from : "UK",
@@ -415,6 +337,7 @@
         }, {
            name : "Do You Really Know Your Family? A Fun Family Game Filled with Conversation Starters and Challenges - Great for Kids, Teens and Adults",
            brand : "By Do You Really Know Your Family",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,349",  
            from : "UK",
@@ -425,6 +348,7 @@
         }, {
            name : "Hasbro Connect 4 Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,809",  
            from : "UK",
@@ -435,6 +359,7 @@
         }, {
            name : "Jumanji Deluxe Game, Immersive Electronic Version of The Classic Adventure Movie Board Game, with Lights and Sounds, for Kids & Adults Ages 8 and up",
            brand : "By Spin Master",
+           qty:1,
            rating : 4.4 ,
            MRP : "9,119",  
            from : "UK",
@@ -445,6 +370,7 @@
         }, {
            name : "Monopoly: Mass Effect N7 Collector's Edition Board Game",
            brand : "By Usaopoly",
+           qty:1,
            rating : 4.9 ,
            MRP : "23,989",  
            from : "UK",
@@ -455,6 +381,7 @@
         }, {
            name : "Hygge Games ...I should have known that! Trivia Game Green",
            brand : "By Hygge Games",
+           qty:1,
            rating : 4.4 ,
            MRP : "5,249",  
            from : "UK",
@@ -465,6 +392,7 @@
         }, {
            name : "SEQUENCE- Original SEQUENCE Game with Folding Board, Cards and Chips by Jax ( Packaging may Vary ) White, 10.3' x 8.1' x 2.31' ",
            brand : "By Sequence",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,089",  
            from : "UK",
@@ -475,6 +403,7 @@
         }, {
            name : "Happy Little Dinosaurs Base Game",
            brand : "By Teeturtle",
+           qty:1,
            rating : 4.7 ,
            MRP : "5,559",  
            from : "UK",
@@ -485,6 +414,7 @@
         }, {
            name : "Hunt A Killer Death at The Dive Bar, Immersive Murder Mystery Game -Take on the Unsolved Case as an Independent Challenge, for Date Night or with Family & Friends as Detectives for Game Night, Age 14+",
            brand : "By Hunt A Killer",
+           qty:1,
            rating : 4.7 ,
            MRP : "7,409",  
            from : "UK",
@@ -495,6 +425,7 @@
         }, {
            name : "Don't Break the Ice Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,819",  
            from : "UK",
@@ -505,6 +436,7 @@
         }, {
            name : "Qwirkle Board Game",
            brand : "By Mindware",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,419",  
            from : "UK",
@@ -518,6 +450,7 @@
         {
            name : "Ravensburger World of Disney Eye Found It Board Game for Boys and Girls Ages 4 and Up - A Fun Family Game You'll Want to Play Again and Again",
            brand : "By Wonder Forge",
+           qty:1,
            rating : 4.7 ,
            MRP : "10,479",  
            from : "UAE",
@@ -528,6 +461,7 @@
         }, {
            name : "Hasbro Gaming Clue Junior: Marvel Avengers Edition Board Game for Kids Ages 5+, Loki's Big Trick, Classic Mystery Game for 2-6 Players (Amazon Exclusive)",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,529",  
            from : "UAE",
@@ -538,6 +472,7 @@
         }, {
            name : "Blank Slate - The Game Where Great Minds Think Alike | Fun Family Friendly Word Association Party Game",
            brand : "By Usaopoly",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,869",  
            from : "UAE",
@@ -548,6 +483,7 @@
         }, {
            name : "Ticket to Ride Board Game | Family Board Game | Board Game for Adults and Family | Train Game | Ages 8+ | For 2 to 5 players | Average Playtime 30-60 minutes | Made by Days of Wonder",
            brand : "By Days Of Wonder",
+           qty:1,
            rating : 4.9 ,
            MRP : "8,199",  
            from : "UAE",
@@ -558,6 +494,7 @@
         }, {
            name : "TOMYOU Dart Board for Kids - 26 inchs, Double Sided Dinosaur Themed Board Games with 16 Sticky Balls, Hooks, Christmas or Birthday Toy Gift for Boys Girls Age 5 6 7 8 9 10 11 12",
            brand : "By Tomyou",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,099",  
            from : "UAE",
@@ -568,6 +505,7 @@
         }, {
            name : "Classic Operation Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,449",  
            from : "UAE",
@@ -578,6 +516,7 @@
         }, {
            name : "Hasbro Gaming The Game of Life: Super Mario Edition Board Game for Kids Ages 8 and Up, Play Minigames, Collect Stars, Battle Bowser",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.6 ,
            MRP : "7,079",  
            from : "UAE",
@@ -588,6 +527,7 @@
         }, {
            name : "Stonemaier Games Viticulture Essential Edition Board Game",
            brand : "By Stonemaier Games",
+           qty:1,
            rating : 4.9 ,
            MRP : "10,099",  
            from : "UAE",
@@ -598,6 +538,7 @@
         }, {
            name : "Do You Really Know Your Family? A Fun Family Game Filled with Conversation Starters and Challenges - Great for Kids, Teens and Adults",
            brand : "By Do You Really Know Your Family",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,349",  
            from : "UAE",
@@ -608,6 +549,7 @@
         }, {
            name : "Hasbro Connect 4 Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,809",  
            from : "UAE",
@@ -618,6 +560,7 @@
         }, {
            name : "Jumanji Deluxe Game, Immersive Electronic Version of The Classic Adventure Movie Board Game, with Lights and Sounds, for Kids & Adults Ages 8 and up",
            brand : "By Spin Master",
+           qty:1,
            rating : 4.4 ,
            MRP : "9,119",  
            from : "UAE",
@@ -628,6 +571,7 @@
         }, {
            name : "Monopoly: Mass Effect N7 Collector's Edition Board Game",
            brand : "By Usaopoly",
+           qty:1,
            rating : 4.9 ,
            MRP : "23,989",  
            from : "UAE",
@@ -638,6 +582,7 @@
         }, {
            name : "Hygge Games ...I should have known that! Trivia Game Green",
            brand : "By Hygge Games",
+           qty:1,
            rating : 4.4 ,
            MRP : "5,249",  
            from : "UAE",
@@ -648,6 +593,7 @@
         }, {
            name : "SEQUENCE- Original SEQUENCE Game with Folding Board, Cards and Chips by Jax ( Packaging may Vary ) White, 10.3' x 8.1' x 2.31' ",
            brand : "By Sequence",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,089",  
            from : "UAE",
@@ -658,6 +604,7 @@
         }, {
            name : "Happy Little Dinosaurs Base Game",
            brand : "By Teeturtle",
+           qty:1,
            rating : 4.7 ,
            MRP : "5,559",  
            from : "UAE",
@@ -668,6 +615,7 @@
         }, {
            name : "Hunt A Killer Death at The Dive Bar, Immersive Murder Mystery Game -Take on the Unsolved Case as an Independent Challenge, for Date Night or with Family & Friends as Detectives for Game Night, Age 14+",
            brand : "By Hunt A Killer",
+           qty:1,
            rating : 4.7 ,
            MRP : "7,409",  
            from : "UAE",
@@ -678,6 +626,7 @@
         }, {
            name : "Don't Break the Ice Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,819",  
            from : "UAE",
@@ -688,6 +637,7 @@
         }, {
            name : "Qwirkle Board Game",
            brand : "By Mindware",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,419",  
            from : "UAE",
@@ -701,6 +651,7 @@
         {
            name : "Ravensburger World of Disney Eye Found It Board Game for Boys and Girls Ages 4 and Up - A Fun Family Game You'll Want to Play Again and Again",
            brand : "By Wonder Forge",
+           qty:1,
            rating : 4.7 ,
            MRP : "10,479",  
            from : "INDIA",
@@ -711,6 +662,7 @@
         }, {
            name : "Hasbro Gaming Clue Junior: Marvel Avengers Edition Board Game for Kids Ages 5+, Loki's Big Trick, Classic Mystery Game for 2-6 Players (Amazon Exclusive)",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,529",  
            from : "INDIA",
@@ -721,6 +673,7 @@
         }, {
            name : "Blank Slate - The Game Where Great Minds Think Alike | Fun Family Friendly Word Association Party Game",
            brand : "By Usaopoly",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,869",  
            from : "INDIA",
@@ -731,6 +684,7 @@
         }, {
            name : "Ticket to Ride Board Game | Family Board Game | Board Game for Adults and Family | Train Game | Ages 8+ | For 2 to 5 players | Average Playtime 30-60 minutes | Made by Days of Wonder",
            brand : "By Days Of Wonder",
+           qty:1,
            rating : 4.9 ,
            MRP : "8,199",  
            from : "INDIA",
@@ -741,6 +695,7 @@
         }, {
            name : "TOMYOU Dart Board for Kids - 26 inchs, Double Sided Dinosaur Themed Board Games with 16 Sticky Balls, Hooks, Christmas or Birthday Toy Gift for Boys Girls Age 5 6 7 8 9 10 11 12",
            brand : "By Tomyou",
+           qty:1,
            rating : 4.6 ,
            MRP : "3,099",  
            from : "INDIA",
@@ -751,6 +706,7 @@
         }, {
            name : "Classic Operation Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,449",  
            from : "INDIA",
@@ -761,6 +717,7 @@
         }, {
            name : "Hasbro Gaming The Game of Life: Super Mario Edition Board Game for Kids Ages 8 and Up, Play Minigames, Collect Stars, Battle Bowser",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.6 ,
            MRP : "7,079",  
            from : "INDIA",
@@ -771,6 +728,7 @@
         }, {
            name : "Stonemaier Games Viticulture Essential Edition Board Game",
            brand : "By Stonemaier Games",
+           qty:1,
            rating : 4.9 ,
            MRP : "10,099",  
            from : "INDIA",
@@ -781,6 +739,7 @@
         }, {
            name : "Do You Really Know Your Family? A Fun Family Game Filled with Conversation Starters and Challenges - Great for Kids, Teens and Adults",
            brand : "By Do You Really Know Your Family",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,349",  
            from : "INDIA",
@@ -791,6 +750,7 @@
         }, {
            name : "Hasbro Connect 4 Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,809",  
            from : "INDIA",
@@ -801,6 +761,7 @@
         }, {
            name : "Jumanji Deluxe Game, Immersive Electronic Version of The Classic Adventure Movie Board Game, with Lights and Sounds, for Kids & Adults Ages 8 and up",
            brand : "By Spin Master",
+           qty:1,
            rating : 4.4 ,
            MRP : "9,119",  
            from : "INDIA",
@@ -811,6 +772,7 @@
         }, {
            name : "Monopoly: Mass Effect N7 Collector's Edition Board Game",
            brand : "By Usaopoly",
+           qty:1,
            rating : 4.9 ,
            MRP : "23,989",  
            from : "INDIA",
@@ -821,6 +783,7 @@
         }, {
            name : "Hygge Games ...I should have known that! Trivia Game Green",
            brand : "By Hygge Games",
+           qty:1,
            rating : 4.4 ,
            MRP : "5,249",  
            from : "INDIA",
@@ -831,6 +794,7 @@
         }, {
            name : "SEQUENCE- Original SEQUENCE Game with Folding Board, Cards and Chips by Jax ( Packaging may Vary ) White, 10.3' x 8.1' x 2.31' ",
            brand : "By Sequence",
+           qty:1,
            rating : 4.8 ,
            MRP : "3,089",  
            from : "INDIA",
@@ -841,6 +805,7 @@
         }, {
            name : "Happy Little Dinosaurs Base Game",
            brand : "By Teeturtle",
+           qty:1,
            rating : 4.7 ,
            MRP : "5,559",  
            from : "INDIA",
@@ -851,6 +816,7 @@
         }, {
            name : "Hunt A Killer Death at The Dive Bar, Immersive Murder Mystery Game -Take on the Unsolved Case as an Independent Challenge, for Date Night or with Family & Friends as Detectives for Game Night, Age 14+",
            brand : "By Hunt A Killer",
+           qty:1,
            rating : 4.7 ,
            MRP : "7,409",  
            from : "INDIA",
@@ -861,6 +827,7 @@
         }, {
            name : "Don't Break the Ice Game",
            brand : "By Hasbro Gaming",
+           qty:1,
            rating : 4.8 ,
            MRP : "2,819",  
            from : "INDIA",
@@ -871,6 +838,7 @@
         }, {
            name : "Qwirkle Board Game",
            brand : "By Mindware",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,419",  
            from : "INDIA",
@@ -985,7 +953,7 @@
             prodiv.addEventListener("click",function(){
                productShow(item);
             });
-  
+
             var image = document.createElement("img");
             image.setAttribute("id","picture");
             image.setAttribute("src",item.image)
@@ -1007,9 +975,15 @@
             var rightdiv = document.createElement("div");
             rightdiv.setAttribute("id","div2");
 
+            var rightdiv1 = document.createElement("div");
+            rightdiv1.setAttribute("id","divr1");
+
+            var rightdiv2 = document.createElement("div");
+            rightdiv2.setAttribute("id","divr2");
+
             var rating1 = document.createElement("p");
             rating1.setAttribute("id","rating");
-            rating1.textContent = "★ " + item.rating ;
+            rating1.innerHTML =`<i style="color: #4cb9eb" class="fas fa-star"></i> ${item.rating}`;
             
             var price = document.createElement("p");
             price.setAttribute("id","cost");
@@ -1017,7 +991,7 @@
 
             var origin = document.createElement("p");
             origin.setAttribute("id","fromCounty");
-            origin.textContent = "from " + item.from ;
+            origin.textContent = "from " + item.from ;  
 
             var dispatch = document.createElement("p");
             dispatch.setAttribute("id","toCounty");
@@ -1025,10 +999,19 @@
 
             var when = document.createElement("p");
             when.setAttribute("id","delivery");
-            when.textContent = "in " +item.delivery  ;
+            when.textContent = "in "+item.delivery ;
+            
+            var symbols = document.createElement("img");
+            symbols.setAttribute("id","imagesymbol");
+            symbols.setAttribute("src","Screenshot 2021-11-09 at 11.07.27 AM.png")
             
             leftdiv.append(rating1, price);
-            rightdiv.append(origin,dispatch, when);
+
+            rightdiv1.append(origin,dispatch, when);
+
+            rightdiv2.append(symbols);
+
+            rightdiv.append(rightdiv1,rightdiv2);
             
             personaldiv.append(leftdiv, rightdiv);
             prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;

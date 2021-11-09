@@ -2,113 +2,8 @@
 <html lang="en">
     <head>
         <title>Online Team Sports Products</title>
-        <style>
-            #heading{
-                width:75%;
-                margin: auto;
-                color: rgb(24, 24, 24);
-            }
-            #optionsForSort{
-                width:75%;
-                margin: auto;
-                padding-top: 10px;
-                padding-bottom : 15px;
-                background-color: white;
-                display: flex;
-                gap: 1.4% ;
-                border-bottom: 1px solid rgba(56, 55, 55, 0.479);
-                position: sticky;
-                top:0;
-            }
-            #container{
-                width: 75%;
-                display: grid ;
-                grid-template-columns: repeat(4, 24%);
-                /* border: 1.5px solid red; */
-                margin: auto;
-                column-gap : 1.4%;
-                row-gap : 20px;
-                font-family: Lato,sans-serif;
-            }
-
-            #optionsForSort > select{
-                width : 33% ;
-                height: 55px; 
-                padding: 10px;
-                border-radius: 6px;
-                padding-right: 10px;
-                font-size: 15px;
-            }
-           
-            select option {
-                margin: 40px;
-                background: rgba(0, 0, 0, 0.3);
-                color: #fff;
-                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-            }
-
-            #maindiv {
-                height: 280px ;
-                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-                border-radius: 8px;
-                line-height: 15px;
-                padding: 2%;
-                color:rgba(41, 40, 40, 0.904);
-            }
-
-            #maindiv:hover{
-               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-            }
-
-            #picture{
-                width: 45%;
-                height: 55%;
-                margin: auto;
-                margin-left: 25%;
-                margin-bottom: 8%;
-                border-top-right-radius: 8px;
-                border-top-left-radius: 8px;
-
-            }
-            p{
-                margin:0;
-                padding:0;
-                line-height: 15px;
-                margin-left : 10px;
-                margin-right : 10px;
-            }
-
-            #nameofprod{
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2; 
-                        line-clamp: 2; 
-                -webkit-box-orient: vertical;
-                font-size: 14px;
-                font-weight: 500;
-                color : black;
-            }
-
-            #brandofprod{
-                font-size: 12px;
-                font-weight: 500;
-            }
-
-            #sub1div{
-                display: flex;
-                justify-content: space-between;
-                font-size: 12px;
-                margin-top: 5%;
-            }
-
-            #cost{
-                font-size: 14px;
-                margin-top: 25%;
-                font-weight: 700;  
-            }
-
-        </style>
+        <link rel="stylesheet" href="products_page.css">
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="optionsForSort">
@@ -153,6 +48,7 @@
         {
            name : "Team Sports America Solar Garden Lantern, Pittsburgh Steelers",
            brand : "By Team Sports America",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,399" , 
            from : "USA",
@@ -163,6 +59,7 @@
         }, {
            name : "Nylon Mesh Scrimmage Team Practice Vests Pinnies Jerseys for Children Youth Sports Basketball, Soccer, Football, Volleyball (12 Jerseys)",
            brand : "By Super Z Outlet",
+           qty:1,
            rating : 4.4 ,
            MRP : "3,959" , 
            from : "USA",
@@ -173,6 +70,7 @@
         }, {
            name : "Littlearth Pets",
            brand : "By Littlearth",
+           qty:1,
            rating : 4.6 ,
            MRP : "6,859" , 
            from : "USA",
@@ -183,6 +81,7 @@
         }, {
            name : "BROTOU Extra Large Sports Ball Bag Mesh Ball Bag Team Work, Adjustable Shoulder Strap and Hanging Ears with Handle,Mesh Ball Bag for Holding Basketball, Volleyball, Swimming Gear (30” x 40”)",
            brand : "By Brotou",
+           qty:1,
            rating : 4.9 ,
            MRP : "3,809" , 
            from : "USA",
@@ -193,6 +92,7 @@
         }, {
            name : "Team Sports Gymnastics 4' Skill Throw Landing Mats 4'x8', Blue Vinyl and 1.8 Density Poly-Foam",
            brand : "By Team Sports",
+           qty:1,
            rating : 4.6 ,
            MRP : "60,579" , 
            from : "USA",
@@ -203,6 +103,7 @@
         }, {
            name : "First Aid Kit for Youth Sports (Basic) - Includes Free Refill Pack - Youth Sports Performance + Aid Kit",
            brand : "By Flash Aid",
+           qty:1,
            rating : 4.6 ,
            MRP : "6,049" , 
            from : "USA",
@@ -213,6 +114,7 @@
         }, {
            name : "Be Smart Get Prepared 73-Piece Coach’s and Team Sports First Aid Kit in Roll up Bag",
            brand : "By Be Smart Get Prepared",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,129" , 
            from : "USA",
@@ -223,6 +125,7 @@
         }, {
            name : "Trademark Innovations Portable 6 Seater Sports Bench Sits",
            brand : "By Trademark Innovations",
+           qty:1,
            rating : 4.6 ,
            MRP : "129,349" , 
            from : "USA",
@@ -233,6 +136,7 @@
         }, {
            name : "Champion Sports Outdoor Badminton Set",
            brand : "By ",
+           qty:1,
            rating : 4.4 ,
            MRP : "29,269" , 
            from : "USA",
@@ -243,6 +147,7 @@
         }, {
            name : "Net World Sports Portable Multi-Sport Team Shelter | Weatherproof Canopy | Pop-Up Design | Dugout Shelter For All Sports Clubs | Optional 8-Seat Bench Available",
            brand : "By Net World Sports",
+           qty:1,
            rating : 4.6 ,
            MRP : "60,499" , 
            from : "USA",
@@ -253,6 +158,7 @@
         }, {
            name : "Tampa Bay Buccaneers Framed 15' x 17' Super Bowl LV Champions Team Collage - NFL Team Plaques and Collages",
            brand : "By Sports Memorabilia",
+           qty:1,
            rating : 4.4 ,
            MRP : "7,769" , 
            from : "USA",
@@ -263,6 +169,7 @@
         }, {
            name : "NBA Industries NBA Mini Pennant Set, Small, Black",
            brand : "By Rico",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,209" , 
            from : "USA",
@@ -273,6 +180,7 @@
         }, {
            name : "(6-Pack) Basketball Motivational Dog Tag Necklaces - Basketball Gifts in Bulk for Basketball Team Accessories - Basketball Party Favors Sports Prizes Awards for Youth Teen Boys Girls Adults Men Women",
            brand : "By Inkstone",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,189" , 
            from : "USA",
@@ -285,6 +193,7 @@
         {
            name : "Team Sports America Solar Garden Lantern, Pittsburgh Steelers",
            brand : "By Team Sports America",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,399" , 
            from : "UAE",
@@ -295,6 +204,7 @@
         }, {
            name : "Nylon Mesh Scrimmage Team Practice Vests Pinnies Jerseys for Children Youth Sports Basketball, Soccer, Football, Volleyball (12 Jerseys)",
            brand : "By Super Z Outlet",
+           qty:1,
            rating : 4.4 ,
            MRP : "3,959" , 
            from : "UAE",
@@ -305,6 +215,7 @@
         }, {
            name : "Littlearth Pets",
            brand : "By Littlearth",
+           qty:1,
            rating : 4.6 ,
            MRP : "6,859" , 
            from : "UAE",
@@ -315,6 +226,7 @@
         }, {
            name : "BROTOU Extra Large Sports Ball Bag Mesh Ball Bag Team Work, Adjustable Shoulder Strap and Hanging Ears with Handle,Mesh Ball Bag for Holding Basketball, Volleyball, Swimming Gear (30” x 40”)",
            brand : "By Brotou",
+           qty:1,
            rating : 4.9 ,
            MRP : "3,809" , 
            from : "UAE",
@@ -325,6 +237,7 @@
         }, {
            name : "Team Sports Gymnastics 4' Skill Throw Landing Mats 4'x8', Blue Vinyl and 1.8 Density Poly-Foam",
            brand : "By Team Sports",
+           qty:1,
            rating : 4.6 ,
            MRP : "60,579" , 
            from : "UAE",
@@ -335,6 +248,7 @@
         }, {
            name : "First Aid Kit for Youth Sports (Basic) - Includes Free Refill Pack - Youth Sports Performance + Aid Kit",
            brand : "By Flash Aid",
+           qty:1,
            rating : 4.6 ,
            MRP : "6,049" , 
            from : "UAE",
@@ -345,6 +259,7 @@
         }, {
            name : "Be Smart Get Prepared 73-Piece Coach’s and Team Sports First Aid Kit in Roll up Bag",
            brand : "By Be Smart Get Prepared",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,129" , 
            from : "UAE",
@@ -355,6 +270,7 @@
         }, {
            name : "Trademark Innovations Portable 6 Seater Sports Bench Sits",
            brand : "By Trademark Innovations",
+           qty:1,
            rating : 4.6 ,
            MRP : "129,349" , 
            from : "UAE",
@@ -365,6 +281,7 @@
         }, {
            name : "Champion Sports Outdoor Badminton Set",
            brand : "By ",
+           qty:1,
            rating : 4.4 ,
            MRP : "29,269" , 
            from : "UAE",
@@ -375,6 +292,7 @@
         }, {
            name : "Net World Sports Portable Multi-Sport Team Shelter | Weatherproof Canopy | Pop-Up Design | Dugout Shelter For All Sports Clubs | Optional 8-Seat Bench Available",
            brand : "By Net World Sports",
+           qty:1,
            rating : 4.6 ,
            MRP : "60,499" , 
            from : "UAE",
@@ -385,6 +303,7 @@
         }, {
            name : "Tampa Bay Buccaneers Framed 15' x 17' Super Bowl LV Champions Team Collage - NFL Team Plaques and Collages",
            brand : "By Sports Memorabilia",
+           qty:1,
            rating : 4.4 ,
            MRP : "7,769" , 
            from : "UAE",
@@ -395,6 +314,7 @@
         }, {
            name : "NBA Industries NBA Mini Pennant Set, Small, Black",
            brand : "By Rico",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,209" , 
            from : "UAE",
@@ -405,6 +325,7 @@
         }, {
            name : "(6-Pack) Basketball Motivational Dog Tag Necklaces - Basketball Gifts in Bulk for Basketball Team Accessories - Basketball Party Favors Sports Prizes Awards for Youth Teen Boys Girls Adults Men Women",
            brand : "By Inkstone",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,189" , 
            from : "UAE",
@@ -417,6 +338,7 @@
         {
            name : "Team Sports America Solar Garden Lantern, Pittsburgh Steelers",
            brand : "By Team Sports America",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,399" , 
            from : "UK",
@@ -427,6 +349,7 @@
         }, {
            name : "Nylon Mesh Scrimmage Team Practice Vests Pinnies Jerseys for Children Youth Sports Basketball, Soccer, Football, Volleyball (12 Jerseys)",
            brand : "By Super Z Outlet",
+           qty:1,
            rating : 4.4 ,
            MRP : "3,959" , 
            from : "UK",
@@ -437,6 +360,7 @@
         }, {
            name : "Littlearth Pets",
            brand : "By Littlearth",
+           qty:1,
            rating : 4.6 ,
            MRP : "6,859" , 
            from : "UK",
@@ -447,6 +371,7 @@
         }, {
            name : "BROTOU Extra Large Sports Ball Bag Mesh Ball Bag Team Work, Adjustable Shoulder Strap and Hanging Ears with Handle,Mesh Ball Bag for Holding Basketball, Volleyball, Swimming Gear (30” x 40”)",
            brand : "By Brotou",
+           qty:1,
            rating : 4.9 ,
            MRP : "3,809" , 
            from : "UK",
@@ -457,6 +382,7 @@
         }, {
            name : "Team Sports Gymnastics 4' Skill Throw Landing Mats 4'x8', Blue Vinyl and 1.8 Density Poly-Foam",
            brand : "By Team Sports",
+           qty:1,
            rating : 4.6 ,
            MRP : "60,579" , 
            from : "UK",
@@ -467,6 +393,7 @@
         }, {
            name : "First Aid Kit for Youth Sports (Basic) - Includes Free Refill Pack - Youth Sports Performance + Aid Kit",
            brand : "By Flash Aid",
+           qty:1,
            rating : 4.6 ,
            MRP : "6,049" , 
            from : "UK",
@@ -477,6 +404,7 @@
         }, {
            name : "Be Smart Get Prepared 73-Piece Coach’s and Team Sports First Aid Kit in Roll up Bag",
            brand : "By Be Smart Get Prepared",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,129" , 
            from : "UK",
@@ -487,6 +415,7 @@
         }, {
            name : "Trademark Innovations Portable 6 Seater Sports Bench Sits",
            brand : "By Trademark Innovations",
+           qty:1,
            rating : 4.6 ,
            MRP : "129,349" , 
            from : "UK",
@@ -497,6 +426,7 @@
         }, {
            name : "Champion Sports Outdoor Badminton Set",
            brand : "By ",
+           qty:1,
            rating : 4.4 ,
            MRP : "29,269" , 
            from : "UK",
@@ -507,6 +437,7 @@
         }, {
            name : "Net World Sports Portable Multi-Sport Team Shelter | Weatherproof Canopy | Pop-Up Design | Dugout Shelter For All Sports Clubs | Optional 8-Seat Bench Available",
            brand : "By Net World Sports",
+           qty:1,
            rating : 4.6 ,
            MRP : "60,499" , 
            from : "UK",
@@ -517,6 +448,7 @@
         }, {
            name : "Tampa Bay Buccaneers Framed 15' x 17' Super Bowl LV Champions Team Collage - NFL Team Plaques and Collages",
            brand : "By Sports Memorabilia",
+           qty:1,
            rating : 4.4 ,
            MRP : "7,769" , 
            from : "UK",
@@ -527,6 +459,7 @@
         }, {
            name : "NBA Industries NBA Mini Pennant Set, Small, Black",
            brand : "By Rico",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,209" , 
            from : "UK",
@@ -537,6 +470,7 @@
         }, {
            name : "(6-Pack) Basketball Motivational Dog Tag Necklaces - Basketball Gifts in Bulk for Basketball Team Accessories - Basketball Party Favors Sports Prizes Awards for Youth Teen Boys Girls Adults Men Women",
            brand : "By Inkstone",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,189" , 
            from : "UK",
@@ -549,6 +483,7 @@
         {
            name : "Team Sports America Solar Garden Lantern, Pittsburgh Steelers",
            brand : "By Team Sports America",
+           qty:1,
            rating : 4.3 ,
            MRP : "3,399" , 
            from : "INDIA",
@@ -559,6 +494,7 @@
         }, {
            name : "Nylon Mesh Scrimmage Team Practice Vests Pinnies Jerseys for Children Youth Sports Basketball, Soccer, Football, Volleyball (12 Jerseys)",
            brand : "By Super Z Outlet",
+           qty:1,
            rating : 4.4 ,
            MRP : "3,959" , 
            from : "INDIA",
@@ -569,6 +505,7 @@
         }, {
            name : "Littlearth Pets",
            brand : "By Littlearth",
+           qty:1,
            rating : 4.6 ,
            MRP : "6,859" , 
            from : "INDIA",
@@ -579,6 +516,7 @@
         }, {
            name : "BROTOU Extra Large Sports Ball Bag Mesh Ball Bag Team Work, Adjustable Shoulder Strap and Hanging Ears with Handle,Mesh Ball Bag for Holding Basketball, Volleyball, Swimming Gear (30” x 40”)",
            brand : "By Brotou",
+           qty:1,
            rating : 4.9 ,
            MRP : "3,809" , 
            from : "INDIA",
@@ -589,6 +527,7 @@
         }, {
            name : "Team Sports Gymnastics 4' Skill Throw Landing Mats 4'x8', Blue Vinyl and 1.8 Density Poly-Foam",
            brand : "By Team Sports",
+           qty:1,
            rating : 4.6 ,
            MRP : "60,579" , 
            from : "INDIA",
@@ -599,6 +538,7 @@
         }, {
            name : "First Aid Kit for Youth Sports (Basic) - Includes Free Refill Pack - Youth Sports Performance + Aid Kit",
            brand : "By Flash Aid",
+           qty:1,
            rating : 4.6 ,
            MRP : "6,049" , 
            from : "INDIA",
@@ -609,6 +549,7 @@
         }, {
            name : "Be Smart Get Prepared 73-Piece Coach’s and Team Sports First Aid Kit in Roll up Bag",
            brand : "By Be Smart Get Prepared",
+           qty:1,
            rating : 4.6 ,
            MRP : "4,129" , 
            from : "INDIA",
@@ -619,6 +560,7 @@
         }, {
            name : "Trademark Innovations Portable 6 Seater Sports Bench Sits",
            brand : "By Trademark Innovations",
+           qty:1,
            rating : 4.6 ,
            MRP : "129,349" , 
            from : "INDIA",
@@ -629,6 +571,7 @@
         }, {
            name : "Champion Sports Outdoor Badminton Set",
            brand : "By ",
+           qty:1,
            rating : 4.4 ,
            MRP : "29,269" , 
            from : "INDIA",
@@ -639,6 +582,7 @@
         }, {
            name : "Net World Sports Portable Multi-Sport Team Shelter | Weatherproof Canopy | Pop-Up Design | Dugout Shelter For All Sports Clubs | Optional 8-Seat Bench Available",
            brand : "By Net World Sports",
+           qty:1,
            rating : 4.6 ,
            MRP : "60,499" , 
            from : "INDIA",
@@ -649,6 +593,7 @@
         }, {
            name : "Tampa Bay Buccaneers Framed 15' x 17' Super Bowl LV Champions Team Collage - NFL Team Plaques and Collages",
            brand : "By Sports Memorabilia",
+           qty:1,
            rating : 4.4 ,
            MRP : "7,769" , 
            from : "INDIA",
@@ -659,6 +604,7 @@
         }, {
            name : "NBA Industries NBA Mini Pennant Set, Small, Black",
            brand : "By Rico",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,209" , 
            from : "INDIA",
@@ -669,6 +615,7 @@
         }, {
            name : "(6-Pack) Basketball Motivational Dog Tag Necklaces - Basketball Gifts in Bulk for Basketball Team Accessories - Basketball Party Favors Sports Prizes Awards for Youth Teen Boys Girls Adults Men Women",
            brand : "By Inkstone",
+           qty:1,
            rating : 4.7 ,
            MRP : "3,189" , 
            from : "INDIA",
@@ -804,9 +751,15 @@
             var rightdiv = document.createElement("div");
             rightdiv.setAttribute("id","div2");
 
+            var rightdiv1 = document.createElement("div");
+            rightdiv1.setAttribute("id","divr1");
+
+            var rightdiv2 = document.createElement("div");
+            rightdiv2.setAttribute("id","divr2");
+
             var rating1 = document.createElement("p");
             rating1.setAttribute("id","rating");
-            rating1.textContent = "★ " + item.rating ;
+            rating1.innerHTML =`<i style="color: #4cb9eb" class="fas fa-star"></i> ${item.rating}`;
             
             var price = document.createElement("p");
             price.setAttribute("id","cost");
@@ -814,7 +767,7 @@
 
             var origin = document.createElement("p");
             origin.setAttribute("id","fromCounty");
-            origin.textContent = "from " + item.from ;
+            origin.textContent = "from " + item.from ;  
 
             var dispatch = document.createElement("p");
             dispatch.setAttribute("id","toCounty");
@@ -822,10 +775,19 @@
 
             var when = document.createElement("p");
             when.setAttribute("id","delivery");
-            when.textContent = "in " +item.delivery  ;
+            when.textContent = "in "+item.delivery ;
+            
+            var symbols = document.createElement("img");
+            symbols.setAttribute("id","imagesymbol");
+            symbols.setAttribute("src","Screenshot 2021-11-09 at 11.07.27 AM.png")
             
             leftdiv.append(rating1, price);
-            rightdiv.append(origin,dispatch, when);
+
+            rightdiv1.append(origin,dispatch, when);
+
+            rightdiv2.append(symbols);
+
+            rightdiv.append(rightdiv1,rightdiv2);
             
             personaldiv.append(leftdiv, rightdiv);
             prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
