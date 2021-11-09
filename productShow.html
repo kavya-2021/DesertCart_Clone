@@ -5,7 +5,7 @@
         <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
        
     <style>
-        body{
+       body{
             display: flex;
             gap: 20px;
             justify-content: center;
@@ -13,8 +13,10 @@
             padding-right: 150px;
             padding-top: 50px;
         }
-        #container {
+
+        #container{
             width: 100%;
+
         }
         
         #nameCart{
@@ -56,6 +58,7 @@
             background-color: rgba(209, 206, 206, 0.877);
             border-radius: 50%;
             box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+            cursor: pointer;
         }
 
         label{
@@ -128,7 +131,7 @@
             justify-content: space-between;
             font-size: 15px;
             line-height: 20px;
-            margin-top: 30px;            
+            margin-top: 30px;         
         }
 
         #cost{
@@ -156,6 +159,7 @@
         #forImage:hover{
             border: 3px solid #5eb2d9;
             border-radius: 6px;
+            cursor: zoom-in;
         }
         #innerImage{
             width:18%;
@@ -163,8 +167,7 @@
             flex-direction: column;
             align-items: center;
         }
-
-      
+     
         #forImage img {
             width: 100%;
             transition: 0.5s all ease-in-out;
@@ -194,9 +197,20 @@
         }
         #innerImage > img:hover{
           border : 3px solid #5eb2d9 ;
+          cursor: pointer;
         }
         #heart:hover ,#share:hover {
-          color:  #5eb2d9      
+          color:  #5eb2d9 ;
+          cursor: pointer;     
+        }
+
+        #cartBtn:hover , #details:hover{
+            cursor: pointer; 
+        }
+
+        #divr1{
+          display: flex;
+          border:1px solid red;
         }
         
     </style>
@@ -238,7 +252,11 @@
 <script>
     var c = document.querySelector("#count").textContent ;
     var productInfo = JSON.parse(localStorage.getItem("SelectedProduct"));
-    var count = Number(c) ;
+    console.log(productInfo);
+    var count =  Number(c) ;
+    var qty = productInfo.qty ;
+    var cartProductArr = JSON.parse(localStorage.getItem("CartItemsinPage")) || [] ;
+    console.log(qty);
 
     document.getElementById("decrement").addEventListener("click",decrement); // for decrement buttons
     document.getElementById("increment").addEventListener("click",increment); // for increment buttons
@@ -299,7 +317,8 @@
             when.textContent = "in " + productInfo.delivery  ;
             
             leftdiv.append(ptag2, price);
-            rightdiv.append(rating1, origin,dispatch, when);
+
+            rightdiv.append(rating1 ,origin,dispatch, when);
             
             personaldiv.append(leftdiv, rightdiv);
 
@@ -319,28 +338,41 @@
 
     
     function decrement(){
-       if(count > 0) count = count -1 ;
+       if(count > 1) count = count -1 ;
        else removeEventListener(click,decrement);
        document.getElementById("count").textContent = count;
+       document.getElementById("cartBtn").textContent = "Add to cart "+count+"x  "+" ₹ "+ productInfo.MRP; 
+       qty = count ;
     }
 
     function increment(){
         count = count+ 1;
         document.getElementById("count").textContent = count;
+        localStorage.setItem("Quantity", JSON.stringify(count));
+        document.getElementById("cartBtn").textContent = "Add to cart "+count+"x  "+ " ₹ "+ productInfo.MRP;
+        qty = count ; 
     }
 
     function addToCart(){
-        alert("Added to cart")
+        productInfo.qty = qty ;
+        document.getElementById("cartBtn").textContent = "Added "+count+"x  "+ " ₹ "+ productInfo.MRP;
+        cartProductArr.push(productInfo);
+        localStorage.setItem("CartItemsinPage", JSON.stringify(cartProductArr));
+        cartBtn.addEventListener("click",function(){
+            window.location.href = "cart.html" ;
+        })
+        console.log(productInfo);
+
     }
     
     function wishList(){
         document.querySelector("#heart").style.color = "#5eb2d9" ;
 
     }
+
     function removeWishList(){
         document.querySelector("#heart").style.color = "rgba(9, 30, 66, 0.25)" ;
  
     }
-
 </script>
 
