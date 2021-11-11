@@ -252,11 +252,12 @@
 <script>
     var c = document.querySelector("#count").textContent ;
     var productInfo = JSON.parse(localStorage.getItem("SelectedProduct"));
-    console.log(productInfo);
+    var wishListArray = JSON.parse(localStorage.getItem("wishList")) || [];
     var count =  Number(c) ;
     var qty = productInfo.qty ;
     var cartProductArr = JSON.parse(localStorage.getItem("CartItemsinPage")) || [] ;
-    console.log(qty);
+    var clickCount = 0;
+    var wishCount = 0;
 
     document.getElementById("decrement").addEventListener("click",decrement); // for decrement buttons
     document.getElementById("increment").addEventListener("click",increment); // for increment buttons
@@ -264,7 +265,6 @@
     document.getElementById("cartBtn").textContent = "Add to cart "+" ₹ "+ productInfo.MRP; // for add to cart buttons with price
     document.querySelector("#name").textContent = productInfo.name ;   // above cart the details of product
     document.querySelector("#heart").addEventListener("click", wishList); // for making wish list buttons
-    document.querySelector("#heart").addEventListener("dblclick", removeWishList); // for removing from wish list
 
     var forImage = document.querySelector("#forImage");     
     var innerImage = document.querySelector("#innerImage");
@@ -298,8 +298,8 @@
 
             var rating1 = document.createElement("p");
             rating1.setAttribute("id","rating");
-            rating1.textContent = "★ " + productInfo.rating ;
-            
+            rating1.innerHTML =`<i style="color: #4cb9eb" class="fas fa-star"></i> ${productInfo.rating}`;
+ 
             var price = document.createElement("p");
             price.setAttribute("id","cost");
             price.textContent = "₹ " + productInfo.MRP ;
@@ -335,12 +335,11 @@
             var description3 = document.createElement("p");
             description3.textContent =  productInfo.name  ;
             document.querySelector("#container").append( title, description1 ,description2 ,description3 );
-
     
     function decrement(){
        if(count > 1) count = count -1 ;
        else removeEventListener(click,decrement);
-       document.getElementById("count").textContent = count;
+       document.getElementById("count").textContent = count ;
        document.getElementById("cartBtn").textContent = "Add to cart "+count+"x  "+" ₹ "+ productInfo.MRP; 
        qty = count ;
     }
@@ -355,24 +354,54 @@
 
     function addToCart(){
         productInfo.qty = qty ;
-        document.getElementById("cartBtn").textContent = "Added "+count+"x  "+ " ₹ "+ productInfo.MRP;
-        cartProductArr.push(productInfo);
-        localStorage.setItem("CartItemsinPage", JSON.stringify(cartProductArr));
-        cartBtn.addEventListener("click",function(){
-            window.location.href = "cart.html" ;
-        })
-        console.log(productInfo);
+        clickCount++ ;
+        var code = productInfo.code ;
+        var found = false
 
-    }
-    
+        for(var i=0 ; i< cartProductArr.length ; i++){
+               if(cartProductArr[i].code === code) {
+                   alert("item already in cart");
+                   found = true;
+                   break;
+                } }
+               if(!found) {
+                     if(clickCount == 1)  {
+                            document.getElementById("cartBtn").textContent = "Added "+count+"x  "+ " ₹ "+ productInfo.MRP;            
+                            cartProductArr.push(productInfo);
+                            localStorage.setItem("CartItemsinPage", JSON.stringify(cartProductArr));                    
+                     } else if(clickCount>= 1){
+                            clickCount=0;
+                            cartBtn.addEventListener("click",function(){
+                            window.location.href = "cart.html" ;
+                        });
+                    }
+                }
+            }
+
     function wishList(){
-        document.querySelector("#heart").style.color = "#5eb2d9" ;
-
+        wishCount++;
+        var code = productInfo.code ;
+        var found = false;
+             for(var i=0 ; i< wishListArray.length ; i++){
+               if(wishListArray[i].code === code) {
+                   alert("Item already exist in Collections");
+                   found = true;
+                   break;
+                } 
+            }
+        if(!found) {
+            if(wishCount==1) {
+                    wishListArray.push(productInfo);
+                    localStorage.setItem("wishList", JSON.stringify(wishListArray));
+                    document.querySelector("#heart").style.color = "#5eb2d9" ;
+                    alert("Added to Collections");
+            }   else if(wishCount >=1 ) {
+                    wishCount=0;
+                    document.querySelector("#heart").style.color = "rgba(9, 30, 66, 0.25)" ;
+                    removeEventListener("click",wishList);
+                }
+            }
     }
 
-    function removeWishList(){
-        document.querySelector("#heart").style.color = "rgba(9, 30, 66, 0.25)" ;
- 
-    }
 </script>
 
