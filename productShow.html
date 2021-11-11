@@ -386,9 +386,9 @@
         wishCount++;
         var code = productInfo.code ;
         var found = false;
-        for(var i=0 ; i< cartProductArr.length ; i++){
-               if(cartProductArr[i].code === code) {
-                   alert("Item already exist in Collections")
+        for(var i=0 ; i< wishListArray.length ; i++){
+               if(wishListArray[i].code === code) {
+                   alert("Item already exist in Collections");
                    found = true;
                    break;
                 } 
@@ -398,7 +398,7 @@
                     wishListArray.push(productInfo);
                     localStorage.setItem("wishList", JSON.stringify(wishListArray));
                     document.querySelector("#heart").style.color = "#5eb2d9" ;
-                    alert("Item added to Collections");
+                    alert("Added to Collections");
             }   else if(wishCount >=1 ) {
                     wishCount=0;
                     document.querySelector("#heart").style.color = "rgba(9, 30, 66, 0.25)" ;
