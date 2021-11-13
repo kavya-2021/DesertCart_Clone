@@ -4,9 +4,33 @@
         <title>Online Perfumes For Him And Her Products</title>
         <link rel="stylesheet" href="innerPage.css">
         <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
-
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- User Account Links -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="useraccount.css">  
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
     </head>
     <body>
+      <div class="navcontainer" style="z-index: 999;">
+         <header>
+             <a href="mainPageUser.html"><img class="logo" src="https://cdn.desertcart.com/static/media/logo.5821c90d.png" alt=""></a>
+             <button id="explore">Explore</button>
+             <nav>
+                 <ul class="nav_links">
+                     <li><a class="anchoricon" href="#"><i class="fal fa-globe"></i></a></li>
+                     <li><button class="usericon" id="usericon1"><i class="fal fa-user"></i>
+                         <div id="content"></div>
+                         </button>
+                     </li>
+                     <li><a class="anchoricon" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                 </ul>
+             </nav>
+         </header>
+         <hr>
+       </div>
         <div id="optionsForSort">
             <select name= "price" id="forPrice" onchange="priceSort()">
             <option value="nofilter">Any Price</option>
@@ -24,14 +48,14 @@
                 <option value="INDIA">IMPORTED FROM INDIA</option>
             </select>
             <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
-                <option value="0">Any delivery time</option>
-                <option value="1"> Same Day </option>
-                <option value="3"> 2 days </option>
-                <option value="3"> 3-5 days </option>
-                <option value="4"> 5-8days </option>
-                <option value="9"> 9-15days</option>
-                <option value="9"> 15+ days </option>
-            </select>
+               <option value="0">Any delivery time</option>
+               <option value="1"> Same Day </option>
+               <option value="2"> 2 days </option>
+               <option value="4"> 3-5 days </option>
+               <option value="6"> 5-8days </option>
+               <option value="10"> 9-15days</option>
+               <option value="16"> 15+ days </option>
+           </select>
             
         </div>
         <div id= "heading">
@@ -50,371 +74,257 @@
            name : "BURBERRY Brit Sheer Eau De Toilette For Her",
            brand : "",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANA",
            MRP :  "5,919",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71XVrXF66yL.jpg" 
         },{
            name : "MGM GRAND FOR HIM & HER perfume 3ml 0.1oz - 1 pack each",
            brand : "MGM GRAND",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANB",
            MRP :  " 934",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81YuZ9xQHvL.jpg" 
         },{
            name : "Hawas for him and her Couple gift by Rasasi perfumes 100ml Eau de Parfum - USA Seller",
            brand : "By Rasasi",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANC",
            MRP :  "35,339",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/41392KWJjnL.jpg" 
         },{
            name : "Just For Him - Pure Instinct Pheromone Perfume Cologne Oil Set - Set of 3",
            brand : "By Pure Instinct",
            rating : 4.7 ,
+           qty : 1,
+           code : "AND",
            MRP :  "5,359",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/41BhhEl1QPL.jpg" 
         },{
            name : "12 Count 6 Him and 6 Her MGM Grand Perfume Trial Size",
            brand : "By MGM Grand",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANE",
            MRP :  "3,139",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81zGcykq0AL.jpg" 
         },{
            name : "Ardorlove Perfumes Spray, Pheromones Cologne Oil for Men and Women 2 Types Best gift for her/him",
            brand : "By Ardorlove",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANF",
            MRP :  "2,599",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/41eqyvLH01L.jpg" 
         },{
            name : "DUMONT DUMAX FIERCE Eau De Parfum (3.4oz / 100ml) – Unisex Perfume Body Spray for Men & Women – Unisex Parfum Scented for Him, her – Long Lasting Cologne with Romantic Refreshing Scent",
            brand : "By DUMONT",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANG",
            MRP :  "12,149",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/61hYlDDHoYL.jpg" 
         },{
            name : "Pure Instinct CRAVE Roll-On The Original Pheromone Infused Essential Oil Perfume Cologne – For Her - TSA Ready 0.34 fl oz",
            brand : "By Pure Instinct",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANH",
            MRP :  " 2,499",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/61AzFaDfOBL.jpg" 
         },{
            name : "IN2U Eau De Toilette Spray 100ml/3.4oz&Value for money",
            brand : "By NC",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANI",
            MRP :  "7,249",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/211KDSO-5AL.jpg" 
         },{
            name : "Pheromone Cologne for Women to Attract Men - Seduce Him - Pheromones Perfume to Get The Man You Want Now",
            brand : "By Do Me",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANJ",
            MRP :  "3,119",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/6117UNDHHTL.jpg" 
         },{
            name : "Alfamarker Pheromones for Men Perfume Set Women-5 Male Pheromone Perfumes x 2ml- Feromonas para Mujeres-Great Holiday Gift",
            brand : "By Alfamarker",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANK",
            MRP :  "4,569",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81DAMJGVW5L.jpg" 
         },{
            name : "This is Him Zadig & Voltaire for men Eau de toilette 3.3 ounce",
            brand : "By Zadig & Voltaire",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANL",
            MRP :  "12,139",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81r3AQpIK8L.jpg" 
         },{
            name : "Bidun Esam | Luxury 3 piece perfume gift set for him and her | Bidun Esam EDP 50ml, Bidun Esam perfume oil 12ml & Bidun Esam body Gel | By Ahmed al maghribi | Long Lasting | Made in Dubai",
            brand : "By Ahmed al maghribi",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANM",
            MRP :  "13,879",   
            from : "UK",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/51aXfUZHNpL.jpg" 
         },{
            name : "Serge Lutens Perfumes for Him and Her Nuit De Cellophane - 100 Ml",
            brand : "By Serge Lutens",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANN",
            MRP :  "20,499",   
            from : "UK",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/51zCa1DRKvS.jpg" 
         },{
            name : "Serge Lutens Perfumes For Him And For Her A Bois Vanille - 100 Ml",
            brand : "By Serge Lutens",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANO",
            MRP :  "22,399",   
            from : "UK",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/519ueOLuxvL.jpg" 
         },{
            name : "Serge Lutens Perfumes For Him And For Her Santal Majuscule - 100 Ml",
            brand : "By ",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANP",
            MRP :  "19,489",   
            from : "UK",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71OyKc7WzkL.jpg" 
         },{
            name : "2 x Perfume's For Him & For Her - Infinity Love 100ml EDP Perfume For Women + Live For The Moment edt For Men 100ml Amazscent Sensational Fragrance For Him",
            brand : "By Glory Cosmetics",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANQ",
            MRP :  "7,219",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71Lo16nq7ZL.jpg" 
         },{
            name : "Oud Simple Mood by my perfumes unisex fragrances 100 ml Eau de parfum gift for her and him amber, floral, musky oud perfumes for women and men",
            brand : "By my perfumes",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANR",
            MRP :  "4,199",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "5-9 days",
-           range: 4, 
+           range: 6, 
            image: "https://m.media-amazon.com/images/I/61no0ZGnCtS.jpg" 
         },{
            name : "Fragrance & Beyond Oriental Perfume Gift Set for Him and Her - Set of 2 Perfumes, Long Lasting Fragrance, Upto 1000 Sprays, Made in India",
            brand : "By Fragrance & Beyond",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANS",
            MRP :  "2,559",   
            from : "india",
            toCountry : "INDIA",
            delivery : "3-5 days",
-           range: 3, 
+           range: 4, 
            image: "https://m.media-amazon.com/images/I/71eIVbJRNBL.jpg" 
         },{
            name : "Mayin Romantic Couple Attar Perfume For Him & Her (Pack Of 2)",
            brand : "By Mayin",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANT",
            MRP :  "504",   
            from : "india",
            toCountry : "INDIA",
            delivery : "3-5 days",
-           range: 3, 
+           range: 4, 
            image: "https://m.media-amazon.com/images/I/61gRW6MqHTL.jpg" 
         },{
            name : "EMBARK My Story for Him Men's Perfume, 100ml Long Lasting Smell Citrus, Spicy, Aquatic All-Day Fragrance for Indian Skin",
            brand : "By EMBARK",
            rating : 4.7 ,
+           qty : 1,
+           code : "ANU",
            MRP :  "2,999",   
            from : "india",
            toCountry : "INDIA",
            delivery : "3-5 days",
-           range: 3, 
+           range: 4, 
            image: "https://m.media-amazon.com/images/I/413QTTyoq8L.jpg" 
         },
     ]
 
 
-    function priceSort(){
-        var select = document.querySelector("#forPrice").value;  
-        if(select == "nofilter"){
-            displayProducts(data);
-        }
-        else if(select == 1){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices < 1000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1);
-       } 
-       else if(select == 2){
-        var level1 = data.filter(function(item){
-           var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 1000 && prices < 2000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 3){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 2000 && prices < 3000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 4){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 3000 && prices < 10000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 5){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 10000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-}
-
-    function countrySort(){
-        var select = document.querySelector("#forCountry").value;
-        console.log(select);
-
-        var selected = data.filter(function(item){
-            if(select === item.from.toUpperCase()) return item ;
-            if(select == "nofilter") return item ;
-        });
-           displayProducts(selected);
-        }
-
-    function deliverySort(){
-        var select = Number(document.querySelector("#fortime").value);
- 
-
-        var selected = data.filter(function(item){
-            var days = item.range ;
-            if(select === 0) return item ;
-            else if(select === days) return item ;
-            
-        });
-             displayProducts(selected);
-        }
-    
-    displayProducts(data);
-
-    function displayProducts(data){
-        document.querySelector("#container").innerHTML = "";
-        data.map(function(item){
-            var prodiv = document.createElement("div");
-            prodiv.setAttribute("id","maindiv");
-            prodiv.addEventListener("click",productShow);
-
-            var image = document.createElement("img");
-            image.setAttribute("id","picture");
-            image.setAttribute("src",item.image)
-
-            var ptag1 = document.createElement("p");
-            ptag1.setAttribute("id","nameofprod");
-            ptag1.textContent = item.name ;
-
-            var ptag2 = document.createElement("p");
-            ptag2.setAttribute("id","brandofprod");
-            ptag2.textContent = item.brand ;
-
-            var personaldiv = document.createElement("div");
-            personaldiv.setAttribute("id","sub1div");
-
-            var leftdiv = document.createElement("div");
-            leftdiv.setAttribute("id","div1");
-
-            var rightdiv = document.createElement("div");
-            rightdiv.setAttribute("id","div2");
-
-            var rating1 = document.createElement("p");
-            rating1.setAttribute("id","rating");
-            rating1.innerHTML =`<i class="fas fa-star"></i> ${item.rating}` ;
-            
-            var price = document.createElement("p");
-            price.setAttribute("id","cost");
-            price.textContent = "₹ " + item.MRP ;
-
-            var origin = document.createElement("p");
-            origin.setAttribute("id","fromCounty");
-            origin.textContent = "from " + item.from ;
-
-            var dispatch = document.createElement("p");
-            dispatch.setAttribute("id","toCounty");
-            dispatch.textContent = "to "+item.toCountry;
-
-            var when = document.createElement("p");
-            when.setAttribute("id","delivery");
-            when.textContent = "in " +item.delivery  ;
-            
-            leftdiv.append(rating1, price);
-            rightdiv.append(origin,dispatch, when);
-            
-            personaldiv.append(leftdiv, rightdiv);
-            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
-
-            document.querySelector("#container").append(prodiv);
-
-        });
-
-        function productShow(){
-            window.location.href = "productShow.html" ;
-        } 
-    }
-
-
 </script>
+<script src="forAll.js"></script>

@@ -4,8 +4,33 @@
         <title>Online Gaming Pc Products</title>
         <link rel="stylesheet" href="innerPage.css">
         <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- User Account Links -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="useraccount.css">  
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
     </head>
     <body>
+      <div class="navcontainer" style="z-index: 999;">
+         <header>
+             <a href="mainPageUser.html"><img class="logo" src="https://cdn.desertcart.com/static/media/logo.5821c90d.png" alt=""></a>
+             <button id="explore">Explore</button>
+             <nav>
+                 <ul class="nav_links">
+                     <li><a class="anchoricon" href="#"><i class="fal fa-globe"></i></a></li>
+                     <li><button class="usericon" id="usericon1"><i class="fal fa-user"></i>
+                         <div id="content"></div>
+                         </button>
+                     </li>
+                     <li><a class="anchoricon" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                 </ul>
+             </nav>
+         </header>
+         <hr>
+       </div>
         <div id="optionsForSort">
             <select name= "price" id="forPrice" onchange="priceSort()">
             <option value="nofilter">Any Price</option>
@@ -23,14 +48,14 @@
                 <option value="INDIA">IMPORTED FROM INDIA</option>
             </select>
             <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
-                <option value="0">Any delivery time</option>
-                <option value="1"> Same Day </option>
-                <option value="3"> 2 days </option>
-                <option value="3"> 3-5 days </option>
-                <option value="4"> 5-8days </option>
-                <option value="9"> 9-15days</option>
-                <option value="9"> 15+ days </option>
-            </select>
+               <option value="0">Any delivery time</option>
+               <option value="1"> Same Day </option>
+               <option value="2"> 2 days </option>
+               <option value="4"> 3-5 days </option>
+               <option value="6"> 5-8days </option>
+               <option value="10"> 9-15days</option>
+               <option value="16"> 15+ days </option>
+           </select>
             
         </div>
         <div id= "heading">
@@ -49,351 +74,234 @@
            name : "CYBERPOWERPC Gamer Xtreme VR Gaming PC, Intel Core i5-11600KF 3.9GHz, 16GB DDR4, GeForce RTX 3060 12GB, 500GB NVMe SSD, 1TB HDD, WiFi Ready & Win 11 Home (GXiVR8480A10)",
            brand : "by CYBERPOWERPC",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACA",
            MRP :  "323,649",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71FLsWWmE8L.jpg" 
         },{
            name : "CYBERPOWERPC Gamer Xtreme Gaming PC, Intel Core i3-10105F 3.7GHz, Intel Iris Xe 4GB, 8GB DDR4, 500GB NVMe SSD, WiFi Ready & Win 10 Home (GXi8800A4)",
            brand : "by CYBERPOWERPC",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACB",
            MRP :  "123,342",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81Ae5t9AjVS.jpg" 
         },{
            name : "Gaming PC Desktop Computer Genesis Design i5 2500 3.30ghz, 8GB DDR3 Ram, Geforce GTX 750 2GB Graphic, 500GB SSD Drive, 550w Power, WiFi Ready",
            brand : "by Geforce",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACC",
            MRP :  "91,159",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71SNXOSVI6L.jpg" 
         },{
            name : "Gaming PC Desktop Computer by Alarco Intel i5 3.10GHz,8GB Ram,1TB Hard Drive,Windows 10 pro,WiFi Ready,Video Card Nvidia GTX 650 1GB, 3 RGB Fans with Remote",
            brand : "by Alarco",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACD",
            MRP :  "90,319",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71z7ztyH1LL.jpg" 
         },{
            name : "OMEN - GT13-0090 30L Gaming Desktop PC, NVIDIA GeForce RTX 3090 Graphics Card, 10th Generation Intel Core i9-10850K Processor, 32 GB RAM, 1 TB SSD, Windows 10 Home (GT13-0090, 2020) Shadow black",
            brand : "by OMEN",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACE",
            MRP :  "611,789",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/810naSDT+2L.jpg" 
         },{
            name : "SkyTech Blaze 3.0 Gaming PC Desktop - AMD Ryzen 5 3600 3.6GHz, 1660 Super 6GB, 16GB DDR4 3000, 1TB SSd, 600W Gold PSU, Windows 10 Home 64-bit, AC WiFi, Black",
            brand : "by SkyTech",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACF",
            MRP :  "243,079",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81yI-hsNmhS.jpg" 
         },{
            name : "Skytech Gaming Archangel Gaming Computer PC Desktop – Ryzen 5 5600X 3.7GHz, RTX 3060 TI 8G, 1TB NVMe SSD, 16GB DDR4 3200MHz, 120mm AIO, RGB Fans, Windows 10 Home 64-bit, 802.11AC Wi-Fi, White",
-           brand : "by Skytech",
+           brand : "bY Skytech",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACG",
            MRP :  "345,919",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81oKvQFPWRL.jpg" 
         },{
            name : "AMD Quad Gaming Computer, Athlon X4 950 4x3.8GHz, 16GB DDR4, AMD Radeon RX 550 2GB GDDR5, 512 GB SSD, USB 3, 802.11AC WiFi & Win 10 Prof #6790",
            brand : "by Shinobee",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACH",
            MRP :  "90,039",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/41NxQG33Z4S.jpg" 
         },{
            name : "Skytech Shadow 3.0 Gaming PC Desktop - AMD Ryzen 5 3600 3.6GHz, RTX 3060 Ti 8GB GDDR6, 16GB DDR4 3000, 1TB NVMe SSD, 600W Gold PSU, RGB Fans, AC WiFi, Windows 10 Home 64-bit…",
            brand : "by Skytech",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACI",
            MRP :  " 246,099",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81sPxMjZ42L.jpg" 
         },{
            name : "iBUYPOWER Pro Gaming PC Computer Desktop Element MR 208i (Intel i7-11700F 2.5GHz,NVIDIA GeForce RTX 2060 6GB, 16GB DDR4, 240GB SSD, 1TB HDD, WiFi Ready, Windows 10 Home)",
            brand : "by iBUYPOWER",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACJ",
            MRP :  "299,419",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/715zrA5cmLL.jpg" 
         },{
            name : "SkyTech Archangel Gaming Computer PC Desktop – Ryzen 5 3600 3.6GHz, GTX 1650 4G, 500GB SSD, 8GB DDR4 3000MHz, RGB Fans, Windows 10 Home 64-bit, 802.11AC Wi-Fi",
            brand : "by SkyTech",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACK",
            MRP :  "276,629",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81KOEh2NRVL.jpg" 
         },{
            name : "CyberpowerPC Gamer Supreme Liquid Cool Gaming PC, AMD Ryzen 7 3800X 3.9GHz, GeForce RTX 3060 12GB, 16GB DDR4, 1TB NVMe SSD, WiFi Ready & Win 10 Home (SLC8260A5)",
            brand : "by CyberpowerPC",
            rating :4.2 ,
+           qty : 1,
+           code : "ACL",
            MRP :  "251,229",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/818SNa1ruZL.jpg" 
         },{
            name : "DASEEN Gaming Computer PC Desktop – Intel Core i5-10400F 2.9GHz, NVIDIA GeForce GTX1050 2GB, 8GB DDR4-2666 RAM, 1TB HDD, 256GB SSD, Windows 10",
            brand : "by DASEEN",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACM",
            MRP :  "124,729",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71wzxur0SZL.jpg" 
         },{
            name : "DASEEN Gaming Computer PC Desktop – Intel Core i5-10400F 2.9GHz, NVIDIA GeForce GTX1050 2GB, 8GB DDR4-2666 RAM, 1TB HDD, 256GB SSD, Windows 10",
            brand : "by DASEEN",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACN",
            MRP :  "124,729",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "5-8 days",
-           range: 9, 
+           range: 6, 
            image: "https://images-na.ssl-images-amazon.com/images/I/71qdtm%2BoIUS.SS150.jpg" 
         },{
            name : "HyperX Cloud Stinger Headphone Gaming Headset With Mic For PC PS4 Xbox one, Kingston, 10 x 20 x 10 cm, Black",
            brand : "by HyperX",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACO",
            MRP :  "6,729",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/61BCBUiL7dL.jpg" 
         },{
            name : "Trust Gaming GXT 232 Mantis Streaming Gaming Microphone for PC, PS4 and PS5, USB Connected, Including Shock Mount, Pop Filter and Tripod Stand, Black",
            brand : "by Trust Gaming",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACP",
            MRP :  "5,189",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71gAmxu6lbL.jpg" 
         },{
            name : 'Lenovo IdeaPad 3 15.6" HD Anti-Glare Touchscreen Laptop, Intel Core i5-10210U up to 4.2GHz, 12GB DDR4, 1TB HDD + 128GB SSD, Webcam w/ Privacy Shutter, WiFi 6, Bluetooth 5.1, Windows 10, TWE Mouse Pad',
            brand : "by Lenovo",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACQ",
            MRP :  "101,609",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/41yW9KR6w2L.jpg" 
         },{
            name : 'Lenovo IdeaCentre AIO 3, All in One Desktop, 23.8"FHD Display, AMD Ryzen 5 5500U, 8GB RAM, 512GB SSD, Integrated AMD Radeon Graphics, Win10, White English KB and Mouse, White Color - [F0G1005NAK]',
            brand : "by Lenovo",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACR",
            MRP :  "102,719",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71CzPS7lwGS.jpg" 
         },{
            name : 'ASUS TUF Gaming F15 FX506HM-AZ157T Eclipse Gray 8 Core 11th Gen Intel Core i7 CPU 2.3GHz, 16GB RAM, 1TB SSD, NVIDIA GeForce RTX 3060, 15.6’’FHD 240Hz, HD Webcam, Win10, Backlit-Eng-Arb-KB',
            brand : "by ASUS",
            rating : 4.7 ,
+           qty : 1,
+           code : "ACS",
            MRP :  "229,139",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71zy6ggfexL.jpg" 
         },
     ]
 
 
-    function priceSort(){
-        var select = document.querySelector("#forPrice").value;  
-        if(select == "nofilter"){
-            displayProducts(data);
-        }
-        else if(select == 1){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices < 1000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1);
-       } 
-       else if(select == 2){
-        var level1 = data.filter(function(item){
-           var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 1000 && prices < 2000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 3){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 2000 && prices < 3000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 4){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 3000 && prices < 10000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 5){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 10000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-}
-
-    function countrySort(){
-        var select = document.querySelector("#forCountry").value;
-        console.log(select);
-
-        var selected = data.filter(function(item){
-            if(select === item.from.toUpperCase()) return item ;
-            if(select == "nofilter") return item ;
-        });
-           displayProducts(selected);
-        }
-
-    function deliverySort(){
-        var select = Number(document.querySelector("#fortime").value);
- 
-
-        var selected = data.filter(function(item){
-            var days = item.range ;
-            if(select === 0) return item ;
-            else if(select === days) return item ;
-            
-        });
-             displayProducts(selected);
-        }
-    
-    displayProducts(data);
-
-    function displayProducts(data){
-        document.querySelector("#container").innerHTML = "";
-        data.map(function(item){
-            var prodiv = document.createElement("div");
-            prodiv.setAttribute("id","maindiv");
-            prodiv.addEventListener("click",productShow);
-
-            var image = document.createElement("img");
-            image.setAttribute("id","picture");
-            image.setAttribute("src",item.image)
-
-            var ptag1 = document.createElement("p");
-            ptag1.setAttribute("id","nameofprod");
-            ptag1.textContent = item.name ;
-
-            var ptag2 = document.createElement("p");
-            ptag2.setAttribute("id","brandofprod");
-            ptag2.textContent = item.brand ;
-
-            var personaldiv = document.createElement("div");
-            personaldiv.setAttribute("id","sub1div");
-
-            var leftdiv = document.createElement("div");
-            leftdiv.setAttribute("id","div1");
-
-            var rightdiv = document.createElement("div");
-            rightdiv.setAttribute("id","div2");
-
-            var rating1 = document.createElement("p");
-            rating1.setAttribute("id","rating");
-            rating1.innerHTML =`<i class="fas fa-star"></i> ${item.rating}` ;
-            
-            var price = document.createElement("p");
-            price.setAttribute("id","cost");
-            price.textContent = "₹ " + item.MRP ;
-
-            var origin = document.createElement("p");
-            origin.setAttribute("id","fromCounty");
-            origin.textContent = "from " + item.from.toUpperCase() ;
-
-            var dispatch = document.createElement("p");
-            dispatch.setAttribute("id","toCounty");
-            dispatch.textContent = "to "+item.toCountry.toUpperCase();
-
-            var when = document.createElement("p");
-            when.setAttribute("id","delivery");
-            when.textContent = "in " +item.delivery  ;
-            
-            leftdiv.append(rating1, price);
-            rightdiv.append(origin,dispatch, when);
-            
-            personaldiv.append(leftdiv, rightdiv);
-            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
-
-            document.querySelector("#container").append(prodiv);
-
-        });
-
-        function productShow(){
-            window.location.href = "productShow.html" ;
-        } 
-    }
-
-
+   
 </script>
+<script src="forAll.js"></script>

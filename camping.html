@@ -4,9 +4,34 @@
         <title>Online Camping Shopping Products</title>
         <link rel="stylesheet" href="innerPage.css">
         <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- User Account Links -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="useraccount.css">  
+        <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
 
     </head>
     <body>
+      <div class="navcontainer" style="z-index: 999;">
+         <header>
+             <a href="mainPageUser.html"><img class="logo" src="https://cdn.desertcart.com/static/media/logo.5821c90d.png" alt=""></a>
+             <button id="explore">Explore</button>
+             <nav>
+                 <ul class="nav_links">
+                     <li><a class="anchoricon" href="#"><i class="fal fa-globe"></i></a></li>
+                     <li><button class="usericon" id="usericon1"><i class="fal fa-user"></i>
+                         <div id="content"></div>
+                         </button>
+                     </li>
+                     <li><a class="anchoricon" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                 </ul>
+             </nav>
+         </header>
+         <hr>
+       </div>
         <div id="optionsForSort">
             <select name= "price" id="forPrice" onchange="priceSort()">
             <option value="nofilter">Any Price</option>
@@ -24,14 +49,14 @@
                 <option value="INDIA">IMPORTED FROM INDIA</option>
             </select>
             <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
-                <option value="0">Any delivery time</option>
-                <option value="1"> Same Day </option>
-                <option value="3"> 2 days </option>
-                <option value="3"> 3-5 days </option>
-                <option value="4"> 5-8days </option>
-                <option value="9"> 9-15days</option>
-                <option value="9"> 15+ days </option>
-            </select>
+               <option value="0">Any delivery time</option>
+               <option value="1"> Same Day </option>
+               <option value="2"> 2 days </option>
+               <option value="4"> 3-5 days </option>
+               <option value="6"> 5-8days </option>
+               <option value="10"> 9-15days</option>
+               <option value="16"> 15+ days </option>
+           </select>
             
         </div>
         <div id= "heading">
@@ -50,311 +75,186 @@
            name : "Jackery Portable Power Station Explorer 240, 240Wh Backup Lithium Battery, 110V/200W Pure Sine Wave AC Outlet, Solar Generator (Solar Panel Not Included) for Outdoors Camping Travel Hunting Emergency",
            brand : "by Jackery",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABA",
            MRP :  "38,509",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71z6d03iT8S.jpg" 
         },{
            name : "Yurtent Roomy 5M Bell Tent with Stove Jack(Top),Fire Retardant Canvas Tent for Camping All Seasons",
            brand : "by Yurtent ",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABB",
            MRP :  "167,369",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/615sijzLTbL.jpg" 
         },{
            name : "Coleman Gas Stove | Portable Bottletop Propane Camp Stove with Adjustable Burner",
            brand : "by Coleman",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABC",
            MRP :  "6,699",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/818e1vgtDkL.jpg" 
         },{
            name : "Emergency Survival Kit and First Aid Kit, 142Pcs Professional Survival Gear and Equipment with Molle Pouch, for Men Camping Outdoor Adventure",
            brand : "by Coleman",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABD",
            MRP :  "18,109",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81oDITQ5AIL.jpg" 
         },{
            name : "Ozark Trail 10-Person Family Camping Tent with 3 Rooms and Screen Porch",
            brand : "by Dome",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABE",
            MRP :  "27,069",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71GzwkGqc4S.jpg" 
         },{
            name : "Coleman Camping Chair with Built-in 4 Can Cooler",
            brand : "by Coleman",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABF",
            MRP :  "4,999",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81V0ddizPWL.jpg" 
         },{
            name : "Coleman Portable Butane Stove with Carrying Case",
            brand : "by Coleman",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABG",
            MRP :  "8,999",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/719FE6i0X9L.jpg" 
         },{
            name : "Terrain Heated Camping Chair - 9 hrs of Heat | with Battery & Charger | 3 Heat Settings",
            brand : "by Gobi",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABH",
            MRP :  "65,779",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71XudPiNpML.jpg" 
         },{
            name : "Mountain House Spaghetti with Meat Sauce | Freeze Dried Backpacking & Camping Food | Survival & Emergency Food",
            brand : "by Mountain House",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABI",
            MRP :  "4,209",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81IjefZmX2L.jpg" 
         },{
            name : "Energizer High-Powered LED Flashlights, 1000+ Lumens Flash Lights, Water Resistant, Heavy Duty Metal Body, AA Batteries Included",
            brand : "by Energizer",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABJ",
            MRP :  "3,879",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71igwEAJIQS.jpg" 
         },{
            name : "Coleman Gas Camping Grill/Stove | Tabletop Propane 2 in 1 Grill/Stove, 2 Burner",
            brand : "by Coleman",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABK",
            MRP :  " 21,689",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/817KGktPGnL.jpg" 
         },{
            name : "CleverMade Collapsible Cooler Bag with Shoulder Strap: Insulated Leakproof 30 Can Portable Soft Beverage Tote with Bottle Opener for Camping, Lunch, Beach, Picnic; Grey/Charcoal",
            brand : "by CleverMade",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABL",
            MRP :  "12,599",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/91M9ZR6BtlL.jpg" 
         },{
            name : "FLY2SKY Tent Lamp Portable LED Tent Light 4 Packs Clip Hook Hurricane Emergency Lights LED Camping Light Bulb Camping Tent Lantern Bulb Camping Equipment for Camping Hiking Backpacking Fishing Outage",
            brand : "by FLY2SKY",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABM",
            MRP :  "3,699",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/61luJJCAZpL.jpg" 
         },{
            name : "Vont 2 Pack LED Camping Lantern, Super Bright Portable Survival Lanterns, Must Have During Hurricane, Emergency, Storms, Outages, Original Collapsible Camping Lights/Lamp (Batteries Included)",
            brand : "by Vont",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABN",
            MRP :  "3,329",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/71ZrLXqW2uS.jpg" 
         },{
            name : "Napier Backroadz Truck Tent",
            brand : "by Napier",
            rating : 4.7 ,
+           qty : 1,
+           code : "ABO",
            MRP :  "78,567",   
            from : "USA",
            toCountry : "INDIA",
            delivery : "9-15 days",
-           range: 9, 
+           range: 10, 
            image: "https://m.media-amazon.com/images/I/81kL5geBkdL.jpg" 
         },
     ]
 
 
-    function priceSort(){
-        var select = document.querySelector("#forPrice").value;  
-        if(select == "nofilter"){
-            displayProducts(data);
-        }
-        else if(select == 1){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices < 1000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1);
-       } 
-       else if(select == 2){
-        var level1 = data.filter(function(item){
-           var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 1000 && prices < 2000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 3){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 2000 && prices < 3000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 4){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 3000 && prices < 10000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 5){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 10000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-}
-
-    function countrySort(){
-        var select = document.querySelector("#forCountry").value;
-        console.log(select);
-
-        var selected = data.filter(function(item){
-            if(select === item.from.toUpperCase()) return item ;
-            if(select == "nofilter") return item ;
-        });
-           displayProducts(selected);
-        }
-
-    function deliverySort(){
-        var select = Number(document.querySelector("#fortime").value);
- 
-
-        var selected = data.filter(function(item){
-            var days = item.range ;
-            if(select === 0) return item ;
-            else if(select === days) return item ;
-            
-        });
-             displayProducts(selected);
-        }
-    
-    displayProducts(data);
-
-    function displayProducts(data){
-        document.querySelector("#container").innerHTML = "";
-        data.map(function(item){
-            var prodiv = document.createElement("div");
-            prodiv.setAttribute("id","maindiv");
-            prodiv.addEventListener("click",productShow);
-
-            var image = document.createElement("img");
-            image.setAttribute("id","picture");
-            image.setAttribute("src",item.image)
-
-            var ptag1 = document.createElement("p");
-            ptag1.setAttribute("id","nameofprod");
-            ptag1.textContent = item.name ;
-
-            var ptag2 = document.createElement("p");
-            ptag2.setAttribute("id","brandofprod");
-            ptag2.textContent = item.brand ;
-
-            var personaldiv = document.createElement("div");
-            personaldiv.setAttribute("id","sub1div");
-
-            var leftdiv = document.createElement("div");
-            leftdiv.setAttribute("id","div1");
-
-            var rightdiv = document.createElement("div");
-            rightdiv.setAttribute("id","div2");
-
-            var rating1 = document.createElement("p");
-            rating1.setAttribute("id","rating");
-            rating1.innerHTML =`<i class="fas fa-star"></i> ${item.rating}` ;
-            
-            var price = document.createElement("p");
-            price.setAttribute("id","cost");
-            price.textContent = "₹ " + item.MRP ;
-
-            var origin = document.createElement("p");
-            origin.setAttribute("id","fromCounty");
-            origin.textContent = "from " + item.from.toUpperCase() ;
-
-            var dispatch = document.createElement("p");
-            dispatch.setAttribute("id","toCounty");
-            dispatch.textContent = "to "+item.toCountry.toUpperCase();
-
-            var when = document.createElement("p");
-            when.setAttribute("id","delivery");
-            when.textContent = "in " +item.delivery  ;
-            
-            leftdiv.append(rating1, price);
-            rightdiv.append(origin,dispatch, when);
-            
-            personaldiv.append(leftdiv, rightdiv);
-            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
-
-            document.querySelector("#container").append(prodiv);
-
-        });
-
-        function productShow(){
-            window.location.href = "productShow.html" ;
-        } 
-    }
-
 
 </script>
+<script src="forAll.js"></script>

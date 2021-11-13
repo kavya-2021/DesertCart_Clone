@@ -74,7 +74,7 @@
 
 #hotDeals{
     margin: 25px 120px;
-    height: 250px;
+    height: 230px;
     width: 80%;
     border-radius: 15px;
     overflow: hidden;
@@ -85,12 +85,14 @@
     align-items: center;
   }
   #bt1 {
+    color: #2e363e;
     width: 70px;
     height: 70px;
     border-radius: 60px;
     cursor: pointer;
   }
   #bt2 {
+    color: #2e363e;
     width: 70px;
     height: 70px;
     border-radius: 60px;
@@ -138,7 +140,7 @@
 .pImg{
     /* border: 1px solid orange; */
     height: 67%;
-    width: 98%;
+    width: 100%;
     padding: 1%;
     background-size: auto;
     background-repeat: no-repeat;
