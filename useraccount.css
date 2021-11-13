@@ -1,0 +1,127 @@
+.navcontainer{
+    position: sticky;
+    top: 0;
+    /* box-sizing: border-box; */
+    /* margin: 0; */
+    height: 0px;
+    width: 100%;
+    padding: 0px;
+    background-color: white;
+    margin-bottom: 48px;
+    /* border: 1px solid red; */
+}
+
+li,a,button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: grey;
+    text-decoration: none;
+}
+a,button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: grey;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8%;
+    height: 40px;
+    /* border: 1px solid red; */
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+    height: 35px;
+    width: 38px;
+}
+.nav_links{
+    display: inline-block;
+    padding: 0px 10px;
+    /* border: 1px solid red; */
+} 
+.nav_links li{
+    display: inline-block;
+    padding: 10px 10px;
+    height: 40px;
+    /* border: 1px solid red; */
+}
+.nav_links li a{
+    position: relative;
+    transition: all 0.3s ease 0s;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+.nav_links li a:hover{
+    color: rgb(167, 214, 236);
+}
+.nav_links a:hover{
+    color: rgb(167, 214, 236);
+    border-radius: 30px;
+    padding: 7px;
+    box-shadow: rgba(167, 214, 236) 0px 3px 6px, rgba(167, 214, 236) 0px 3px 6px;
+}
+.anchoricon{
+    justify-content: space-between;
+    cursor: pointer;
+    margin-right: auto;
+    font-size: x-large;
+    color: rgb(190, 182, 182);
+    height: 35px;
+    width: 40px;
+}
+#explore{
+    padding: 5px;
+    color: black;
+    font-size: 15px;
+    margin-left: -630px;
+    background: transparent;
+    border-radius: 50px;
+    border: none;
+}
+#explore:hover{
+    color: rgb(167, 214, 236);
+    border-radius: 30px;
+    padding: 6px;
+}
+.usericon{
+    padding: 0px;
+    background: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+}
+.usericon:hover{
+    color: rgb(167, 214, 236);
+    border-radius: 30px;
+    padding: 0px;
+}
+.fal{
+    font-size: large;
+    padding: 15px;
+}
+
+#usericon {
+    float: right;
+    background:white;
+    cursor: pointer;
+}
+#content{
+    border-radius: 5px;
+    height: 150px;
+    background-color: white ;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 25px;
+    cursor: pointer;
+}
+#content:hover{
+    color: rgb(167, 214, 236);
+    line-height: 25px;
+}
