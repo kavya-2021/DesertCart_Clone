@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>cart</title>
+   <style>
+        #main{
+              
+              width:40%;
+              float:right;
+              border: 1px solid rgb(201, 197, 197);
+              border-radius:5px;
+              padding: 10px;
+          }
+          .insidesiv{
+             border-bottom: 1px solid rgb(201, 197, 197); 
+             display:grid;grid-gap:10px;
+             margin-top:5px;
+             grid-template-columns: 10px 50px auto auto;
+          }
+          .insidesiv:hover{
+              background-color:rgb(233, 233, 233);
+              cursor: pointer;
+          }
+          h2{
+              float:right;
+              color:blue;
+          }#button{
+              height:100px;
+              width:100%;
+              margin-top: 20px;
+              border-radius:5px;
+              border: 1px solid rgb(201, 197, 197);
+          }
+          b{
+              float:left;
+              margin-top: 30px;
+              font-size: 30px;
+              color:rgb(134, 134, 134)
+          }.icon{
+              border-radius: 1000px;
+              height: 50px;
+              margin-top: 10px;
+              background:rgb(236, 236, 236);
+              
+          }
+         i{
+             margin-left: 10px;
+             margin-top: 10px;
+         }
+         #subtotalicon{
+             color:#90d2f0;
+             border:3px solid #90d2f0;
+         }.changed{
+             float:right;font-size:17px;
+             line-height: 1px;
+             
+         }.changed>p{
+             text-align:right;
+         }
+         .fixed{
+             font-size:17px;
+             line-height:5px;
+         }#buttondiv{
+            
+             float:right;
+             width:50%;
+             height:100px;
+             line-height: 5px;
+             font-size:20px;
+             
+         }#buttondiv>p{
+             text-align:right;
+         }#applypromo{
+             color:rgb(153, 153, 153);
+         }#applypromo:hover{
+            text-decoration: underline;
+
+         }
+         
+   </style>
+</head>
+<body>
+    <div id="main">
+        <div  class="insidesiv" id="shipping">
+            <div class="green" id="shippinggreed"></div>
+            <div class="icon" id="shippingicon"><i style="font-size:24px" class="fa">&#xf072;</i></div>
+            <div class="fixed" id="shippingfixed">
+                <h3>Sheeping Method</h3>
+            </div>
+            <div class="changed" id="shippingchanged">
+                <h2 id="shippingh2">+</h2>
+            </div>
+        </div>
+        <div class="insidesiv" id="delivery">
+            <div class="green" id="deliverygreen"></div>
+            <div class="icon" id="deliveryicon"><i style="font-size:24px" class="fa">&#xf041;</i></div>
+            <div class="fixed" id="deliveryfixed">
+                <h3>Delivery Address</h3>
+            </div>
+            <div class="changed" id="deliverychanged">
+                <h2 id="deliveryh2">+</h2>
+            </div>
+        </div>
+        <div class="insidesiv" id="payment">
+            <div class="green" id="paymentgreen"></div>
+            <div class="icon" id="paymenticon"><i style="font-size:24px" class="fa">&#xf09d;</i></div>
+            <div class="fixed" id="paymentfixed">
+                <h3>Payment Method</h3>
+            </div>
+            <div class="changed" id="paymentchanged">
+                <h2 id="paymenth2">+</h2>
+            </div>
+        </div>
+        <div class="insidesiv" id="total">
+            <div class="green" id="totalgreen"></div>
+            <div class="icon" id="totalicon"><i class="fa fa-money" aria-hidden="true"></i></div>
+            <div class="fixed" id="totalfixed">
+                <h3>Subtotal</h3>
+            </div>
+            <div class="changed" id="totalchanged">
+                <h2 id="totalh2">+</h2>
+            </div>
+        </div>
+        <button id="button" type="button"><b>Place Order</b>
+            <div id="buttondiv"></div>
+        </button>
+    </div>
+</body>
+</html>
+<script>
+    var paymentinput=JSON.parse(localStorage.getItem("cardno"));
+    
+    document.getElementById("payment").addEventListener("click",addpayment);
+        
+    
+        if(paymentinput==null){
+           
+        }
+        else {document.getElementById("paymentgreen").style.backgroundColor ="#0cb552";
+        document.getElementById("paymenticon").style.color="#0cb552";
+        document.getElementById("paymenticon").style.border="2px solid #0cb552";
+             var a=document.createElement("p");
+            a.textContent = "Credit Card"
+            document.getElementById("paymentfixed").append(a)
+            document.getElementById("paymenth2").textContent="";
+            var b=document.createElement("p");
+            b.textContent = "changed"
+            b.style.color="#90d2f0"
+            b.addEventListener("click",function(){
+                window.location.href="payment.html"
+            })
+
+            var d=document.createElement("p");
+            d.textContent = paymentinput;
+            document.getElementById("paymentchanged").append(b,d)
+        }
+    
+    function addpayment() {
+        event.preventDefault();
+        window.location.href="payment.html"
+       
+        
+        document.getElementById("payment").removeEventListener("click",addpayment);
+    }
+
+
+    var delivery=JSON.parse(localStorage.getItem("addressinput"))
+    
+    document.getElementById("delivery").addEventListener("click",addaddress);
+
+    
+    if(delivery==null){
+            
+        }
+        else {
+            document.getElementById("deliverygreen").style.backgroundColor ="#0cb552";
+        document.getElementById("deliveryicon").style.color="#0cb552";
+        document.getElementById("deliveryicon").style.border="2px solid #0cb552";
+            delivery.map(function(item){
+                var a=document.createElement("p");
+                a.textContent = item.address+" , "+item.city;
+
+                var b=document.createElement("p");
+                b.textContent = "changed"
+                b.style.color="#90d2f0"
+                b.addEventListener("click",function(){
+                    window.location.href="location.html"
+                })
+
+                var c=document.createElement("p");
+                c.textContent="+91"+item.phone;
+
+                document.getElementById("deliveryh2").textContent="";
+                document.getElementById("deliveryfixed").append(a)
+                document.getElementById("deliverychanged").append(b,c)
+            })
+        }
+
+    function addaddress(){
+        
+        window.location.href="location.html"
+        
+       document.getElementById("delivery").removeEventListener("click",addaddress);
+    }
+
+
+
+
+    document.getElementById("shipping").addEventListener("click",addshipping);
+    var shippinginput=JSON.parse(localStorage.getItem("shippinginput"));
+    console.log(shippinginput)
+
+   var cost=shippinginput.costi
+    if(shippinginput==null){
+        document.getElementById("shippingh2").textContent="+";
+        }
+        else{
+            document.getElementById("shippinggreed").style.backgroundColor ="#0cb552";
+        document.getElementById("shippingicon").style.color="#0cb552";
+        document.getElementById("shippingicon").style.border="2px solid #0cb552";
+            console.log(shippinginput.membership);
+            var a=document.createElement("p");
+            a.textContent=shippinginput.type;
+
+            var b=document.createElement("p");
+            b.textContent = "changed"
+            b.style.color="#90d2f0"
+            b.addEventListener("click",function(){
+                window.location.href="shipping.html"
+            })
+
+            var c=document.createElement("p");
+            c.textContent = "Shipping:"+shippinginput.cost;
+
+            var d=document.createElement("p");
+            d.textContent = shippinginput.membership
+
+             document.getElementById("shippingh2").textContent="";
+             document.getElementById("shippingfixed").append(a)
+             document.getElementById("shippingchanged").append(b,c,d)
+        }
+
+
+    function addshipping() {
+        window.location.href="shipping.html"
+        event.preventDefault();
+        
+
+        document.getElementById("shipping").removeEventListener("click",addshipping);
+    }
+
+    var totalamount =8000;
+
+    if(totalamount==""){
+        
+    }else{
+        document.getElementById("totalgreen").style.backgroundColor ="#0cb552";
+        document.getElementById("totalicon").style.color="#90d2f0";
+        document.getElementById("totalicon").style.border="2px solid #90d2f0";
+        document.getElementById("totalh2").textContent ="";
+
+        var a=document.createElement("p");
+        a.setAttribute("id","applypromo")
+        a.textContent ="Apply Promo Code"
+        a.addEventListener("click",gotopromo)
+
+        var b=document.createElement("p");
+        b.textContent ="TOTAL COST:  ₹"+"  "+totalamount
+        b.style.color="red"
+       
+        var c=document.createElement("p")
+        c.textContent ="("+"no of quantity"+")"
+        document.getElementById("totalfixed").append(c)
+        document.getElementById("totalchanged").append(a,b)
+    }
+
+    function gotopromo(){
+        localStorage.setItem("total",JSON.stringify(totalamount));
+        window.location.href="promocode.html"
+    }
+
+
+    var retotal=totalamount+cost;
+    if(paymentinput!=null){
+        var a=document.createElement("p");
+        a.textContent="Total"
+
+        var b=document.createElement("p");
+        b.textContent="₹"+retotal
+
+        var d=document.createElement("br");
+        var c=document.createElement("p")
+        c.textContent="Including VAT and Fees"
+        document.getElementById("buttondiv").append(a,b,c)
+
+        document.getElementById("button").style.backgroundColor="#5eb2d9"
+        document.getElementById("button").style.color="white";
+    }
+
+    if(paymentinput!=null&&totalamount!=null&&shippinginput!=null&&delivery!=null){
+        document.getElementById("button").addEventListener("click",function(){
+            alert("YOU HAVE SUCCESSFULLY PLACED YOUR ORDER")
+        })
+    }
+</script> 
