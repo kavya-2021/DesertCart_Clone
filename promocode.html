@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promocode</title>
+    <style>
+         #main1{
+              
+              width:40%;
+              float:right;
+              border: 1px solid rgb(201, 197, 197);
+              border-radius:5px;
+              text-align:center;
+          }
+          #xbtn{
+              float:right;
+              background-color: white;
+              border:1px;
+              margin-right: 10px;
+              margin-top: 10px;
+              cursor: pointer;
+          }
+          #conf{
+           height:70px;
+           background-color:#5eb2d9;
+           width:90%;
+           border-radius: 5px;
+           border: 1px;
+           margin-bottom: 20px;
+           margin-top: 20px;
+           cursor: pointer;
+          }
+          #code{
+            height:30px;
+           padding:20px;
+           width:82%;
+           border-radius: 5px;
+           border: 1px solid rgb(201, 197, 197);
+           cursor: pointer;
+          }
+            #mainDiv{ 
+                display: grid;
+                grid-template-columns: 48% 100%;
+                gap: 0%;
+                height: 300px;
+                margin-top: 3%;
+            }
+            #mainDiv > div{
+                margin-left: 10%;
+                margin-top: 0%;
+            }
+            #subDiv{
+                /* cart Item */
+                display: grid;
+                border: 2px solid rgb(225, 225, 235);
+                grid-template-rows: auto;
+                margin-left: 20px;
+                margin-right: 20px;
+                border-radius: 10px;
+            }
+            #subDiv1{
+                /* payment options */
+                height: 500px;
+                padding-top: 30px;
+                border: 2px solid rgb(225, 225, 235);
+                padding-left: 20px;
+                border-radius: 10px;
+                position:relative;
+                top: 0;
+            }
+            .itemDiv{
+                /* for individual item */
+                display: grid;
+                border: 1px solid rgb(225, 225, 235);
+                grid-template-columns: 30% 40% 30%;
+                height: 90%;
+                border-radius: 10px;
+                margin:10px;
+            }
+            img{
+                width: 150px;
+                height: 170px;
+                margin-left: 5px;
+                margin-top: 10px;
+            }
+            h1{
+                margin-left: 18px;
+                padding-left: 10px;
+                padding-top: 10px;
+                font-size: 20px;
+                position: sticky;
+                top: 0;
+                width: 610px;
+                height: 40px;
+                border: none;
+                background-color: white;
+            }
+            #contentDiv > #paraDiv{
+                width: 100%;
+                height: 50%;
+                margin-left: 1.5%;
+                padding: 10px;
+            }
+            #pTag1{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; 
+                        line-clamp: 2; 
+                -webkit-box-orient: vertical;
+                font-size: 15px;
+                font-weight: bold;
+                font-family:'Times New Roman', Times, serif;
+            }
+            #pTag1 + p {
+                line-height: 0px;
+                font-family:'Times New Roman', Times, serif;
+            }
+            #price{
+                margin-left: 10px;
+                font-size: 16px;
+            }
+            #rightDiv{
+                display: inline-block;
+                width: 100px;
+                height: 60px;
+                margin-left: 45px;
+                vertical-align: top;
+            }
+            #rightDiv2{
+                display: inline-block;
+                width: 15px;
+                height: 60px;
+                margin-left: 0px;
+            }
+            #leftDiv{
+                display: inline-block;
+                vertical-align: top;
+            }
+            #fromCounty, #dispatched, #delivery {
+                font-size: 12px;
+                margin-left: 30px;
+                font-weight: 500;
+                line-height: 1px;
+                margin-top: 15px;
+            }
+            #imagesymbol{
+                width: 10px;
+                height: 50px;
+                vertical-align: top;
+            }
+            #quant{
+                width: 100px;
+                height: 40px;
+                border: 1px solid rgb(164, 164, 179);
+                border-radius: 1%;
+                justify-content: space-between;
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                padding-left: 1%;
+                padding-right:1% ;
+                border-radius: 6px;
+                margin-top: 50px;
+                margin-left: 20px;
+            }
+            #incDec{
+                border-left: 1px solid rgb(225, 225, 235);
+                margin-left: 20px;
+            }
+            .inc , .dec {
+                border: none;
+                width: 30px;
+                font-size: 25px;
+                background-color: transparent;
+            }
+            .inc:hover , .dec:hover {
+                border: none;
+                font-size: 25px;
+                background-color: rgba(209, 206, 206, 0.877);
+                border-radius: 50%;
+                box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+            }
+    </style>
+</head>
+<body>
+    <div id="mainDiv">
+        <div>
+           <h1 id="h1Tag">Estimated Delivery Nov 22 to Nov 30</h1>
+           <div id="subDiv">
+
+        </div>    
+    </div>
+    <div id="main1">
+        <button id="xbtn" type="button">X</button>
+        <h1>Enter your Promo Code</h1>
+        <img src="https://d33wubrfki0l68.cloudfront.net/874dde41bca3a1105fe54a7563a2ade5acf0da12/85e83/_nuxt/img/gift360x360.135e5fe.gif"/>
+        <input id="code" type="text" placeholder="Promo Code"/><br>
+        <button id="conf">Confirm</button>
+    </div>
+</body>
+</html>
+<script>
+    var total= JSON.parse(localStorage.getItem("totalAmt"));
+    console.log(total)
+    document.getElementById("conf").addEventListener("click",getvalue);
+    function getvalue(){
+        event.preventDefault();
+        var code = document.getElementById("code").value;
+        if(code=="masai30"){
+            total=total*0.7;
+        }else if(code=="masai25"){
+            total=total*0.75;
+        }else if(code=="masai20"){
+            total=total*0.8;
+        }else if(code=="masai15"){
+            total=total*0.85;
+        }else if(code=="masai10"){
+            total=total*0.9;
+        }else if(code=="masai5"){
+            total=total*0.95;
+        }
+        else{
+            alert("ENTER A VALID PROMOCODE")
+        }
+        console.log(total)
+        localStorage.setItem("totalAmt", Math.floor(total));
+        document.getElementById("conf").removeEventListener("click",getvalue)
+    } 
+    
+    var cartitems = JSON.parse(localStorage.getItem("CartItemsinPage"));
+    displayCartItems(cartitems);
+
+    function displayCartItems(cartitems){
+       cartitems.map(function(item,index){
+        var itemDiv = document.createElement("div"); // for individual item show
+        itemDiv.setAttribute("id",index);
+        itemDiv.setAttribute("class","itemDiv")
+        var imgDiv = document.createElement("div");
+        var image = document.createElement("img");
+        image.setAttribute("src",item.image);
+        var contentDiv = document.createElement("div"); // to show content and price
+        contentDiv.setAttribute("id", "contentDiv")
+        var paraDiv = document.createElement("div");
+        paraDiv.setAttribute("id","paraDiv");
+        var pTag1 = document.createElement("p");
+        pTag1.setAttribute("id","pTag1")
+        pTag1.textContent = item.name;
+        var name = pTag1.textContent;
+        var pTag2 = document.createElement("p");
+        pTag2.textContent = item.brand;
+        var rsDiv = document.createElement("div");
+        rsDiv.setAttribute("id","leftDiv")
+        var h2Tag = document.createElement("h2");
+        h2Tag.setAttribute("id","price");
+        h2Tag.textContent = "₹ " + item.MRP;
+        var price = h2Tag.textContent;
+
+        var rightdiv1 = document.createElement("div");
+        rightdiv1.setAttribute("id","rightDiv");
+
+        var rightDiv2 = document.createElement("div");
+        rightDiv2.setAttribute("id","rightDiv2");
+
+        var origin = document.createElement("p");
+        origin.setAttribute("id","fromCounty");
+        origin.textContent = "from " + item.from ;
+
+        var dispatched = document.createElement("p");
+        dispatched.setAttribute("id","dispatched");
+        dispatched.textContent = "to " + item.toCountry;
+
+        var delivery = document.createElement("p");
+        delivery.setAttribute("id","delivery");
+        delivery.textContent = "in " + item.delivery;
+
+        var symbols = document.createElement("img");
+        symbols.setAttribute("id","imagesymbol");
+        symbols.setAttribute("src","Screenshot 2021-11-09 at 11.07.27 AM.png")
+        
+
+        var span = document.createElement("span");
+        span.setAttribute("id","incDec");
+        var div = document.createElement("div");
+        div.setAttribute("id","quant");
+        var btn1 = document.createElement("button");
+        var decid = "dec" + index;
+        btn1.setAttribute("id",decid);
+        btn1.setAttribute("class","dec")
+        btn1.textContent = "-";
+        var qty = item.qty;
+        // console.log(typeof qty)
+        var pTag = document.createElement("p");
+        var countid = "count"+ index;
+        pTag.setAttribute("id",countid);
+        pTag.textContent = qty;
+        // var count = +(pTag.textContent);
+        var btn2 = document.createElement("button");
+        var incid = "inc" + index;
+        btn2.setAttribute("id",incid);
+        btn2.setAttribute("class","inc");
+        btn2.textContent = "+";
+
+        div.append(btn1,pTag,btn2)
+        span.append(div)
+        rightDiv2.append(symbols)
+        rightdiv1.append(origin,dispatched,delivery)
+        rsDiv.append(h2Tag)
+        paraDiv.append(pTag1,pTag2);
+        contentDiv.append(paraDiv,rsDiv,rightdiv1,rightDiv2)
+        imgDiv.append(image)
+        itemDiv.append(imgDiv,contentDiv,span);
+        document.getElementById("subDiv").append(itemDiv);
+        
+        var inc = document.getElementById(incid);
+            inc.addEventListener("click",function(){
+            incFun(item,countid);
+            var qty = JSON.parse(localStorage.getItem("count")) ||item.qty;
+        });
+
+        var dec = document.getElementById(decid);
+            dec.addEventListener("click", function(){
+            decFun(item,countid,index,itemDiv);
+            var qty = JSON.parse(localStorage.getItem("count")) ||item.qty;
+        });
+       });  
+    };
+
+    function decFun(item,countid){
+        // console.log(index);
+        var count = JSON.parse(localStorage.getItem("CartItemsinPage")) || [];
+           for(var i = 0; i < count.length; i++){
+                if(count[i].name == item.name){
+                    if(count[i].qty > 1){
+                        count[i].qty--;
+                        console.log(count[i].qty)
+                        break;
+                    }else{
+                        // count[i].remove();
+                    }
+                }
+            }
+            localStorage.setItem("CartItemsinPage",JSON.stringify(count));
+            // displayCartItems(count);
+    }
+
+
+
+    function incFun(item,countid){
+            item.qty++;
+            var count = JSON.parse(localStorage.getItem("CartItemsinPage")) || [];
+            for(var i = 0; i < count.length; i++){
+                if(count[i].name == item.name){
+                    count[i].qty++;
+                    break;
+                }
+            }
+            localStorage.setItem("CartItemsinPage",JSON.stringify(count));
+            // displayCartItems(count);
+    }
+   
+</script>
