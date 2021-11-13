@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cardentery</title>
+    <style>
+        #payment{
+            
+            width:40%;
+            float:right;
+            border: 1px solid rgb(201, 197, 197);
+            border-radius:10px;
+            text-align:center;
+           
+        }
+        #select{
+            height:130px;width:150px;
+            border: 1px solid rgb(199, 196, 196);
+            margin:auto;
+            border-radius:10px;
+            margin-bottom: 20px;
+        }
+        #select:hover{
+            background:rgb(240, 238, 238);
+            cursor: pointer;
+        }
+        #select>img{
+            height:70px;
+            
+
+        }
+        #xbtn{
+            float:right;
+            width:50px;
+            background:white;
+            border:1px ;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        #xbtn:hover{
+            background:rgb(243, 243, 243);
+        }
+        #select>p{
+            vertical-align:top;
+            float:right;
+            margin-right: 10px;
+        }
+        input{
+            height: 20px;
+            width:90%;
+            border-radius: 10px;
+            border: 1px solid #eaeaea;
+            padding:20px;
+            margin-top:10px;
+        }
+       #btn{
+           height:60px;
+           width:95%;
+           padding:10px;
+           margin-top:25px;
+           margin: "auto";
+           border-radius:5px;
+           text-align:middle;
+           border: 1px solid #eaeaea;
+           background:#e0e0e0;
+           margin-bottom: 20px;
+           font-size: 20px;
+           color:grey;
+           cursor: pointer;
+       }#lock{
+           float:left;
+           height:80px;
+           margin-left: 40px;
+       }
+       #notorn{
+           float:right;
+           height: 80px;
+           margin-right: 40px;
+       }#ex{
+           display:grid;
+           grid-template-columns: auto auto;
+           grid-gap: 20px;
+           padding:20px;
+           
+       }input{
+           cursor:auto;
+       }
+        
+    </style>
+</head>
+<body>
+   <div id="payment">
+        <button id="xbtn" type="button">X</button>
+       <h1>Select your Payment Method</h1>
+
+       <div id="select">
+            <p>&#10004</p>
+           <img src="https://image.flaticon.com/icons/png/512/60/60378.png"/>
+           <h5>Credit/Debit Card</h5>
+           
+       </div>
+       <div id=""></div>
+   </div>
+</body>
+</html>
+<script>
+    document.getElementById("select").addEventListener("click",inputpage);
+    var main=document.getElementById("payment");
+    function inputpage(){
+        var h=document.getElementById("select");
+        h.style.color="#84cff0"
+        h.style.border="1px solid #84cff0"
+
+       var int=document.createElement("div");
+       
+       var h=document.createElement("h2");
+       h.textContent="Secure credit card payment"
+       var v=document.createElement("p");
+       v.textContent="This is a secure 128-bit SSL encrypted payment."
+       var lock=document.createElement("img")
+       lock.setAttribute("id", "lock")
+       lock.src="https://media.istockphoto.com/vectors/lock-icon-vector-id936681148?k=20&m=936681148&s=612x612&w=0&h=j6fxNWrJ09iE7khUsDWetKn_PwWydgIS0yFJBEonGow="
+       var notorn=document.createElement("img");
+       notorn.setAttribute("id", "notorn");
+       notorn.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMdFTLJN7wFpdWWExplROd9jSR0YN_0ofU6w7tXxRmST2jPr_3ksjNOomBdAgIJ8R8BAY&usqp=CAU"       
+       var cardno=document.createElement("input");
+       cardno.type="number"
+       cardno.placeholder="CARD NO"
+       cardno.setAttribute("id", "cardno");
+
+
+       
+       var ex=document.createElement("div");
+       ex.setAttribute("id", "ex")
+       var exdate=document.createElement("input");
+       exdate.type="date";
+       exdate.placeholder="MM/YY";
+       var ccv=document.createElement("input");
+       ccv.placeholder="CCV";
+       ccv.type="number";
+       ccv.setAttribute("id", "ccv")
+       var cname=document.createElement("input");
+       cname.type="text";
+       cname.placeholder="Card Holder Name"
+      
+        var btn=document.createElement("button");
+        btn.setAttribute("id","btn");
+        btn.textContent="Confirm"
+        btn.addEventListener("click",checkcredientials);
+
+        int.append(lock,notorn,h,v);
+       ex.append(exdate,ccv);
+      
+       main.append(int,cardno,ex,cname,btn)
+       document.getElementById("select").removeEventListener("click",inputpage);
+    }
+    function checkcredientials(){
+        var cardno=document.getElementById("cardno").value;
+        localStorage.setItem("cardno",JSON.stringify(cardno));
+        window.location.href="cartpayment.html"
+        if(cardno.length!=16){
+            alert("PLEASE ENTER A VALID CARDNO")
+        }
+        var ccv=document.getElementById("ccv").value;
+
+        if(ccv.length!=3){
+            alert("PLEASE ENTER A VALID CCV")
+        }
+    }
+    document.getElementById("xbtn").addEventListener("click",function(){
+        
+        window.location.href="cartpayment.html"
+    })
+</script>

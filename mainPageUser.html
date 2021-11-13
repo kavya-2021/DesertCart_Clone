@@ -1,76 +1,511 @@
 <!DOCTYPE html>
-<html lang="en" >
-    <head> <title> Online Lipstick Products</title>
-      <link rel="stylesheet" href="products_page.css">
-      <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <!-- User Account Links -->
-      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-      <link rel="stylesheet" type="text/css" href="useraccount.css">  
-      <script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
-      <!-- // changes done till above-->
-    </head>
-    <body>
-      <div class="navcontainer" style="z-index: 999;">
-         <header>
-             <a href="mainPageUser.html"><img class="logo" src="https://cdn.desertcart.com/static/media/logo.5821c90d.png" alt=""></a>
-             <button id="explore">Explore</button>
-             <nav>
-                 <ul class="nav_links">
-                     <li><a class="anchoricon" href="#"><i class="fal fa-globe"></i></a></li>
-                     <li><button class="usericon" id="usericon1"><i class="fal fa-user"></i>
-                         <div id="content"></div>
-                         </button>
-                     </li>
-                     <li><a class="anchoricon" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                 </ul>
-             </nav>
-         </header>
-         <hr>
-     </div>
-        <div id="optionsForSort">
-            <select name= "price" id="forPrice" onchange="priceSort()">
-            <option value="nofilter">Any Price</option>
-            <option value="1"> Below INR 1,000 </option>
-            <option value="2">INR 1,000 - INR 2000</option>
-            <option value="3">INR 2,000 - INR 3000</option>
-            <option value="4">INR 3,000 - INR 10000</option>
-            <option value="5"> INR 10000 + </option>
-            </select>
-            <select name="IMPORTED_FROM" id="forCountry" onchange="countrySort()">
-                <option value="nofilter">Any Country</option>
-                <option value="USA"> IMPORTED FROM USA</option>
-                <option value="UK">IMPORTED FROM UK</option>
-                <option value="UAE">IMPORTED FROM UAE</option>
-                <option value="INDIA">IMPORTED FROM INDIA</option>
-            </select>
-            <select name = "DELIVERY_TIME" id="fortime" onchange="deliverySort()">
-                <option value="0">Any delivery time</option>
-                <option value="1"> Same Day </option>
-                <option value="2"> 2 days </option>
-                <option value="4"> 3-5 days </option>
-                <option value="6"> 5-8days </option>
-                <option value="10"> 9-15days</option>
-                <option value="16"> 15+ days </option>
-            </select>
-            
-        </div>
-        <div id= "heading">
-            <h2>Online Lipsticks Shopping Store in India</h2>
-        </div>
-        
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account</title>
+    <!-- User Account Links -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="useraccount.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <link rel="stylesheet" type="text/css" href="explore.css">
+
+    <!-- Main Page Links -->
+    <link rel="stylesheet" href="mianPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@800&family=Rubik:wght@500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/e4ab5f5716.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- User Account Navbar -->
+    <div class="navcontainer">
+        <header>
+            <a href="mainPageUser.html"><img class="logo" src="https://cdn.desertcart.com/static/media/logo.5821c90d.png" alt=""></a>
+            <button id="explore">Explore</button>
+            <nav>
+                <ul class="nav_links">
+                    <li><a class="anchoricon" href="#"><i class="fal fa-globe"></i></a></li>
+                    <li><button class="usericon" id="usericon1"><i class="fal fa-user"></i>
+                        <div id="content"></div>
+                        </button>
+                    </li>
+                    <li><a class="anchoricon" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr />
+    </div>
+    <div id="showBottomPart" style="z-index: 999;">
+    
+    </div>
+    <!-- Main Page Content -->
         <div id="container">
- 
+                <div id="mainText">
+                <h1 id="heading">Find 100M+ products</h1>
+                </div>
+                <div id="searchIcon">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="search" type="search" placeholder=" Search for any product...">
+                </div>
+                <div id="slidDiv">
+                   <h1 style="font-weight: 400;"><i class="fas fa-shield-alt"></i> Secure and Convenient Shooping </h1>
+                </div>
         </div>
-    </body>
+        <a href="hotDeals.html">
+        <div id="hotDeals">
+            <div id="bt1d">
+                <button id="bt1"><i class="fas fa-angle-left"></i></button>
+            </div>
+            <div id="bt2d">
+                <button id="bt2"><i class="fas fa-angle-right"></i></button>
+            </div>
+        </div>
+        </a>
+
+        <div id="pcontainer">
+            <div>
+                <h2 class="boxHeading">The Perfumery </h2>
+            </div>
+            <div id="boxContainer">
+                <div class="pbox" id="pbox">
+                    <a href="HerPerfume.html">
+                        <div class="pImg" id="herImg">
+                        </div>
+                        <div class="pText">
+                            <h3 class="subHeading">Her</h3>
+                            <p class="subPara">Designer fragrances. Not designer prices</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="HimPerfume.html">
+                        <div class="pImg" id="himImg"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Him</h3>
+                            <p class="subPara">Too attractive to be resisted</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="uniSex.html">
+                        <div class="pImg" id="unImg"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Unisex</h3>
+                            <p class="subPara">You can Share this fragrance with your better half</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pcontainer">
+            <div>
+                <h2 class="boxHeading">Better Everyday</h2>
+            </div>
+            <div id="boxContainer">
+                <div class="pbox" id="pbox">
+                    <a href="babyNedd.html">
+                        <div class="pImg" id="be1Img">
+                        </div>
+                        <div class="pText">
+                            <h3 class="subHeading">Healthy Baby, Happy Baby</h3>
+                            <p class="subPara">The best of all the gentle care there is</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="wellness.html">
+                        <div class="pImg" id="be2Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Feel good</h3>
+                            <p class="subPara">Stop putting it off get in shape</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="herbel.html">
+                        <div class="pImg" id="be3Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Herb up your life!</h3>
+                            <p class="subPara">Live naturally, Live herbally</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pcontainer">
+            <div>
+                <h2 class="boxHeading">Do it in style</h2>
+            </div>
+            <div id="boxContainer">
+                <div class="pbox" id="pbox">
+                    <a href="Summer.html">
+                        <div class="pImg" id="ds1Img">
+                        </div>
+                        <div class="pText">
+                            <h3 class="subHeading">Cool your summer</h3>
+                            <p class="subPara">Dresses that won't make you break a sweat</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="summerMen.html">
+                        <div class="pImg" id="ds2Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Make them look</h3>
+                            <p class="subPara">Summer collection for Him, simple yet elegant</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="mensWatches.html">
+                        <div class="pImg" id="ds3Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Watches for a lifetime</h3>
+                            <p class="subPara">Largest collection of elegant timepieces</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pcontainer">
+            <div>
+                <h2 class="boxHeading">All Game, All Season</h2>
+            </div>
+            <div id="boxContainer">
+                <div class="pbox" id="pbox">
+                    <a href="playStation.html">
+                        <div class="pImg" id="as1Img">
+                        </div>
+                        <div class="pText">
+                            <h3 class="subHeading">It's time to play</h3>
+                            <p class="subPara">All of the best that playstation has to offer</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="gamingPC.html">
+                        <div class="pImg" id="as2Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">The real gaming rigs</h3>
+                            <p class="subPara">We'll find you the best weapon to dominate them all</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="oldGames.html">
+                        <div class="pImg" id="as3Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">A Trip down the memory lane</h3>
+                            <p class="subPara">A nostalgic homage to the good old games</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pcontainer">
+            <div>
+                <h2 class="boxHeading">Transforming your outdoor space</h2>
+            </div>
+            <div id="boxContainer">
+                <div class="pbox" id="pbox">
+                    <a href="survival.html">
+                        <div class="pImg" id="ts1Img">
+                        </div>
+                        <div class="pText">
+                            <h3 class="subHeading">Survive the end of the world</h3>
+                            <p class="subPara">All the things you'll ever need to survive anything</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="camping.html">
+                        <div class="pImg" id="ts2Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Outdoors calling</h3>
+                            <p class="subPara">Make it a camping season all year round</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="journey.html">
+                        <div class="pImg" id="ts3Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">It's about the journey</h3>
+                            <p class="subPara">All the essential gear you will need to tackle your next hike</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pcontainer">
+            <div>
+                <h2 class="boxHeading">Look Fabulous</h2>
+            </div>
+            <div id="boxContainer">
+                <div class="pbox" id="pbox">
+                    <a href="LookFabEye.html">
+                        <div class="pImg" id="lb1Img">
+                        </div>
+                        <div class="pText">
+                            <h3 class="subHeading">Glamor-Eyes</h3>
+                            <p class="subPara">Smokey shadow look or hot hues on your date night, there is something for everyone</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="bold&Beauty.html">
+                        <div class="pImg" id="lb2Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Bold and Beautiful</h3>
+                            <p class="subPara">Amp up your look with these lipsitck collectiosn dramatic shades, vibrant colors, and super-rich finishes!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="loveSkin.html">
+                        <div class="pImg" id="lb3Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Love your skin</h3>
+                            <p class="subPara">Find your miracle product in here</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pcontainer">
+            <div>
+                <h2 class="boxHeading">Your Electronic Dose</h2>
+            </div>
+            <div id="boxContainer">
+                <div class="pbox" id="pbox">
+                    <a href="all_laptops.html">
+                        <div class="pImg" id="ed1Img">
+                        </div>
+                        <div class="pText">
+                            <h3 class="subHeading">All about laptops</h3>
+                            <p class="subPara">Looking for a work machine to crunch those number or just something to netflix and chill. This list is it</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="all_earphones.html">
+                        <div class="pImg" id="ed2Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Only hear what you want to</h3>
+                            <p class="subPara">We lined up the top-rated Noise-Cancelling Headphones</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="all_mobile.html">
+                        <div class="pImg" id="ed3Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Slick phone cases</h3>
+                            <p class="subPara">Battery packs with a zillion Mah or a bomb proof case to accessorize your phone like a boss</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pcontainer">
+            <div>
+                <h2 class="boxHeading">So many books, so little time</h2>
+            </div>
+            <div id="boxContainer">
+                <div class="pbox" id="pbox">
+                    <a href="fiction_books.html">
+                        <div class="pImg" id="book1Img">
+                        </div>
+                        <div class="pText">
+                            <h3 class="subHeading">Fiction</h3>
+                            <p class="subPara">Love The Great Gatsby? You'll surely love these</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="history_book.html">
+                        <div class="pImg" id="book2Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">History</h3>
+                            <p class="subPara">Absorb the pathway of history</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="biography_book.html">
+                        <div class="pImg" id="book3Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Biography</h3>
+                            <p class="subPara">Experience what other's lived through</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pcontainer">
+            <div>
+                <h2 class="boxHeading">Welcome to the Grind</h2>
+            </div>
+            <div id="boxContainer">
+                <div class="pbox" id="pbox">
+                    <a href="cardio_grind.html">
+                        <div class="pImg" id="grind1Img">
+                        </div>
+                        <div class="pText">
+                            <h3 class="subHeading">Skipping on leg days?</h3>
+                            <p class="subPara">Cardio Training equipments that'll stregnthen your legs and core</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="sports_grind.html">
+                        <div class="pImg" id="grind2Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Team sports anyone?</h3>
+                            <p class="subPara">Cricket or Football? We got it all</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="yoga_gring.html">
+                        <div class="pImg" id="grind3Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Yoga for everybody</h3>
+                            <p class="subPara">Stretch your body, not your wallet</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pcontainer">
+            <div>
+                <h2 class="boxHeading">Baby R Us</h2>
+            </div>
+            <div id="boxContainer">
+                <div class="pbox" id="pbox">
+                    <a href="education_baby.html">
+                        <div class="pImg" id="baby1Img">
+                        </div>
+                        <div class="pText">
+                            <h3 class="subHeading">Play and Learn</h3>
+                            <p class="subPara">Make play time, their learning time</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="games_baby.html">
+                        <div class="pImg" id="baby2Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading" >You can't be bored with these board games</h3>
+                            <p class="subPara">Monopoly to ludo, snakes and ladders to checkers, we have it all</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="action_baby.html">
+                        <div class="pImg" id="baby3Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Toy Figurines</h3>
+                            <p class="subPara">Woody or Buzz Light Year? hundreds more of your heroes in here</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pcontainer">
+            <div>
+                <h2 class="boxHeading">This is living</h2>
+            </div>
+            <div id="boxContainer">
+                <div class="pbox" id="pbox">
+                    <a href="home_live.html">
+                        <div class="pImg" id="liv1Img">
+                        </div>
+                        <div class="pText">
+                            <h3 class="subHeading">Make it a home</h3>
+                            <p class="subPara">Furniture that makes your house a home</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="pbox" id="pbox">
+                    <a href="Adorn_live.html">
+                        <div class="pImg" id="liv2Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Adorn</h3>
+                            <p class="subPara">Alluring and stylish home decorations</p>
+                        </div>
+                    </a>
+                </div>
+                <div style="margin-bottom:0px;" class="pbox" id="pbox">
+                    <a href="addColor_live.html">
+                        <div class="pImg" id="liv3Img"></div>
+                        <div class="pText">
+                            <h3 class="subHeading">Add Color</h3>
+                            <p class="subPara">Paintings that reflect you</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dropdownbar">
+        <div id="dropdownInside">
+                <div id="help"> 
+                    Need help? <br>
+                    We'd love to help you out!
+                    support@desertcart.com 
+
+                </div>
+                <div id="phone">
+                    <div>
+                        <i style="font-size:28px;" class="fas fa-phone-alt"></i>
+                    </div>
+                    <div id="innerPhone">
+                        Phone Support
+                        +97145245555
+                    </div>
+                </div>
+                <div id="chat">
+                    <div>
+                        <i style="font-size:28px;" class="fas fa-comment-alt"></i>
+                    </div>
+                    <div id="innerPhone">
+                        24/7 Live Chat <br>
+                        Chat with us any time
+                    </div>
+                </div>
+                <div id="FAQ">  
+                    <div>
+                        <i style="font-size:28px;" class="far fa-comment-alt"></i>
+                    </div>
+                    <div id="innerPhone">
+                        FAQ <br>
+                        Find your Answer
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div id="finalBelowPicture">
+        <img src="main last part.png" alt="">
+    </div>
+</body>
 </html>
-<script >
+<script>
     document.getElementById("usericon1").addEventListener("click",userpopdown);
     var content = document.getElementById("content");
-  function userpopdown(event) {
+    function userpopdown(event) {
     event.preventDefault();
     console.log("here")
     document.getElementById("content").style.border="1px solid rgb(199, 196, 196) "
@@ -959,8 +1394,7 @@ function showBottomDiv(){
    var a124 = document.createElement("a");
    a124.setAttribute("href","#");
    a124.textContent = "Cookbooks";
-
-
+   
    li18.append(a18);
    li17.append(a17)
    li16.append(a16)
@@ -978,6 +1412,8 @@ function showBottomDiv(){
    li4.append(a4);
    li3.append(a3);
    ul3.append(li3,li4,li5,li6,li7,li8,li9,li10,li11,li12,li13,li14,li15,li16,li17,li18);
+   
+   
    
    li33.append(a33)
    li32.append(a32)
@@ -1039,6 +1475,8 @@ function showBottomDiv(){
    li54.append(a54);
    li53.append(a53);
    ul19.append(li53,li54,li55,li56);
+
+
 
    li58.append(a58);
    li57.append(a57);
@@ -1221,570 +1659,11 @@ function showBottomDiv(){
    document.getElementById("explore").removeEventListener("click", showBottomDiv);
 }
 
-    var data =[
-        {
-           name : "7Pcs Matte Liquid Lipstick + 1Pcs Lip Plumper Makeup Set Kit, Long Lasting Waterproof Velvet Lip Gloss Set, Pigmented Lip Makeup Gift Sets for Girls and Women",
-           brand : "By Qibest",
-           code :"QC",
-           qty:1,
-           rating : 4.3 ,
-           MRP : "1,919" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/71mDhuzT3YS.jpg" 
-        },
-        {
-           name : "6Pcs Matte Liquid Lipstick Makeup Set, Matte liquid Long-Lasting Wear Non-Stick Cup Not Fade Waterproof Lip Gloss (Set A)",
-           brand : "By Bestland",
-           code :"QD",
-           qty:1,
-           rating : 4.0 ,
-           MRP : "2,059" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/61YVyDv6rbL.jpg" 
-        },
-        {
-           name : "Maybelline Color Sensational Lipstick, Lip Makeup, Cream Finish, Hydrating Lipstick, Nude, Pink, Red, Plum Lip Color, Warm Me Up, 0.15 oz; (Packaging May Vary)",
-           brand : "By Maybelline New York",
-           code :"QE",
-           qty:1,
-           rating : 4.5 ,
-           MRP : "834" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/71KI8ihR0XL.jpg" 
-        },
-        {
-           name : "12Pcs Matte Liquid Lipstick + Lip Liner Pens Set, One Step Lips Makeup Kits Pigment Velvety Nude Lip Stain Waterproof Long Wear Lip Gloss Make up Gift Set",
-           brand : "By Bestland",
-           code :"QF",
-           qty:1,
-           rating : 4.1 ,
-           MRP : "2,229" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "3-5 days",
-           range: 4,
-           image: "https://m.media-amazon.com/images/I/71PbfB04iOS.jpg" 
-        },
-        {
-           name : "REVLON Super Lustrous Glass Shine Lipstick, Flawless Moisturizing Lip Color with Aloe, Hyaluronic Acid and Rose Quartz, Glossed Up Rose (003), 0.15 oz",
-           brand : "By Revlon",
-           code :"QG",
-           qty:1,
-           rating : 4.5 ,
-           MRP : "1,059" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/71ZnyotJHIL.jpg" 
-        },
-        {
-           name : "L'Oreal Paris Colour Riche Lipstick, Sandstone, 1 Count",
-           brand : "By L'Oreal Paris ",
-           code :"QH",
-           qty:1,
-           rating : 4.6 ,
-           MRP : "874" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/51FEZnRe7hL.jpg" 
-        },
-        {
-           name : "3 Pure Color Envy Sculpting Lipsticks Trio by Estee Lauder for Women - 3 x 0.12 oz Lipstick - 280 Ambitious Pink, Lipstick - 260 Eccentric, Lipstick - 340 Envious",
-           brand : "By Estee Lauder",
-           code :"QI",
-           qty:1,
-           rating : 4.5 ,
-           MRP : "9,179" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "3-5 days",
-           range: 4,
-           image: "https://m.media-amazon.com/images/I/71ue2t1QHYL.jpg" 
-        },
-        {
-           name : "REVLON Super Lustrous Lipstick, 5 Piece Multi-finish Lipcolor Gift Set, in Cream Pearl & Matte, Pack of 5",
-           brand : "By Revlon",
-           code :"QJ",
-           qty:1,
-           rating : 4.5 ,
-           MRP : "4,979" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/81l--fbgybL.jpg" 
-        },
-        {
-           name : "Miss Rose Long-lasting Matte Lipstick Set, 12 PCS Multi Colored featuring full-pigment lip color with a smooth, ultra-matte finish in 12 shades",
-           brand : "By Miss Rose",
-           code :"QK",
-           qty:1,
-           rating : 4.1 ,
-           MRP : "3,309" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/51YTdPxBU4L.jpg" 
-        },
-        {
-           name : "(3 Pack) RIMMEL LONDON Lasting Finish Intense Wear Lipstick - Amethyst Shimmer",
-           brand : "By Rimmel",
-           code :"QL",
-           qty:1,
-           rating : 4.9 ,
-           MRP : "3,559" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/515Lt1r+uDL.jpg" 
-        },
-        {
-           name : "Clinique Pop Lip Colour + Primer Lipstick, 0.08 oz. Travel Size •• (Bare Pop 02)",
-           brand : "By Clinique",
-           code :"QM",
-           qty:1,
-           rating : 4.5 ,
-           MRP : "984" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/71JpwWUM78L.jpg" 
-        },
-        {
-           name : "Matte Liquid Lipstick Set, Spdoo 15 Colors Long Lasting High Pigmented Velvet Lip Gloss Kit",
-           brand : "By Spdoo",
-           code :"QN",
-           qty:1,
-           rating : 3.9 ,
-           MRP : "3,389" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/61dYsghvQBL.jpg" 
-        },
-        {
-           name : "Mineral Fusion Lipstick, Ruby, .14 Ounce",
-           brand : "By Mineral Fusion",
-           code :"QO",
-           qty:1,
-           rating : 4.3 ,
-           MRP : "2,409" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/51OP-hnkhjL.jpg" 
-        },
-
-        {
-           name : "1PC Mini Capsule Lipstick, Matte Non-Stick Cup Waterproof Long Lasting Lipstick, Bright Moisturize Lip Gloss, Lip Enhancer for Fuller, Beauty Cosmetics Makeup Gift for Girls Womens (Red - 900#)",
-           brand : "By 2022",
-           code :"QP",
-           qty:1,
-           rating : 4.3 ,
-           MRP : "5,449" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/51fi-Qo+mEL.jpg" 
-        },
-        {
-           name : "Matte Lipstick Set Mini Capsule Lipstick Set Velvet Matte Lipstick Smooth Long Lasting Waterproof Lipsticks Makeup Set 16 Colors",
-           brand : "By Grospe",
-           code :"QQ",
-           qty:1,
-           rating : 4.3 ,
-           MRP : "3,619" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "15+ days",
-           range: 16,
-           image: "https://m.media-amazon.com/images/I/61afS21Lc0L.jpg" 
-        },
-        {
-           name : "20 Pcs Tattoo Lipstick Cotton Swab, Long Lasting Waterproof Disposable Portable Lipstick, Red Moisturizing Lip Balm Lip Stick Non-stick Lipstick ",
-           brand : "By Natebur",
-           code :"QR",
-           qty:1,
-           rating : 4.3 ,
-           MRP : "3,209" ,
-           from : "USA",
-           toCountry : "INDIA",
-           delivery : "9-15 days",
-           range: 10,
-           image: "https://m.media-amazon.com/images/I/61pB14BSxeL.jpg" 
-        },
-        {
-           name : "Maybelline Color Sensational Powder Matte Lipstick 05 Cruel Ruby",
-           brand : "By Maybelline New York",
-           code :"QS",
-           qty:1,
-           rating : 3.9 ,
-           MRP : "879" ,
-           from : "UAE",
-           toCountry : "INDIA",
-           delivery : "5-8 days",
-           range: 6,
-           image: "https://m.media-amazon.com/images/I/41jwCGiWd9L.jpg" 
-        },
-        {
-           name : "NYX PROFESSIONAL MAKEUP Shout Loud Satin Lipstick, Desert Rose 05",
-           brand : "By Nyx",
-           code :"QT",
-           qty:1,
-           rating : 4.1 ,
-           MRP : "629" ,
-           from : "UAE",
-           toCountry : "INDIA",
-           delivery : "5-8 days",
-           range: 6,
-           image: "https://m.media-amazon.com/images/I/61+5X2LpI5L.jpg" 
-        },
-        {
-           name : "Flawless Brows Eyebrow Hair Remover Trimmer Eplitor Razor for Women, Lipstick-Sized Eye brow Epilator,Facial Hair Shaver For Good Finishing",
-           brand : "By Mbeline",
-           code :"QU",
-           qty:1,
-           rating : 2.8 ,
-           MRP : "1,369" ,
-           from : "UAE",
-           toCountry : "INDIA",
-           delivery : "5-8 days",
-           range: 6,
-           image: "https://m.media-amazon.com/images/I/61YVNmKT6GL.jpg" 
-        },
-        {
-           name : "theBalm Meet Matt(e) Hughes Liquid Lipstick Set #2 Set of 6 Mini Long-Lasting Liquid Lipsticks",
-           brand : "By ",
-           code :"QV",
-           qty:1,
-           rating : 3.7 ,
-           MRP : "2,319" ,
-           from : "UAE",
-           toCountry : "INDIA",
-           delivery : "5-8 days",
-           range: 6,
-           image: "https://m.media-amazon.com/images/I/91borg4EtXL.jpg" 
-        },
-        {
-           name : "Flormar Matte Liquid Lipstick Lip Gloss - 02 Fall Rose",
-           brand : "By Flormar",
-           code :"QW",
-           qty:1,
-           rating : 5 ,
-           MRP : "2,029" ,
-           from : "UAE",
-           toCountry : "INDIA",
-           delivery : "5-8 days",
-           range: 6,
-           image: "https://m.media-amazon.com/images/I/71GgD-FU9-L.jpg" 
-        },
-        {
-           name : "Max Factor Lipfinity Lip Colour Lipstick, 2-step Long Lasting, 335 Just In Love, 2.3 ml + 1.9 g",
-           brand : "By Max Factor",
-           code :"QX",
-           qty:1,
-           rating : 4.5 ,
-           MRP : "1,509" ,
-           from : "UAE",
-           toCountry : "INDIA",
-           delivery : "5-8 days",
-           range: 6,
-           image: "https://m.media-amazon.com/images/I/51WsRzsrzRS.jpg" 
-        },
-       
-        {
-           name : "Maybelline Superstay 14H Megawatt Lipstick Nu 135 Flash of Fuchsia",
-           brand : "By Maybelline New York",
-           code :"QY",
-           qty:1,
-           rating : 3.8 ,
-           MRP : "1,929" ,
-           from : "UAE",
-           toCountry : "INDIA",
-           delivery : "5-8 days",
-           range: 6,
-           image: "https://m.media-amazon.com/images/I/71mOS0iAfML.jpg" 
-        },
-        {
-           name : "[rom&nd] Zero matte lipstick 20 colors | Velvet matte, Colourpop, Sensational Lip color Creamy Matte, Silk Finishi | lipstick for Daily Use, K-beauty | 3g/0.106oz No.12 something…",
-           brand : "By Rom Nd",
-           code :"QZ",
-           qty:1,
-           rating : 4.6 ,
-           MRP : "1,899" ,
-           from : "UAE",
-           toCountry : "INDIA",
-           delivery : "5-8 days",
-           range: 6,
-           image: "https://m.media-amazon.com/images/I/31jzjUstgBL.jpg" 
-        },
-        {
-           name : "Estee Lauder for Sculpted Lips Trio Lipsticks Gift Set 3 Full Sizes 410 Dynamic, 110 Insatiable Ivory, and 221 Pink Parfait",
-           brand : "By ",
-           code :"RA",
-           qty:1,
-           rating : 4.3 ,
-           MRP : "7,639" ,
-           from : "UAE",
-           toCountry : "INDIA",
-           delivery : "3-5 days",
-           range: 4,
-           image: "https://m.media-amazon.com/images/I/71c4tgQ6R3L.jpg" 
-        },
-        {
-           name : "(3 Pack) RIMMEL LONDON Lasting Finish Intense Wear Lipstick - Amethyst Shimmer",
-           brand : "By Rimmel",
-           code :"RB",
-           qty:1,
-           rating : 4.9 ,
-           MRP : "2,559" ,
-           from : "INDIA",
-           toCountry : "INDIA",
-           delivery : "3-5 days",
-           range: 4,
-           image: "https://m.media-amazon.com/images/I/515Lt1r+uDL.jpg" 
-        },
-        {
-           name : "Maybelline Color Sensational Lipstick, Lip Makeup, Cream Finish, Hydrating Lipstick, Nude, Pink, Red, Plum Lip Color, Warm Me Up, 0.15 oz; (Packaging May Vary)",
-           brand : "By Maybelline New York",
-           code :"RC",
-           qty:1,
-           rating : 4.5 ,
-           MRP : "834" ,
-           from : "INDIA",
-           toCountry : "INDIA",
-           delivery : "1-2 days",
-           range: 2,
-           image: "https://m.media-amazon.com/images/I/71KI8ihR0XL.jpg" 
-        },
-        {
-           name : "Clinique Pop Lip Colour + Primer Lipstick, 0.08 oz. Travel Size •• (Bare Pop 02)",
-           brand : "By Clinique",
-           code :"RD",
-           qty:1,
-           rating : 4.5 ,
-           MRP : "984" ,
-           from : "INDIA",
-           toCountry : "INDIA",
-           delivery : "Same day",
-           range: 1,
-           image: "https://m.media-amazon.com/images/I/71JpwWUM78L.jpg" 
-        },
-        {
-           name : "7Pcs Matte Liquid Lipstick + 1Pcs Lip Plumper Makeup Set Kit, Long Lasting Waterproof Velvet Lip Gloss Set, Pigmented Lip Makeup Gift Sets for Girls and Women",
-           brand : "By Qibest",
-           code :"RE",
-           qty:1,
-           rating : 4.3 ,
-           MRP : "1,919" ,
-           from : "INDIA",
-           toCountry : "INDIA",
-           delivery : "3-5 days",
-           range: 4,
-           image: "https://m.media-amazon.com/images/I/71mDhuzT3YS.jpg" 
-        },
-    
-    ]
-
-    function priceSort(){
-        var select = document.querySelector("#forPrice").value;  
-        if(select == "nofilter"){
-            displayProducts(data);
-        }
-        else if(select == 1){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices < 1000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1);
-       } 
-       else if(select == 2){
-        var level1 = data.filter(function(item){
-           var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 1000 && prices < 2000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 3){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 2000 && prices < 3000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 4){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 3000 && prices < 10000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-       else if(select == 5){
-        var level1 = data.filter(function(item){
-         var cost =item.MRP;
-           cost = String(cost);
-           var prices = cost.replace(",","");
-           prices = Number(prices);
-             if(prices >= 10000) {
-                return item;
-             } 
-        }); 
-        displayProducts(level1); 
-       }
-    }
-
-function countrySort(){
-    var select = document.querySelector("#forCountry").value;
-    console.log(select);
-
-    var selected = data.filter(function(item){
-        if(select === item.from) return item ;
-        if(select == "nofilter") return item ;
-    });
-       displayProducts(selected);
-    }
-
-function deliverySort(){
-    var select = Number(document.querySelector("#fortime").value);
-
-
-    var selected = data.filter(function(item){
-        var days = item.range ;
-        if(select === 0) return item ;
-        else if(select === days) return item ;
-        
-    });
-         displayProducts(selected);
-    }
-
-
-
-displayProducts(data);
-
-function displayProducts(data){
-        document.querySelector("#container").innerHTML = "";
-        data.map(function(item){
-            var prodiv = document.createElement("div");
-            prodiv.setAttribute("id","maindiv");
-            prodiv.addEventListener("click",function(){
-               productShow(item);
-            });
-
-            var image = document.createElement("img");
-            image.setAttribute("id","picture");
-            image.setAttribute("src",item.image)
-
-            var ptag1 = document.createElement("p");
-            ptag1.setAttribute("id","nameofprod");
-            ptag1.textContent = item.name ;
-
-            var ptag2 = document.createElement("p");
-            ptag2.setAttribute("id","brandofprod");
-            ptag2.textContent = item.brand ;
-
-            var personaldiv = document.createElement("div");
-            personaldiv.setAttribute("id","sub1div");
-
-            var leftdiv = document.createElement("div");
-            leftdiv.setAttribute("id","div1");
-
-            var rightdiv = document.createElement("div");
-            rightdiv.setAttribute("id","div2");
-
-            var rightdiv1 = document.createElement("div");
-            rightdiv1.setAttribute("id","divr1");
-
-            var rightdiv2 = document.createElement("div");
-            rightdiv2.setAttribute("id","divr2");
-
-            var rating1 = document.createElement("p");
-            rating1.setAttribute("id","rating");
-            rating1.innerHTML =`<i style="color: #4cb9eb" class="fas fa-star"></i> ${item.rating}`;
-            
-            var price = document.createElement("p");
-            price.setAttribute("id","cost");
-            price.textContent = "₹ " + item.MRP ;
-
-            var origin = document.createElement("p");
-            origin.setAttribute("id","fromCounty");
-            origin.textContent = "from " + item.from ;  
-
-            var dispatch = document.createElement("p");
-            dispatch.setAttribute("id","toCounty");
-            dispatch.textContent = "to "+item.toCountry;
-
-            var when = document.createElement("p");
-            when.setAttribute("id","delivery");
-            when.textContent = "in "+item.delivery ;
-            
-            var symbols = document.createElement("img");
-            symbols.setAttribute("id","imagesymbol");
-            symbols.setAttribute("src","Screenshot 2021-11-09 at 11.07.27 AM.png")
-            
-            leftdiv.append(rating1, price);
-
-            rightdiv1.append(origin,dispatch, when);
-
-            rightdiv2.append(symbols);
-
-            rightdiv.append(rightdiv1,rightdiv2);
-            
-            personaldiv.append(leftdiv, rightdiv);
-            prodiv.append(image , ptag1 ,ptag2 ,personaldiv) ;
-
-            document.querySelector("#container").append(prodiv);
-
-        }); 
-    function productShow(item){
-         var product = item;
-         localStorage.setItem("SelectedProduct", JSON.stringify(product)); 
-         window.location.href = "productShow.html" ;
-        } 
-    }
-
-    function showCartPageonClick(){
-window.location.href ="cart.html";
+function showCartPageonClick(){
+    window.location.href ="cart.html";
 }
 function goToHomePage(){
-window.location.href ="mainPage.html";
+    window.location.href ="mainPage.html";
 }
 document.querySelector("#showlogin")
 .addEventListener("click",function(){
