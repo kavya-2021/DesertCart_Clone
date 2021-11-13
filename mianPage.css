@@ -2,6 +2,7 @@
     font-family: 'Lato', sans-serif;
     text-decoration: none;
 }
+
 #container{
     width: 100%;
     height: 450px;
@@ -72,10 +73,10 @@
 }
 
 #hotDeals{
-    margin: 25px 60px;
-    height: 280px;
-    width: 90%;
-    border-radius: 20px;
+    margin: 25px 120px;
+    height: 250px;
+    width: 80%;
+    border-radius: 15px;
     overflow: hidden;
     background-image: url(https://dc-marketing.s3.amazonaws.com/media/244800638Artboard_1.png);
     background-size: cover;
@@ -113,9 +114,10 @@ button > i{
     font-size: 40px;
 }
 #pcontainer{
-    width: 90%;
-    margin: 100px 60px;
+    width: 80%;
+    margin-left: 120px;
     height: 500px;
+    margin-top: -50px;
 }
 #boxContainer{
     margin-top: 25px;
@@ -124,44 +126,49 @@ button > i{
 }
 .pbox{
     border: 1px solid rgb(241, 241, 241);
-    height: 400px;
+    height: 300px;
     width: 32%;
     border-radius: 10px;
 }
 #pbox:hover{
-    background-color: snow;
-    transition: 1s;
+    background-color: #F5FFF5;
+    transition: 1.5s;
 }
 
 .pImg{
     /* border: 1px solid orange; */
-    height: 65%;
+    height: 67%;
     width: 98%;
     padding: 1%;
-    background-size: cover;
-    border-radius: 10px 10px 0px 0px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    border-radius: 8px 8px 0px 0px;
 }
 .pText{
     height: 30%;
     width: 100%;
     text-align: left;
 }
-#boxHeading{
+.boxHeading{
     font-weight: bold;
     font-size: 20px;
     font-family: 'Lato', sans-serif;
 
 }
 .subHeading{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 20px;
     color: #2e363e;
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 100%;
 }
 .subPara{
     margin-left: 20px;
     color: #2e363e;
     margin-right: 10px;
+    font-size: 12px;
+    letter-spacing:0.2px ;
+    margin-top: -5px;
 }
 #herImg{
     background-image: url(https://cdn.desertcart.com/cms-media/shop_women_perfume_online_777169b8dd.jpg?95355.45000000001);

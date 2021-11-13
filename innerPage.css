@@ -1,6 +1,7 @@
 #heading{
     width:80%;
     margin: auto;
+    margin-top: 60px;
     color: rgb(24, 24, 24);
 }
 #optionsForSort{
@@ -18,7 +19,7 @@
 #container{
     width: 80%;
     display: grid ;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 24%);
     /* border: 1.5px solid red; */
     margin: auto;
     column-gap : 1.4%;
@@ -27,7 +28,7 @@
 }
 
 #optionsForSort > select{
-    width : 33% ;
+    width : 33.33% ;
     height: 55px; 
     padding: 10px;
     border-radius: 6px;
@@ -43,7 +44,7 @@ select option {
 }
 
 #maindiv {
-    height: 350px ;
+    height: 300px ;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
     border-radius: 8px;
     line-height: 15px;
@@ -52,18 +53,16 @@ select option {
 }
 
 #maindiv:hover{
-    transition: 0.5s;
    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+   cursor: pointer;
 }
 
 #picture{
-    width: 65%;
+    width: 45%;
     height: 55%;
     margin: auto;
-    margin-top: 5%;
-    margin-left: 20%;
+    margin-left: 25%;
     margin-bottom: 8%;
-    align-items: center;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 
@@ -98,6 +97,7 @@ p{
     justify-content: space-between;
     font-size: 12px;
     margin-top: 5%;
+    padding-right: 4%;
 }
 
 #cost{
@@ -105,6 +105,6 @@ p{
     margin-top: 25%;
     font-weight: 700;  
 }
-i{
-    color: mediumturquoise;
+#div2{
+   display:flex ;
 }
