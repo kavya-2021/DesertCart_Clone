@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+    <style>
+         #main{
+              
+              width:40%;
+              float:right;
+              border: 1px solid rgb(201, 197, 197);
+              border-radius:5px;
+              text-align:center;
+          }
+          #xbtn:hover{
+            background:rgb(230, 227, 227);
+        }
+          
+          #xbtn{
+              float:right;
+              background-color: white;
+              border:1px;
+              margin-right: 10px;
+              margin-top: 10px;
+              cursor: pointer;
+          }#button{
+            height:60px;
+           width:95%;
+           padding:10px;
+           margin-top:25px;
+           margin: "auto";
+           border-radius:5px;
+           text-align:middle;
+           border: 1px solid#5eb2d9 ;
+           background:white;
+           margin-bottom: 20px;
+           font-size: 20px;
+           color:#5eb2d9;
+           cursor: pointer;
+          }
+          #js{
+              width:70%;
+              margin:auto auto;
+              border: 1px solid rgb(201, 197, 197);
+              text-align:left;
+              padding:20px;border-radius:5px;
+              line-height:1px;
+              cursor: pointer;
+          }
+          #js:hover{
+              background:rgb(209, 208, 208);
+          }
+          #button:hover{background:rgb(209, 208, 208);box-shadow: 0 0 11px rgba(33,33,33,.2); }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <button id="xbtn" type="button">X</button>
+        <h1>Select your Delivery Address</h1>
+        <div id="jsinput"></div>
+        <button id="button" type="button">Add New Address</button>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById("xbtn").addEventListener("click",function(){
+        window.location.href="cartpayment.html"
+    })
+    var getting=JSON.parse(localStorage.getItem("address"));
+    
+   
+    document.getElementById("button").addEventListener("click",function(){
+        window.location.href="address.html"
+    })
+
+    var getadd=[];
+    getting.map(function(item){
+        console.log(item)
+        var js=document.createElement("div");
+        js.setAttribute("id","js")
+        
+
+        var c=document.createElement("h2");
+        c.textContent = item.phone;
+
+        var a=document.createElement("h3");
+        a.textContent=item.address+" , "+item.state;
+
+        var b=document.createElement("p");
+        b.textContent=item.city+" , "+item.pincode;
+
+        js.append(c,a,b)
+
+        var azz={
+            phone:item.phone,
+            address:item.address,
+            city:item.city,
+        }
+        getadd.push(azz)
+        
+        
+        document.getElementById("jsinput").append(js)
+    })
+    document.getElementById("jsinput").addEventListener("click",function(){
+        localStorage.setItem("addressinput",JSON.stringify(getadd));
+        window.location.href="payment.html"
+    });
+
+</script>
