@@ -2,25 +2,30 @@
 <div align="center">
   <img alt="Demo" src="./Images/Demo.png" />
 </div>
-# DesertCart-Website-Clone 
+## DesertCart-Website-Clone 
+<br/>
 ---
+<br/>
 ##### This is clone website of DesertCart.com. Desert Cart is an ecommerse website where user can buy all kinds of beauty products.
+<br/>
 ---
-## [Deployement ](https://rahulk612.github.io/desertCart/)🔗
+<br/>
+#### [Deployement ](https://rahulk612.github.io/desertCart/)🔗
+<br/>
 ---
-## Tech Stack 🔧
-- `HTML`
-- `CSS3`
-- `Advanced JavaScript`
+<br/> <br/>
+## Tech Stack 🔧 <br/>
+- `HTML` <br/>
+- `CSS3` <br/>
+- `Advanced JavaScript` <br/> <br/>
 ---
-## Features 
-##### - User can buy any type of products.
-##### - They can use this website from 163+ countries.
-##### - Users can sort & filter different kinds of products according to price, delivery time and importing country.
-##### - Users can add product to wishlist.
----
-## Page and Responsibilities 
----
+## Features  <br/>
+# - User can buy any type of products. <br/>
+# - They can use this website from 163+ countries. <br/>
+# - Users can sort & filter different kinds of products according to price, delivery time and importing country. <br/>
+# - Users can add product to wishlist. <br/>
+--- <br/> <br/>
+## Page and Responsibilities <br/> <br/>
 
 - **Home Page**
 ##### here is the landing page of our website
