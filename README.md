@@ -88,7 +88,7 @@ They can place an order by simply clicking on the place order button after that 
 
 #### Ravindra Sham Pawar [GitHub](https://github.com/Ravindraapps) :octocat:
 
-#### Aswini Rathod [GitHub] :octocat:
+#### Ashwini Rathod [GitHub](https://github.com/rathodashwini990) :octocat:
 
 #### Abhishek [GitHub] :octocat:
 
